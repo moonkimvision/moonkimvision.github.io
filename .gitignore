@@ -1,3 +1,6 @@
+# ralph-core (private submodule — 로컬에서만 사용)
+ralph-core/
+
 # Jekyll
 _site/
 .sass-cache/
