@@ -14,14 +14,13 @@ a:hover { text-decoration: underline; }
 
 /* ── Layout ───────────────────────────────────────────────── */
 .container {
-  max-width: 760px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
 .main-content {
-  padding: 48px 24px;
-  max-width: 760px;
+  max-width: 960px;
   margin: 0 auto;
 }
 
@@ -30,6 +29,9 @@ a:hover { text-decoration: underline; }
   border-bottom: 1px solid #e5e7eb;
   padding: 16px 0;
   background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .site-header .container {
@@ -42,6 +44,7 @@ a:hover { text-decoration: underline; }
   font-size: 1.1rem;
   font-weight: 700;
   color: #1a1a1a;
+  letter-spacing: -0.01em;
 }
 
 .site-nav a {
@@ -52,16 +55,156 @@ a:hover { text-decoration: underline; }
 
 .site-nav a:hover { color: #1a1a1a; text-decoration: none; }
 
-/* ── Footer ───────────────────────────────────────────────── */
-.site-footer {
-  border-top: 1px solid #e5e7eb;
-  padding: 24px 0;
+/* ── Hero ─────────────────────────────────────────────────── */
+.hero {
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+  color: #fff;
+  padding: 100px 24px;
   text-align: center;
-  font-size: 0.85rem;
-  color: #6b7280;
 }
 
+.hero-inner {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.hero-eyebrow {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #93c5fd;
+  margin-bottom: 16px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.hero-tagline {
+  font-size: 1.1rem;
+  color: #94a3b8;
+  margin-bottom: 40px;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.btn:hover { opacity: 0.85; text-decoration: none; }
+
+.btn-primary {
+  background: #2563eb;
+  color: #fff;
+}
+
+.btn-secondary {
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.25);
+}
+
+/* ── Sections ────────────────────────────────────────────── */
+.section {
+  padding: 72px 24px;
+}
+
+.section-alt {
+  background: #f9fafb;
+}
+
+.section-inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 32px;
+  color: #111827;
+}
+
+/* ── Card Grid ───────────────────────────────────────────── */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 28px 24px;
+  transition: box-shadow 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.card-icon {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+.empty-msg { color: #6b7280; font-size: 0.95rem; }
+
+.link-more {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2563eb;
+}
+
+/* ── Post List ───────────────────────────────────────────── */
+.post-list { list-style: none; }
+.post-list li { padding: 20px 0; border-bottom: 1px solid #e5e7eb; }
+.post-list li:last-child { border-bottom: none; }
+.post-list .post-title { font-size: 1.05rem; font-weight: 600; }
+.post-list .post-date  { font-size: 0.85rem; color: #6b7280; margin-top: 4px; }
+
+/* ── Policy List ─────────────────────────────────────────── */
+.policy-list { list-style: none; }
+.policy-list li { padding: 16px 0; border-bottom: 1px solid #e5e7eb; }
+.policy-list li:last-child { border-bottom: none; }
+
 /* ── Page (정책 문서 등) ───────────────────────────────────── */
+.page-wrapper {
+  padding: 48px 24px;
+}
+
 .page-header { margin-bottom: 32px; }
 .page-header h1 { font-size: 1.75rem; font-weight: 700; }
 .page-meta { margin-top: 6px; color: #6b7280; font-size: 0.875rem; }
@@ -87,6 +230,7 @@ a:hover { text-decoration: underline; }
   margin-right: 4px;
 }
 
+.post-content { padding: 48px 24px; max-width: 760px; margin: 0 auto; }
 .post-content h2 { font-size: 1.2rem; font-weight: 600; margin: 32px 0 12px; }
 .post-content h3 { font-size: 1rem; font-weight: 600; margin: 24px 0 8px; }
 .post-content p  { margin-bottom: 16px; }
@@ -108,24 +252,45 @@ a:hover { text-decoration: underline; }
 }
 .post-content pre code { background: none; padding: 0; font-size: 0.875rem; }
 
-/* ── Home ─────────────────────────────────────────────────── */
-.home-hero { margin-bottom: 48px; }
-.home-hero h1 { font-size: 2rem; font-weight: 700; margin-bottom: 8px; }
-.home-hero p  { color: #4b5563; }
+/* ── Footer ───────────────────────────────────────────────── */
+.site-footer {
+  border-top: 1px solid #e5e7eb;
+  padding: 40px 0 24px;
+  font-size: 0.85rem;
+  color: #6b7280;
+  background: #f9fafb;
+}
 
-.post-list { list-style: none; }
-.post-list li { padding: 20px 0; border-bottom: 1px solid #e5e7eb; }
-.post-list li:last-child { border-bottom: none; }
-.post-list .post-title { font-size: 1.1rem; font-weight: 600; }
-.post-list .post-date  { font-size: 0.85rem; color: #6b7280; margin-top: 4px; }
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
 
-/* ── Policy index ────────────────────────────────────────── */
-.policy-list { list-style: none; }
-.policy-list li { padding: 16px 0; border-bottom: 1px solid #e5e7eb; }
-.policy-list li:last-child { border-bottom: none; }
+.footer-col p {
+  margin-bottom: 4px;
+  line-height: 1.6;
+}
+
+.footer-brand {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #374151;
+  margin-bottom: 8px !important;
+}
+
+.footer-bottom {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 16px;
+  text-align: center;
+}
 
 /* ── Responsive ───────────────────────────────────────────── */
-@media (max-width: 600px) {
+@media (max-width: 640px) {
+  .hero { padding: 72px 24px; }
+  .hero-title { font-size: 2.2rem; }
   .site-nav a:first-child { margin-left: 0; }
   .page-header h1, .post-header h1 { font-size: 1.4rem; }
+  .section { padding: 48px 24px; }
 }
