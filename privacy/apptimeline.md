@@ -8,7 +8,7 @@ date: 2026-05-30
 lang: ko
 ---
 
-<div class="lang-ko">
+<div class="lang-ko" markdown="1">
 
 moonkimvision("회사", "저희")은 AppTimeline 앱(이하 "서비스")을 광고 지원 방식으로 무료 제공합니다.
 
@@ -93,7 +93,7 @@ Google AdMob 등 제3자 광고 네트워크는 맞춤형 광고를 위해 기�
 
 </div>
 
-<div class="lang-en" style="display:none">
+<div class="lang-en" style="display:none" markdown="1">
 
 moonkimvision ("we," "us," or "our") built the AppTimeline app as an ad-supported app. This SERVICE is provided by moonkimvision at no cost and is intended for use as is.
 
