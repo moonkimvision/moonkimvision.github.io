@@ -1,0 +1,86 @@
+---
+layout: default
+---
+<div class="page-wrapper">
+  <article class="page">
+    <header class="page-header">
+      <div class="policy-header-row">
+        <div>
+          <h1 class="lang-ko-el">{{ page.title_ko }}</h1>
+          <h1 class="lang-en-el" style="display:none">{{ page.title_en }}</h1>
+        </div>
+        <div class="lang-switcher" role="group" aria-label="Language selector">
+          <button class="lang-btn" id="btn-ko" onclick="setLang('ko')" aria-pressed="true">한국어</button>
+          <button class="lang-btn" id="btn-en" onclick="setLang('en')" aria-pressed="false">English</button>
+        </div>
+      </div>
+      {%- if page.date -%}
+        <p class="page-meta lang-ko-el">시행일: {{ page.date | date: "%Y년 %m월 %d일" }}</p>
+        <p class="page-meta lang-en-el" style="display:none">Effective Date: {{ page.date | date: "%B %-d, %Y" }}</p>
+      {%- endif -%}
+    </header>
+    <div class="page-content">
+      {{ content }}
+    </div>
+  </article>
+</div>
+
+<style>
+.policy-header-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.lang-switcher {
+  display: flex;
+  gap: 0;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  overflow: hidden;
+  flex-shrink: 0;
+  align-self: flex-start;
+  margin-top: 0.25rem;
+}
+.lang-btn {
+  padding: 0.35rem 0.9rem;
+  border: none;
+  background: #f9fafb;
+  color: #374151;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  font-family: inherit;
+}
+.lang-btn:first-child { border-right: 1px solid #d1d5db; }
+.lang-btn.active {
+  background: #111827;
+  color: #fff;
+  font-weight: 600;
+}
+.lang-btn:hover:not(.active) { background: #e5e7eb; }
+</style>
+
+<script>
+(function () {
+  var stored = localStorage.getItem('policy-lang');
+  var initial = stored || (navigator.language && navigator.language.startsWith('ko') ? 'ko' : 'en');
+  setLang(initial);
+
+  function setLang(lang) {
+    var isKo = lang === 'ko';
+    var koEls = document.querySelectorAll('.lang-ko-el, .lang-ko');
+    var enEls = document.querySelectorAll('.lang-en-el, .lang-en');
+    koEls.forEach(function(el){ el.style.display = isKo ? '' : 'none'; });
+    enEls.forEach(function(el){ el.style.display = isKo ? 'none' : ''; });
+    document.getElementById('btn-ko').classList.toggle('active', isKo);
+    document.getElementById('btn-en').classList.toggle('active', !isKo);
+    document.getElementById('btn-ko').setAttribute('aria-pressed', isKo);
+    document.getElementById('btn-en').setAttribute('aria-pressed', !isKo);
+    localStorage.setItem('policy-lang', lang);
+  }
+
+  window.setLang = setLang;
+})();
+</script>
