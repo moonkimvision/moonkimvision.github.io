@@ -11,4 +11,5 @@ moonkimvision에서 서비스하는 앱의 개인정보처리방침 목록입니
 
 <ul class="policy-list">
   <li><a href="/privacy/apptimeline/">AppTimeline Privacy Policy</a></li>
+  <li><a href="/privacy/cropscreenrecorder/">Crop Screen Recorder Privacy Policy</a></li>
 </ul>
