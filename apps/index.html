@@ -1,0 +1,31 @@
+---
+layout: default
+bilingual: true
+title: "앱"
+permalink: /apps/
+description: moonkimvision이 만든 안드로이드 앱 — AppRoutine, Crop Video Recorder.
+---
+<section class="page-hero page-hero-compact">
+  <div class="stamp-drift" aria-hidden="true"></div>
+  <div class="container page-hero-inner">
+    <div>
+      <p class="eyebrow"><span class="lang-ko">앱</span><span class="lang-en">Apps</span></p>
+      <h1 class="page-hero-title"><span class="lang-ko">작고, 잔소리 없는 앱.</span><span class="lang-en">Small apps. No nagging.</span></h1>
+      <p class="hero-lead"><span class="lang-ko">moonkimvision은 매일 쓰는 폰을 조금 더 편하게 만드는 안드로이드 앱을 만들어요. 계정 가입 없이, 사용 기록과 영상은 기기 안에만.</span><span class="lang-en">moonkimvision builds Android apps that make the phone you use every day a little easier. No sign-up, and your usage history and recordings stay on your device.</span></p>
+    </div>
+    <div class="chat page-hero-chat">
+      {% include bubble.html who="sister" ko="근데 있잖아, 앱 만드는 회사가 왜 우리를 데려온 거야? 아 잠깐, 우리가 귀여워서?" en="But wait, why would an app company bring us in? Oh. Because we're cute?" %}
+      {% include bubble.html who="brother" ko="…써 보라고." en="…To test the apps." %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="app-grid">
+      {%- for app in site.data.apps %}
+      {% include app-card.html app=app %}
+      {%- endfor %}
+    </div>
+  </div>
+</section>
