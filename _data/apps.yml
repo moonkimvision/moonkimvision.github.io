@@ -1,0 +1,48 @@
+# moonkimvision 앱 목록 — 홈·앱 페이지·포스트 하단 카드가 이 파일을 읽는다.
+# 새 앱을 추가하면: 아이콘(assets/images/apps/) + 소개 포스트 + 개인정보처리방침(privacy/) 을 같이 만든다.
+
+- id: approutine
+  name: AppRoutine
+  name_ko: 앱루틴
+  icon: /assets/images/apps/approutine-icon.png
+  color: "#1565C0"
+  platform: Android
+  tagline_ko: 내 하루를 되감아 보는 앱
+  tagline_en: Rewind your day
+  summary_ko: 스크린타임을 타임라인으로. 앱 사용 기록, 사용 제한, 앱 알람까지 한 번에.
+  summary_en: See your screen time as a timeline. Track app usage, set limits and app alarms.
+  features_ko: [사용 기록 타임라인, 앱 런처, 사용 통계, 앱 다이어트, 달성 배지, 앱 알람]
+  features_en: [Usage timeline, Launcher, Usage stats, App diet, Badges, App alarms]
+  store: https://play.google.com/store/apps/details?id=com.moonkimvision.apptimeline
+  privacy: /privacy/apptimeline/
+  post: /posts/approutine-intro/
+  twins:
+    - who: sister
+      ko: 오늘 폰 몇 시간 썼냐고? 아 잠깐, 그건 묻지 마.
+      en: How many hours on my phone today? Wait. Don't ask that.
+    - who: brother
+      ko: …타임라인에 다 나와.
+      en: …It's all on the timeline.
+
+- id: crop-video-recorder
+  name: Crop Video Recorder
+  name_ko: 크롭 비디오 레코더
+  icon: /assets/images/apps/crop-video-recorder-icon.png
+  color: "#5B4FDB"
+  platform: Android
+  tagline_ko: 필요한 부분만 잘라서 녹화
+  tagline_en: Record only the part you need
+  summary_ko: 전체 화면을 녹화한 뒤 자르지 마세요. 처음부터 원하는 영역만 녹화합니다.
+  summary_en: Don't record the whole screen and crop it later. Record only what you need from the start.
+  features_ko: [영역만 녹화, 녹화 중 영역 이동, 알림 안 찍힘, 기기에만 저장]
+  features_en: [Area-only recording, Move while recording, No notifications in shot, Stays on device]
+  store: https://play.google.com/store/apps/details?id=com.moonkimvision.crop_screen_recorder
+  privacy: /privacy/cropscreenrecorder/
+  post: /posts/crop-video-recorder-intro/
+  twins:
+    - who: sister
+      ko: 내 화면 녹화하는데 단톡 알림이 같이 찍혔잖아. 근데 있잖아, 그게 하필—
+      en: I recorded my screen and the group chat popped up in it. And you know what, of all things—
+    - who: brother
+      ko: …영역만 찍으면 돼.
+      en: …Just record the area.

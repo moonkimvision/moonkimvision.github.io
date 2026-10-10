@@ -1,0 +1,226 @@
+# 쌍둥이 캐릭터 프로필 데이터
+# 원본 설정: marketing-studio/projects/twins/marketing/character/CHARACTER.md (§8 누나, §9 동생)
+# 설정이 바뀌면 이 파일을 같이 고친다.
+
+sister:
+  id: sister
+  url: /twins/sister/
+  other: brother
+  name_ko: 누나
+  name_en: Big Sis
+  badge_ko: 몇 분 먼저 태어남
+  badge_en: Born a few minutes earlier
+  role_ko: 수다 · 허세 담당
+  role_en: The Talker
+  oneliner_ko: 표정은 덤덤한데, 말은 끝이 없다.
+  oneliner_en: Deadpan face. Endless chatter.
+  intro_ko: >-
+    밝고 착한 주인공형은 아니다. 남의 피드를 보고 입을 삐죽이다가도 바로 따라 하고,
+    좋아요 숫자 하나에 흔들린다. 그래도 마지막엔 어깨를 펴고 결국 내 길을 간다.
+    무표정으로 쉬지 않고 떠드는 게 이 누나의 매력이다.
+  intro_en: >-
+    Not your bright, wholesome lead. She pouts at other people's feeds and copies them
+    a second later, and one like count can shake her day. But in the end she squares her
+    shoulders and walks her own way. Talking nonstop with a perfectly blank face is her charm.
+  images:
+    front: /assets/images/twins/sister-front.png
+    three_quarter: /assets/images/twins/sister-34.png
+    side: /assets/images/twins/sister-side.png
+    face: /assets/images/twins/sister-face.png
+  profile:
+    - label_ko: 호칭
+      label_en: Called
+      ko: 누나. 동생보다 몇 분 먼저 태어났다
+      en: "\"Nuna\" (big sis) — a few minutes older"
+    - label_ko: 포지션
+      label_en: Role
+      ko: 쉼 없는 수다와 허세 (보케)
+      en: Nonstop talk and bravado (the funny one)
+    - label_ko: 성격
+      label_en: Personality
+      ko: 자신감 있고 턱을 살짝 든다. SNS와 주변 시선에 잘 휘둘리지만 결국 내 길을 간다
+      en: Confident, chin slightly up. Easily swayed by social media, but always finds her own way back
+    - label_ko: 말투
+      label_en: Speech
+      ko: 반말 구어체. "아", "근데", "있잖아" 같은 추임새, 자기 말에 스스로 끼어들기
+      en: Casual, full of fillers like "uh", "but", "you know" — interrupts herself constantly
+    - label_ko: 외형
+      label_en: Look
+      ko: 새까만 일자 단발 + 무겁게 자른 일자 앞머리, 반쯤 뜬 고양이 눈
+      en: Jet-black blunt bob with heavy straight bangs, half-lidded cat eyes
+    - label_ko: 옷
+      label_en: Outfit
+      ko: 루즈한 회색 맨투맨 + 차콜 반바지
+      en: Loose gray sweatshirt, charcoal shorts
+    - label_ko: 시그니처
+      label_en: Signature
+      ko: 주황 손목 밴드 — 둘의 세계에서 유일한 색
+      en: The orange wristband — the only color in their world
+    - label_ko: 좋아하는 것
+      label_en: Loves
+      ko: 인생샷, 좋아요, 자기 몫의 아이스크림
+      en: The perfect selfie, likes, her own ice cream
+    - label_ko: 약한 것
+      label_en: Weak spot
+      ko: 남의 피드, 생각보다 적은 좋아요 숫자
+      en: Other people's feeds, a like count lower than expected
+  quotes:
+    - ko: 아 잠깐, 있잖아—
+      en: Wait, wait, listen—
+    - ko: 이 눈, 이 눈이 말이야.
+      en: These eyes. I'm telling you, these eyes.
+    - ko: 다시.
+      en: Again.
+    - ko: 네가 먹었지?
+      en: You ate it, didn't you?
+    - ko: 안 줘.
+      en: Not sharing.
+  stats:
+    - key: talk
+      value: 95
+    - key: bravado
+      value: 85
+    - key: sns
+      value: 90
+    - key: tsukkomi
+      value: 25
+    - key: zoning
+      value: 15
+
+brother:
+  id: brother
+  url: /twins/brother/
+  other: sister
+  name_ko: 동생
+  name_en: Little Bro
+  badge_ko: 몇 분 늦게 태어남
+  badge_en: Born a few minutes later
+  role_ko: 느린 한마디 · 태클 담당
+  role_en: The One-Liner
+  oneliner_ko: 느리고 짧게. 그런데 정곡을 찌른다.
+  oneliner_en: Slow and short. Always right on target.
+  intro_ko: >-
+    누나의 이란성 쌍둥이 남동생. 멍하고 느긋해서 단어를 늦게 찾고 말끝을 흐리지만,
+    누나의 긴 수다 끝에 툭 던지는 한마디가 늘 정곡이다. 화내지 않는다. 폰을 보다
+    들켜도 부정하지 않고 멍하게 인정한다.
+  intro_en: >-
+    Her fraternal twin brother. Laid-back and spacey, he searches for words and lets
+    his sentences trail off — yet the one line he drops after her endless monologue always
+    lands. He never gets angry. Caught on his phone, he doesn't deny it; he just blankly admits it.
+  images:
+    front: /assets/images/twins/brother-front.png
+    three_quarter: /assets/images/twins/brother-34.png
+    side: /assets/images/twins/brother-side.png
+    face: /assets/images/twins/brother-face.png
+  profile:
+    - label_ko: 호칭
+      label_en: Called
+      ko: 동생. 누나를 꼬박꼬박 "누나"라고 부른다
+      en: Little bro — always calls her "Nuna"
+    - label_ko: 포지션
+      label_en: Role
+      ko: 느리고 짧은 한마디로 태클 (츳코미)
+      en: The slow, short comeback (the straight man)
+    - label_ko: 성격
+      label_en: Personality
+      ko: 멍하고 느긋하다. 화내지 않고, 훈계하지 않는다
+      en: Spacey and easygoing. Never angry, never preachy
+    - label_ko: 말투
+      label_en: Speech
+      ko: 느리다. "그거… 아, 뭐였지" 하고 단어를 늦게 찾고 말끝을 흐린다
+      en: Slow. "That… uh, what was it" — trails off at the end
+    - label_ko: 외형
+      label_en: Look
+      ko: 부스스한 짧은 머리 + 정수리에 삐친 한 가닥, 처진 졸린 눈, 살짝 구부정
+      en: Messy short hair with one stubborn tuft, droopy sleepy eyes, slight slouch
+    - label_ko: 옷
+      label_en: Outfit
+      ko: 회색 후드 + 검은 긴바지
+      en: Gray hoodie, black pants
+    - label_ko: 시그니처
+      label_en: Signature
+      ko: 누나와 똑같은 주황 손목 밴드
+      en: The same orange wristband as his sister
+    - label_ko: 좋아하는 것
+      label_en: Loves
+      ko: 가만히 있기, 누나 몫의 아이스크림
+      en: Doing nothing, his sister's ice cream
+    - label_ko: 특기
+      label_en: Talent
+      ko: 같은 각도로 네 번 찍기, 멍한 셀카로 좋아요 3,208개
+      en: Taking the same shot four times, 3,208 likes on a blank-faced selfie
+  quotes:
+    - ko: …왜.
+      en: …What.
+    - ko: 그거… 아, 뭐였지.
+      en: That… uh, what was it.
+    - ko: …찍었어.
+      en: …Took it.
+    - ko: …잘 나왔지?
+      en: …Came out good, right?
+    - ko: 나도… 방금 봤지만.
+      en: I… just saw it too, though.
+  stats:
+    - key: talk
+      value: 10
+    - key: bravado
+      value: 5
+    - key: sns
+      value: 55
+    - key: tsukkomi
+      value: 95
+    - key: zoning
+      value: 99
+
+stat_labels:
+  talk: { ko: 수다력, en: Chatter }
+  bravado: { ko: 허세, en: Bravado }
+  sns: { ko: SNS 민감도, en: Social-media swayability }
+  tsukkomi: { ko: 정곡력, en: Comeback accuracy }
+  zoning: { ko: 멍 지수, en: Zone-out level }
+
+# 숏폼 에피소드 (marketing-studio/projects/twins/marketing/campaigns)
+episodes:
+  - series_ko: 아이스크림 실종 사건
+    series_en: The Missing Ice Cream
+    title_ko: 1화 — 네가 먹었지?
+    title_en: "Ep.1 — You ate it, didn't you?"
+    summary_ko: 누나의 아이스크림이 사라졌다. 증거는 없다. "네가 먹었지?" "아니?" 카메라 각도만 바꿔 세 번.
+    summary_en: "Her ice cream is gone, and there's no proof. \"You ate it?\" \"No?\" Three times, three camera angles."
+    lines: ["야.", "왜.", "네가 먹었지?", "아니?"]
+  - series_ko: 아이스크림 실종 사건
+    series_en: The Missing Ice Cream
+    title_ko: 2화 — 그 후
+    title_en: Ep.2 — The Aftermath
+    summary_ko: 범인은… 아빠. 이번엔 동생이 추궁할 차례. "어쩔 건데?" "어쩌라고."
+    summary_en: "The culprit was… Dad. Now it's his turn to interrogate. \"So what now?\" \"So what.\""
+    lines: ["어쩔 건데?", "어쩌라고."]
+  - series_ko: 아이스크림 실종 사건
+    series_en: The Missing Ice Cream
+    title_ko: 3화 — 그 후의 그 후
+    title_en: Ep.3 — After the Aftermath
+    summary_ko: 엄마가 새로 사 줬다. 누나 것만. 소파 위 정적과 쩝쩝 소리.
+    summary_en: Mom bought a new one. Only for her. Silence on the sofa, and loud chewing.
+    lines: ["맛있냐?", "안 줘."]
+  - series_ko: 누나의 인생샷
+    series_en: Sis's Perfect Shot
+    title_ko: 1화 — 다시
+    title_en: Ep.1 — Again
+    summary_ko: 포즈는 네 번 바꿨는데, 사진엔 전부 동생 얼굴. 전면 카메라였다.
+    summary_en: Four different poses, four photos of his face. The front camera was on.
+    lines: ["다시.", "…찍었어."]
+  - series_ko: 누나의 인생샷
+    series_en: Sis's Perfect Shot
+    title_ko: 2화 — 좋아요
+    title_en: Ep.2 — Likes
+    summary_ko: 실수로 올라간 동생 셀카, 좋아요 3,208. 누나 사진은 41.
+    summary_en: His selfie got posted by mistake — 3,208 likes. Hers got 41.
+    lines: ["내 건 이거.", "…적네."]
+  - series_ko: 누나의 인생샷
+    series_en: Sis's Perfect Shot
+    title_ko: 3화 — 따라 하기
+    title_en: Ep.3 — Copycat
+    summary_ko: 누나가 연구를 시작했다. 동생의 멍한 표정을 따라서.
+    summary_en: She starts her research — copying his blank stare.
+    lines: []
+    soon: true
