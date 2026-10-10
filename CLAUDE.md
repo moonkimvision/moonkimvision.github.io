@@ -20,17 +20,33 @@ Jekyll 기반 GitHub Pages 블로그.
 ```
 /
 ├── _config.yml          # Jekyll 전역 설정
+├── _data/
+│   ├── twins.yml        # 쌍둥이 캐릭터 프로필·능력치·에피소드
+│   └── apps.yml         # 앱 목록 (홈·앱 페이지·포스트 하단 카드가 읽음)
 ├── _posts/              # 블로그 포스트 (YYYY-MM-DD-slug.md)
-├── _pages/              # 고정 페이지 (정책 문서 등)
-│   └── privacy/         # 앱별 개인정보처리방침
-├── _layouts/            # HTML 레이아웃 템플릿
-├── _includes/           # 재사용 HTML 조각
+├── privacy/             # 앱별 개인정보처리방침
+├── twins/               # 쌍둥이 소개(/twins/) + 프로필(sister, brother)
+├── apps/                # 앱 목록(/apps/)
+├── _layouts/            # default · home · page · post · character · policy-bilingual
+├── _includes/           # header · footer · bubble(말풍선) · app-card · twin-card · post-card
 ├── assets/
-│   ├── css/
+│   ├── css/main.css     # 쌍둥이 테마 (크림 + 먹색 + 주황 한 점)
 │   └── images/
+│       ├── twins/       # 캐릭터 컷아웃·얼굴·스탬프·OG 이미지
+│       └── apps/        # 앱 아이콘
 ├── BACKLOG.md
 └── ralph-core/          # ralph 자동화 엔진 (submodule)
 ```
+
+---
+
+## 쌍둥이 캐릭터 (사이트 마스코트)
+
+- 원본 설정: `../marketing-studio/projects/twins/marketing/character/CHARACTER.md` — 누나(§8)·동생(§9). 사이트용 요약은 `_data/twins.yml`.
+- 디자인 규칙: 흑백 + 크림 배경 `#FFF6E5` + 유일한 색 주황 `#F57C00`(손목 밴드). 누나 말풍선 흰색, 동생 말풍선 연주황.
+- 말투: 누나 = 수다·허세, 자기 말 끊기("아 잠깐"). 동생 = 느리고 짧은 한마디("…"로 시작). 훈계·비하 금지.
+- 포스트 안 대화: `<div class="chat">` 안에 `{% include bubble.html who="sister|brother" text="..." %}` 를 줄마다.
+- 언어: `bilingual: true` 페이지(또는 layout)만 헤더에 한국어/EN 토글이 나오고, 나머지는 `lang` 으로 고정된다. 양쪽 문구는 `.lang-ko` / `.lang-en`.
 
 ---
 
@@ -52,15 +68,20 @@ bundle exec jekyll build
 ## 페이지 규칙
 
 ### 정책 페이지 (개인정보처리방침 등)
-- 경로: `_pages/privacy/<앱-슬러그>.md`
+- 경로: `privacy/<앱-슬러그>.md`
 - permalink: `/privacy/<앱-슬러그>/`
 - Google Play 등록 URL 예시: `https://moonkimvision.github.io/privacy/my-app/`
-- layout: `page`
+- layout: `policy-bilingual` (한/영 토글, `title_ko`·`title_en`) 또는 `page`
+- 정책 페이지 URL 은 스토어에 등록돼 있으므로 바꾸지 않는다.
+
+### 앱 추가
+- `_data/apps.yml` 에 항목 추가 (아이콘 `assets/images/apps/<id>-icon.png`, 스토어·정책·소개 글 링크, 쌍둥이 한마디)
+- 소개 포스트에 `app: <id>` 를 넣으면 포스트 상단 색과 하단 앱 카드가 붙는다.
 
 ### 블로그 포스트
 - 경로: `_posts/YYYY-MM-DD-slug.md`
 - permalink: `/posts/<slug>/`
-- layout: `post`
+- layout: `post` (기본값으로 설정됨), 목록 카드 요약은 front matter `description`
 
 ### Front matter 필수 항목
 ```yaml
