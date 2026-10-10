@@ -1,0 +1,106 @@
+---
+layout: default
+bilingual: true
+---
+{%- comment -%} 캐릭터 프로필. front matter: character: sister | brother (데이터: _data/twins.yml) {%- endcomment -%}
+{%- assign c = site.data.twins[page.character] -%}
+{%- assign o = site.data.twins[c.other] -%}
+{%- assign labels = site.data.twins.stat_labels -%}
+<section class="profile-hero profile-{{ c.id }}">
+  <div class="stamp-drift" aria-hidden="true"></div>
+  <div class="container profile-hero-inner">
+    <div class="profile-figure">
+      <div class="turnaround" data-turnaround>
+        <img class="pose is-on" data-pose="front" src="{{ c.images.front | relative_url }}" alt="{{ c.name_ko }} 정면 / {{ c.name_en }} front view">
+        <img class="pose" data-pose="three_quarter" src="{{ c.images.three_quarter | relative_url }}" alt="{{ c.name_ko }} 3/4 / {{ c.name_en }} three-quarter view" loading="lazy">
+        <img class="pose" data-pose="side" src="{{ c.images.side | relative_url }}" alt="{{ c.name_ko }} 옆모습 / {{ c.name_en }} side view" loading="lazy">
+      </div>
+      <div class="pose-tabs" role="group" aria-label="View">
+        <button type="button" class="is-on" data-pose-btn="front"><span class="lang-ko">정면</span><span class="lang-en">Front</span></button>
+        <button type="button" data-pose-btn="three_quarter">3/4</button>
+        <button type="button" data-pose-btn="side"><span class="lang-ko">옆</span><span class="lang-en">Side</span></button>
+      </div>
+    </div>
+    <div class="profile-intro">
+      <p class="eyebrow"><span class="lang-ko">쌍둥이 프로필</span><span class="lang-en">Twin profile</span> · <span class="lang-ko">{{ c.badge_ko }}</span><span class="lang-en">{{ c.badge_en }}</span></p>
+      <h1 class="profile-name"><span class="lang-ko">{{ c.name_ko }}</span><span class="lang-en">{{ c.name_en }}</span></h1>
+      <p class="profile-role"><span class="lang-ko">{{ c.role_ko }}</span><span class="lang-en">{{ c.role_en }}</span></p>
+      <p class="profile-oneliner"><span class="lang-ko">{{ c.oneliner_ko }}</span><span class="lang-en">{{ c.oneliner_en }}</span></p>
+      <p class="profile-desc"><span class="lang-ko">{{ c.intro_ko }}</span><span class="lang-en">{{ c.intro_en }}</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container profile-grid">
+    <div class="paper profile-card">
+      <h2 class="card-title"><span class="lang-ko">프로필</span><span class="lang-en">Profile</span></h2>
+      <dl class="profile-table">
+        {%- for row in c.profile %}
+        <div class="profile-row">
+          <dt><span class="lang-ko">{{ row.label_ko }}</span><span class="lang-en">{{ row.label_en }}</span></dt>
+          <dd><span class="lang-ko">{{ row.ko }}</span><span class="lang-en">{{ row.en }}</span></dd>
+        </div>
+        {%- endfor %}
+      </dl>
+    </div>
+
+    <div class="profile-side">
+      <div class="paper profile-card">
+        <h2 class="card-title"><span class="lang-ko">능력치</span><span class="lang-en">Stats</span></h2>
+        <p class="card-note"><span class="lang-ko">회색 눈금은 {{ o.name_ko }}의 수치</span><span class="lang-en">Gray tick = {{ o.name_en }}</span></p>
+        <ul class="stat-list">
+          {%- for s in c.stats %}
+          {%- assign os = o.stats | where: "key", s.key | first %}
+          <li class="stat">
+            <span class="stat-label"><span class="lang-ko">{{ labels[s.key].ko }}</span><span class="lang-en">{{ labels[s.key].en }}</span></span>
+            <span class="stat-bar" role="img" aria-label="{{ labels[s.key].ko }} {{ s.value }} / 100">
+              <span class="stat-fill" style="width: {{ s.value }}%"></span>
+              <span class="stat-ghost" style="left: {{ os.value }}%"></span>
+            </span>
+            <span class="stat-num">{{ s.value }}</span>
+          </li>
+          {%- endfor %}
+        </ul>
+      </div>
+
+      <div class="paper profile-card">
+        <h2 class="card-title"><span class="lang-ko">자주 하는 말</span><span class="lang-en">Catchphrases</span></h2>
+        <div class="chat">
+          {%- for q in c.quotes %}
+          {% include bubble.html who=c.id ko=q.ko en=q.en %}
+          {%- endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-ink">
+  <div class="container duo-row">
+    <div class="duo-copy">
+      <p class="eyebrow"><span class="lang-ko">쌍둥이 공식</span><span class="lang-en">The duo formula</span></p>
+      <h2 class="section-title"><span class="lang-ko">누나의 수다 → 동생의 한마디 → 정적.</span><span class="lang-en">Her monologue → his one-liner → silence.</span></h2>
+      <p><span class="lang-ko">둘 다 무표정. 웃음은 그 사이의 정적에서 나온다.</span><span class="lang-en">Both deadpan. The laugh lives in the silence after.</span></p>
+    </div>
+    <a class="other-twin" href="{{ o.url | relative_url }}">
+      <img src="{{ o.images.three_quarter | relative_url }}" alt="" loading="lazy">
+      <span class="other-twin-label"><span class="lang-ko">{{ o.name_ko }} 프로필 보기 →</span><span class="lang-en">Meet {{ o.name_en }} →</span></span>
+    </a>
+  </div>
+</section>
+
+<script>
+(function () {
+  var box = document.querySelector('[data-turnaround]');
+  if (!box) return;
+  var btns = document.querySelectorAll('[data-pose-btn]');
+  btns.forEach(function (b) {
+    b.addEventListener('click', function () {
+      var k = b.getAttribute('data-pose-btn');
+      box.querySelectorAll('.pose').forEach(function (p) { p.classList.toggle('is-on', p.getAttribute('data-pose') === k); });
+      btns.forEach(function (x) { x.classList.toggle('is-on', x === b); });
+    });
+  });
+})();
+</script>

@@ -1,0 +1,113 @@
+---
+layout: default
+bilingual: true
+title: "쌍둥이 소개"
+permalink: /twins/
+description: 몇 분 차이로 태어난 이란성 쌍둥이 남매. 말 많은 누나와 한마디뿐인 동생의 프로필과 에피소드.
+image: /assets/images/twins/og-twins.jpg
+---
+{%- assign s = site.data.twins.sister -%}
+{%- assign b = site.data.twins.brother -%}
+
+<section class="page-hero">
+  <div class="stamp-drift" aria-hidden="true"></div>
+  <div class="container page-hero-inner">
+    <figure class="polaroid">
+      <img src="{{ '/assets/images/twins/duo.jpg' | relative_url }}" alt="볼을 맞댄 쌍둥이 남매 / The twins, cheek to cheek" width="900" height="900">
+      <figcaption><span class="lang-ko">동생이 또 꼽사리 꼈다.</span><span class="lang-en">He photobombed. Again.</span></figcaption>
+    </figure>
+    <div>
+      <p class="eyebrow"><span class="lang-ko">쌍둥이 소개</span><span class="lang-en">Meet the twins</span></p>
+      <h1 class="page-hero-title"><span class="lang-ko">몇 분 차이,<br>이란성 쌍둥이.</span><span class="lang-en">Minutes apart.<br>Fraternal twins.</span></h1>
+      <p class="hero-lead">
+        <span class="lang-ko">말 많고 허세 있는 누나, 느리고 짧게 정곡을 찌르는 동생. 둘 다 무표정이고, 둘 다 폰에 휘둘린다. 아이스크림 하나, 셀카 한 장으로 매일 티격태격하는 현실 남매예요.</span>
+        <span class="lang-en">A chatty, show-off sister and a slow brother whose few words always hit home. Both deadpan, both hooked on their phones — real siblings who squabble daily over one ice cream or one selfie.</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="twin-grid">
+      {% include twin-card.html id="sister" %}
+      {% include twin-card.html id="brother" %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow"><span class="lang-ko">비교</span><span class="lang-en">Side by side</span></p>
+      <h2 class="section-title"><span class="lang-ko">같은 그림체, 정반대 성격</span><span class="lang-en">Same art style, opposite personalities</span></h2>
+    </header>
+    <div class="compare paper">
+      <div class="compare-head">
+        <span></span>
+        <a href="{{ s.url | relative_url }}"><img src="{{ s.images.face | relative_url }}" alt="" width="56" height="56"><span class="lang-ko">{{ s.name_ko }}</span><span class="lang-en">{{ s.name_en }}</span></a>
+        <a href="{{ b.url | relative_url }}"><img src="{{ b.images.face | relative_url }}" alt="" width="56" height="56"><span class="lang-ko">{{ b.name_ko }}</span><span class="lang-en">{{ b.name_en }}</span></a>
+      </div>
+      <dl>
+        <div class="compare-row"><dt><span class="lang-ko">머리</span><span class="lang-en">Hair</span></dt><dd><span class="lang-ko">일자 단발 + 일자 앞머리</span><span class="lang-en">Blunt bob, straight bangs</span></dd><dd><span class="lang-ko">부스스한 짧은 머리 + 삐친 한 가닥</span><span class="lang-en">Messy crop, one stubborn tuft</span></dd></div>
+        <div class="compare-row"><dt><span class="lang-ko">눈</span><span class="lang-en">Eyes</span></dt><dd><span class="lang-ko">올라간 고양이 눈, 반쯤 뜸</span><span class="lang-en">Upturned cat eyes, half-lidded</span></dd><dd><span class="lang-ko">처진 졸린 눈</span><span class="lang-en">Droopy, sleepy eyes</span></dd></div>
+        <div class="compare-row"><dt><span class="lang-ko">자세</span><span class="lang-en">Posture</span></dt><dd><span class="lang-ko">곧게, 턱을 살짝 듦</span><span class="lang-en">Straight, chin up</span></dd><dd><span class="lang-ko">구부정, 고개 살짝 앞으로</span><span class="lang-en">Slouched, head forward</span></dd></div>
+        <div class="compare-row"><dt><span class="lang-ko">말 속도</span><span class="lang-en">Speech</span></dt><dd><span class="lang-ko">→ → → ↘ 몰아치기</span><span class="lang-en">→ → → ↘ rapid-fire</span></dd><dd><span class="lang-ko">… … ↘ 늘어짐</span><span class="lang-en">… … ↘ trailing off</span></dd></div>
+        <div class="compare-row"><dt><span class="lang-ko">웃음 담당</span><span class="lang-en">Comedy role</span></dt><dd><span class="lang-ko">보케 (수다·허세)</span><span class="lang-en">The funny one</span></dd><dd><span class="lang-ko">츳코미 (느린 태클)</span><span class="lang-en">The straight man</span></dd></div>
+        <div class="compare-row"><dt><span class="lang-ko">공통점</span><span class="lang-en">In common</span></dt><dd class="span2"><span class="lang-ko">새까만 머리, 무표정, 그리고 주황 손목 밴드</span><span class="lang-en">Jet-black hair, blank faces, and the orange wristband</span></dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow"><span class="lang-ko">숏폼 에피소드</span><span class="lang-en">Short-form episodes</span></p>
+      <h2 class="section-title"><span class="lang-ko">오늘도 티격태격</span><span class="lang-en">Squabbling, as usual</span></h2>
+    </header>
+    <ol class="episode-grid">
+      {%- for ep in site.data.twins.episodes %}
+      <li class="episode{% if ep.soon %} is-soon{% endif %}">
+        <p class="episode-series"><span class="lang-ko">{{ ep.series_ko }}</span><span class="lang-en">{{ ep.series_en }}</span>{% if ep.soon %} <span class="soon"><span class="lang-ko">곧 공개</span><span class="lang-en">Coming soon</span></span>{% endif %}</p>
+        <h3 class="episode-title"><span class="lang-ko">{{ ep.title_ko }}</span><span class="lang-en">{{ ep.title_en }}</span></h3>
+        <p class="episode-summary"><span class="lang-ko">{{ ep.summary_ko }}</span><span class="lang-en">{{ ep.summary_en }}</span></p>
+        {%- if ep.lines.size > 0 %}
+        <p class="episode-lines" lang="ko">{% for l in ep.lines %}<span>{{ l }}</span>{% endfor %}</p>
+        {%- endif %}
+      </li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>
+
+<section class="section section-ink">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow"><span class="lang-ko">누나 이모티콘</span><span class="lang-en">Sis stickers</span></p>
+      <h2 class="section-title"><span class="lang-ko">표정은 여섯 개뿐. 그래도 충분하다.</span><span class="lang-en">Only six expressions. That's plenty.</span></h2>
+    </header>
+    <ul class="stamp-grid">
+      {%- assign stamp_ko = "반웃음,윙크,웃음,무심,옆모습,메롱" | split: "," -%}
+      {%- assign stamp_en = "Smirk,Wink,Laugh,Bored,Side-eye,Tongue out" | split: "," -%}
+      {%- for i in (1..6) %}
+      <li class="stamp">
+        <img src="{{ '/assets/images/twins/stamp-' | append: i | append: '.png' | relative_url }}" alt="{{ stamp_ko[forloop.index0] }}" width="120" height="120" loading="lazy">
+        <span><span class="lang-ko">{{ stamp_ko[forloop.index0] }}</span><span class="lang-en">{{ stamp_en[forloop.index0] }}</span></span>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container world-note">
+    <div class="world-swatches" aria-hidden="true">
+      <span style="background:#141414"></span><span style="background:#8c8c8c"></span><span style="background:#fff"></span><span style="background:#FFF6E5"></span><span style="background:#F57C00"></span>
+    </div>
+    <div>
+      <h2 class="section-title"><span class="lang-ko">흑백 세계, 주황 한 점</span><span class="lang-en">A black-and-white world, one dot of orange</span></h2>
+      <p><span class="lang-ko">쌍둥이의 세계는 검정·흰색·회색뿐이에요. 유일한 색은 둘이 똑같이 찬 주황 손목 밴드. 이 홈페이지도 같은 규칙으로 만들었어요.</span><span class="lang-en">The twins' world is only black, white and gray. The one color is the orange wristband they both wear. This website follows the same rule.</span></p>
+    </div>
+  </div>
+</section>
