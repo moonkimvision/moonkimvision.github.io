@@ -1,9 +1,25 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <meta name="description" content="{{ page.description | default: site.description }}">
+  <meta name="theme-color" content="#FFF6E5">
+  <script>
+  // 언어 선택을 첫 페인트 전에 적용해 깜빡임을 막는다. (setLang 은 footer 스크립트)
+  (function () {
+    // 한 언어로만 쓴 페이지(블로그 포스트 등)는 그 언어로 고정
+    if (document.documentElement.hasAttribute('data-lang-fixed')) return;
+    var l = null;
+    try { l = localStorage.getItem('site-lang'); } catch (e) {}
+    if (l !== 'ko' && l !== 'en') {
+      l = (navigator.language || '').toLowerCase().indexOf('ko') === 0 ? 'ko' : 'en';
+    }
+    document.documentElement.setAttribute('data-lang', l);
+  })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;500;700;900&display=swap">
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <link rel="icon" type="image/png" href="{{ '/assets/images/twins/sister-face.png' | relative_url }}">
   {% seo %}
   {% feed_meta %}
 </head>

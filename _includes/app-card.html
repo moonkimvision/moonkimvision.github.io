@@ -1,0 +1,33 @@
+{%- comment -%}
+  앱 카드. 사용: include app-card.html app=app (app = site.data.apps 의 항목)
+  include.compact 가 있으면 쌍둥이 대화를 뺀다.
+{%- endcomment -%}
+{%- assign app = include.app -%}
+<article class="app-card" style="--app-color: {{ app.color }}">
+  <header class="app-card-head">
+    <img class="app-icon" src="{{ app.icon | relative_url }}" alt="{{ app.name }} icon" width="72" height="72" loading="lazy">
+    <div>
+      <p class="app-platform">{{ app.platform }}</p>
+      <h3 class="app-name">{{ app.name }}</h3>
+      <p class="app-tagline"><span class="lang-ko">{{ app.tagline_ko }}</span><span class="lang-en">{{ app.tagline_en }}</span></p>
+    </div>
+  </header>
+  <p class="app-summary"><span class="lang-ko">{{ app.summary_ko }}</span><span class="lang-en">{{ app.summary_en }}</span></p>
+  <ul class="chips">
+    {%- for f in app.features_ko %}
+    <li><span class="lang-ko">{{ f }}</span><span class="lang-en">{{ app.features_en[forloop.index0] }}</span></li>
+    {%- endfor %}
+  </ul>
+  {%- unless include.compact %}
+  <div class="chat chat-sm">
+    {%- for line in app.twins %}
+    {% include bubble.html who=line.who ko=line.ko en=line.en %}
+    {%- endfor %}
+  </div>
+  {%- endunless %}
+  <div class="app-actions">
+    <a class="btn btn-ink" href="{{ app.post | relative_url }}"><span class="lang-ko">소개 글 읽기</span><span class="lang-en">Read more</span></a>
+    <a class="btn btn-line" href="{{ app.store }}" rel="noopener" target="_blank">Google Play</a>
+    <a class="link-quiet" href="{{ app.privacy | relative_url }}"><span class="lang-ko">개인정보처리방침</span><span class="lang-en">Privacy</span></a>
+  </div>
+</article>

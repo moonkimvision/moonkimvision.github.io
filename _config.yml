@@ -1,5 +1,5 @@
 title: MoonKimVision
-description: 모바일 앱 개발 및 서비스 운영
+description: 무표정 쌍둥이 남매가 안내하는 moonkimvision의 모바일 앱과 이야기
 url: "https://moonkimvision.github.io"
 baseurl: ""
 lang: ko
@@ -15,10 +15,18 @@ company:
   email: moonkimvision@gmail.com
   registration: "407-64-00770"
 
-collections:
-  policies:
-    output: true
-    permalink: /privacy/:name/
+# 페이지 기본값
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/images/twins/og-twins.jpg
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      lang: ko
 
 # 빌드 설정
 markdown: kramdown

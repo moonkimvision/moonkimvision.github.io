@@ -2,8 +2,9 @@
 layout: default
 ---
 <div class="page-wrapper">
-  <article class="page">
+  <article class="page paper">
     <header class="page-header">
+      {%- if page.eyebrow %}<p class="eyebrow">{{ page.eyebrow }}</p>{% endif %}
       <h1>{{ page.title }}</h1>
       {%- if page.date -%}
         <p class="page-meta">최종 업데이트: {{ page.date | date: "%Y년 %m월 %d일" }}</p>

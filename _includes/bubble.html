@@ -1,0 +1,7 @@
+{%- comment -%}
+  쌍둥이 말풍선 한 줄. 마크다운 안에서는 <div class="chat"> ... </div> 로 감싸 여러 줄을 쓴다.
+  사용: include bubble.html who="sister" text="한국어만"
+        include bubble.html who="brother" ko="한국어" en="English"
+{%- endcomment -%}
+{%- assign tw = site.data.twins[include.who] -%}
+<div class="chat-row chat-{{ include.who }}"><img class="chat-avatar" src="{{ tw.images.face | relative_url }}" alt="" width="48" height="48"><div class="chat-bubble">{% if include.en %}<span class="chat-name"><span class="lang-ko">{{ tw.name_ko }}</span><span class="lang-en">{{ tw.name_en }}</span></span><span class="lang-ko">{{ include.ko }}</span><span class="lang-en">{{ include.en }}</span>{% else %}<span class="chat-name">{{ tw.name_ko }}</span>{{ include.text | default: include.ko }}{% endif %}</div></div>

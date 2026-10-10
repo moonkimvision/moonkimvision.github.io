@@ -1,20 +1,48 @@
 ---
 layout: default
 ---
+{%- assign post_app = nil -%}
+{%- if page.app -%}{%- assign post_app = site.data.apps | where: "id", page.app | first -%}{%- endif -%}
 <article class="post">
-  <header class="post-header">
-    <h1>{{ page.title }}</h1>
-    <p class="post-meta">
-      {{ page.date | date: "%Y년 %m월 %d일" }}
-      {%- if page.tags.size > 0 -%}
-        &nbsp;·&nbsp;
-        {%- for tag in page.tags -%}
-          <span class="tag">{{ tag }}</span>
-        {%- endfor -%}
-      {%- endif -%}
-    </p>
+  <header class="post-hero"{% if post_app %} style="--app-color: {{ post_app.color }}"{% endif %}>
+    <div class="container post-hero-inner">
+      <a class="back-link" href="{{ '/posts/' | relative_url }}">← 블로그</a>
+      {%- if page.tags.size > 0 %}
+      <p class="post-tags">
+        {%- for tag in page.tags -%}<span class="tag">{{ tag }}</span>{%- endfor -%}
+      </p>
+      {%- endif %}
+      <h1>{{ page.title }}</h1>
+      {%- if page.subtitle %}<p class="post-subtitle">{{ page.subtitle }}</p>{% endif %}
+      <p class="post-meta">
+        <span class="post-hosts" aria-hidden="true">
+          <img src="{{ '/assets/images/twins/sister-face.png' | relative_url }}" alt="" width="28" height="28">
+          <img src="{{ '/assets/images/twins/brother-face.png' | relative_url }}" alt="" width="28" height="28">
+        </span>
+        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y년 %m월 %d일" }}</time>
+      </p>
+    </div>
   </header>
-  <div class="post-content">
-    {{ content }}
+
+  <div class="post-body paper">
+    <div class="post-content">
+      {{ content }}
+    </div>
   </div>
+
+  {%- if post_app %}
+  <section class="post-app container">
+    <h2 class="section-kicker">이 글에 나온 앱</h2>
+    {% include app-card.html app=post_app compact=true %}
+  </section>
+  {%- endif %}
+
+  <nav class="post-nav container" aria-label="이전·다음 글">
+    {%- if page.previous %}
+    <a class="post-nav-link" href="{{ page.previous.url | relative_url }}"><span>← 이전 글</span>{{ page.previous.title }}</a>
+    {%- else %}<span></span>{%- endif %}
+    {%- if page.next %}
+    <a class="post-nav-link next" href="{{ page.next.url | relative_url }}"><span>다음 글 →</span>{{ page.next.title }}</a>
+    {%- endif %}
+  </nav>
 </article>

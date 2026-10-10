@@ -1,14 +1,24 @@
 <footer class="site-footer">
+  <div class="footer-peek" aria-hidden="true">
+    <img class="peek peek-sister" src="{{ '/assets/images/twins/sister-34.png' | relative_url }}" alt="" loading="lazy">
+    <img class="peek peek-brother" src="{{ '/assets/images/twins/brother-34.png' | relative_url }}" alt="" loading="lazy">
+  </div>
   <div class="container">
     <div class="footer-grid">
       <div class="footer-col">
         <p class="footer-brand">{{ site.company.name }}</p>
-        <p>대표자: {{ site.company.representative }}</p>
-        <p>사업자등록번호: {{ site.company.registration }}</p>
+        <p><span class="lang-ko">대표자</span><span class="lang-en">Representative</span>: {{ site.company.representative }}</p>
+        <p><span class="lang-ko">사업자등록번호</span><span class="lang-en">Business Reg. No.</span>: {{ site.company.registration }}</p>
       </div>
       <div class="footer-col">
         <p>{{ site.company.address }}</p>
         <p><a href="mailto:{{ site.company.email }}">{{ site.company.email }}</a></p>
+      </div>
+      <div class="footer-col footer-links">
+        <a href="{{ '/twins/' | relative_url }}"><span class="lang-ko">쌍둥이 소개</span><span class="lang-en">Meet the twins</span></a>
+        <a href="{{ '/apps/' | relative_url }}"><span class="lang-ko">앱</span><span class="lang-en">Apps</span></a>
+        <a href="{{ '/privacy/' | relative_url }}"><span class="lang-ko">개인정보처리방침</span><span class="lang-en">Privacy policies</span></a>
+        <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
       </div>
     </div>
     <div class="footer-bottom">
@@ -16,3 +26,41 @@
     </div>
   </div>
 </footer>
+<script>
+(function () {
+  function setLang(lang) {
+    var root = document.documentElement;
+    root.setAttribute('data-lang', lang);
+    root.setAttribute('lang', lang);
+    try { localStorage.setItem('site-lang', lang); } catch (e) {}
+    document.querySelectorAll('[data-set-lang]').forEach(function (b) {
+      var on = b.getAttribute('data-set-lang') === lang;
+      b.classList.toggle('active', on);
+      b.setAttribute('aria-pressed', String(on));
+    });
+  }
+  document.querySelectorAll('[data-set-lang]').forEach(function (b) {
+    b.addEventListener('click', function () { setLang(b.getAttribute('data-set-lang')); });
+  });
+  if (!document.documentElement.hasAttribute('data-lang-fixed')) {
+    setLang(document.documentElement.getAttribute('data-lang') || 'ko');
+  }
+  window.setLang = setLang;
+
+  // 캐릭터를 누르면 대사가 바뀐다: <button data-lines-ko="a|b" data-lines-en="a|b" data-bubble="#id">
+  document.querySelectorAll('[data-lines-ko]').forEach(function (el) {
+    var i = 0;
+    var bubble = document.querySelector(el.getAttribute('data-bubble'));
+    if (!bubble) return;
+    el.addEventListener('click', function () {
+      var ko = el.getAttribute('data-lines-ko').split('|');
+      var en = (el.getAttribute('data-lines-en') || '').split('|');
+      i = (i + 1) % ko.length;
+      var k = bubble.querySelector('.lang-ko'), e = bubble.querySelector('.lang-en');
+      if (k) k.textContent = ko[i];
+      if (e) e.textContent = en[i] || ko[i];
+      bubble.classList.remove('pop'); void bubble.offsetWidth; bubble.classList.add('pop');
+    });
+  });
+})();
+</script>

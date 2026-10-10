@@ -1,0 +1,14 @@
+{%- comment -%} 쌍둥이 카드. 사용: include twin-card.html id="sister" {%- endcomment -%}
+{%- assign c = site.data.twins[include.id] -%}
+<a class="twin-card twin-card-{{ c.id }}" href="{{ c.url | relative_url }}">
+  <span class="twin-card-art">
+    <img src="{{ c.images.three_quarter | relative_url }}" alt="{{ c.name_ko }} / {{ c.name_en }}" loading="lazy">
+  </span>
+  <span class="twin-card-body">
+    <span class="twin-card-badge"><span class="lang-ko">{{ c.badge_ko }}</span><span class="lang-en">{{ c.badge_en }}</span></span>
+    <span class="twin-card-name"><span class="lang-ko">{{ c.name_ko }}</span><span class="lang-en">{{ c.name_en }}</span></span>
+    <span class="twin-card-role"><span class="lang-ko">{{ c.role_ko }}</span><span class="lang-en">{{ c.role_en }}</span></span>
+    <span class="twin-card-line"><span class="lang-ko">{{ c.oneliner_ko }}</span><span class="lang-en">{{ c.oneliner_en }}</span></span>
+    <span class="twin-card-more"><span class="lang-ko">프로필 보기 →</span><span class="lang-en">See profile →</span></span>
+  </span>
+</a>

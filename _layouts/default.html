@@ -1,9 +1,11 @@
+{%- assign doc_lang = page.lang | default: site.lang | default: 'ko' -%}
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: 'ko' }}">
+<html lang="{{ doc_lang }}" data-lang="{{ doc_lang }}"{% unless page.bilingual or layout.bilingual %} data-lang-fixed{% endunless %}>
   {%- include head.html -%}
-  <body>
+  <body class="layout-{{ page.layout | default: 'default' }}">
+    <a class="skip-link" href="#main"><span class="lang-ko">본문 바로가기</span><span class="lang-en">Skip to content</span></a>
     {%- include header.html -%}
-    <main>
+    <main id="main">
       {{ content }}
     </main>
     {%- include footer.html -%}
