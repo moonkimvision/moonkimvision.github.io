@@ -15,7 +15,10 @@ company:
   email: moonkimvision@gmail.com
   registration: "407-64-00770"
 
-# 검색엔진 sameAs (jekyll-seo-tag)
+# 검색엔진·링크 미리보기 (jekyll-seo-tag)
+logo: /assets/images/twins/apple-touch-icon.png
+twitter:
+  card: summary_large_image
 social:
   name: moonkimvision
   links:   # _data/sns.yml 과 같은 주소
