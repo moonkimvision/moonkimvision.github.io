@@ -12,13 +12,13 @@ bilingual: true
     <div class="profile-figure">
       <div class="turnaround" data-turnaround>
         <img class="pose is-on" data-pose="front" src="{{ c.images.front | relative_url }}" alt="{{ c.name_ko }} 정면 / {{ c.name_en }} front view">
-        <img class="pose" data-pose="three_quarter" src="{{ c.images.three_quarter | relative_url }}" alt="{{ c.name_ko }} 3/4 / {{ c.name_en }} three-quarter view" loading="lazy">
-        <img class="pose" data-pose="side" src="{{ c.images.side | relative_url }}" alt="{{ c.name_ko }} 옆모습 / {{ c.name_en }} side view" loading="lazy">
+        <img class="pose" aria-hidden="true" data-pose="three_quarter" src="{{ c.images.three_quarter | relative_url }}" alt="{{ c.name_ko }} 3/4 / {{ c.name_en }} three-quarter view" loading="lazy">
+        <img class="pose" aria-hidden="true" data-pose="side" src="{{ c.images.side | relative_url }}" alt="{{ c.name_ko }} 옆모습 / {{ c.name_en }} side view" loading="lazy">
       </div>
       <div class="pose-tabs" role="group" aria-label="View">
-        <button type="button" class="is-on" data-pose-btn="front"><span class="lang-ko">정면</span><span class="lang-en">Front</span></button>
-        <button type="button" data-pose-btn="three_quarter">3/4</button>
-        <button type="button" data-pose-btn="side"><span class="lang-ko">옆</span><span class="lang-en">Side</span></button>
+        <button type="button" class="is-on" aria-pressed="true" data-pose-btn="front"><span class="lang-ko">정면</span><span class="lang-en">Front</span></button>
+        <button type="button" aria-pressed="false" data-pose-btn="three_quarter">3/4</button>
+        <button type="button" aria-pressed="false" data-pose-btn="side"><span class="lang-ko">옆</span><span class="lang-en">Side</span></button>
       </div>
     </div>
     <div class="profile-intro">
@@ -89,18 +89,3 @@ bilingual: true
     </a>
   </div>
 </section>
-
-<script>
-(function () {
-  var box = document.querySelector('[data-turnaround]');
-  if (!box) return;
-  var btns = document.querySelectorAll('[data-pose-btn]');
-  btns.forEach(function (b) {
-    b.addEventListener('click', function () {
-      var k = b.getAttribute('data-pose-btn');
-      box.querySelectorAll('.pose').forEach(function (p) { p.classList.toggle('is-on', p.getAttribute('data-pose') === k); });
-      btns.forEach(function (x) { x.classList.toggle('is-on', x === b); });
-    });
-  });
-})();
-</script>

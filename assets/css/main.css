@@ -207,6 +207,7 @@ html[data-lang="en"] .lang-ko-el { display: none !important; }
   content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--orange);
   margin-left: 44px;
 }
+.ticker:hover .ticker-track { animation-play-state: paused; }
 @keyframes ticker { to { transform: translateX(-50%); } }
 
 /* ── Twin cards ──────────────────────────────────────────── */

@@ -13,12 +13,14 @@
       l = (navigator.language || '').toLowerCase().indexOf('ko') === 0 ? 'ko' : 'en';
     }
     document.documentElement.setAttribute('data-lang', l);
+    document.documentElement.setAttribute('lang', l);
   })();
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;700;900&display=swap">
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <script src="{{ '/assets/js/site.js' | relative_url }}" defer></script>
   <link rel="icon" type="image/png" sizes="64x64" href="{{ '/assets/images/twins/favicon.png' | relative_url }}">
   <link rel="apple-touch-icon" href="{{ '/assets/images/twins/apple-touch-icon.png' | relative_url }}">
   {% seo %}
