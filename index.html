@@ -1,0 +1,134 @@
+---
+layout: home
+title: moonkimvision
+description: 무표정 쌍둥이 남매가 안내하는 moonkimvision의 앱과 이야기. AppRoutine, Crop Video Recorder.
+image: /assets/images/twins/og-twins.jpg
+---
+{%- assign s = site.data.twins.sister -%}
+{%- assign b = site.data.twins.brother -%}
+
+<section class="hero">
+  <div class="stamp-drift" aria-hidden="true"></div>
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow">moonkimvision · <span class="lang-ko">모바일 앱 스튜디오</span><span class="lang-en">Mobile app studio</span></p>
+      <h1 class="hero-title">
+        <span class="lang-ko">무표정 쌍둥이가<br><mark>앱</mark>을 소개합니다.</span>
+        <span class="lang-en">Two deadpan twins<br>present our <mark>apps</mark>.</span>
+      </h1>
+      <p class="hero-lead">
+        <span class="lang-ko">몇 분 차이로 태어난 이란성 쌍둥이 남매. 말 많은 누나와 한마디뿐인 동생이 moonkimvision의 앱과 이야기를 안내해요.</span>
+        <span class="lang-en">Fraternal twins born minutes apart. A sister who never stops talking and a brother who says one word at a time — your guides to moonkimvision's apps.</span>
+      </p>
+      <div class="hero-cta">
+        <a href="{{ '/twins/' | relative_url }}" class="btn btn-orange"><span class="lang-ko">쌍둥이 만나기</span><span class="lang-en">Meet the twins</span></a>
+        <a href="{{ '/apps/' | relative_url }}" class="btn btn-line"><span class="lang-ko">앱 둘러보기</span><span class="lang-en">See the apps</span></a>
+      </div>
+    </div>
+
+    <div class="hero-stage">
+      <p class="bubble bubble-left" id="bubble-sister" aria-live="polite"><span class="lang-ko">야.</span><span class="lang-en">Hey.</span></p>
+      <p class="bubble bubble-right" id="bubble-brother" aria-live="polite"><span class="lang-ko">…왜.</span><span class="lang-en">…What.</span></p>
+      <button type="button" class="hero-twin hero-sister" data-bubble="#bubble-sister"
+        data-lines-ko="야.|네가 먹었지?|다시.|아 잠깐, 있잖아—|이거 봐.|안 줘."
+        data-lines-en="Hey.|You ate it, didn't you?|Again.|Wait, wait, listen—|Look at this.|Not sharing.">
+        <img src="{{ s.images.front | relative_url }}" alt="{{ s.name_ko }} / {{ s.name_en }}" width="390" height="1100">
+        <span class="sr-only"><span class="lang-ko">누나에게 말 걸기</span><span class="lang-en">Poke the sister</span></span>
+      </button>
+      <button type="button" class="hero-twin hero-brother" data-bubble="#bubble-brother"
+        data-lines-ko="…왜.|아니?|…찍었어.|…몰라.|…잘 나왔지?|…적네."
+        data-lines-en="…What.|No?|…Took it.|…Dunno.|…Came out good, right?|…That's not many.">
+        <img src="{{ b.images.front | relative_url }}" alt="{{ b.name_ko }} / {{ b.name_en }}" width="447" height="1100">
+        <span class="sr-only"><span class="lang-ko">동생에게 말 걸기</span><span class="lang-en">Poke the brother</span></span>
+      </button>
+      <p class="stage-hint"><span class="lang-ko">캐릭터를 눌러 보세요</span><span class="lang-en">Tap a twin</span></p>
+    </div>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    {%- for round in (1..2) %}
+    <span>야.</span><span>왜.</span><span>네가 먹었지?</span><span>아니?</span><span>어쩔 건데?</span><span>어쩌라고.</span><span>다시.</span><span>…찍었어.</span><span>맛있냐?</span><span>안 줘.</span><span>…적네.</span>
+    {%- endfor %}
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow"><span class="lang-ko">등장인물</span><span class="lang-en">Characters</span></p>
+      <h2 class="section-title"><span class="lang-ko">같은 날, 몇 분 차이.</span><span class="lang-en">Same day, minutes apart.</span></h2>
+      <p class="section-lead"><span class="lang-ko">흑백 세계에 사는 이란성 쌍둥이. 둘이 가진 색은 손목의 주황 밴드 하나뿐이에요.</span><span class="lang-en">Fraternal twins living in a black-and-white world. The only color they own is an orange wristband.</span></p>
+    </header>
+    <div class="twin-grid">
+      {% include twin-card.html id="sister" %}
+      {% include twin-card.html id="brother" %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-ink">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow"><span class="lang-ko">쌍둥이 공식</span><span class="lang-en">The duo formula</span></p>
+      <h2 class="section-title"><span class="lang-ko">웃음은 정적에서 나온다.</span><span class="lang-en">The laugh lives in the silence.</span></h2>
+    </header>
+    <ol class="formula">
+      <li class="formula-step">
+        <span class="formula-num">1</span>
+        <h3><span class="lang-ko">누나의 쉼 없는 수다</span><span class="lang-en">Her nonstop monologue</span></h3>
+        <div class="chat chat-sm">
+          {% include bubble.html who="sister" ko="아 잠깐, 있잖아. 오늘 찍은 사진이 진짜, 이 눈, 이 눈이 말이야—" en="Wait, listen. The photo I took today, seriously, these eyes, these eyes—" %}
+        </div>
+      </li>
+      <li class="formula-step">
+        <span class="formula-num">2</span>
+        <h3><span class="lang-ko">동생의 느린 한마디</span><span class="lang-en">His slow one-liner</span></h3>
+        <div class="chat chat-sm">
+          {% include bubble.html who="brother" ko="…전면 카메라였어." en="…Front camera was on." %}
+        </div>
+      </li>
+      <li class="formula-step">
+        <span class="formula-num">3</span>
+        <h3><span class="lang-ko">정적</span><span class="lang-en">Silence</span></h3>
+        <p class="formula-silence">……</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow"><span class="lang-ko">앱</span><span class="lang-en">Apps</span></p>
+      <h2 class="section-title"><span class="lang-ko">쌍둥이가 매일 쓰는 앱</span><span class="lang-en">Apps the twins actually use</span></h2>
+    </header>
+    <div class="app-grid">
+      {%- for app in site.data.apps %}
+      {% include app-card.html app=app %}
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <header class="section-head section-head-row">
+      <div>
+        <p class="eyebrow"><span class="lang-ko">블로그</span><span class="lang-en">Blog</span></p>
+        <h2 class="section-title"><span class="lang-ko">최근 이야기</span><span class="lang-en">Latest posts</span></h2>
+      </div>
+      <a href="{{ '/posts/' | relative_url }}" class="link-more"><span class="lang-ko">모든 글 보기 →</span><span class="lang-en">All posts →</span></a>
+    </header>
+    {%- if site.posts.size > 0 %}
+    <div class="post-grid">
+      {%- for post in site.posts limit: 3 %}
+      {% include post-card.html post=post %}
+      {%- endfor %}
+    </div>
+    {%- else %}
+    <p class="empty-msg"><span class="lang-ko">아직 글이 없습니다.</span><span class="lang-en">No posts yet.</span></p>
+    {%- endif %}
+  </div>
+</section>
