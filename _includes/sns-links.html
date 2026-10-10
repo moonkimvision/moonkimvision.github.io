@@ -1,0 +1,22 @@
+{%- comment -%}
+  SNS 링크 (_data/sns.yml). 사용: include sns-links.html style="icons|buttons"
+  icons = 동그란 아이콘만 (푸터), buttons = 아이콘 + 이름 + 계정 (본문)
+{%- endcomment -%}
+<ul class="sns sns-{{ include.style | default: 'icons' }}">
+  {%- for s in site.data.sns %}
+  <li>
+    <a class="sns-link" href="{{ s.url }}" target="_blank" rel="noopener me" aria-label="{{ s.name }} {{ s.handle }}">
+      <svg class="sns-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        {%- case s.id -%}
+        {%- when 'youtube' -%}<path fill="currentColor" fill-rule="evenodd" d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15V9l5.2 3z"/>
+        {%- when 'instagram' -%}<rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor"/>
+        {%- when 'tiktok' -%}<path fill="currentColor" d="M16.5 3c.3 2.2 1.7 3.8 4 4v3c-1.5 0-2.9-.4-4-1.1V15a6 6 0 1 1-6-6h.5v3.1h-.5a3 3 0 1 0 3 3V3z"/>
+        {%- endcase -%}
+      </svg>
+      {%- if include.style == 'buttons' %}
+      <span class="sns-text"><strong>{{ s.name }}</strong><small>{{ s.handle }}</small></span>
+      {%- endif %}
+    </a>
+  </li>
+  {%- endfor %}
+</ul>

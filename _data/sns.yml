@@ -1,0 +1,15 @@
+# 쌍둥이 숏폼 SNS 채널. 푸터·홈·쌍둥이 페이지가 읽는다 (_includes/sns-links.html).
+# 검색엔진용 sameAs 는 _config.yml 의 social.links 에도 같은 주소를 둔다.
+
+- id: youtube
+  name: YouTube
+  url: https://www.youtube.com/@moonkimvision
+  handle: "@moonkimvision"
+- id: instagram
+  name: Instagram
+  url: https://www.instagram.com/moonkimvision/
+  handle: "@moonkimvision"
+- id: tiktok
+  name: TikTok
+  url: https://www.tiktok.com/@moonkimvision
+  handle: "@moonkimvision"

@@ -15,6 +15,14 @@ company:
   email: moonkimvision@gmail.com
   registration: "407-64-00770"
 
+# 검색엔진 sameAs (jekyll-seo-tag)
+social:
+  name: moonkimvision
+  links:   # _data/sns.yml 과 같은 주소
+    - https://www.youtube.com/@moonkimvision
+    - https://www.instagram.com/moonkimvision/
+    - https://www.tiktok.com/@moonkimvision
+
 # 페이지 기본값
 defaults:
   - scope:
