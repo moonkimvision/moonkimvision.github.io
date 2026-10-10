@@ -7,7 +7,6 @@ lang: ko
 app: crop-video-recorder
 tags: [CropVideoRecorder, 앱소개, 화면녹화]
 description: "Crop Video Recorder는 화면 위에 녹화 영역을 띄우고 그 안만 영상으로 남기는 안드로이드 화면 녹화 앱입니다. 녹화 중 영역 이동, 알림이 찍히지 않는 녹화를 쌍둥이와 함께 소개합니다."
-image: /assets/images/twins/og-twins.jpg
 ---
 
 <div class="chat">

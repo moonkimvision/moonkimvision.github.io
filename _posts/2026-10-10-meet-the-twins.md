@@ -6,7 +6,6 @@ date: 2026-10-10 09:00:00 +0900
 lang: ko
 tags: [공지, 쌍둥이]
 description: "moonkimvision 홈페이지가 새 단장했습니다. 말 많은 누나와 한마디뿐인 동생, 이란성 쌍둥이 남매가 앞으로 앱과 소식을 안내합니다."
-image: /assets/images/twins/og-twins.jpg
 ---
 
 <div class="chat">

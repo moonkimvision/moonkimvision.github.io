@@ -23,10 +23,10 @@ sister:
     a second later, and one like count can shake her day. But in the end she squares her
     shoulders and walks her own way. Talking nonstop with a perfectly blank face is her charm.
   images:
-    front: /assets/images/twins/sister-front.png
-    three_quarter: /assets/images/twins/sister-34.png
-    side: /assets/images/twins/sister-side.png
-    face: /assets/images/twins/sister-face.png
+    front: /assets/images/twins/sister-front.webp
+    three_quarter: /assets/images/twins/sister-34.webp
+    side: /assets/images/twins/sister-side.webp
+    face: /assets/images/twins/sister-face.webp
   profile:
     - label_ko: 호칭
       label_en: Called
@@ -108,10 +108,10 @@ brother:
     his sentences trail off — yet the one line he drops after her endless monologue always
     lands. He never gets angry. Caught on his phone, he doesn't deny it; he just blankly admits it.
   images:
-    front: /assets/images/twins/brother-front.png
-    three_quarter: /assets/images/twins/brother-34.png
-    side: /assets/images/twins/brother-side.png
-    face: /assets/images/twins/brother-face.png
+    front: /assets/images/twins/brother-front.webp
+    three_quarter: /assets/images/twins/brother-34.webp
+    side: /assets/images/twins/brother-side.webp
+    face: /assets/images/twins/brother-face.webp
   profile:
     - label_ko: 호칭
       label_en: Called

@@ -4,7 +4,6 @@ bilingual: true
 title: "쌍둥이 소개"
 permalink: /twins/
 description: 몇 분 차이로 태어난 이란성 쌍둥이 남매. 말 많은 누나와 한마디뿐인 동생의 프로필과 에피소드.
-image: /assets/images/twins/og-twins.jpg
 ---
 {%- assign s = site.data.twins.sister -%}
 {%- assign b = site.data.twins.brother -%}
@@ -13,7 +12,7 @@ image: /assets/images/twins/og-twins.jpg
   <div class="stamp-drift" aria-hidden="true"></div>
   <div class="container page-hero-inner">
     <figure class="polaroid">
-      <img src="{{ '/assets/images/twins/duo.jpg' | relative_url }}" alt="볼을 맞댄 쌍둥이 남매 / The twins, cheek to cheek" width="900" height="900">
+      <img src="{{ '/assets/images/twins/duo.webp' | relative_url }}" alt="볼을 맞댄 쌍둥이 남매 / The twins, cheek to cheek" width="900" height="900">
       <figcaption><span class="lang-ko">동생이 또 꼽사리 꼈다.</span><span class="lang-en">He photobombed. Again.</span></figcaption>
     </figure>
     <div>
@@ -92,7 +91,7 @@ image: /assets/images/twins/og-twins.jpg
       {%- assign stamp_en = "Smirk,Wink,Laugh,Bored,Side-eye,Tongue out" | split: "," -%}
       {%- for i in (1..6) %}
       <li class="stamp">
-        <img src="{{ '/assets/images/twins/stamp-' | append: i | append: '.png' | relative_url }}" alt="{{ stamp_ko[forloop.index0] }}" width="120" height="120" loading="lazy">
+        <img src="{{ '/assets/images/twins/stamp-' | append: i | append: '.webp' | relative_url }}" alt="{{ stamp_ko[forloop.index0] }}" width="120" height="120" loading="lazy">
         <span><span class="lang-ko">{{ stamp_ko[forloop.index0] }}</span><span class="lang-en">{{ stamp_en[forloop.index0] }}</span></span>
       </li>
       {%- endfor %}

@@ -7,7 +7,6 @@ lang: ko
 app: approutine
 tags: [AppRoutine, 앱소개, 스크린타임]
 description: "AppRoutine은 앱 사용 기록을 시간순 타임라인으로 보여주는 안드로이드 앱입니다. 타임라인, 런처, 통계, 앱 다이어트, 앱 알람 기능을 쌍둥이와 함께 소개합니다."
-image: /assets/images/twins/og-twins.jpg
 ---
 
 <div class="chat">
