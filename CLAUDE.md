@@ -22,17 +22,20 @@ Jekyll 기반 GitHub Pages 블로그.
 ├── _config.yml          # Jekyll 전역 설정
 ├── _data/
 │   ├── twins.yml        # 쌍둥이 캐릭터 프로필·능력치·에피소드
-│   └── apps.yml         # 앱 목록 (홈·앱 페이지·포스트 하단 카드가 읽음)
+│   ├── apps.yml         # 앱 목록 (홈·앱 페이지·포스트 하단 카드가 읽음)
+│   └── sns.yml          # 유튜브·인스타그램·틱톡 채널 (_config.yml social.links 와 같은 주소)
 ├── _posts/              # 블로그 포스트 (YYYY-MM-DD-slug.md)
 ├── privacy/             # 앱별 개인정보처리방침
 ├── twins/               # 쌍둥이 소개(/twins/) + 프로필(sister, brother)
 ├── apps/                # 앱 목록(/apps/)
+├── 404.html             # 없는 주소 안내 (쌍둥이)
 ├── _layouts/            # default · home · page · post · character · policy-bilingual
 ├── _includes/           # header · footer · bubble(말풍선) · app-card · twin-card · post-card
 ├── assets/
 │   ├── css/main.css     # 쌍둥이 테마 (크림 + 먹색 + 주황 한 점)
+│   ├── js/site.js       # 언어 토글·캐릭터 대사·포즈 전환 (언어 첫 적용만 head 인라인)
 │   └── images/
-│       ├── twins/       # 캐릭터 컷아웃·얼굴·스탬프·OG 이미지
+│       ├── twins/       # 캐릭터 WebP(컷아웃·얼굴·스탬프·푸터 빼꼼), OG jpg, 파비콘
 │       └── apps/        # 앱 아이콘
 ├── BACKLOG.md
 └── ralph-core/          # ralph 자동화 엔진 (submodule)
