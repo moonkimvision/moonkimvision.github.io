@@ -26,6 +26,9 @@ social:
     - https://www.instagram.com/moonkimvision/
     - https://www.tiktok.com/@moonkimvision
 
+# 방문자 통계 (쿠키 없음, 배포 환경에서만 집계) — 대시보드: https://moonkimvision.goatcounter.com
+goatcounter: moonkimvision
+
 # 페이지 기본값
 defaults:
   - scope:
