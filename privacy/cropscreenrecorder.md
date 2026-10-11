@@ -27,6 +27,9 @@ Crop Screen Recorder는 화면의 특정 영역(오버레이로 지정한 크롭
 **마이크 오디오 (RECORD_AUDIO)**  
 사용자가 음성 포함 녹화를 선택한 경우에만 마이크 입력을 녹화 영상에 포함합니다. 음성 데이터는 영상과 함께 기기 내부에만 저장되며, 별도로 전송·수집되지 않습니다.
 
+**기기 소리 (AudioPlaybackCapture, Android 10 이상)**  
+사용자가 "기기 소리" 녹음을 선택한 경우에만 녹화 중 기기에서 재생되는 소리를 녹화 영상에 포함합니다. 소리 녹음을 허용하지 않는 앱의 소리는 녹음되지 않습니다. 기기 소리는 영상과 함께 기기 내부에만 저장되며, 별도로 전송·수집되지 않습니다.
+
 **오버레이 창 표시 (SYSTEM_ALERT_WINDOW)**  
 크롭할 영역을 지정하고 드래그·크기 조절하기 위한 화면 오버레이를 표시하는 데 사용됩니다. 이 권한 자체는 개인 식별 정보를 수집하지 않습니다.
 
@@ -122,6 +125,9 @@ Recorded videos are **stored only on your device's local storage**. We do not tr
 
 **Microphone Audio (RECORD_AUDIO)**  
 If you choose to include audio while recording, microphone input is included in the recorded video. Audio data is stored locally with the video and is not separately transmitted or collected.
+
+**Device Audio (AudioPlaybackCapture, Android 10+)**  
+Only if you choose "Device audio," sound played on your device during recording is included in the recorded video. Apps that do not allow audio capture are not recorded. Device audio is stored locally with the video and is not separately transmitted or collected.
 
 **Overlay Window (SYSTEM_ALERT_WINDOW)**  
 Used to display the draggable, resizable overlay that lets you define the crop region. This permission itself does not collect any personally identifiable information.

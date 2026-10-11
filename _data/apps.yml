@@ -25,17 +25,17 @@
       en: …It's all on the timeline.
 
 - id: crop-video-recorder
-  name: Crop Video Recorder
-  name_ko: 크롭 비디오 레코더
+  name: Crop Screen Recorder
+  name_ko: 크롭 스크린 레코더
   icon: /assets/images/apps/crop-video-recorder-icon.png
-  color: "#5B4FDB"
+  color: "#141414"
   platform: Android
   tagline_ko: 필요한 부분만 잘라서 녹화
   tagline_en: Record only the part you need
-  summary_ko: 전체 화면을 녹화한 뒤 자르지 마세요. 처음부터 원하는 영역만 녹화합니다.
-  summary_en: Don't record the whole screen and crop it later. Record only what you need from the start.
-  features_ko: [영역만 녹화, 녹화 중 영역 이동, 알림 안 찍힘, 기기에만 저장]
-  features_en: [Area-only recording, Move while recording, No notifications in shot, Stays on device]
+  summary_ko: 전체 화면을 녹화한 뒤 자르지 마세요. 처음부터 원하는 영역만, 올릴 곳에 맞는 비율로 녹화하고 바로 공유합니다.
+  summary_en: Don't record the whole screen and crop it later. Record only what you need, in the ratio you'll post it, and share right away.
+  features_ko: [영역만 녹화, 녹화 중 영역 이동, 9:16·1:1 비율, 소리 녹음, GIF·자르기, 기기에만 저장]
+  features_en: [Area-only recording, Move while recording, 9:16 & 1:1 ratios, Sound recording, GIFs & trim, Stays on device]
   store: https://play.google.com/store/apps/details?id=com.moonkimvision.crop_screen_recorder
   privacy: /privacy/cropscreenrecorder/
   post: /posts/crop-video-recorder-intro/

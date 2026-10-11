@@ -28,7 +28,7 @@ moonkimvision 홈페이지가 새 단장을 했어요. 앞으로 앱 소개와 �
 ## 새 홈페이지에서 볼 수 있는 것
 
 - **[쌍둥이 소개](/twins/)** — 둘의 비교, 숏폼 에피소드, 누나 이모티콘
-- **[앱](/apps/)** — [AppRoutine](/posts/approutine-intro/)과 [Crop Video Recorder](/posts/crop-video-recorder-intro/) 소개
+- **[앱](/apps/)** — [AppRoutine](/posts/approutine-intro/)과 [Crop Screen Recorder](/posts/crop-video-recorder-intro/) 소개
 - **[개인정보처리방침](/privacy/)** — 앱별 정책 문서 (한국어 / English)
 
 홈 화면의 쌍둥이를 눌러 보면 대사가 바뀌어요. 별 기능은 아니지만, 누나가 하고 싶은 말이 많아서요.
