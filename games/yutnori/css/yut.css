@@ -28,3 +28,20 @@
 .chip.again{border-color:var(--gold-deep);background:rgba(217,182,106,.25)}
 .log-head{display:flex;justify-content:space-between;align-items:center}
 .linkbtn{background:none;border:none;color:var(--ink-soft);font-size:13px;text-decoration:underline;padding:0}
+
+
+/* 던지기 버튼: 한 번 더 */
+.throw-btn.again{
+  color:#2B150C;background:linear-gradient(100deg,#D59A1E,#FFE29A 40%,#F4C24A 60%,#D59A1E);background-size:220% 100%;
+  box-shadow:0 0 0 3px rgba(244,194,74,.35);animation:againBtn 1.3s ease-in-out infinite;
+}
+@keyframes againBtn{
+  0%,100%{background-position:0% 0;box-shadow:0 0 0 0 rgba(244,194,74,.6)}
+  50%{background-position:100% 0;box-shadow:0 0 0 8px rgba(244,194,74,0)}
+}
+@media (prefers-reduced-motion: reduce){
+  .stamp{animation:fadeonly 2s forwards}
+  .stamp.special{animation:fadeonly 3.4s forwards}
+  .stamp.special *,.throw-btn.again{animation:none !important}
+  .stamp.special .spark{opacity:1}
+}

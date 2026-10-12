@@ -3,7 +3,45 @@ body.is-fs{overflow:hidden}
 body.is-fs .app{max-width:none;height:100vh;height:100dvh;display:flex;flex-direction:column;padding-top:10px;padding-bottom:10px}
 body.is-fs header{flex:none}
 body.is-fs .main{flex:1;min-height:0}
-body.is-fs .board,body.is-fs.board-only .board{max-width:max(300px, min(100%, calc(100dvh - 150px)))}
+@media (min-height:521px){
+  body.is-fs .board,body.is-fs.board-only .board{max-width:max(300px, min(100%, calc(100dvh - 175px)))}
+}
+@media (min-width:761px) and (min-height:521px){
+  body.is-fs .main,body.is-fs.board-only .main{
+    grid-template-columns:minmax(260px,330px) minmax(0,1fr) minmax(280px,330px);
+    grid-template-rows:auto minmax(0,1fr);
+    grid-template-areas:"teams board goal" "teams board yut";
+    align-items:start;
+  }
+  body.is-fs .side{display:contents}
+  body.is-fs .side > .panel:first-child{grid-area:teams;align-self:start}
+  body.is-fs .goal-tray{grid-area:goal}
+  body.is-fs .yut-panel{grid-area:yut;grid-column:auto}
+  body.is-fs.board-only .goal-tray{grid-row:1 / -1}
+  body.is-fs .board-wrap{grid-area:board;order:0;align-self:stretch;align-items:center}
+  body.is-fs .yut-panel{align-self:stretch;min-height:0;overflow-y:auto;gap:10px}
+  body.is-fs .goal-tray .hint{display:none}
+  body.is-fs .sticks{height:clamp(96px,16dvh,190px)}
+  body.is-fs .stick{height:clamp(76px,12.5dvh,150px)}
+  body.is-fs .result{min-height:0}
+  body.is-fs .result .big{font-size:clamp(34px,5.5dvh,52px)}
+}
+@media (min-width:761px) and (min-height:521px) and (max-height:820px){
+  body.is-fs .yut-panel > div:last-child{display:none}
+}
+@media (min-width:761px) and (min-height:521px) and (max-width:1280px){
+  body.is-fs{--slot:34px}
+  body.is-fs .main,body.is-fs.board-only .main{grid-template-columns:minmax(220px,250px) minmax(0,1fr) minmax(220px,250px);gap:16px}
+  body.is-fs .team-row{grid-template-columns:64px 1fr;gap:6px;padding:7px 2px}
+  body.is-fs .team-name{font-size:14px}
+  body.is-fs .slots{gap:4px}
+  body.is-fs .goal-row{grid-template-columns:62px 1fr auto;gap:6px;padding:5px 2px}
+  body.is-fs .goal-label{font-size:13px}
+  body.is-fs .goal-tray .slot{width:28px;height:28px}
+  body.is-fs .goal-count{font-size:15px}
+  body.is-fs .react button{width:28px;height:26px;font-size:14px}
+  body.is-fs .panel{padding:10px}
+}
 
 /* ---------- Phone landscape ---------- */
 @media (orientation: landscape) and (max-height: 520px){
@@ -56,6 +94,9 @@ body.is-fs .board,body.is-fs.board-only .board{max-width:max(300px, min(100%, ca
   .yut-panel > div:last-child{display:none}
   .sp-sub{margin-top:8px;padding:6px 14px}
   .win-card{padding:18px 24px}
+  .awards li{font-size:13px;padding:5px 10px}
+  .react button{width:26px;height:24px;font-size:13px}
+  .stats{font-size:13px}
 }
 @media (orientation: landscape) and (max-height: 520px) and (max-width: 740px){
   :root{--slot:25px}

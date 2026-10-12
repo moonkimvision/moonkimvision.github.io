@@ -41,13 +41,27 @@ export function flip(first,slowIds){
   if(reduceMotion||!first) return;
   pieces.forEach(p=>{
     const a=first[p.id]; if(!a||!pieceEls[p.id].isConnected) return;
-    const tok=tokenOf(p.id),b=tok.getBoundingClientRect(); if(!b.width) return;
+    const tok=tokenOf(p.id);
+    tok.style.transition='none';tok.style.translate='';tok.style.transform='';
+    const b=tok.getBoundingClientRect(); if(!b.width) return;
     const dx=(a.left+a.width/2)-(b.left+b.width/2),dy=(a.top+a.height/2)-(b.top+b.height/2),s=a.width/b.width;
     if(Math.abs(dx)<1&&Math.abs(dy)<1&&Math.abs(s-1)<.02) return;
-    tok.style.transition='none';tok.style.transform='translate('+dx+'px,'+dy+'px) scale('+s+')';tok.getBoundingClientRect();
-    const dur=slowIds&&slowIds.has(p.id)?'.75s':'.32s';
-    requestAnimationFrame(()=>{tok.style.transition='transform '+dur+' cubic-bezier(.2,.8,.2,1)';tok.style.transform='';});
+    tok.style.translate=dx+'px '+dy+'px';tok.style.transform='scale('+s+')';tok.getBoundingClientRect();
+    const slow=slowIds&&slowIds.has(p.id);
+    const dur=slow?'.75s':'.26s',ease=slow?'cubic-bezier(.2,.8,.2,1)':'cubic-bezier(.3,1.35,.5,1)';
+    requestAnimationFrame(()=>{
+      tok.style.transition='translate '+dur+' '+ease+',transform '+dur+' '+ease+',scale .22s cubic-bezier(.3,1.7,.5,1)';
+      tok.style.translate='';tok.style.transform='';
+    });
   });
+}
+// 말 토큰에 한 번만 도는 애니메이션 클래스(land·hop·flinch·spin-home)를 붙인다
+export function playAnim(tok,cls,delay){
+  if(reduceMotion||!tok) return;
+  tok.classList.remove(cls);void tok.offsetWidth;
+  tok.style.animationDelay=(delay||0)+'s';tok.classList.add(cls);
+  const done=()=>{tok.classList.remove(cls);tok.style.animationDelay='';tok.removeEventListener('animationend',done);};
+  tok.addEventListener('animationend',done);
 }
 export function render(first,slowIds){
   for(let t=0;t<MAX_TEAMS;t++){

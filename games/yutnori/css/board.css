@@ -1,4 +1,4 @@
-/* 윷판(나무판·칸·출발 표시)과 말 */
+/* 윷판(나무판·칸·출발 표시)과 말, 말랑한 말 움직임 */
 /* ---------- Board ---------- */
 .board-wrap{display:flex;justify-content:center}
 .board{
@@ -76,4 +76,35 @@ body.board-only .board{max-width:max(300px, min(900px, calc(100vh - 170px)))}
   font-family:"Black Han Sans",sans-serif;font-size:max(11px,2.2cqw);
 }
 .ghost{position:fixed;left:0;top:0;pointer-events:none;z-index:1000}
-.ghost .token{position:absolute;transform:scale(1.1);box-shadow:0 3px 0 var(--lo),0 18px 24px rgba(0,0,0,.45)}
+
+
+/* ---------- 쫀득한 말 움직임 ----------
+   위치 이동은 translate, 말랑한 찌그러짐은 scale, 회전은 rotate 속성으로 나눠서 서로 섞여도 어긋나지 않게 해요. */
+.slot .piece .token,.board-layer .piece .token{transition:scale .22s cubic-bezier(.3,1.7,.5,1)}
+.slot .piece:hover .token,.board-layer .piece:hover .token{scale:1.08}
+.token.land{animation:jelly .66s cubic-bezier(.3,.7,.4,1) both}
+@keyframes jelly{
+  0%{scale:1.32 .68}20%{scale:.8 1.22}38%{scale:1.14 .88}56%{scale:.94 1.06}74%{scale:1.03 .98}100%{scale:1 1}
+}
+.token.hop{animation:hopJiggle .56s ease-out both}
+@keyframes hopJiggle{
+  0%{translate:0 0;scale:1 1}28%{translate:0 -30%;scale:.92 1.1}50%{translate:0 0;scale:1.18 .84}
+  68%{scale:.95 1.05}84%{scale:1.03 .98}100%{translate:0 0;scale:1 1}
+}
+.token.spin-home{animation:spinHome .8s cubic-bezier(.35,.6,.3,1) both}
+@keyframes spinHome{0%{rotate:0deg}100%{rotate:720deg}}
+.token.flinch{animation:flinch .7s ease-out}
+@keyframes flinch{
+  0%{translate:0 0;scale:1 1}15%{translate:0 8%;scale:.82 .82}35%{translate:0 -12%;scale:1.1 1.1}
+  55%{translate:-7% 0;scale:1 1}70%{translate:6% 0}85%{translate:-2% 0}100%{translate:0 0}
+}
+.ghost .token{position:absolute;left:0;top:0;box-shadow:0 3px 0 var(--lo),0 20px 26px rgba(0,0,0,.4);will-change:translate,transform}
+.ghost .token.pick{animation:pick .5s cubic-bezier(.3,.7,.4,1) both}
+@keyframes pick{0%{scale:1 1}22%{scale:1.38 .72}46%{scale:.86 1.22}68%{scale:1.07 .95}100%{scale:1 1}}
+.node.hot{animation:nodeWobble .5s ease-out}
+@keyframes nodeWobble{0%{transform:translate(-50%,-50%) scale(.9)}40%{transform:translate(-50%,-50%) scale(1.42,1.1)}70%{transform:translate(-50%,-50%) scale(1.18,1.32)}100%{transform:translate(-50%,-50%) scale(1.25)}}
+@media (prefers-reduced-motion: reduce){
+  .relief{animation:fadeonly 2.9s forwards}
+  .token.flinch,.token.land,.token.hop,.token.spin-home,.ghost .token.pick,.node.hot,.relief .rf-face{animation:none}
+}
+

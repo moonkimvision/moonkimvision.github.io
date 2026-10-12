@@ -1,0 +1,100 @@
+/* 사용법 안내(TV·스마트뷰·빔): 쌍둥이 대화 + 연결 방법 탭. 동작은 js/guide.js */
+dialog.guide{
+  border:none;padding:0;background:transparent;color:var(--ink);
+  width:min(760px,94vw);max-width:none;max-height:none;overflow:visible;
+}
+dialog.guide::backdrop{background:rgba(20,20,20,.55)}
+dialog.guide[open] .g-card{animation:gIn .35s cubic-bezier(.2,.9,.3,1.2) both}
+@keyframes gIn{0%{opacity:0;transform:translateY(24px) scale(.96)}100%{opacity:1;transform:none}}
+.g-card{
+  position:relative;max-height:min(92dvh,920px);overflow-y:auto;overscroll-behavior:contain;
+  background:var(--bg);border:2.5px solid var(--ink);border-radius:22px;box-shadow:8px 8px 0 var(--shade);
+  padding:0 clamp(16px,3vw,28px) 20px;
+}
+.g-card h2{font-family:"Black Han Sans","Apple SD Gothic Neo",sans-serif;font-weight:400;font-size:clamp(22px,3.4vw,30px);text-align:center;margin:4px 0 12px}
+.g-x{
+  position:sticky;top:12px;float:right;margin:12px -6px 0 0;z-index:5;width:38px;height:38px;border-radius:50%;
+  border:2px solid var(--ink);background:var(--panel);color:var(--ink);font-size:16px;box-shadow:2px 2px 0 var(--shade);
+}
+
+/* ---------- 장면: TV 뒤에서 빼꼼 + 휴대폰에서 쏘는 화면 ---------- */
+.g-scene{position:relative;height:226px;margin:0 auto;max-width:420px}
+.g-tv{
+  position:absolute;left:50%;bottom:26px;z-index:2;width:220px;height:124px;margin-left:-130px;
+  background:#141414;border-radius:10px;border:2.5px solid var(--ink);box-shadow:4px 4px 0 var(--orange);
+  display:grid;place-items:center;
+}
+.g-tv::after{content:"";position:absolute;left:50%;bottom:-24px;width:70px;height:20px;margin-left:-35px;border-radius:0 0 6px 6px;background:var(--ink)}
+.g-tv-board{
+  height:86%;aspect-ratio:1;border-radius:6%;
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='none' stroke='%23D9B66A' stroke-width='3'%3E%3Crect x='12' y='12' width='76' height='76'/%3E%3Cpath d='M12 12L88 88M88 12L12 88'/%3E%3C/g%3E%3Cg fill='%23FFF6E5'%3E%3Ccircle cx='12' cy='12' r='6'/%3E%3Ccircle cx='88' cy='12' r='6'/%3E%3Ccircle cx='12' cy='88' r='6'/%3E%3Ccircle cx='88' cy='88' r='6'/%3E%3Ccircle cx='50' cy='50' r='6'/%3E%3C/g%3E%3Ccircle cx='31' cy='31' r='7' fill='%23B8382D'/%3E%3Ccircle cx='88' cy='50' r='7' fill='%2334549F'/%3E%3C/svg%3E") center/100% no-repeat,
+    linear-gradient(160deg,#4B2A1B,#2B150C);
+}
+.g-peek{position:absolute;z-index:1;height:104px;width:auto;bottom:112px}
+.g-peek.sis{left:calc(50% - 128px);transform:scaleX(-1) rotate(-6deg)}
+.g-peek.bro{left:calc(50% + 4px);bottom:106px;transform:rotate(5deg)}
+.g-phone{
+  position:absolute;z-index:3;right:calc(50% - 205px);bottom:8px;width:92px;height:50px;
+  background:#141414;border:2.5px solid var(--ink);border-radius:10px;box-shadow:3px 3px 0 var(--orange);
+  display:grid;place-items:center;transform:rotate(-8deg);
+}
+.g-phone .g-tv-board{height:82%}
+.g-waves{position:absolute;z-index:3;right:calc(50% - 150px);bottom:48px;width:40px;height:40px}
+.g-waves i{position:absolute;inset:0;border:3px solid var(--orange);border-color:var(--orange) transparent transparent transparent;border-radius:50%;transform:rotate(-40deg);animation:gWave 1.6s ease-out infinite}
+.g-waves i:nth-child(2){inset:7px;animation-delay:.2s}
+.g-waves i:nth-child(3){inset:14px;animation-delay:.4s}
+@keyframes gWave{0%,100%{opacity:.25}50%{opacity:1}}
+
+/* ---------- 쌍둥이 대화 ---------- */
+.g-chat{display:flex;flex-direction:column;gap:8px;margin:6px 0 14px}
+.g-row{display:flex;align-items:flex-end;gap:8px}
+.g-row.bro{flex-direction:row-reverse}
+.g-ava{width:42px;height:42px;flex:none;border-radius:50%;border:2px solid var(--ink);background:#FFF6E5}
+.g-say{
+  margin:0;max-width:min(520px,82%);background:var(--panel);border:2px solid var(--ink);border-radius:16px 16px 16px 4px;
+  padding:6px 14px 8px;line-height:1.55;box-shadow:2px 2px 0 var(--shade);font-size:15px;
+}
+.g-row.bro .g-say{background:var(--bro-bubble);border-radius:16px 16px 4px 16px}
+.g-say b{display:block;font-size:12px;color:var(--ink-soft);font-weight:700}
+.g-row.bro .g-say b{text-align:right}
+
+/* ---------- 탭과 단계 ---------- */
+.g-tabs{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin:4px 0 14px}
+.g-tabs button{
+  border:2px solid var(--ink);background:var(--panel);color:var(--ink);border-radius:999px;
+  padding:6px 14px;font-size:15px;font-weight:700;box-shadow:2px 2px 0 var(--shade);
+}
+.g-tabs button[aria-selected="true"]{background:var(--orange);color:#141414}
+.g-panel{background:var(--panel);border:2px solid var(--ink);border-radius:16px;padding:12px clamp(12px,2.4vw,20px) 14px}
+.g-steps{list-style:none;counter-reset:g;margin:4px 0 0;padding:0;display:grid;gap:10px}
+.g-steps li{counter-increment:g;position:relative;padding-left:40px;line-height:1.6;font-size:16px}
+.g-steps li::before{
+  content:counter(g);position:absolute;left:0;top:-1px;width:28px;height:28px;border-radius:50%;
+  display:grid;place-items:center;background:var(--orange);color:#141414;border:2px solid var(--ink);
+  font-family:"Black Han Sans",sans-serif;font-size:15px;
+}
+.g-steps b{background:linear-gradient(transparent 62%,var(--orange-soft) 62%);font-weight:700}
+.g-tip{margin:12px 0 0;padding:9px 12px;border-radius:10px;background:var(--bg2);border-left:4px solid var(--orange);font-size:14px;line-height:1.6;color:var(--ink)}
+.g-tip b{font-weight:700}
+.g-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-top:16px}
+.g-share{margin:0;font-size:13px;color:var(--ink-soft)}
+.g-go{
+  margin-left:auto;padding:11px 26px;border-radius:999px;border:2px solid var(--ink);background:var(--btn);color:var(--btn-ink);
+  font-family:"Black Han Sans",sans-serif;font-size:19px;letter-spacing:.04em;box-shadow:3px 3px 0 var(--orange);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]) .g-steps b{background:linear-gradient(transparent 62%,rgba(245,124,0,.45) 62%)}
+}
+:root[data-theme="dark"] .g-steps b{background:linear-gradient(transparent 62%,rgba(245,124,0,.45) 62%)}
+@media (max-width:520px){
+  .g-scene{transform:scale(.8);transform-origin:50% 100%;height:226px;margin-top:-44px}
+  .g-steps li{font-size:15px}
+}
+@media (orientation: landscape) and (max-height: 520px){
+  .g-scene{display:none}
+  .g-card h2{margin-top:12px}
+}
+@media (prefers-reduced-motion: reduce){
+  dialog.guide[open] .g-card,.g-waves i{animation:none}
+}

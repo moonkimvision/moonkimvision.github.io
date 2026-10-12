@@ -1,10 +1,12 @@
-/* 색 토큰(라이트·다크), 기본 요소, 팀 색, 제목·툴바·버튼 */
+/* 색 토큰(라이트·다크), 기본 요소, 팀 색, 제목·툴바·버튼
+   쌍둥이 테마: 크림 종이 + 먹색 선 + 주황 한 점(쌍둥이 손목 밴드 색) — moonkimvision.com 과 같은 색 */
 :root{
   box-sizing:border-box;
   padding-top:env(safe-area-inset-top,0px);
   padding-bottom:env(safe-area-inset-bottom,0px);
-  --bg:#D3DED5; --bg2:#C3D2C7; --panel:#E7EEE8; --panel-line:#A9BDAF;
-  --ink:#1F2E28; --ink-soft:#50635A; --slot-line:#93A99B;
+  --bg:#FFF6E5; --bg2:#F8EAD0; --panel:#FFFFFF; --panel-line:#141414; --line-soft:#E2D6BF;
+  --ink:#141414; --ink-soft:#6B665D; --slot-line:#B9B5AE;
+  --orange:#F57C00; --orange-soft:#FFE0B2; --bro-bubble:#FFE3BF; --shade:#141414;
   --gold:#D9B66A; --gold-deep:#9C7A36;
   --t0-hi:#9DB5F0; --t0-mid:#34549F; --t0-lo:#172A5E;
   --t1-hi:#F6A898; --t1-mid:#B8382D; --t1-lo:#661711;
@@ -12,19 +14,19 @@
   --t3-hi:#FFF1A6; --t3-mid:#E0A21A; --t3-lo:#865505;
   --pz:8.4cqw;
   --slot:44px;
-  --btn:#1F2E28; --btn-ink:#F1F5F1;
+  --btn:#141414; --btn-ink:#FFF6E5;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --bg:#16201C; --bg2:#1C2823; --panel:#1F2B26; --panel-line:#34473E;
-    --ink:#E4ECE6; --ink-soft:#9BB0A5; --slot-line:#4A6056;
-    --btn:#E4ECE6; --btn-ink:#16201C;
+    --bg:#141414; --bg2:#1D1B18; --panel:#1F1D1A; --panel-line:#D9D0BF; --line-soft:#3A3631;
+    --ink:#FFF6E5; --ink-soft:#B9B5AE; --slot-line:#5B564E; --bro-bubble:#4A3520; --shade:#000;
+    --btn:#FFF6E5; --btn-ink:#141414;
   }
 }
 :root[data-theme="dark"]{
-  --bg:#16201C; --bg2:#1C2823; --panel:#1F2B26; --panel-line:#34473E;
-  --ink:#E4ECE6; --ink-soft:#9BB0A5; --slot-line:#4A6056;
-  --btn:#E4ECE6; --btn-ink:#16201C;
+  --bg:#141414; --bg2:#1D1B18; --panel:#1F1D1A; --panel-line:#D9D0BF; --line-soft:#3A3631;
+  --ink:#FFF6E5; --ink-soft:#B9B5AE; --slot-line:#5B564E; --bro-bubble:#4A3520; --shade:#000;
+  --btn:#FFF6E5; --btn-ink:#141414;
 }
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 *,*::before,*::after{box-sizing:inherit}
@@ -32,7 +34,7 @@ body{
   margin:0;min-height:100%;
   font-family:"Gowun Dodum","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
   color:var(--ink);
-  background:radial-gradient(ellipse at 50% -10%, var(--bg2), transparent 60%), var(--bg);
+  background:var(--bg);
   -webkit-font-smoothing:antialiased;overflow-x:hidden;
 }
 .app{max-width:1440px;margin:0 auto;padding:18px max(clamp(12px,3vw,32px),env(safe-area-inset-right,0px)) 36px max(clamp(12px,3vw,32px),env(safe-area-inset-left,0px))}
@@ -49,14 +51,19 @@ h1{
   font-family:"Black Han Sans","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
   font-weight:400;font-size:clamp(30px,5.2vw,60px);letter-spacing:.02em;line-height:1.1;margin:6px 0 4px;
 }
+h1 mark{background:linear-gradient(transparent 58%,var(--orange) 58%,var(--orange) 92%,transparent 92%);color:inherit;padding:0 2px}
 .toolbar{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:12px 0 20px}
 button{font:inherit;cursor:pointer}
 .tbtn{
-  border:1.5px solid var(--ink);background:transparent;color:var(--ink);
-  padding:7px 14px;border-radius:999px;font-size:15px;transition:background .15s,color .15s;
+  border:2px solid var(--ink);background:var(--panel);color:var(--ink);font-weight:700;
+  padding:6px 14px;border-radius:999px;font-size:15px;box-shadow:3px 3px 0 var(--shade);
+  transition:background .15s,color .15s,transform .12s,box-shadow .12s;
 }
-.tbtn:hover,.tbtn[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
-.tbtn:disabled{opacity:.35;cursor:default;background:transparent;color:var(--ink)}
+.tbtn:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--shade)}
+.tbtn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--shade)}
+.tbtn[aria-pressed="true"]{background:var(--orange);color:#141414}
+.tbtn:disabled{opacity:.35;cursor:default;background:var(--panel);color:var(--ink);transform:none;box-shadow:none}
 .tbtn.warn{border-color:#B8382D;color:#B8382D}
 .tbtn.warn:hover{background:#B8382D;color:#fff}
-button:focus-visible,input:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+button:focus-visible,input:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
+

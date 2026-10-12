@@ -1,4 +1,4 @@
-/* 연출: 큰 글자 스플래시, 파티클 캔버스, 토스트, 승리 카드 */
+/* 연출: 큰 글자 스플래시, 파티클 캔버스, 토스트, 승리 카드, 응원, 기록판 */
 /* ---------- Splash ---------- */
 .splash{position:fixed;inset:0;z-index:2500;display:grid;place-items:center;pointer-events:none;visibility:hidden;overflow:hidden}
 .splash.show{visibility:visible}
@@ -10,7 +10,7 @@
 .splash[data-kind="backdo"] .flash{background:radial-gradient(circle,rgba(40,20,60,.35),transparent 70%)}
 @keyframes flash{0%{opacity:1}100%{opacity:0}}
 .splash .rays{
-  position:absolute;width:150vmax;height:150vmax;left:50%;top:50%;margin:-75vmax 0 0 -75vmax;
+  position:absolute;width:150vmax;height:150vmax;left:50%;top:var(--sy,50%);margin:-75vmax 0 0 -75vmax;
   background:repeating-conic-gradient(from 0deg, var(--th) 0 6deg, transparent 6deg 18deg);
   -webkit-mask:radial-gradient(circle, #000 0, rgba(0,0,0,.6) 12%, transparent 45%);
           mask:radial-gradient(circle, #000 0, rgba(0,0,0,.6) 12%, transparent 45%);
@@ -18,7 +18,7 @@
 }
 .splash.show .rays{animation:rays 1.8s ease-out forwards}
 @keyframes rays{0%{opacity:0;transform:rotate(0) scale(.4)}15%{opacity:.8}70%{opacity:.55}100%{opacity:0;transform:rotate(60deg) scale(1.1)}}
-.splash .box{position:relative;text-align:center;padding:0 16px}
+.splash .box{position:absolute;left:50%;top:var(--sy,50%);transform:translate(-50%,-50%) scale(var(--ss,1));width:max-content;max-width:100vw;text-align:center;padding:0 16px}
 .sp-title{
   font-family:"Black Han Sans","Apple SD Gothic Neo",sans-serif;
   font-size:clamp(44px,min(15vw,30vh),190px);line-height:1;letter-spacing:.02em;
@@ -37,7 +37,7 @@
 .splash.show[data-kind="backdo"] .sp-title{animation-name:slideBack}
 .splash.show[data-kind="stack"] .sp-title{animation-name:hop}
 @keyframes slam{
-  0%{opacity:0;transform:scale(3.2)} 16%{opacity:1;transform:scale(.88)} 24%{transform:scale(1.08)} 32%{transform:scale(1)}
+  0%{opacity:0;transform:scale(3.2)} 9%{opacity:1;transform:scale(.88)} 17%{transform:scale(1.08)} 25%{transform:scale(1)}
   82%{opacity:1;transform:scale(1)} 100%{opacity:0;transform:scale(1.15)}
 }
 @keyframes slamTilt{
@@ -50,17 +50,19 @@
   28%{transform:translateX(0) skewX(0)} 82%{opacity:1;transform:translateX(0)} 100%{opacity:0;transform:translateX(-40vw)}
 }
 @keyframes hop{
-  0%{opacity:0;transform:translateY(40vh) scale(.6)} 16%{opacity:1;transform:translateY(-30px) scale(1.05)}
+  0%{opacity:0;transform:translateY(60px) scale(.6)} 16%{opacity:1;transform:translateY(-30px) scale(1.05)}
   24%{transform:translateY(0) scale(1,.9)} 30%{transform:translateY(-14px) scale(1)} 36%{transform:translateY(0)}
   82%{opacity:1;transform:translateY(0)} 100%{opacity:0;transform:translateY(-20px)}
 }
+.splash.quick.show .sp-title,.splash.quick.show .sp-sub{animation-duration:1.2s}
+.splash.quick.show .rays{animation-duration:1.15s}
 @keyframes subin{0%,14%{opacity:0;transform:translateY(20px)}26%{opacity:1;transform:translateY(0)}82%{opacity:1}100%{opacity:0}}
 #fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:2600}
 
 /* ---------- Toast & win ---------- */
 .toast{
   position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);opacity:0;pointer-events:none;
-  background:#2B150C;color:#FFF6DE;border:1.5px solid var(--gold);padding:10px 18px;border-radius:999px;font-size:16px;z-index:2000;
+  background:#141414;color:#FFF6E5;border:2px solid var(--orange);padding:10px 18px;border-radius:999px;font-size:16px;z-index:2000;
   transition:opacity .2s, transform .2s;max-width:90vw;text-align:center;
 }
 .toast.show{opacity:1;transform:translate(-50%,0)}
@@ -77,3 +79,27 @@
 .win-card .row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
 .win-card button{padding:10px 18px;border-radius:999px;border:1.5px solid var(--gold);background:transparent;color:#FFF6DE;font-size:15px}
 .win-card button.primary{background:var(--gold);color:#2B150C}
+
+
+.react{display:flex;gap:4px}
+.react button{border:1px solid var(--panel-line);background:transparent;border-radius:999px;width:32px;height:30px;font-size:16px;line-height:1;padding:0;transition:transform .1s}
+.react button:active{transform:scale(.85)}
+.floaty{position:fixed;z-index:2550;pointer-events:none;font-size:34px;will-change:transform,opacity;animation:floaty var(--dur,2.2s) ease-out forwards}
+@keyframes floaty{
+  0%{opacity:0;transform:translate(0,0) scale(.4)}
+  12%{opacity:1;transform:translate(calc(var(--dx)*.2),-40px) scale(1.15)}
+  100%{opacity:0;transform:translate(var(--dx),var(--dy)) scale(.9) rotate(var(--rot))}
+}
+.awards{list-style:none;padding:0;margin:0 0 18px;display:grid;gap:6px;text-align:left}
+.awards li{background:rgba(255,246,222,.08);border:1px solid rgba(217,182,106,.45);border-radius:10px;padding:7px 12px;font-size:15px}
+.awards b{color:var(--gold);margin-right:6px}
+.awards:empty{display:none}
+.stats-card{max-width:min(560px,94vw);max-height:92dvh;overflow:auto}
+.stats-scroll{overflow-x:auto;margin:6px 0 14px}
+.stats{border-collapse:collapse;width:100%;font-size:15px}
+.stats th,.stats td{padding:7px 10px;text-align:center;border-bottom:1px solid rgba(217,182,106,.3);white-space:nowrap}
+.stats th{color:var(--gold);font-weight:700}
+.stats td:first-child{text-align:left;font-weight:700;border-left:4px solid var(--tc)}
+.splash [data-team="y"],.splash[data-team="y"]{--tc:#E0A21A;--th:#FFE7A0;--tl:#6A3F1C}
+.splash[data-kind="yut"] .flash{background:radial-gradient(circle,rgba(255,225,140,.55),transparent 70%)}
+

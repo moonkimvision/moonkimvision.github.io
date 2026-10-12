@@ -7,8 +7,10 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="윷놀이 대항전">
-<meta name="theme-color" content="#2B150C">
-<title>문가네 남가네 윷놀이 대항전</title>
+<meta name="theme-color" content="#FFF6E5">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<title>윷놀이 대항전</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gowun+Dodum&display=swap" rel="stylesheet">
@@ -17,17 +19,22 @@
 <link rel="stylesheet" href="css/board.css">
 <link rel="stylesheet" href="css/yut.css">
 <link rel="stylesheet" href="css/effects.css">
+<link rel="stylesheet" href="css/labels.css">
+<link rel="stylesheet" href="css/twins.css">
+<link rel="stylesheet" href="css/guide.css">
 <link rel="stylesheet" href="css/responsive.css">
 <script type="module" src="js/main.js"></script>
 </head>
 <body>
 <div class="app">
   <header>
-    <h1>문가네 남가네 윷놀이 대항전</h1>
+    <h1><mark>윷놀이</mark> 대항전</h1>
     <div class="toolbar">
+      <button class="tbtn guide-btn" id="guideBtn" aria-haspopup="dialog">사용법</button>
       <button class="tbtn" id="fsBtn" aria-pressed="false">전체화면</button>
-      <button class="tbtn" id="modeBtn" aria-pressed="false">판만 보기</button>
+      <button class="tbtn" id="modeBtn" aria-pressed="false">윷 던지기 화면</button>
       <button class="tbtn" id="soundBtn" aria-pressed="true">소리 켜짐</button>
+      <button class="tbtn" id="statsBtn">기록판</button>
       <button class="tbtn" id="undoBtn" disabled>되돌리기</button>
       <button class="tbtn warn" id="resetBtn">새 게임</button>
     </div>
@@ -45,10 +52,16 @@
         <div id="teamRows"></div>
       </section>
       <section class="panel goal-tray" id="goalTray" aria-label="골인한 말">
-        <div class="panel-head"><h2>골인</h2></div>
+        <div class="panel-head"><h2>골인</h2><div class="react" aria-label="응원하기"><button data-r="clap" aria-label="박수">👏</button><button data-r="fire" aria-label="불꽃">🔥</button><button data-r="shock" aria-label="깜짝">😱</button><button data-r="laugh" aria-label="웃음">🤣</button></div></div>
         <div id="goalRows"></div>
-        <p class="hint">말을 칸에 놓으면 자동으로 자리를 잡아요. 같은 편 말은 업히고, 상대 말이 있는 칸에 놓으면 잡아서 대기 줄로 돌려보내요. 한 칸 뒤로 옮기면 빽도로 알려줘요. 들어온 말은 이 칸으로 끌어다 놓으세요.</p>
+        <p class="hint">말을 칸에 놓으면 자동으로 자리를 잡아요. 같은 편 말은 업히고, 상대 말이 있는 칸에 놓으면 잡아서 대기 줄로 돌려보내요. 도착한 칸에 도·개·걸·윷·모가 표시되고, 한 칸 뒤로 옮기면 빽도로 알려줘요. 들어온 말은 이 칸으로 끌어다 놓으세요.</p>
       </section>
+      <div class="twins" id="twins" aria-hidden="true">
+        <p class="tw-bubble tw-sis" id="twSis"></p>
+        <p class="tw-bubble tw-bro" id="twBro"></p>
+        <button class="tw-peek tw-sister" tabindex="-1"><img src="img/sister-peek.webp" alt="" width="208" height="264"></button>
+        <button class="tw-peek tw-brother" tabindex="-1"><img src="img/brother-peek.webp" alt="" width="232" height="264"></button>
+      </div>
     </aside>
 
     <div class="board-wrap">
@@ -90,11 +103,110 @@
   <div class="box"><div class="sp-title" id="spTitle"></div><div class="sp-sub" id="spSub"></div></div>
 </div>
 <canvas id="fx"></canvas>
+<div class="win" id="statsModal">
+  <div class="win-card stats-card">
+    <h3 style="font-size:clamp(26px,5vw,40px)">기록판</h3>
+    <div class="stats-scroll"><table class="stats" id="statsTable"></table></div>
+    <ul class="awards" id="liveAwards"></ul>
+    <div class="row"><button class="primary" id="statsClose">닫기</button></div>
+  </div>
+</div>
+<dialog class="guide" id="guide" aria-labelledby="guideTitle">
+  <div class="g-card">
+    <button class="g-x" id="guideX" aria-label="사용법 닫기">✕</button>
+    <div class="g-scene" aria-hidden="true">
+      <img class="g-peek sis" src="img/sister-peek.webp" alt="" width="208" height="264">
+      <img class="g-peek bro" src="img/brother-peek.webp" alt="" width="232" height="264">
+      <div class="g-tv"><div class="g-tv-board"></div></div>
+      <div class="g-waves"><i></i><i></i><i></i></div>
+      <div class="g-phone"><div class="g-tv-board"></div></div>
+    </div>
+    <h2 id="guideTitle">TV·빔에 띄우고 다 같이 하는 법</h2>
+      <div class="g-chat">
+        <div class="g-row"><img class="g-ava" src="img/sister-face.webp" alt="" width="128" height="128"><p class="g-say"><b>누나</b>TV에 판 크게 띄워 놓고 하면 진짜 명절 느낌 나. 아 잠깐, 리모컨 어디 갔지?</p></div>
+        <div class="g-row bro"><img class="g-ava" src="img/brother-face.webp" alt="" width="128" height="128"><p class="g-say"><b>동생</b>…휴대폰으로 하면 돼.</p></div>
+      </div>
+    <div class="g-tabs" role="tablist" aria-label="연결 방법">
+      <button role="tab" id="gt-sv" aria-controls="gp-sv" aria-selected="true">갤럭시 스마트뷰</button>
+      <button role="tab" id="gt-ip" aria-controls="gp-ip" aria-selected="false" tabindex="-1">아이폰</button>
+      <button role="tab" id="gt-bp" aria-controls="gp-bp" aria-selected="false" tabindex="-1">빔프로젝터·노트북</button>
+      <button role="tab" id="gt-play" aria-controls="gp-play" aria-selected="false" tabindex="-1">게임 진행</button>
+    </div>
+
+    <section class="g-panel" role="tabpanel" id="gp-sv" aria-labelledby="gt-sv">
+      <div class="g-chat">
+        <div class="g-row"><img class="g-ava" src="img/sister-face.webp" alt="" width="128" height="128"><p class="g-say"><b>누나</b>갤럭시면 스마트뷰. 손가락 두 번이면 끝이야. 진짜로. 아 잠깐, 세 번인가.</p></div>
+        <div class="g-row bro"><img class="g-ava" src="img/brother-face.webp" alt="" width="128" height="128"><p class="g-say"><b>동생</b>…와이파이 먼저.</p></div>
+      </div>
+      <ol class="g-steps">
+        <li>휴대폰과 TV를 <b>같은 와이파이</b>에 연결해요.</li>
+        <li>휴대폰 화면 맨 위에서 아래로 두 번 쓸어내려 빠른 설정을 열고 <b>Smart View</b>를 눌러요. 안 보이면 빠른 설정의 연필(편집) 버튼에서 추가할 수 있어요.</li>
+        <li>목록에서 우리 집 TV를 고르고, TV에 허용 창이 뜨면 리모컨으로 <b>허용</b>을 눌러요. (처음 한 번만 물어봐요)</li>
+        <li>휴대폰을 <b>가로로</b> 돌린 뒤 이 화면 위의 <b>전체화면</b>을 누르면 TV에 판이 꽉 차요.</li>
+        <li>말은 휴대폰에서 손가락으로 끌어 놓아요. 소리는 보통 TV 스피커로 나와요.</li>
+      </ol>
+      <p class="g-tip">LG·다른 회사 TV도 화면 공유(미라캐스트)를 지원하면 Smart View 목록에 떠요. TV가 안 보이면 TV를 껐다 켜고, 휴대폰 와이파이를 한 번 다시 연결해 보세요.</p>
+    </section>
+
+    <section class="g-panel" role="tabpanel" id="gp-ip" aria-labelledby="gt-ip" hidden>
+      <div class="g-chat">
+        <div class="g-row"><img class="g-ava" src="img/sister-face.webp" alt="" width="128" height="128"><p class="g-say"><b>누나</b>아이폰은 화면 미러링이야. 근데 TV가 에어플레이를 알아야 해. 우리 집 TV는… 아 잠깐, 모르겠다.</p></div>
+        <div class="g-row bro"><img class="g-ava" src="img/brother-face.webp" alt="" width="128" height="128"><p class="g-say"><b>동생</b>…TV 설정에 있어.</p></div>
+      </div>
+      <ol class="g-steps">
+        <li>아이폰과 TV(또는 Apple TV)를 <b>같은 와이파이</b>에 연결해요. TV 설정에서 <b>AirPlay</b>가 켜져 있어야 해요.</li>
+        <li>화면 오른쪽 위에서 아래로 쓸어내려 제어 센터를 열고 <b>화면 미러링</b>(겹친 네모 두 개)을 눌러요.</li>
+        <li>TV를 고르고, TV에 뜬 숫자 코드를 아이폰에 입력해요.</li>
+        <li>제어 센터에서 <b>세로 화면 고정</b>을 끄고 아이폰을 가로로 돌려요.</li>
+        <li>아이폰은 브라우저에서 전체화면이 안 돼요. 공유 버튼 → <b>홈 화면에 추가</b>로 아이콘을 만들고, 그 아이콘으로 열면 주소창 없이 꽉 차요.</li>
+      </ol>
+      <p class="g-tip">AirPlay가 없는 TV는 <b>라이트닝(또는 USB-C) → HDMI 어댑터</b>로 선을 연결하면 바로 나와요.</p>
+    </section>
+
+    <section class="g-panel" role="tabpanel" id="gp-bp" aria-labelledby="gt-bp" hidden>
+      <div class="g-chat">
+        <div class="g-row"><img class="g-ava" src="img/sister-face.webp" alt="" width="128" height="128"><p class="g-say"><b>누나</b>빔 쏘면 벽 전체가 윷판이야. 영화관 같지? 아 잠깐, 불은 다 끄지 마. 윷 안 보여.</p></div>
+        <div class="g-row bro"><img class="g-ava" src="img/brother-face.webp" alt="" width="128" height="128"><p class="g-say"><b>동생</b>…커튼만.</p></div>
+      </div>
+      <ol class="g-steps">
+        <li>노트북을 <b>HDMI 선</b>으로 빔프로젝터(또는 TV)에 연결해요. 휴대폰은 USB-C → HDMI 어댑터가 있으면 같은 방법으로 돼요.</li>
+        <li>윈도우는 <b>Win + P → 복제</b>, 맥은 디스플레이 설정에서 <b>미러링</b>을 골라요.</li>
+        <li>브라우저에서 이 게임을 열고 키보드 <b>F</b>(또는 위의 전체화면)를 눌러요.</li>
+        <li>말은 마우스로 끌어 놓아요. 무선 마우스 하나를 돌려 가며 쓰면 자리에서 일어날 필요가 없어요.</li>
+        <li>빔에 무선 미러링(스크린 미러링·미라캐스트)이 있으면 휴대폰 <b>스마트뷰</b>로 선 없이 연결돼요.</li>
+      </ol>
+      <p class="g-tip">밝은 방이면 커튼을 치고, 판이 작아 보이면 빔을 벽에서 조금 더 멀리 두세요. TV 화면 가장자리가 잘리면 TV 화면 크기 설정을 <b>화면 맞춤</b>으로 바꿔요.</p>
+    </section>
+
+    <section class="g-panel" role="tabpanel" id="gp-play" aria-labelledby="gt-play" hidden>
+      <div class="g-chat">
+        <div class="g-row"><img class="g-ava" src="img/sister-face.webp" alt="" width="128" height="128"><p class="g-say"><b>누나</b>윷은 진짜 윷으로 던져. 화면은 판이랑 점수만. 이게 제일 시끄럽고 재밌어.</p></div>
+        <div class="g-row bro"><img class="g-ava" src="img/brother-face.webp" alt="" width="128" height="128"><p class="g-say"><b>동생</b>…말은 폰으로 옮겨.</p></div>
+      </div>
+      <ol class="g-steps">
+        <li>팀 이름을 눌러 바꾸고(기본 문가네·남가네·김가네), 2팀·3팀·4팀을 골라요.</li>
+        <li><b>진짜 윷</b>을 던지고, 나온 만큼 말을 끌어서 칸에 놓아요. 판이 도·개·걸·윷·모를 알아서 표시해 줘요.</li>
+        <li>상대 말이 있는 칸에 놓으면 <b>잡기</b>, 우리 편 말이 있으면 <b>업기</b>, 한 칸 뒤로 놓으면 <b>빽도</b>예요.</li>
+        <li>판을 다 돈 말은 <b>골인</b> 칸으로 끌어다 놓아요. 네 개가 먼저 들어온 팀이 이겨요.</li>
+        <li>윷이 없으면 위의 <b>윷 던지기 화면</b>을 켜고 화면 속 윷을 던져요.</li>
+        <li>잘못 놓았으면 <b>되돌리기</b>. 판은 자동으로 저장돼서 닫았다 열어도 이어져요. 누가 많이 잡았는지는 <b>기록판</b>에서.</li>
+        <li>👏🔥😱🤣 응원 버튼을 누르면 TV 화면에 이모지가 터져요.</li>
+      </ol>
+      <p class="g-tip">게임 화면이 열려 있는 동안은 휴대폰 화면이 꺼지지 않게 해 둬요(지원하는 브라우저에서). 그래도 꺼지면 휴대폰의 화면 자동 꺼짐 시간을 늘려 주세요.</p>
+    </section>
+
+    <div class="g-foot">
+      <p class="g-share">이 안내 바로 열기: 주소 뒤에 <b>#guide</b></p>
+      <button class="g-go" id="guideGo">시작하기</button>
+    </div>
+  </div>
+</dialog>
 <div class="toast" id="toast" role="status"></div>
 <div class="win" id="win">
   <div class="win-card" id="winCard">
     <h3 id="winTitle"></h3>
     <p>말 네 개가 모두 들어왔어요</p>
+    <ul class="awards" id="awards"></ul>
     <div class="row">
       <button id="winClose">판 계속 보기</button>
       <button class="primary" id="winNew">새 게임 시작</button>
