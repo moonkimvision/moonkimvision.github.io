@@ -1,0 +1,79 @@
+/* 윷판(나무판·칸·출발 표시)과 말 */
+/* ---------- Board ---------- */
+.board-wrap{display:flex;justify-content:center}
+.board{
+  container-type:inline-size;position:relative;width:100%;
+  max-width:max(300px, min(720px, calc(100vh - 190px)));
+  aspect-ratio:1;border-radius:4.5%;
+  background:
+    radial-gradient(ellipse at 28% 18%, rgba(255,210,160,.18), transparent 55%),
+    repeating-linear-gradient(97deg, rgba(0,0,0,0) 0 7px, rgba(0,0,0,.07) 7px 9px, rgba(255,255,255,.02) 9px 15px),
+    linear-gradient(160deg,#4B2A1B,#2B150C 70%,#1F0E07);
+  box-shadow:
+    inset 0 0 0 1.4cqw #3A1E11, inset 0 0 0 1.8cqw var(--gold-deep), inset 0 0 0 2.1cqw #3A1E11,
+    inset 0 0 6cqw rgba(0,0,0,.55), 0 22px 40px -18px rgba(0,0,0,.6), 0 4px 0 #1A0B05;
+}
+body.board-only .board{max-width:max(300px, min(900px, calc(100vh - 170px)))}
+.board.shake{animation:shake .45s cubic-bezier(.36,.07,.19,.97)}
+@keyframes shake{
+  10%,90%{transform:translate(-2px,1px) rotate(-.3deg)}
+  20%,80%{transform:translate(5px,-2px) rotate(.4deg)}
+  30%,50%,70%{transform:translate(-9px,3px) rotate(-.6deg)}
+  40%,60%{transform:translate(9px,-3px) rotate(.6deg)}
+}
+.board svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.node{
+  position:absolute;width:4.6cqw;aspect-ratio:1;border-radius:50%;transform:translate(-50%,-50%);
+  background:conic-gradient(from 40deg,#F4F1FF,#CDEBE6,#F8E3EF,#DCEBFC,#F6EFD6,#E3F6EC,#F4F1FF);
+  box-shadow:0 0 0 .35cqw var(--gold),0 0 0 .6cqw #2B150C,0 .5cqw 1cqw rgba(0,0,0,.5),inset 0 -.4cqw .8cqw rgba(0,0,0,.18);
+  transition:transform .12s, box-shadow .12s;
+}
+.node.big{width:7.6cqw}
+.node::after{content:"";position:absolute;inset:18%;border-radius:50%;background:radial-gradient(circle at 35% 30%,rgba(255,255,255,.9),rgba(255,255,255,0) 60%)}
+.node.hot{transform:translate(-50%,-50%) scale(1.25);box-shadow:0 0 0 .5cqw #fff,0 0 0 1.1cqw var(--gold),0 0 3cqw rgba(255,230,160,.8)}
+.ring{
+  position:absolute;width:6cqw;aspect-ratio:1;border-radius:50%;transform:translate(-50%,-50%);
+  border:.6cqw solid var(--rc,#FFF6DE);pointer-events:none;z-index:40;
+  animation:ring .8s ease-out forwards;
+}
+@keyframes ring{0%{width:4cqw;opacity:1}100%{width:26cqw;opacity:0;border-width:.1cqw}}
+.start-label{
+  position:absolute;left:92%;top:92%;transform:translate(-50%,calc(-50% + 6.4cqw));
+  font-family:"Black Han Sans",sans-serif;font-size:2.6cqw;color:var(--gold);letter-spacing:.1em;pointer-events:none;
+}
+.board-layer{position:absolute;inset:0}
+.board-layer .piece{
+  position:absolute;width:var(--pz);height:var(--pz);
+  transform:translate(calc(-50% + var(--i,0) * 1.9cqw), calc(-50% - var(--i,0) * 1.9cqw));
+  z-index:calc(10 + var(--i,0));
+}
+
+/* ---------- Pieces ---------- */
+.piece{touch-action:none;cursor:grab;user-select:none;-webkit-user-select:none}
+.piece.lifted .token{opacity:.18}
+.token{
+  container-type:inline-size;width:100%;height:100%;border-radius:50%;position:relative;display:grid;place-items:center;
+  background:radial-gradient(circle at 34% 28%, var(--hi) 0, var(--mid) 45%, var(--lo) 100%);
+  border:2px solid var(--gold);
+  box-shadow:0 3px 0 var(--lo),0 5px 0 rgba(0,0,0,.25),0 8px 12px rgba(0,0,0,.35);
+}
+.token.t0{--hi:var(--t0-hi);--mid:var(--t0-mid);--lo:var(--t0-lo)}
+.token.t1{--hi:var(--t1-hi);--mid:var(--t1-mid);--lo:var(--t1-lo)}
+.token.t2{--hi:var(--t2-hi);--mid:var(--t2-mid);--lo:var(--t2-lo)}
+.token.t3{--hi:var(--t3-hi);--mid:var(--t3-mid);--lo:var(--t3-lo)}
+.token::before{content:"";position:absolute;inset:13%;border-radius:50%;border:1px solid rgba(255,240,200,.45)}
+.token::after{content:"";position:absolute;left:18%;top:10%;width:40%;height:26%;border-radius:50%;background:radial-gradient(ellipse,rgba(255,255,255,.55),rgba(255,255,255,0) 70%)}
+.token .mark{
+  font-family:"Black Han Sans","Apple SD Gothic Neo",sans-serif;font-size:48cqw;line-height:1;
+  color:#FFF6DE;text-shadow:0 1px 0 rgba(0,0,0,.45);position:relative;z-index:1;
+}
+.token.t3 .mark{color:#3A2406;text-shadow:0 1px 0 rgba(255,255,255,.45)}
+.token.t3::before{border-color:rgba(90,55,0,.4)}
+.piece[data-count]::after{
+  content:attr(data-count);position:absolute;right:-12%;top:-12%;z-index:2;
+  min-width:44%;height:44%;padding:0 4%;border-radius:999px;display:grid;place-items:center;
+  background:#FFF6DE;color:#2B150C;border:1.5px solid var(--gold-deep);
+  font-family:"Black Han Sans",sans-serif;font-size:max(11px,2.2cqw);
+}
+.ghost{position:fixed;left:0;top:0;pointer-events:none;z-index:1000}
+.ghost .token{position:absolute;transform:scale(1.1);box-shadow:0 3px 0 var(--lo),0 18px 24px rgba(0,0,0,.45)}

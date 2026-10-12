@@ -1,0 +1,62 @@
+/* 색 토큰(라이트·다크), 기본 요소, 팀 색, 제목·툴바·버튼 */
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#D3DED5; --bg2:#C3D2C7; --panel:#E7EEE8; --panel-line:#A9BDAF;
+  --ink:#1F2E28; --ink-soft:#50635A; --slot-line:#93A99B;
+  --gold:#D9B66A; --gold-deep:#9C7A36;
+  --t0-hi:#9DB5F0; --t0-mid:#34549F; --t0-lo:#172A5E;
+  --t1-hi:#F6A898; --t1-mid:#B8382D; --t1-lo:#661711;
+  --t2-hi:#A6E6BE; --t2-mid:#2E8A55; --t2-lo:#12472A;
+  --t3-hi:#FFF1A6; --t3-mid:#E0A21A; --t3-lo:#865505;
+  --pz:8.4cqw;
+  --slot:44px;
+  --btn:#1F2E28; --btn-ink:#F1F5F1;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#16201C; --bg2:#1C2823; --panel:#1F2B26; --panel-line:#34473E;
+    --ink:#E4ECE6; --ink-soft:#9BB0A5; --slot-line:#4A6056;
+    --btn:#E4ECE6; --btn-ink:#16201C;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#16201C; --bg2:#1C2823; --panel:#1F2B26; --panel-line:#34473E;
+  --ink:#E4ECE6; --ink-soft:#9BB0A5; --slot-line:#4A6056;
+  --btn:#E4ECE6; --btn-ink:#16201C;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{
+  margin:0;min-height:100%;
+  font-family:"Gowun Dodum","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  color:var(--ink);
+  background:radial-gradient(ellipse at 50% -10%, var(--bg2), transparent 60%), var(--bg);
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+.app{max-width:1440px;margin:0 auto;padding:18px max(clamp(12px,3vw,32px),env(safe-area-inset-right,0px)) 36px max(clamp(12px,3vw,32px),env(safe-area-inset-left,0px))}
+
+/* team color hooks */
+[data-team="0"]{--tc:var(--t0-mid);--th:var(--t0-hi);--tl:var(--t0-lo)}
+[data-team="1"]{--tc:var(--t1-mid);--th:var(--t1-hi);--tl:var(--t1-lo)}
+[data-team="2"]{--tc:var(--t2-mid);--th:var(--t2-hi);--tl:var(--t2-lo)}
+[data-team="3"]{--tc:var(--t3-mid);--th:var(--t3-hi);--tl:var(--t3-lo)}
+
+/* ---------- Title ---------- */
+header{text-align:center}
+h1{
+  font-family:"Black Han Sans","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  font-weight:400;font-size:clamp(30px,5.2vw,60px);letter-spacing:.02em;line-height:1.1;margin:6px 0 4px;
+}
+.toolbar{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:12px 0 20px}
+button{font:inherit;cursor:pointer}
+.tbtn{
+  border:1.5px solid var(--ink);background:transparent;color:var(--ink);
+  padding:7px 14px;border-radius:999px;font-size:15px;transition:background .15s,color .15s;
+}
+.tbtn:hover,.tbtn[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.tbtn:disabled{opacity:.35;cursor:default;background:transparent;color:var(--ink)}
+.tbtn.warn{border-color:#B8382D;color:#B8382D}
+.tbtn.warn:hover{background:#B8382D;color:#fff}
+button:focus-visible,input:focus-visible{outline:3px solid var(--gold);outline-offset:2px}

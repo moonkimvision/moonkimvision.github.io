@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="윷놀이 대항전">
+<meta name="theme-color" content="#2B150C">
+<title>문가네 남가네 윷놀이 대항전</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gowun+Dodum&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/board.css">
+<link rel="stylesheet" href="css/yut.css">
+<link rel="stylesheet" href="css/effects.css">
+<link rel="stylesheet" href="css/responsive.css">
+<script type="module" src="js/main.js"></script>
+</head>
+<body>
+<div class="app">
+  <header>
+    <h1>문가네 남가네 윷놀이 대항전</h1>
+    <div class="toolbar">
+      <button class="tbtn" id="fsBtn" aria-pressed="false">전체화면</button>
+      <button class="tbtn" id="modeBtn" aria-pressed="false">판만 보기</button>
+      <button class="tbtn" id="soundBtn" aria-pressed="true">소리 켜짐</button>
+      <button class="tbtn" id="undoBtn" disabled>되돌리기</button>
+      <button class="tbtn warn" id="resetBtn">새 게임</button>
+    </div>
+  </header>
+
+  <main class="main">
+    <aside class="side">
+      <section class="panel" aria-label="팀과 대기 중인 말">
+        <div class="panel-head">
+          <h2>팀과 대기 말</h2>
+          <div class="seg" id="teamSeg" role="group" aria-label="팀 수">
+            <button data-n="2">2팀</button><button data-n="3">3팀</button><button data-n="4">4팀</button>
+          </div>
+        </div>
+        <div id="teamRows"></div>
+      </section>
+      <section class="panel goal-tray" id="goalTray" aria-label="골인한 말">
+        <div class="panel-head"><h2>골인</h2></div>
+        <div id="goalRows"></div>
+        <p class="hint">말을 칸에 놓으면 자동으로 자리를 잡아요. 같은 편 말은 업히고, 상대 말이 있는 칸에 놓으면 잡아서 대기 줄로 돌려보내요. 한 칸 뒤로 옮기면 빽도로 알려줘요. 들어온 말은 이 칸으로 끌어다 놓으세요.</p>
+      </section>
+    </aside>
+
+    <div class="board-wrap">
+      <div class="board" id="board">
+        <svg viewBox="0 0 100 100" aria-hidden="true">
+          <g stroke="#D9B66A" stroke-width=".7" fill="none" stroke-linecap="round" opacity=".9">
+            <rect x="8" y="8" width="84" height="84"/>
+            <line x1="8" y1="8" x2="92" y2="92"/>
+            <line x1="92" y1="8" x2="8" y2="92"/>
+          </g>
+          <g stroke="#D9B66A" stroke-width=".25" fill="none" opacity=".35">
+            <rect x="5.4" y="5.4" width="89.2" height="89.2" rx="2"/>
+          </g>
+        </svg>
+        <div id="nodeLayer"></div>
+        <div class="start-label">출발</div>
+        <div class="board-layer" id="boardLayer"></div>
+      </div>
+    </div>
+
+    <section class="panel yut-panel" aria-label="윷 던지기">
+      <div class="sticks" id="sticks"></div>
+      <button class="throw-btn" id="throwBtn">윷 던지기</button>
+      <div class="result" id="result" aria-live="polite">
+        <div class="big">&nbsp;</div>
+        <div class="sub">버튼을 눌러 윷을 던지세요</div>
+      </div>
+      <div>
+        <div class="log-head"><h2>최근 기록</h2><button class="linkbtn" id="clearLog">기록 지우기</button></div>
+        <div class="log" id="log"></div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<div class="splash" id="splash" aria-live="assertive">
+  <div class="flash"></div>
+  <div class="rays"></div>
+  <div class="box"><div class="sp-title" id="spTitle"></div><div class="sp-sub" id="spSub"></div></div>
+</div>
+<canvas id="fx"></canvas>
+<div class="toast" id="toast" role="status"></div>
+<div class="win" id="win">
+  <div class="win-card" id="winCard">
+    <h3 id="winTitle"></h3>
+    <p>말 네 개가 모두 들어왔어요</p>
+    <div class="row">
+      <button id="winClose">판 계속 보기</button>
+      <button class="primary" id="winNew">새 게임 시작</button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

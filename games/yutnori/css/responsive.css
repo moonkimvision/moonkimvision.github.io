@@ -1,0 +1,74 @@
+/* 전체화면, 휴대폰 가로, 동작 줄이기 */
+body.is-fs{overflow:hidden}
+body.is-fs .app{max-width:none;height:100vh;height:100dvh;display:flex;flex-direction:column;padding-top:10px;padding-bottom:10px}
+body.is-fs header{flex:none}
+body.is-fs .main{flex:1;min-height:0}
+body.is-fs .board,body.is-fs.board-only .board{max-width:max(300px, min(100%, calc(100dvh - 150px)))}
+
+/* ---------- Phone landscape ---------- */
+@media (orientation: landscape) and (max-height: 520px){
+  :root{--slot:30px}
+  html,body{height:100%}
+  body{overflow:hidden}
+  .app{height:100%;display:flex;flex-direction:column;padding-top:6px;padding-bottom:6px}
+  header{display:flex;align-items:center;justify-content:center;gap:14px;flex:none;margin-bottom:6px}
+  h1{font-size:clamp(18px,3.2vw,26px);margin:0}
+  .toolbar{margin:0;gap:5px;flex-wrap:nowrap}
+  .tbtn{padding:3px 10px;font-size:12px;border-width:1.2px}
+  .main,body.board-only .main{
+    flex:1;min-height:0;gap:10px;
+    grid-template-columns:auto minmax(0,1fr) auto;
+    grid-template-rows:auto minmax(0,1fr);
+    grid-template-areas:"teams board goal" "teams board yut";
+    align-items:stretch;
+  }
+  .side{display:contents}
+  .side > .panel:first-child{grid-area:teams;overflow-y:auto}
+  .goal-tray{grid-area:goal}
+  .yut-panel{grid-area:yut;grid-column:auto;overflow-y:auto;min-height:0}
+  body.board-only .goal-tray{grid-row:1 / -1;align-self:start}
+  .board-wrap{grid-area:board;order:0;align-items:center;min-height:0}
+  .board,body.board-only .board{
+    max-width:min(100%, calc(100dvh - 58px - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px)));
+    max-height:100%;
+  }
+  .panel{padding:8px 10px 10px;border-radius:12px}
+  .panel h2{font-size:12px}
+  .panel-head{margin-bottom:2px}
+  .seg button{padding:2px 7px;font-size:11px}
+  .team-row{grid-template-columns:62px 1fr;gap:8px;padding:5px 2px}
+  .team-name{font-size:13px;border-bottom-width:2px;padding:2px 1px}
+  .slots{gap:4px}
+  .goal-row{grid-template-columns:52px 1fr auto;gap:6px;padding:3px 2px}
+  .goal-label{font-size:12px;border-left-width:3px;padding-left:5px}
+  .goal-tray .slot{width:22px;height:22px}
+  .goal-count{font-size:13px;min-width:24px}
+  .hint{display:none}
+  .yut-panel{gap:6px;padding:8px}
+  .sticks{height:72px;gap:7px}
+  .stick{width:14px;height:60px;border-radius:7px;font-size:8px}
+  .stick .bk{font-size:8px}
+  @keyframes toss{0%{transform:translateY(0) rotate(0)}45%{transform:translateY(-22px) rotate(calc(var(--r) * 1deg))}100%{transform:translateY(0) rotate(calc(var(--r2) * 1deg))}}
+  .throw-btn{padding:7px;font-size:16px;border-radius:9px}
+  .result{min-height:0}
+  .result .big{font-size:28px}
+  .result .sub{font-size:11px}
+  .yut-panel > div:last-child{display:none}
+  .sp-sub{margin-top:8px;padding:6px 14px}
+  .win-card{padding:18px 24px}
+}
+@media (orientation: landscape) and (max-height: 520px) and (max-width: 740px){
+  :root{--slot:25px}
+  .team-row{grid-template-columns:50px 1fr;gap:6px}
+  .team-name{font-size:12px}
+  .goal-row{grid-template-columns:44px 1fr auto;gap:4px}
+  .goal-tray .slot{width:18px;height:18px}
+  .slots{gap:3px}
+  h1{font-size:17px}
+}
+
+@media (prefers-reduced-motion: reduce){
+  .stick.toss,.result.pop .big,.board.shake,.splash .rays{animation:none !important}
+  .splash.show .sp-title,.splash.show .sp-sub{animation:fadeonly 1.8s forwards !important}
+  @keyframes fadeonly{0%,100%{opacity:0}10%,85%{opacity:1}}
+}

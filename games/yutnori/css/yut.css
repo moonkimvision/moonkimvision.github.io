@@ -1,0 +1,30 @@
+/* 윷 던지기 패널 */
+/* ---------- Yut panel ---------- */
+.yut-panel{display:flex;flex-direction:column;gap:14px}
+.sticks{display:flex;justify-content:center;gap:12px;height:190px;align-items:center;border-radius:12px;background:rgba(0,0,0,.05)}
+.stick{
+  width:28px;height:150px;border-radius:14px;display:flex;flex-direction:column;justify-content:space-evenly;align-items:center;
+  font-family:"Black Han Sans",sans-serif;font-size:16px;transition:background .2s;
+}
+.stick.flat{background:linear-gradient(90deg,#E3C78E,#F2DEAF 50%,#DDBF83);color:#6A3F1C;box-shadow:inset 0 0 0 1.5px #B48B4A}
+.stick.round{background:linear-gradient(90deg,#5E3618,#9A6534 45%,#6E4020);color:transparent;box-shadow:inset 0 0 0 1.5px #3E220E,inset 6px 0 8px rgba(255,255,255,.12)}
+.stick .bk{color:#B8382D;font-size:15px}
+.stick.round .bk{color:transparent}
+.stick.toss{animation:toss .75s cubic-bezier(.3,.7,.4,1) both;animation-delay:var(--d,0s)}
+@keyframes toss{
+  0%{transform:translateY(0) rotate(0)}
+  45%{transform:translateY(-70px) rotate(calc(var(--r) * 1deg))}
+  100%{transform:translateY(0) rotate(calc(var(--r2) * 1deg))}
+}
+.throw-btn{width:100%;padding:14px;border:none;border-radius:12px;background:var(--btn);color:var(--btn-ink);font-family:"Black Han Sans",sans-serif;font-size:22px;letter-spacing:.06em}
+.throw-btn:disabled{opacity:.6;cursor:default}
+.result{text-align:center;min-height:92px}
+.result .big{font-family:"Black Han Sans",sans-serif;font-size:52px;line-height:1.1}
+.result .sub{font-size:15px;color:var(--ink-soft)}
+.result.pop .big{animation:pop .35s ease-out}
+@keyframes pop{0%{transform:scale(.6);opacity:0}100%{transform:scale(1);opacity:1}}
+.log{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.chip{padding:4px 10px;border-radius:999px;border:1px solid var(--panel-line);font-size:14px}
+.chip.again{border-color:var(--gold-deep);background:rgba(217,182,106,.25)}
+.log-head{display:flex;justify-content:space-between;align-items:center}
+.linkbtn{background:none;border:none;color:var(--ink-soft);font-size:13px;text-decoration:underline;padding:0}
