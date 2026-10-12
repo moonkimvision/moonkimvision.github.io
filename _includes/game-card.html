@@ -1,0 +1,33 @@
+{%- comment -%}
+  게임 카드. 사용: include game-card.html game=game (game = site.data.games 의 항목)
+  include.compact 가 있으면 쌍둥이 대화를 뺀다. 생김새는 앱 카드(app-card)를 그대로 쓰고 아이콘 대신 게임 화면을 둔다.
+{%- endcomment -%}
+{%- assign game = include.game -%}
+<article class="app-card game-card" style="--app-color: {{ game.color }}">
+  <a class="game-thumb" href="{{ game.url | relative_url }}" tabindex="-1" aria-hidden="true">
+    <img src="{{ game.thumb | relative_url }}" alt="" width="960" height="540" loading="lazy">
+  </a>
+  <header class="app-card-head">
+    <div>
+      <p class="app-platform"><span class="lang-ko">{{ game.players_ko }}</span><span class="lang-en">{{ game.players_en }}</span></p>
+      <h3 class="app-name"><span class="lang-ko">{{ game.name_ko }}</span><span class="lang-en">{{ game.name_en }}</span></h3>
+      <p class="app-tagline"><span class="lang-ko">{{ game.tagline_ko }}</span><span class="lang-en">{{ game.tagline_en }}</span></p>
+    </div>
+  </header>
+  <p class="app-summary"><span class="lang-ko">{{ game.summary_ko }}</span><span class="lang-en">{{ game.summary_en }}</span></p>
+  <ul class="chips">
+    {%- for f in game.features_ko %}
+    <li><span class="lang-ko">{{ f }}</span><span class="lang-en">{{ game.features_en[forloop.index0] }}</span></li>
+    {%- endfor %}
+  </ul>
+  {%- unless include.compact %}
+  <div class="chat chat-sm">
+    {%- for line in game.twins %}
+    {% include bubble.html who=line.who ko=line.ko en=line.en %}
+    {%- endfor %}
+  </div>
+  {%- endunless %}
+  <div class="app-actions">
+    <a class="btn btn-ink" href="{{ game.url | relative_url }}"><span class="lang-ko">바로 하기</span><span class="lang-en">Play now</span></a>
+  </div>
+</article>

@@ -293,6 +293,9 @@ html[data-lang="en"] .lang-ko-el { display: none !important; }
 .app-card .chat { flex: 1; }
 .app-actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 18px; }
 .app-actions .btn { padding: 9px 18px; font-size: 0.88rem; }
+.game-thumb { display: block; margin: 8px 0 14px; aspect-ratio: 16 / 9; border: var(--line); border-radius: 14px; overflow: hidden; background: var(--app-color); }
+.game-thumb img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .25s; }
+.game-thumb:hover img { transform: scale(1.03); }
 
 /* ── Post cards ──────────────────────────────────────────── */
 .post-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }

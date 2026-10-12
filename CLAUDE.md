@@ -24,20 +24,23 @@ Jekyll 기반 GitHub Pages 블로그.
 ├── _data/
 │   ├── twins.yml        # 쌍둥이 캐릭터 프로필·능력치·에피소드
 │   ├── apps.yml         # 앱 목록 (홈·앱 페이지·포스트 하단 카드가 읽음)
+│   ├── games.yml        # 웹게임 목록 (/games/ 가 읽음)
 │   └── sns.yml          # 유튜브·인스타그램·틱톡 채널 (_config.yml social.links 와 같은 주소)
 ├── _posts/              # 블로그 포스트 (YYYY-MM-DD-slug.md)
 ├── privacy/             # 앱별 개인정보처리방침
 ├── twins/               # 쌍둥이 소개(/twins/) + 프로필(sister, brother)
 ├── apps/                # 앱 목록(/apps/)
+├── games/               # 게임 목록(/games/) + 게임별 폴더(games/<id>/ — 게임 저장소 Actions 가 복사, 직접 수정 금지)
 ├── 404.html             # 없는 주소 안내 (쌍둥이)
 ├── _layouts/            # default · home · page · post · character · policy-bilingual
-├── _includes/           # header · footer · bubble(말풍선) · app-card · twin-card · post-card
+├── _includes/           # header · footer · bubble(말풍선) · app-card · game-card · twin-card · post-card
 ├── assets/
 │   ├── css/main.css     # 쌍둥이 테마 (크림 + 먹색 + 주황 한 점)
 │   ├── js/site.js       # 언어 토글·캐릭터 대사·포즈 전환 (언어 첫 적용만 head 인라인)
 │   └── images/
 │       ├── twins/       # 캐릭터 WebP(컷아웃·얼굴·스탬프·푸터 빼꼼), OG jpg, 파비콘
-│       └── apps/        # 앱 아이콘
+│       ├── apps/        # 앱 아이콘
+│       └── games/       # 게임 썸네일 WebP (16:9)
 ├── BACKLOG.md
 └── ralph-core/          # ralph 자동화 엔진 (submodule)
 ```
@@ -81,6 +84,11 @@ bundle exec jekyll build
 ### 앱 추가
 - `_data/apps.yml` 에 항목 추가 (아이콘 `assets/images/apps/<id>-icon.png`, 스토어·정책·소개 글 링크, 쌍둥이 한마디)
 - 소개 포스트에 `app: <id>` 를 넣으면 포스트 상단 색과 하단 앱 카드가 붙는다.
+
+### 게임 추가
+- 게임은 각자 비공개 저장소(예: `moonkimvision/yutnori`)에 두고, `main` push 시 GitHub Actions 가 이 저장소의 `games/<id>/` 로 복사·커밋한다 → `https://moonkimvision.com/games/<id>/`.
+- 게임 저장소에 `.github/workflows/deploy.yml`(yutnori 저장소 것 복사, 경로만 바꿈)과 Secret `SITE_DEPLOY_KEY`(이 저장소 Deploy key 의 짝, 쓰기 허용)를 둔다. 배포 키는 저장소마다 따로 만든다.
+- `_data/games.yml` 에 항목 추가 (썸네일 `assets/images/games/<id>.webp`, 쌍둥이 한마디).
 
 ### 블로그 포스트
 - 경로: `_posts/YYYY-MM-DD-slug.md`

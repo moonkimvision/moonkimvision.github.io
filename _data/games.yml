@@ -1,0 +1,25 @@
+# moonkimvision 웹게임 목록 — /games/ 페이지가 이 파일을 읽는다.
+# 게임 파일(games/<id>/)은 각 게임 저장소(비공개)의 GitHub Actions 가 이 저장소로 복사해 넣는다 — 여기서 직접 고치지 않는다.
+# 새 게임: 게임 저장소에 .github/workflows/deploy.yml(yutnori 저장소 참고) + 아래 항목 + 썸네일(assets/images/games/<id>.webp, 16:9)
+
+- id: yutnori
+  name_ko: 윷놀이 대항전
+  name_en: Yut Nori Showdown
+  url: /games/yutnori/
+  thumb: /assets/images/games/yutnori.webp
+  color: "#2B150C"
+  players_ko: 2~4팀 · 한 화면에서 같이
+  players_en: 2–4 teams · one shared screen
+  tagline_ko: 거실 TV에 띄워 놓는 윷판
+  tagline_en: A yut board for the living-room TV
+  summary_ko: 윷은 버튼으로 던지고, 말은 손가락으로 끌어 놓으세요. 잡기·업기·빽도·골인은 판이 알아서 알려 줘요.
+  summary_en: Throw the sticks with a button and drag the pieces with your finger. The board calls out captures, stacking, back-do and goals for you.
+  features_ko: [2~4팀, 끌어 놓는 말, 잡기·업기·빽도 안내, 윷 던지기, 전체화면, 자동 저장]
+  features_en: [2–4 teams, Drag-and-drop pieces, Capture & stack calls, Stick throwing, Fullscreen, Auto-save]
+  twins:
+    - who: sister
+      ko: 윷이면 내가 동네 1등이었거든? 아 잠깐, 그 동네에 나밖에 없었나.
+      en: I was the yut champion of the whole block. Wait. I might've been the only one on the block.
+    - who: brother
+      ko: …잡았어.
+      en: …Caught you.
