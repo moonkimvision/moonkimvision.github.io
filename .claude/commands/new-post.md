@@ -57,5 +57,5 @@ description: "<목록 카드·검색 결과에 나오는 1~2문장 요약>"
 
 ```
 ✅ 생성 완료: _posts/YYYY-MM-DD-<슬러그>.md
-🔗 배포 후 URL: https://moonkimvision.github.io/posts/<슬러그>/
+🔗 배포 후 URL: https://moonkimvision.com/posts/<슬러그>/
 ```

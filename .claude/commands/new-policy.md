@@ -136,6 +136,6 @@ Email: moonkimvision@gmail.com
 
 ```
 ✅ 생성 완료: <종류>/<슬러그>.md
-🔗 배포 후 URL: https://moonkimvision.github.io/<종류>/<슬러그>/
-📋 Google Play 등록용 URL: https://moonkimvision.github.io/<종류>/<슬러그>/
+🔗 배포 후 URL: https://moonkimvision.com/<종류>/<슬러그>/
+📋 Google Play 등록용 URL: https://moonkimvision.com/<종류>/<슬러그>/
 ```

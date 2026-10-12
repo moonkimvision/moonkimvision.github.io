@@ -11,7 +11,7 @@ Jekyll 기반 GitHub Pages 블로그.
 |------|------|
 | 빌드 | Jekyll (GitHub Pages 네이티브 지원) |
 | 호스팅 | GitHub Pages — `main` 브랜치 push 시 자동 배포 |
-| 도메인 | `https://moonkimvision.github.io` |
+| 도메인 | `https://moonkimvision.com` (가비아 구매, 루트 `CNAME` 파일로 연결. 옛 `moonkimvision.github.io` 주소는 자동 리다이렉트) |
 
 ---
 
@@ -19,6 +19,7 @@ Jekyll 기반 GitHub Pages 블로그.
 
 ```
 /
+├── CNAME                # 사용자 도메인 (moonkimvision.com)
 ├── _config.yml          # Jekyll 전역 설정
 ├── _data/
 │   ├── twins.yml        # 쌍둥이 캐릭터 프로필·능력치·에피소드
@@ -73,7 +74,7 @@ bundle exec jekyll build
 ### 정책 페이지 (개인정보처리방침 등)
 - 경로: `privacy/<앱-슬러그>.md`
 - permalink: `/privacy/<앱-슬러그>/`
-- Google Play 등록 URL 예시: `https://moonkimvision.github.io/privacy/my-app/`
+- Google Play 등록 URL 예시: `https://moonkimvision.com/privacy/my-app/`
 - layout: `policy-bilingual` (한/영 토글, `title_ko`·`title_en`) 또는 `page`
 - 정책 페이지 URL 은 스토어에 등록돼 있으므로 바꾸지 않는다.
 
