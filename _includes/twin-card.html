@@ -1,5 +1,10 @@
-{%- comment -%} 쌍둥이 카드. 사용: include twin-card.html id="sister" {%- endcomment -%}
-{%- assign c = site.data.twins[include.id] -%}
+{%- comment -%}
+  캐릭터 카드 (멤버 한 명). 사용: include twin-card.html id="sister"
+  쌍둥이 외 그룹: include twin-card.html group="<그룹 id>" id="<멤버 id>"  (데이터: _data/characters.yml 의 그룹 data 파일)
+{%- endcomment -%}
+{%- assign grp_id = include.group | default: "twins" -%}
+{%- assign grp = site.data.characters | where: "id", grp_id | first -%}
+{%- assign c = site.data[grp.data][include.id] -%}
 <a class="twin-card twin-card-{{ c.id }}" href="{{ c.url | relative_url }}">
   <span class="twin-card-art">
     <img src="{{ c.images.three_quarter | relative_url }}" alt="{{ c.name_ko }} / {{ c.name_en }}" loading="lazy">

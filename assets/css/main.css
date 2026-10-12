@@ -238,6 +238,36 @@ html[data-lang="en"] .lang-ko-el { display: none !important; }
 .twin-card-line { color: var(--ink-2); flex: 1; }
 .twin-card-more { font-weight: 900; border-bottom: 3px solid var(--orange); align-self: flex-start; }
 
+/* ── Character groups (/characters/, _data/characters.yml) ─ */
+.group-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+.group-card {
+  position: relative; display: flex; flex-direction: column; text-decoration: none; color: inherit;
+  background: var(--paper); border: var(--line); border-radius: 24px; overflow: hidden;
+  box-shadow: var(--shadow); transition: transform .15s, box-shadow .15s;
+}
+a.group-card:hover { transform: translate(-3px, -3px); box-shadow: var(--shadow-lg); }
+.group-card::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 10px; background: var(--group-color, var(--orange)); border-bottom: var(--line); z-index: 1; }
+.group-card-art { display: block; aspect-ratio: 16 / 10; background: var(--cream); border-bottom: var(--line); overflow: hidden; }
+.group-card-art img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; transition: transform .25s; }
+a.group-card:hover .group-card-art img { transform: scale(1.03); }
+.group-card-body { display: flex; flex-direction: column; gap: 10px; padding: 22px 24px 24px; flex: 1; }
+.group-card-name { font-family: var(--display); font-size: 2.2rem; line-height: 1.1; }
+.group-card-line { color: var(--ink-2); flex: 1; }
+.group-card-members { display: flex; flex-wrap: wrap; gap: 8px 16px; }
+.group-member { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; }
+.group-member img { width: 40px; height: 40px; border-radius: 50%; border: 2px solid var(--ink); background: var(--cream); }
+.group-card.is-soon { opacity: .75; }
+.group-card.is-soon .soon { align-self: flex-start; margin-left: 0; }
+.group-card-next { border-style: dashed; box-shadow: none; background: var(--cream); justify-content: center; }
+.group-card-next::before { display: none; }
+.group-card-next-mark {
+  align-self: center; margin-top: 36px; width: 120px; height: 120px; border-radius: 50%;
+  display: grid; place-items: center; border: var(--line); background: var(--paper);
+  font-family: var(--display); font-size: 4rem; color: var(--orange);
+}
+.group-card-next .group-card-body { text-align: center; align-items: center; }
+.eyebrow-link { color: inherit; text-decoration: none; border-bottom: 2px solid var(--orange); }
+
 /* ── Chat bubbles (마크다운·카드 공용) ───────────────────── */
 .chat { display: flex; flex-direction: column; gap: 12px; margin: 28px 0; }
 .chat-row { display: flex; align-items: flex-end; gap: 10px; }
@@ -571,7 +601,7 @@ html[data-lang="en"] .lang-ko-el { display: none !important; }
 /* ── Responsive ───────────────────────────────────────────── */
 @media (max-width: 960px) {
   .post-grid, .episode-grid { grid-template-columns: repeat(2, 1fr); }
-  .twin-grid, .app-grid { grid-template-columns: 1fr; }
+  .twin-grid, .app-grid, .group-grid { grid-template-columns: 1fr; }
   .formula { grid-template-columns: 1fr; gap: 28px; }
   .stamp-grid { grid-template-columns: repeat(3, 1fr); }
   .profile-grid { grid-template-columns: 1fr; }

@@ -2,10 +2,17 @@
 layout: default
 bilingual: true
 ---
-{%- comment -%} 캐릭터 프로필. front matter: character: sister | brother (데이터: _data/twins.yml) {%- endcomment -%}
-{%- assign c = site.data.twins[page.character] -%}
-{%- assign o = site.data.twins[c.other] -%}
-{%- assign labels = site.data.twins.stat_labels -%}
+{%- comment -%}
+  캐릭터 프로필. front matter: character: <멤버 id>, group: <그룹 id> (기본 twins)
+  데이터: _data/characters.yml 의 그룹 항목 → 그 data 파일(_data/twins.yml 등)의 멤버.
+  멤버의 other(짝)가 있으면 능력치 비교 눈금·짝 프로필 링크, 그룹에 formula 가 있으면 아래 '공식' 띠를 그린다.
+{%- endcomment -%}
+{%- assign grp_id = page.group | default: "twins" -%}
+{%- assign grp = site.data.characters | where: "id", grp_id | first -%}
+{%- assign d = site.data[grp.data] -%}
+{%- assign c = d[page.character] -%}
+{%- if c.other -%}{%- assign o = d[c.other] -%}{%- else -%}{%- assign o = nil -%}{%- endif -%}
+{%- assign labels = d.stat_labels -%}
 <section class="profile-hero profile-{{ c.id }}">
   <div class="stamp-drift" aria-hidden="true"></div>
   <div class="container profile-hero-inner">
@@ -22,7 +29,7 @@ bilingual: true
       </div>
     </div>
     <div class="profile-intro">
-      <p class="eyebrow"><span class="lang-ko">쌍둥이 프로필</span><span class="lang-en">Twin profile</span> · <span class="lang-ko">{{ c.badge_ko }}</span><span class="lang-en">{{ c.badge_en }}</span></p>
+      <p class="eyebrow"><a href="{{ grp.url | relative_url }}" class="eyebrow-link"><span class="lang-ko">{{ grp.profile_eyebrow_ko | default: grp.name_ko }}</span><span class="lang-en">{{ grp.profile_eyebrow_en | default: grp.name_en }}</span></a> · <span class="lang-ko">{{ c.badge_ko }}</span><span class="lang-en">{{ c.badge_en }}</span></p>
       <h1 class="profile-name"><span class="lang-ko">{{ c.name_ko }}</span><span class="lang-en">{{ c.name_en }}</span></h1>
       <p class="profile-role"><span class="lang-ko">{{ c.role_ko }}</span><span class="lang-en">{{ c.role_en }}</span></p>
       <p class="profile-oneliner"><span class="lang-ko">{{ c.oneliner_ko }}</span><span class="lang-en">{{ c.oneliner_en }}</span></p>
@@ -48,15 +55,17 @@ bilingual: true
     <div class="profile-side">
       <div class="paper profile-card">
         <h2 class="card-title"><span class="lang-ko">능력치</span><span class="lang-en">Stats</span></h2>
+        {%- if o %}
         <p class="card-note"><span class="lang-ko">회색 눈금은 {{ o.name_ko }}의 수치</span><span class="lang-en">Gray tick = {{ o.name_en }}</span></p>
+        {%- endif %}
         <ul class="stat-list">
           {%- for s in c.stats %}
-          {%- assign os = o.stats | where: "key", s.key | first %}
+          {%- if o %}{% assign os = o.stats | where: "key", s.key | first %}{% else %}{% assign os = nil %}{% endif %}
           <li class="stat">
             <span class="stat-label"><span class="lang-ko">{{ labels[s.key].ko }}</span><span class="lang-en">{{ labels[s.key].en }}</span></span>
             <span class="stat-bar" role="img" aria-label="{{ labels[s.key].ko }} {{ s.value }} / 100">
               <span class="stat-fill" style="width: {{ s.value }}%"></span>
-              <span class="stat-ghost" style="left: {{ os.value }}%"></span>
+              {%- if os %}<span class="stat-ghost" style="left: {{ os.value }}%"></span>{% endif %}
             </span>
             <span class="stat-num">{{ s.value }}</span>
           </li>
@@ -68,7 +77,7 @@ bilingual: true
         <h2 class="card-title"><span class="lang-ko">자주 하는 말</span><span class="lang-en">Catchphrases</span></h2>
         <div class="chat">
           {%- for q in c.quotes %}
-          {% include bubble.html who=c.id ko=q.ko en=q.en %}
+          {% include bubble.html group=grp_id who=c.id ko=q.ko en=q.en %}
           {%- endfor %}
         </div>
       </div>
@@ -76,16 +85,26 @@ bilingual: true
   </div>
 </section>
 
+{%- if grp.formula or o %}
+{%- assign f = grp.formula %}
 <section class="section section-ink">
   <div class="container duo-row">
     <div class="duo-copy">
-      <p class="eyebrow"><span class="lang-ko">쌍둥이 공식</span><span class="lang-en">The duo formula</span></p>
-      <h2 class="section-title"><span class="lang-ko">누나의 수다 → 동생의 한마디 → 정적.</span><span class="lang-en">Her monologue → his one-liner → silence.</span></h2>
-      <p><span class="lang-ko">둘 다 무표정. 웃음은 그 사이의 정적에서 나온다.</span><span class="lang-en">Both deadpan. The laugh lives in the silence after.</span></p>
+      {%- if f %}
+      <p class="eyebrow"><span class="lang-ko">{{ f.eyebrow_ko }}</span><span class="lang-en">{{ f.eyebrow_en }}</span></p>
+      <h2 class="section-title"><span class="lang-ko">{{ f.title_ko }}</span><span class="lang-en">{{ f.title_en }}</span></h2>
+      <p><span class="lang-ko">{{ f.text_ko }}</span><span class="lang-en">{{ f.text_en }}</span></p>
+      {%- else %}
+      <p class="eyebrow"><span class="lang-ko">{{ grp.name_ko }}</span><span class="lang-en">{{ grp.name_en }}</span></p>
+      <h2 class="section-title"><span class="lang-ko">{{ grp.tagline_ko }}</span><span class="lang-en">{{ grp.tagline_en }}</span></h2>
+      {%- endif %}
     </div>
+    {%- if o %}
     <a class="other-twin" href="{{ o.url | relative_url }}">
       <img src="{{ o.images.three_quarter | relative_url }}" alt="" loading="lazy">
       <span class="other-twin-label"><span class="lang-ko">{{ o.name_ko }} 프로필 보기 →</span><span class="lang-en">Meet {{ o.name_en }} →</span></span>
     </a>
+    {%- endif %}
   </div>
 </section>
+{%- endif %}

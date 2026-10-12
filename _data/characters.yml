@@ -1,0 +1,26 @@
+# 캐릭터(그룹) 목록 — 상단 메뉴 '캐릭터'(/characters/), 홈 등장인물 섹션, 프로필 레이아웃이 읽는다.
+# 새 캐릭터(그룹) 추가 방법은 CLAUDE.md "캐릭터 추가" 참고:
+#   1) 여기 한 항목  2) _data/<data>.yml (멤버 프로필, twins.yml 과 같은 구조)  3) /<id>/ 폴더 (그룹 소개 + 멤버 프로필 페이지)
+# 순서 = 화면에 나오는 순서. status: active | soon (soon 이면 카드만 '곧 공개'로, 링크 없음)
+
+- id: twins
+  status: active
+  url: /twins/                 # 이미 SNS 에 공유된 주소라 바꾸지 않는다
+  data: twins                  # 멤버 프로필 데이터: _data/twins.yml
+  members: [sister, brother]
+  name_ko: 쌍둥이 남매
+  name_en: The Twins
+  tagline_ko: 몇 분 차이로 태어난 이란성 쌍둥이. 말 많은 누나와 한마디뿐인 동생.
+  tagline_en: Fraternal twins born minutes apart. A sister who never stops talking and a brother who says one word.
+  image: /assets/images/twins/duo.webp
+  color: "#F57C00"             # 카드 위 띠·포인트 색
+  # 프로필 페이지 아래 '공식' 띠 (없으면 그 띠를 그리지 않는다)
+  formula:
+    eyebrow_ko: 쌍둥이 공식
+    eyebrow_en: The duo formula
+    title_ko: 누나의 수다 → 동생의 한마디 → 정적.
+    title_en: Her monologue → his one-liner → silence.
+    text_ko: 둘 다 무표정. 웃음은 그 사이의 정적에서 나온다.
+    text_en: Both deadpan. The laugh lives in the silence after.
+  profile_eyebrow_ko: 쌍둥이 프로필
+  profile_eyebrow_en: Twin profile

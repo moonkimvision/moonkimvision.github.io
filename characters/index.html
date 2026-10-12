@@ -1,0 +1,65 @@
+---
+layout: default
+bilingual: true
+title: "캐릭터"
+permalink: /characters/
+description: moonkimvision의 캐릭터들. 무표정 쌍둥이 남매와 앞으로 합류할 친구들.
+---
+{%- comment -%} 캐릭터(그룹) 목록. 데이터: _data/characters.yml — 새 그룹은 거기 한 항목 + /<id>/ 폴더 (CLAUDE.md "캐릭터 추가") {%- endcomment -%}
+<section class="page-hero page-hero-compact">
+  <div class="stamp-drift" aria-hidden="true"></div>
+  <div class="container page-hero-inner">
+    <div>
+      <p class="eyebrow"><span class="lang-ko">캐릭터</span><span class="lang-en">Characters</span></p>
+      <h1 class="page-hero-title"><span class="lang-ko">무표정이 기본값인<br>사람들.</span><span class="lang-en">Deadpan<br>by default.</span></h1>
+      <p class="hero-lead"><span class="lang-ko">moonkimvision의 숏폼과 앱에 나오는 캐릭터들이에요. 지금은 쌍둥이 남매가 집을 지키고 있고, 새 친구들이 곧 합류해요.</span><span class="lang-en">The characters behind moonkimvision's shorts and apps. The twins are holding down the fort for now — new friends are on the way.</span></p>
+    </div>
+    <div class="chat page-hero-chat">
+      {% include bubble.html who="sister" ko="잠깐, 우리 말고 또 온다고? 아 그럼 내가 선배네. 선배." en="Wait, more people are coming? Oh, so I'm the senior. Senior." %}
+      {% include bubble.html who="brother" ko="…몇 분 차이로." en="…By a few minutes." %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="group-grid">
+      {%- for g in site.data.characters %}
+      {%- if g.status == "soon" %}
+      <div class="group-card is-soon" style="--group-color: {{ g.color | default: '#F57C00' }}">
+        <span class="group-card-art"><img src="{{ g.image | relative_url }}" alt="" loading="lazy"></span>
+        <span class="group-card-body">
+          <span class="group-card-name"><span class="lang-ko">{{ g.name_ko }}</span><span class="lang-en">{{ g.name_en }}</span></span>
+          <span class="group-card-line"><span class="lang-ko">{{ g.tagline_ko }}</span><span class="lang-en">{{ g.tagline_en }}</span></span>
+          <span class="soon"><span class="lang-ko">곧 공개</span><span class="lang-en">Coming soon</span></span>
+        </span>
+      </div>
+      {%- else %}
+      {%- assign d = site.data[g.data] %}
+      <a class="group-card" href="{{ g.url | relative_url }}" style="--group-color: {{ g.color | default: '#F57C00' }}">
+        <span class="group-card-art"><img src="{{ g.image | relative_url }}" alt="{{ g.name_ko }} / {{ g.name_en }}" loading="lazy"></span>
+        <span class="group-card-body">
+          <span class="group-card-name"><span class="lang-ko">{{ g.name_ko }}</span><span class="lang-en">{{ g.name_en }}</span></span>
+          <span class="group-card-line"><span class="lang-ko">{{ g.tagline_ko }}</span><span class="lang-en">{{ g.tagline_en }}</span></span>
+          <span class="group-card-members">
+            {%- for m in g.members %}
+            {%- assign c = d[m] %}
+            <span class="group-member"><img src="{{ c.images.face | relative_url }}" alt="" width="40" height="40" loading="lazy"><span class="lang-ko">{{ c.name_ko }}</span><span class="lang-en">{{ c.name_en }}</span></span>
+            {%- endfor %}
+          </span>
+          <span class="twin-card-more"><span class="lang-ko">만나러 가기 →</span><span class="lang-en">Meet them →</span></span>
+        </span>
+      </a>
+      {%- endif %}
+      {%- endfor %}
+      <div class="group-card group-card-next" aria-label="새 캐릭터 준비 중 / New characters coming">
+        <span class="group-card-next-mark" aria-hidden="true">?</span>
+        <span class="group-card-body">
+          <span class="group-card-name"><span class="lang-ko">새 친구 준비 중</span><span class="lang-en">New friends, soon</span></span>
+          <span class="group-card-line"><span class="lang-ko">다음 캐릭터는 SNS 에서 먼저 공개돼요.</span><span class="lang-en">The next characters debut on our socials first.</span></span>
+          {% include sns-links.html style="icons" %}
+        </span>
+      </div>
+    </div>
+  </div>
+</section>

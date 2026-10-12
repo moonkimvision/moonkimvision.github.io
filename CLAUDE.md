@@ -22,18 +22,20 @@ Jekyll 기반 GitHub Pages 블로그.
 ├── CNAME                # 사용자 도메인 (moonkimvision.com)
 ├── _config.yml          # Jekyll 전역 설정
 ├── _data/
-│   ├── twins.yml        # 쌍둥이 캐릭터 프로필·능력치·에피소드
+│   ├── characters.yml   # 캐릭터 그룹 목록 (상단 메뉴 '캐릭터' /characters/, 프로필 레이아웃·카드·말풍선이 읽음)
+│   ├── twins.yml        # 쌍둥이 캐릭터 프로필·능력치·에피소드 (characters.yml 의 twins 그룹 data)
 │   ├── apps.yml         # 앱 목록 (홈·앱 페이지·포스트 하단 카드가 읽음)
 │   ├── games.yml        # 웹게임 목록 (/games/ 가 읽음)
 │   └── sns.yml          # 유튜브·인스타그램·틱톡 채널 (_config.yml social.links 와 같은 주소)
 ├── _posts/              # 블로그 포스트 (YYYY-MM-DD-slug.md)
 ├── privacy/             # 앱별 개인정보처리방침
-├── twins/               # 쌍둥이 소개(/twins/) + 프로필(sister, brother)
+├── characters/          # 캐릭터 목록(/characters/) — 그룹 카드 + '새 친구 준비 중' 카드
+├── twins/               # 쌍둥이 소개(/twins/) + 프로필(sister, brother) — 첫 캐릭터 그룹 (주소는 SNS 공유돼 있어 유지)
 ├── apps/                # 앱 목록(/apps/)
 ├── games/               # 게임 목록(/games/) + 게임별 폴더(games/<id>/ — 게임 저장소 Actions 가 복사, 직접 수정 금지)
 ├── 404.html             # 없는 주소 안내 (쌍둥이)
 ├── _layouts/            # default · home · page · post · character · policy-bilingual
-├── _includes/           # header · footer · bubble(말풍선) · app-card · game-card · twin-card · post-card
+├── _includes/           # header · footer · bubble(말풍선, group 인자) · app-card · game-card · twin-card(멤버 카드, group 인자) · post-card
 ├── assets/
 │   ├── css/main.css     # 쌍둥이 테마 (크림 + 먹색 + 주황 한 점)
 │   ├── js/site.js       # 언어 토글·캐릭터 대사·포즈 전환 (언어 첫 적용만 head 인라인)
@@ -54,6 +56,19 @@ Jekyll 기반 GitHub Pages 블로그.
 - 말투: 누나 = 수다·허세, 자기 말 끊기("아 잠깐"). 동생 = 느리고 짧은 한마디("…"로 시작). 훈계·비하 금지.
 - 포스트 안 대화: `<div class="chat">` 안에 `{% include bubble.html who="sister|brother" text="..." %}` 를 줄마다.
 - 언어: `bilingual: true` 페이지(또는 layout)만 헤더에 한국어/EN 토글이 나오고, 나머지는 `lang` 으로 고정된다. 양쪽 문구는 `.lang-ko` / `.lang-en`.
+- 쌍둥이는 사이트 전체 마스코트로 남는다 (헤더 로고 얼굴, 푸터 빼꼼, 404, 홈 히어로). 다른 캐릭터는 '캐릭터' 메뉴 아래에 그룹으로 추가된다.
+
+---
+
+## 캐릭터 추가 (쌍둥이 외 새 그룹, 2026-10-12~)
+
+상단 메뉴는 `홈 · 캐릭터 · 앱 · 게임 · 블로그 · 정책`. '캐릭터'(/characters/)는 `_data/characters.yml` 의 그룹을 카드로 보여 주고, 그룹 주소 아래 어느 페이지에서든 메뉴가 켜진다.
+
+1. `_data/characters.yml` 에 그룹 한 항목: `id`, `status`(active | soon — soon 이면 링크 없이 '곧 공개' 카드), `url`(`/<id>/`, 기존 폴더 apps·games·twins·privacy·posts 와 겹치지 않게), `data`(멤버 데이터 파일 이름), `members`, `name_ko/en`, `tagline_ko/en`, `image`(그룹 대표 이미지, 16:10 으로 잘림), `color`, 선택 `formula`(프로필 아래 '공식' 띠)·`profile_eyebrow_ko/en`.
+2. `_data/<data>.yml`: 멤버마다 `twins.yml` 과 같은 구조 (id, url, name/role/oneliner/intro, images.front·three_quarter·side·face, profile, quotes, stats) + `stat_labels`. 짝이 있으면 `other` (능력치 비교 눈금·짝 프로필 링크), 없으면 생략.
+3. `/<id>/index.html`(그룹 소개, `twins/index.html` 참고) + 멤버 프로필 `/<id>/<member>.html`: front matter `layout: character`, `group: <id>`, `character: <member>`.
+4. 이미지: `assets/images/<id>/` (WebP). 카드·말풍선은 그룹을 넘긴다 — `{% include twin-card.html group="<id>" id="<member>" %}`, `{% include bubble.html group="<id>" who="<member>" ... %}`. 말풍선 색은 `main.css` 의 `.chat-<member>` 를 추가 (없으면 기본 흰 말풍선).
+5. 새 캐릭터가 공개 전이면 `status: soon` 으로 먼저 카드만 (티저).
 
 ---
 

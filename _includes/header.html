@@ -1,4 +1,8 @@
 {%- assign path = page.url -%}
+{%- comment -%} '캐릭터' 메뉴는 /characters/ 와 _data/characters.yml 의 모든 그룹 주소(/twins/ 등)에서 켜진다 {%- endcomment -%}
+{%- assign in_characters = false -%}
+{%- if path contains '/characters/' -%}{%- assign in_characters = true -%}{%- endif -%}
+{%- for g in site.data.characters -%}{%- if path contains g.url -%}{%- assign in_characters = true -%}{%- endif -%}{%- endfor -%}
 {%- assign bilingual = false -%}
 {%- if page.bilingual or layout.bilingual -%}{%- assign bilingual = true -%}{%- endif -%}
 <header class="site-header">
@@ -12,7 +16,7 @@
     </a>
     <nav class="site-nav" aria-label="Main">
       <a href="{{ '/' | relative_url }}"{% if path == '/' %} aria-current="page"{% endif %}><span class="lang-ko">홈</span><span class="lang-en">Home</span></a>
-      <a href="{{ '/twins/' | relative_url }}"{% if path contains '/twins/' %} aria-current="page"{% endif %}><span class="lang-ko">쌍둥이</span><span class="lang-en">Twins</span></a>
+      <a href="{{ '/characters/' | relative_url }}"{% if in_characters %} aria-current="page"{% endif %}><span class="lang-ko">캐릭터</span><span class="lang-en">Characters</span></a>
       <a href="{{ '/apps/' | relative_url }}"{% if path contains '/apps/' %} aria-current="page"{% endif %}><span class="lang-ko">앱</span><span class="lang-en">Apps</span></a>
       <a href="{{ '/games/' | relative_url }}"{% if path contains '/games/' %} aria-current="page"{% endif %}><span class="lang-ko">게임</span><span class="lang-en">Games</span></a>
       <a href="{{ '/posts/' | relative_url }}"{% if path contains '/posts/' %} aria-current="page"{% endif %}><span class="lang-ko">블로그</span><span class="lang-en">Blog</span></a>
