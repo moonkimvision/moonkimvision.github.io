@@ -54,6 +54,7 @@ exclude:
   - ralph-core/
   - BACKLOG.md
   - README.md
+  - CLAUDE.md
   - "*.py"
   - .claude/
 
