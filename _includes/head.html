@@ -26,6 +26,9 @@
   {%- if site.goatcounter and jekyll.environment == "production" %}
   <script data-goatcounter="https://{{ site.goatcounter }}.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
   {%- endif %}
+  {%- if site.adsense and jekyll.environment == "production" %}
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.adsense }}" crossorigin="anonymous"></script>
+  {%- endif %}
   {% seo %}
   {% feed_meta %}
 </head>
