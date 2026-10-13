@@ -1,0 +1,186 @@
+# 공동책임 (아빠 콤비) 캐릭터 프로필 데이터 — _data/characters.yml 의 gongdong 그룹
+# 원본 설정: marketing-studio/projects/twins/marketing/character/CHARACTER.md ('공동책임', §11 아빠, §13 곰돌이)
+# 설정이 바뀌면 이 파일을 같이 고친다.
+
+dad:
+  id: dad
+  url: /gongdong/dad/
+  other: bear
+  name_ko: 유 책임
+  name_en: Lead Yu
+  badge_ko: 쌍둥이 아빠
+  badge_en: The twins' dad
+  role_ko: 아재개그 · 호탕 담당
+  role_en: The Dad-Joker
+  oneliner_ko: 무표정 집안에서 혼자 표정이 다 드러나는 사람.
+  oneliner_en: The only face in a deadpan family that shows everything.
+  intro_ko: >-
+    성(유)과 직책(책임)만 있고 이름은 나오지 않는다. 인상 좋고 호탕해서 웬만한 일은
+    "하하하!" 한 번에 넘긴다. 아재개그를 쉬지 않고 던지고 혼자 제일 크게 웃는다.
+    아이스크림 실종 사건의 진범이지만, 들켜도 당당해서 남매도 결국 화를 못 낸다.
+  intro_en: >-
+    All we know is his surname (Yu) and his job title (Lead) — his first name never comes up.
+    Big-hearted and loud, he laughs off almost anything with one "Hahaha!" He fires dad jokes
+    nonstop and laughs at them the hardest. He's the culprit behind the missing ice cream,
+    but he owns it so cheerfully that the twins can't stay mad.
+  images:
+    front: /assets/images/gongdong/dad-front.webp
+    three_quarter: /assets/images/gongdong/dad-34.webp
+    side: /assets/images/gongdong/dad-side.webp
+    face: /assets/images/gongdong/dad-face.webp
+  profile:
+    - label_ko: 호칭
+      label_en: Called
+      ko: 남매는 "아빠", 곰은 "유 책임님"
+      en: "\"Dad\" to the twins, \"Lead Yu\" to the bear"
+    - label_ko: 포지션
+      label_en: Role
+      ko: 아재개그와 근거 없는 자신감 (튀는 쪽)
+      en: Dad jokes and unfounded confidence (the loud one)
+    - label_ko: 성격
+      label_en: Personality
+      ko: 낙천가. 걱정을 오래 못 하고, 진지한 분위기를 못 견뎌 먼저 깬다. 자식 바보
+      en: An optimist who can't worry for long and always breaks a serious mood first. Dotes on his kids
+    - label_ko: 말투
+      label_en: Speech
+      ko: 크고 시원한 반말. "허허", "아이고~", "자, 봐 봐" 로 시작해서 "~지!" 로 신나게 맺는다
+      en: Loud and casual. Opens with "Heh heh", "Oh boy~", "Look, look" — ends on a high note
+    - label_ko: 외형
+      label_en: Look
+      ko: 짧게 넘긴 흑발, 둥근 얼굴, 깎아도 남는 회색 수염 자국, 따뜻한 눈매
+      en: Short slicked-back hair, round face, a gray five-o'clock shadow, warm eyes
+    - label_ko: 옷
+      label_en: Outfit
+      ko: 무지 흰 반팔 티 + 진회색 트레이닝 바지 + 회색 실내 슬리퍼
+      en: Plain white tee, dark gray sweatpants, gray house slippers
+    - label_ko: 시그니처
+      label_en: Signature
+      ko: 주황 손목시계 줄 — 쌍둥이 손목 밴드와 같은 색
+      en: An orange watch strap — the same color as the twins' wristbands
+    - label_ko: 좋아하는 것
+      label_en: Loves
+      ko: 아재개그, 남매 자랑, 남의 아이스크림
+      en: Dad jokes, bragging about his kids, other people's ice cream
+    - label_ko: 약한 것
+      label_en: Weak spot
+      ko: 엄마. 엄마 앞에서는 꼼짝 못 한다
+      en: Mom. He's powerless in front of her
+  quotes:
+    - ko: 노 책임~ 아재개그 하나 할까? 하하!
+      en: Hey, Lead No~ Want to hear a dad joke? Ha!
+    - ko: 아빠가 먹었지! 맛있더라!
+      en: I ate it! It was delicious!
+    - ko: 요즘 그거… 갓생? 아빠도 갓생 살아!
+      en: What's the word… "grindset"? Dad's on the grindset too!
+    - ko: 이건 공동 책임이야, 노 책임!
+      en: This is a joint responsibility, Lead No!
+    - ko: 역시 노 책임은 보는 눈이 있어!
+      en: See? Lead No really knows quality!
+  stats:
+    - key: dadjoke
+      value: 99
+    - key: energy
+      value: 95
+    - key: confidence
+      value: 90
+    - key: dry
+      value: 5
+    - key: formal
+      value: 0
+
+bear:
+  id: bear
+  url: /gongdong/bear/
+  other: dad
+  name_ko: 노 책임
+  name_en: Lead No
+  badge_ko: 아빠 짝꿍 · 막대 인형
+  badge_en: Dad's sidekick · rod puppet
+  role_ko: 건조한 한마디 담당
+  role_en: The Dry One
+  oneliner_ko: 귀여운 핫핑크 곰인데, 세상 다 산 눈.
+  oneliner_en: A cute hot-pink bear with eyes that have seen it all.
+  intro_ko: >-
+    유 책임과 같은 직급이라 둘은 동기 같은 사이. 아빠 개그의 유일한 냉정한 관객이다.
+    아빠가 들뜰수록 차분해지고, 가족 중 혼자 사내 존댓말을 끝까지 지킨다.
+    아래에서 막대로 움직이는 인형이라 혼자 못 걷지만, 아무도 막대에 대해 묻지 않는다.
+    사실 아빠를 좋아한다. 절대 말로 하지 않을 뿐.
+  intro_en: >-
+    Same job title as Lead Yu, so the two are like coworkers from the same hiring class.
+    He's the only audience that never laughs at Dad's jokes. The more excited Dad gets,
+    the calmer he becomes — and he's the only one in the family who sticks to polite office speech.
+    He's a rod puppet and can't walk on his own, but nobody ever asks about the rods.
+    Secretly, he likes Dad. He'd just never say it.
+  images:
+    front: /assets/images/gongdong/bear-front.webp
+    three_quarter: /assets/images/gongdong/bear-34.webp
+    side: /assets/images/gongdong/bear-side.webp
+    face: /assets/images/gongdong/bear-face.webp
+  profile:
+    - label_ko: 호칭
+      label_en: Called
+      ko: 노 책임. 아빠를 꼬박꼬박 "유 책임님"이라고 부른다
+      en: Lead No — always calls Dad "Lead Yu"
+    - label_ko: 포지션
+      label_en: Role
+      ko: 들뜬 아빠 옆의 건조한 한마디
+      en: The dry one-liner next to an overexcited Dad
+    - label_ko: 성격
+      label_en: Personality
+      ko: 시니컬한 현실주의자. 기대를 안 하니 실망도 안 한다. 웃지 않는다
+      en: A cynical realist. Expects nothing, so he's never disappointed. Never smiles
+    - label_ko: 말투
+      label_en: Speech
+      ko: 짧은 존댓말, 끝은 늘 내림. 감탄사·느낌표 없음
+      en: Short and polite, always trailing down. No exclamations, ever
+    - label_ko: 외형
+      label_en: Look
+      ko: 핫핑크 곰, 반쯤 감긴 눈. 아래에서 막대 세 개로 움직이고 발이 떠 있다
+      en: A hot-pink bear with half-closed eyes. Moved by three rods from below, feet never touching the ground
+    - label_ko: 옷
+      label_en: Outfit
+      ko: 아빠와 같은 흰 반팔 티. 아빠가 입혔다. 불만이다
+      en: The same white tee as Dad. Dad put it on him. He's not happy about it
+    - label_ko: 시그니처
+      label_en: Signature
+      ko: 핫핑크 털 — 흑백 세계의 두 번째 색
+      en: Hot-pink fur — the second color in a black-and-white world
+    - label_ko: 좋아하는 것
+      label_en: Loves
+      ko: (말 안 함) 사실 유 책임님
+      en: (Won't say.) Lead Yu, actually
+    - label_ko: 특기
+      label_en: Talent
+      ko: 아빠 개그 뒤에 정적 만들기, 남매와 같은 눈으로 아빠 쳐다보기
+      en: Creating silence after Dad's jokes, giving Dad the same look the twins do
+  quotes:
+    - ko: 아, 네.
+      en: Ah. Okay.
+    - ko: …안 웃겨요.
+      en: …Not funny.
+    - ko: 그건 유 책임님 생각이고요.
+      en: That's your opinion, Lead Yu.
+    - ko: 유 책임님, 그거 회의 때도 하셨어요.
+      en: Lead Yu, you did that one in the meeting too.
+    - ko: …제 책임은 아닌데요.
+      en: …That's not my responsibility.
+    - ko: …같은 거 입히지 마세요.
+      en: …Please stop dressing us alike.
+  stats:
+    - key: dadjoke
+      value: 0
+    - key: energy
+      value: 5
+    - key: confidence
+      value: 20
+    - key: dry
+      value: 98
+    - key: formal
+      value: 100
+
+stat_labels:
+  dadjoke: { ko: 아재개그력, en: Dad-joke power }
+  energy: { ko: 텐션, en: Energy }
+  confidence: { ko: 근거 없는 자신감, en: Unfounded confidence }
+  dry: { ko: 건조함, en: Dryness }
+  formal: { ko: 사내 존댓말, en: Office politeness }

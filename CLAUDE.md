@@ -24,6 +24,7 @@ Jekyll 기반 GitHub Pages 블로그.
 ├── _data/
 │   ├── characters.yml   # 캐릭터 그룹 목록 (상단 메뉴 '캐릭터' /characters/, 프로필 레이아웃·카드·말풍선이 읽음)
 │   ├── twins.yml        # 쌍둥이 캐릭터 프로필·능력치·에피소드 (characters.yml 의 twins 그룹 data)
+│   ├── gongdong.yml     # 공동책임(아빠 유 책임 + 곰돌이 노 책임) 프로필·능력치 (gongdong 그룹 data)
 │   ├── apps.yml         # 앱 목록 (홈·앱 페이지·포스트 하단 카드가 읽음)
 │   ├── games.yml        # 웹게임 목록 (/games/ 가 읽음)
 │   └── sns.yml          # 유튜브·인스타그램·틱톡 채널 (_config.yml social.links 와 같은 주소)
@@ -31,6 +32,7 @@ Jekyll 기반 GitHub Pages 블로그.
 ├── privacy/             # 앱별 개인정보처리방침
 ├── characters/          # 캐릭터 목록(/characters/) — 그룹 카드 + '새 친구 준비 중' 카드
 ├── twins/               # 쌍둥이 소개(/twins/) + 프로필(sister, brother) — 첫 캐릭터 그룹 (주소는 SNS 공유돼 있어 유지)
+├── gongdong/            # 공동책임 소개(/gongdong/) + 프로필(dad, bear) — 두 번째 캐릭터 그룹
 ├── apps/                # 앱 목록(/apps/)
 ├── games/               # 게임 목록(/games/) + 게임별 폴더(games/<id>/ — 게임 저장소 Actions 가 복사, 직접 수정 금지)
 ├── 404.html             # 없는 주소 안내 (쌍둥이)
@@ -41,6 +43,7 @@ Jekyll 기반 GitHub Pages 블로그.
 │   ├── js/site.js       # 언어 토글·캐릭터 대사·포즈 전환 (언어 첫 적용만 head 인라인)
 │   └── images/
 │       ├── twins/       # 캐릭터 WebP(컷아웃·얼굴·스탬프·푸터 빼꼼), OG jpg, 파비콘
+│       ├── gongdong/    # 공동책임 WebP (컷아웃·얼굴·듀오) — marketing-studio 마스터 시트에서 잘라 냄
 │       ├── apps/        # 앱 아이콘
 │       └── games/       # 게임 썸네일 WebP (16:9)
 ├── BACKLOG.md

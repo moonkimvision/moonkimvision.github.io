@@ -15,6 +15,8 @@
   --orange: #F57C00;     /* 유일한 색 */
   --orange-soft: #FFE0B2;
   --bro-bubble: #FFE3BF; /* 동생 자막색 #FFB74D 계열 */
+  --pink: #FF2E93;       /* 노 책임(공동책임 곰) 털색 — 주황 외 유일한 예외 */
+  --bear-bubble: #FFD6EA;
   --line: 2.5px solid var(--ink);
   --shadow: 5px 5px 0 var(--ink);
   --shadow-lg: 8px 8px 0 var(--ink);
@@ -225,6 +227,7 @@ html[data-lang="en"] .lang-ko-el { display: none !important; }
   background: var(--orange); top: 14%; left: 11%;
 }
 .twin-card-brother .twin-card-art::before { background: var(--ink); }
+.twin-card-bear .twin-card-art::before { background: var(--pink); }
 .twin-card-art img {
   position: absolute; left: 50%; top: 6%; height: 175%; width: auto; max-width: none;
   transform: translateX(-50%); transition: transform .2s;
@@ -285,6 +288,9 @@ a.group-card:hover .group-card-art img { transform: scale(1.03); }
 .chat-brother { flex-direction: row-reverse; }
 .chat-brother .chat-bubble { background: var(--bro-bubble); border-radius: 18px 18px 4px 18px; }
 .chat-brother .chat-name { text-align: right; }
+.chat-bear { flex-direction: row-reverse; }
+.chat-bear .chat-bubble { background: var(--bear-bubble); border-radius: 18px 18px 4px 18px; }
+.chat-bear .chat-name { text-align: right; }
 .chat-sm { margin: 18px 0; gap: 10px; }
 .chat-sm .chat-avatar { width: 38px; height: 38px; }
 .chat-sm .chat-bubble { font-size: 0.92rem; padding: 6px 14px 8px; }
@@ -417,6 +423,8 @@ a.group-card:hover .group-card-art img { transform: scale(1.03); }
   border-radius: 50%; background: var(--orange); border: var(--line);
 }
 .profile-brother .profile-figure::before { background: var(--paper); }
+.profile-bear .profile-figure::before { background: var(--pink); }
+.profile-bear .stat-fill { background: var(--pink); }
 .turnaround {
   position: relative; height: 600px;
   -webkit-mask-image: linear-gradient(#000 80%, transparent);

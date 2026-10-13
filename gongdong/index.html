@@ -1,0 +1,91 @@
+---
+layout: default
+bilingual: true
+title: "공동책임 소개"
+permalink: /gongdong/
+description: 쌍둥이 아빠 유 책임과 곰돌이 막대 인형 노 책임. 둘 다 직책이 '책임'이라 합쳐서 공동책임.
+---
+{%- assign d = site.data.gongdong.dad -%}
+{%- assign b = site.data.gongdong.bear -%}
+
+<section class="page-hero">
+  <div class="stamp-drift" aria-hidden="true"></div>
+  <div class="container page-hero-inner">
+    <figure class="polaroid">
+      <img src="{{ '/assets/images/gongdong/duo.webp' | relative_url }}" alt="흰 티를 맞춰 입은 유 책임과 노 책임 / Lead Yu and Lead No in matching white tees" width="900" height="900">
+      <figcaption><span class="lang-ko">커플 티. 한쪽만 신났다.</span><span class="lang-en">Matching tees. Only one of them is happy about it.</span></figcaption>
+    </figure>
+    <div>
+      <p class="eyebrow"><a href="{{ '/characters/' | relative_url }}" class="eyebrow-link"><span class="lang-ko">캐릭터</span><span class="lang-en">Characters</span></a> · <span class="lang-ko">공동책임 소개</span><span class="lang-en">Meet the leads</span></p>
+      <h1 class="page-hero-title"><span class="lang-ko">책임 둘,<br>공동책임.</span><span class="lang-en">Two leads,<br>YouNo Lead.</span></h1>
+      <p class="hero-lead">
+        <span class="lang-ko">남매가 쌍둥이라면, 아빠 쪽은 공동책임. 혼자 표정이 다 드러나는 쌍둥이 아빠 유 책임과, 아빠가 커플 티를 입혀 놓은 핫핑크 곰돌이 인형 노 책임이에요. 둘 다 직책이 '책임'이라 회사 동기처럼 지내요.</span>
+        <span class="lang-en">If the kids are the twins, Dad's side is YouNo Lead. Lead Yu is the twins' dad, the only face in the family that shows everything. Lead No is the hot-pink teddy puppet he dressed in a matching tee. Same job title, so they act like coworkers.</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="twin-grid">
+      {% include twin-card.html group="gongdong" id="dad" %}
+      {% include twin-card.html group="gongdong" id="bear" %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow"><span class="lang-ko">비교</span><span class="lang-en">Side by side</span></p>
+      <h2 class="section-title"><span class="lang-ko">같은 흰 티, 정반대 온도</span><span class="lang-en">Same white tee, opposite temperatures</span></h2>
+    </header>
+    <div class="compare paper">
+      <div class="compare-head">
+        <span></span>
+        <a href="{{ d.url | relative_url }}"><img src="{{ d.images.face | relative_url }}" alt="" width="56" height="56"><span class="lang-ko">{{ d.name_ko }}</span><span class="lang-en">{{ d.name_en }}</span></a>
+        <a href="{{ b.url | relative_url }}"><img src="{{ b.images.face | relative_url }}" alt="" width="56" height="56"><span class="lang-ko">{{ b.name_ko }}</span><span class="lang-en">{{ b.name_en }}</span></a>
+      </div>
+      <dl>
+        <div class="compare-row"><dt><span class="lang-ko">정체</span><span class="lang-en">Who</span></dt><dd><span class="lang-ko">쌍둥이 아빠</span><span class="lang-en">The twins' dad</span></dd><dd><span class="lang-ko">아래에서 막대로 움직이는 곰돌이 인형</span><span class="lang-en">A teddy-bear rod puppet</span></dd></div>
+        <div class="compare-row"><dt><span class="lang-ko">표정</span><span class="lang-en">Face</span></dt><dd><span class="lang-ko">늘 웃는다</span><span class="lang-en">Always smiling</span></dd><dd><span class="lang-ko">반쯤 감긴 눈, 절대 안 웃음</span><span class="lang-en">Half-closed eyes, never smiles</span></dd></div>
+        <div class="compare-row"><dt><span class="lang-ko">말투</span><span class="lang-en">Speech</span></dt><dd><span class="lang-ko">크고 시원한 반말 ↗!</span><span class="lang-en">Loud and casual ↗!</span></dd><dd><span class="lang-ko">짧은 사내 존댓말 ↘</span><span class="lang-en">Short, polite office talk ↘</span></dd></div>
+        <div class="compare-row"><dt><span class="lang-ko">상대 호칭</span><span class="lang-en">Calls the other</span></dt><dd><span class="lang-ko">"노 책임~!"</span><span class="lang-en">"Lead No~!"</span></dd><dd><span class="lang-ko">"유 책임님."</span><span class="lang-en">"Lead Yu."</span></dd></div>
+        <div class="compare-row"><dt><span class="lang-ko">웃음 담당</span><span class="lang-en">Comedy role</span></dt><dd><span class="lang-ko">아재개그·근거 없는 자신감</span><span class="lang-en">Dad jokes, unfounded confidence</span></dd><dd><span class="lang-ko">건조한 한마디 (안 먹힘)</span><span class="lang-en">The dry comeback (never lands)</span></dd></div>
+        <div class="compare-row"><dt><span class="lang-ko">공통점</span><span class="lang-en">In common</span></dt><dd class="span2"><span class="lang-ko">직책이 '책임', 그리고 같은 흰 반팔 티</span><span class="lang-en">The job title "Lead", and the same white tee</span></dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow"><span class="lang-ko">아빠 공식</span><span class="lang-en">The dad formula</span></p>
+      <h2 class="section-title"><span class="lang-ko">태클이 안 먹힌다</span><span class="lang-en">The comeback never lands</span></h2>
+      <p class="section-lead"><span class="lang-ko">콤비 회차는 유튜브 쇼츠·인스타그램 릴스·틱톡에 #공동책임 으로 올라가요.</span><span class="lang-en">Their episodes go up on YouTube Shorts, Instagram Reels and TikTok as #공동책임.</span></p>
+      {% include sns-links.html style="buttons" %}
+    </header>
+    <div class="chat">
+      {% include bubble.html group="gongdong" who="dad" ko="노 책임~ 아재개그 하나 할까? 하하!" en="Hey, Lead No~ Want to hear a dad joke? Ha!" %}
+      {% include bubble.html group="gongdong" who="bear" ko="하지 마세요." en="Please don't." %}
+      {% include bubble.html group="gongdong" who="dad" ko="역시 기대되지? 하하하!" en="Can't wait, huh? Hahaha!" %}
+      {% include bubble.html group="gongdong" who="dad" ko="아이스크림 누가 먹었게~?" en="Guess who ate the ice cream~?" %}
+      {% include bubble.html group="gongdong" who="bear" ko="유 책임님이요." en="You did, Lead Yu." %}
+      {% include bubble.html group="gongdong" who="dad" ko="어떻게 알았어! 하하하!" en="How'd you know?! Hahaha!" %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container world-note">
+    <div class="world-swatches" aria-hidden="true">
+      <span style="background:#141414"></span><span style="background:#fff"></span><span style="background:#FFF6E5"></span><span style="background:#F57C00"></span><span style="background:#FF2E93"></span>
+    </div>
+    <div>
+      <h2 class="section-title"><span class="lang-ko">흑백 세계에 두 번째 색</span><span class="lang-en">A second color in a black-and-white world</span></h2>
+      <p><span class="lang-ko">쌍둥이의 세계는 흑백에 주황 한 점이에요. 유 책임도 규칙대로 주황 손목시계 줄만 찼지만, 노 책임의 핫핑크 털은 일부러 깬 예외예요. 둘이 한 화면에 나오면 두 색이 같이 보여요.</span><span class="lang-en">The twins' world is black and white with one dot of orange. Lead Yu follows the rule with an orange watch strap, but Lead No's hot-pink fur is a deliberate exception. Put them side by side and you get both colors.</span></p>
+    </div>
+  </div>
+</section>

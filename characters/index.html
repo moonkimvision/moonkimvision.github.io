@@ -3,7 +3,7 @@ layout: default
 bilingual: true
 title: "캐릭터"
 permalink: /characters/
-description: moonkimvision의 캐릭터들. 무표정 쌍둥이 남매와 앞으로 합류할 친구들.
+description: moonkimvision의 캐릭터들. 무표정 쌍둥이 남매와 아빠 콤비 공동책임, 그리고 앞으로 합류할 친구들.
 ---
 {%- comment -%} 캐릭터(그룹) 목록. 데이터: _data/characters.yml — 새 그룹은 거기 한 항목 + /<id>/ 폴더 (CLAUDE.md "캐릭터 추가") {%- endcomment -%}
 <section class="page-hero page-hero-compact">
@@ -12,11 +12,12 @@ description: moonkimvision의 캐릭터들. 무표정 쌍둥이 남매와 앞으
     <div>
       <p class="eyebrow"><span class="lang-ko">캐릭터</span><span class="lang-en">Characters</span></p>
       <h1 class="page-hero-title"><span class="lang-ko">무표정이 기본값인<br>사람들.</span><span class="lang-en">Deadpan<br>by default.</span></h1>
-      <p class="hero-lead"><span class="lang-ko">moonkimvision의 숏폼과 앱에 나오는 캐릭터들이에요. 지금은 쌍둥이 남매가 집을 지키고 있고, 새 친구들이 곧 합류해요.</span><span class="lang-en">The characters behind moonkimvision's shorts and apps. The twins are holding down the fort for now — new friends are on the way.</span></p>
+      <p class="hero-lead"><span class="lang-ko">moonkimvision의 숏폼과 앱에 나오는 캐릭터들이에요. 무표정 쌍둥이 남매에, 혼자 표정이 다 드러나는 아빠와 그 짝꿍 곰돌이까지. 새 친구들도 계속 합류해요.</span><span class="lang-en">The characters behind moonkimvision's shorts and apps. The deadpan twins, plus their very expressive dad and his teddy-bear sidekick — with more friends on the way.</span></p>
     </div>
     <div class="chat page-hero-chat">
-      {% include bubble.html who="sister" ko="잠깐, 우리 말고 또 온다고? 아 그럼 내가 선배네. 선배." en="Wait, more people are coming? Oh, so I'm the senior. Senior." %}
-      {% include bubble.html who="brother" ko="…몇 분 차이로." en="…By a few minutes." %}
+      {% include bubble.html who="sister" ko="잠깐, 아빠도 캐릭터야? 아 그럼 내가 선배네. 선배." en="Wait, Dad's a character now? Oh, so I'm the senior. Senior." %}
+      {% include bubble.html group="gongdong" who="dad" ko="허허, 아빠가 신입이다! 잘 부탁해!" en="Heh heh, Dad's the new hire! Be nice!" %}
+      {% include bubble.html group="gongdong" who="bear" ko="…같이 묶지 마세요." en="…Please don't lump me in." %}
     </div>
   </div>
 </section>
