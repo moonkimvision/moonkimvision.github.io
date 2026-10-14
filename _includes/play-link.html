@@ -1,0 +1,10 @@
+{%- comment -%}
+  Google Play 링크 한 개. 사용: include play-link.html app=app place="hero|bottom|list|card" class="btn btn-orange" [short=true]
+  - 클릭 측정: GoatCounter 이벤트 play-<앱 id>-<place>
+  - Play Console 획득 보고서용 referrer(utm) 를 붙인다. campaign = 지금 페이지 slug (없으면 place)
+{%- endcomment -%}
+{%- assign pl_app = include.app -%}
+{%- assign pl_campaign = page.slug | default: include.place -%}
+<a class="{{ include.class | default: 'btn btn-orange' }}" href="{{ pl_app.store }}&referrer=utm_source%3Dmoonkimvision%26utm_medium%3Dsite%26utm_campaign%3D{{ pl_campaign }}" rel="noopener" target="_blank" data-goatcounter-click="play-{{ pl_app.id }}-{{ include.place | default: 'card' }}" title="Google Play">
+  {%- if include.short -%}Google Play{%- else -%}<span class="lang-ko">Google Play에서 받기 · 무료</span><span class="lang-en">Get it on Google Play · Free</span>{%- endif -%}
+</a>

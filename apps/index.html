@@ -34,7 +34,7 @@ description: moonkimvision이 만든 안드로이드 앱과, 설치 없이 브�
     </header>
     <div class="app-grid">
       {%- for app in site.data.apps %}
-      {% include app-card.html app=app %}
+      {% include app-card.html app=app place="apps" %}
       {%- endfor %}
     </div>
   </div>

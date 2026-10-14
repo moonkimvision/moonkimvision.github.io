@@ -113,6 +113,9 @@ bundle exec jekyll build
 - 경로: `_posts/YYYY-MM-DD-slug.md`
 - permalink: `/posts/<slug>/`
 - layout: `post` (기본값으로 설정됨), 목록 카드 요약은 front matter `description`
+- 카드 제목은 ` — ` 앞부분만, 뒷부분은 부제로 나온다. 본문 강조 형광펜은 `<mark>` 또는 `**…**{:.hl}` 에만 (일반 `**굵게**` 는 굵기만).
+- `app: <id>` 포스트는 상단(제목 아래) Play 버튼 + 하단 앱 카드(Play 주 버튼)가 자동으로 붙는다. Play 링크는 `_includes/play-link.html` 로만 (utm referrer·클릭 측정 포함).
+- 클릭 측정(GoatCounter 이벤트, `data-goatcounter-click`): `play-<앱>-<hero|bottom|list|apps|home>`, `sns-<채널>-<post|list|footer|buttons>`, `postcard-<list|home|related>-<slug>`, `nav-prev|next`. 대시보드에서 이벤트 수 ÷ 페이지뷰로 본다.
 
 ### Front matter 필수 항목
 ```yaml

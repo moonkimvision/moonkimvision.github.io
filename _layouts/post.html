@@ -19,8 +19,17 @@ layout: default
           <img src="{{ '/assets/images/twins/sister-face.webp' | relative_url }}" alt="" width="28" height="28">
           <img src="{{ '/assets/images/twins/brother-face.webp' | relative_url }}" alt="" width="28" height="28">
         </span>
-        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y년 %m월 %d일" }}</time>
+        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y년 %-m월 %-d일" }}</time>
+        {%- assign read_chars = content | strip_html | strip_newlines | size %}
+        <span class="sep" aria-hidden="true">·</span><span>{{ read_chars | divided_by: 500 | plus: 1 }}분 읽기</span>
       </p>
+      {%- if post_app %}
+      <div class="post-hero-cta">
+        <img src="{{ post_app.icon | relative_url }}" alt="" width="40" height="40">
+        <span class="post-hero-cta-text"><strong>{{ post_app.name }}</strong><small>{{ post_app.platform }} · 무료</small></span>
+        {% include play-link.html app=post_app place="hero" class="btn btn-orange" short=true %}
+      </div>
+      {%- endif %}
     </div>
   </header>
 
@@ -33,16 +42,40 @@ layout: default
   {%- if post_app %}
   <section class="post-app container">
     <h2 class="section-kicker">이 글에 나온 앱</h2>
-    {% include app-card.html app=post_app compact=true %}
+    <div class="chat chat-sm">
+      {% include bubble.html who="brother" text="…받아 봐. 무료야." %}
+    </div>
+    {% include app-card.html app=post_app compact=true context="post" place="bottom" %}
+  </section>
+  {%- endif %}
+
+  <section class="post-follow container">
+    <div class="post-follow-inner paper">
+      <div class="chat chat-sm">
+        {% include bubble.html who="sister" text="우리 숏폼도 있거든? 아 잠깐, 구독 버튼은 저기." %}
+      </div>
+      {% include sns-links.html style="buttons" place="post" %}
+    </div>
+  </section>
+
+  {%- assign related = site.posts | where_exp: "p", "p.url != page.url" %}
+  {%- if related.size > 0 %}
+  <section class="post-related container">
+    <h2 class="section-kicker">다른 이야기</h2>
+    <div class="post-grid">
+      {%- for p in related limit: 3 %}
+      {% include post-card.html post=p place="related" %}
+      {%- endfor %}
+    </div>
   </section>
   {%- endif %}
 
   <nav class="post-nav container" aria-label="이전·다음 글">
     {%- if page.previous %}
-    <a class="post-nav-link" href="{{ page.previous.url | relative_url }}"><span>← 이전 글</span>{{ page.previous.title }}</a>
+    <a class="post-nav-link" href="{{ page.previous.url | relative_url }}" data-goatcounter-click="nav-prev"><span>← 이전 글</span>{{ page.previous.title }}</a>
     {%- else %}<span></span>{%- endif %}
     {%- if page.next %}
-    <a class="post-nav-link next" href="{{ page.next.url | relative_url }}"><span>다음 글 →</span>{{ page.next.title }}</a>
+    <a class="post-nav-link next" href="{{ page.next.url | relative_url }}" data-goatcounter-click="nav-next"><span>다음 글 →</span>{{ page.next.title }}</a>
     {%- endif %}
   </nav>
 </article>

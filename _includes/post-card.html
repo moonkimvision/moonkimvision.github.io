@@ -1,8 +1,8 @@
-{%- comment -%} 포스트 카드. 사용: include post-card.html post=post {%- endcomment -%}
+{%- comment -%} 포스트 카드. 사용: include post-card.html post=post [place="list|home|related"] — 클릭 측정 postcard-<place>-<slug> {%- endcomment -%}
 {%- assign p = include.post -%}
 {%- assign p_app = nil -%}
 {%- if p.app -%}{%- assign p_app = site.data.apps | where: "id", p.app | first -%}{%- endif -%}
-<a class="post-card" href="{{ p.url | relative_url }}"{% if p_app %} style="--app-color: {{ p_app.color }}"{% endif %}>
+<a class="post-card" href="{{ p.url | relative_url }}" data-goatcounter-click="postcard-{{ include.place | default: 'list' }}-{{ p.slug }}"{% if p_app %} style="--app-color: {{ p_app.color }}"{% endif %}>
   <span class="post-card-thumb">
     {%- if p_app %}
     <img src="{{ p_app.icon | relative_url }}" alt="" width="64" height="64" loading="lazy">
@@ -12,8 +12,10 @@
   </span>
   <span class="post-card-body">
     {%- if p.tags.size > 0 %}<span class="post-card-tags">{% for t in p.tags limit: 2 %}<span class="tag">{{ t }}</span>{% endfor %}</span>{% endif %}
-    <span class="post-card-title">{{ p.title }}</span>
-    <span class="post-card-excerpt">{{ p.description | default: p.excerpt | strip_html | truncate: 90 }}</span>
+    {%- assign p_title = p.title | split: " — " %}
+    <span class="post-card-title">{{ p_title[0] }}</span>
+    {%- if p_title[1] %}<span class="post-card-sub">{{ p_title[1] }}</span>{% endif %}
+    <span class="post-card-excerpt">{{ p.description | default: p.excerpt | strip_html | truncate: 120 }}</span>
     <span class="post-card-date">{{ p.date | date: "%Y.%m.%d" }}</span>
   </span>
 </a>

@@ -1,11 +1,12 @@
 {%- comment -%}
   SNS 링크 (_data/sns.yml). 사용: include sns-links.html style="icons|buttons"
   icons = 동그란 아이콘만 (푸터), buttons = 아이콘 + 이름 + 계정 (본문)
+  place = 클릭 측정 위치 이름 (GoatCounter sns-<id>-<place>, 기본 style 값)
 {%- endcomment -%}
 <ul class="sns sns-{{ include.style | default: 'icons' }}">
   {%- for s in site.data.sns %}
   <li>
-    <a class="sns-link" href="{{ s.url }}" target="_blank" rel="noopener me" aria-label="{{ s.name }} {{ s.handle }}">
+    <a class="sns-link" href="{{ s.url }}" target="_blank" rel="noopener me" aria-label="{{ s.name }} {{ s.handle }}" data-goatcounter-click="sns-{{ s.id }}-{{ include.place | default: include.style | default: 'icons' }}">
       <svg class="sns-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
         {%- case s.id -%}
         {%- when 'youtube' -%}<path fill="currentColor" fill-rule="evenodd" d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15V9l5.2 3z"/>

@@ -4,7 +4,7 @@ title: 블로그
 permalink: /posts/
 description: moonkimvision 블로그 — 앱 소개와 쌍둥이 이야기.
 ---
-<section class="page-hero page-hero-compact">
+<section class="page-hero page-hero-compact posts-hero">
   <div class="stamp-drift" aria-hidden="true"></div>
   <div class="container page-hero-inner">
     <div>
@@ -24,11 +24,28 @@ description: moonkimvision 블로그 — 앱 소개와 쌍둥이 이야기.
     {%- if site.posts.size > 0 %}
     <div class="post-grid">
       {%- for post in site.posts %}
-      {% include post-card.html post=post %}
+      {% include post-card.html post=post place="list" %}
       {%- endfor %}
     </div>
     {%- else %}
     <p class="empty-msg">아직 글이 없습니다.</p>
     {%- endif %}
+  </div>
+</section>
+
+<section class="section section-alt posts-more">
+  <div class="container">
+    <h2 class="section-kicker">글에 나온 앱, 바로 받기</h2>
+    <ul class="app-strip">
+      {%- for app in site.data.apps %}
+      <li class="app-strip-item" style="--app-color: {{ app.color }}">
+        <img src="{{ app.icon | relative_url }}" alt="" width="48" height="48" loading="lazy">
+        <span class="app-strip-text"><strong>{{ app.name }}</strong><small>{{ app.tagline_ko }}</small></span>
+        {% include play-link.html app=app place="list" class="btn btn-orange" short=true %}
+      </li>
+      {%- endfor %}
+    </ul>
+    <h2 class="section-kicker posts-more-sns">쌍둥이 숏폼</h2>
+    {% include sns-links.html style="buttons" place="list" %}
   </div>
 </section>

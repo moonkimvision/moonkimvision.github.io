@@ -126,7 +126,7 @@ description: 무표정 쌍둥이 남매가 안내하는 moonkimvision의 앱과 
     </header>
     <div class="app-grid">
       {%- for app in site.data.apps %}
-      {% include app-card.html app=app %}
+      {% include app-card.html app=app place="home" %}
       {%- endfor %}
     </div>
   </div>
@@ -144,7 +144,7 @@ description: 무표정 쌍둥이 남매가 안내하는 moonkimvision의 앱과 
     {%- if site.posts.size > 0 %}
     <div class="post-grid">
       {%- for post in site.posts limit: 3 %}
-      {% include post-card.html post=post %}
+      {% include post-card.html post=post place="home" %}
       {%- endfor %}
     </div>
     {%- else %}
