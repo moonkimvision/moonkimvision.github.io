@@ -3,7 +3,7 @@ layout: default
 bilingual: true
 title: "앱"
 permalink: /apps/
-description: moonkimvision이 만든 안드로이드 앱 — AppRoutine, Crop Screen Recorder.
+description: moonkimvision이 만든 안드로이드 앱과, 설치 없이 브라우저에서 바로 하는 웹게임.
 ---
 <section class="page-hero page-hero-compact">
   <div class="stamp-drift" aria-hidden="true"></div>
@@ -11,7 +11,7 @@ description: moonkimvision이 만든 안드로이드 앱 — AppRoutine, Crop Sc
     <div>
       <p class="eyebrow"><span class="lang-ko">앱</span><span class="lang-en">Apps</span></p>
       <h1 class="page-hero-title"><span class="lang-ko">작고, 잔소리 없는 앱.</span><span class="lang-en">Small apps. No nagging.</span></h1>
-      <p class="hero-lead"><span class="lang-ko">moonkimvision은 매일 쓰는 폰을 조금 더 편하게 만드는 안드로이드 앱을 만들어요. 계정 가입 없이, 사용 기록과 영상은 기기 안에만.</span><span class="lang-en">moonkimvision builds Android apps that make the phone you use every day a little easier. No sign-up, and your usage history and recordings stay on your device.</span></p>
+      <p class="hero-lead"><span class="lang-ko">moonkimvision은 매일 쓰는 폰을 조금 더 편하게 만드는 안드로이드 앱을 만들어요. 설치 없이 브라우저에서 바로 하는 웹게임도 있어요.</span><span class="lang-en">moonkimvision builds Android apps that make the phone you use every day a little easier. There are also web games you can play right in your browser — no install.</span></p>
     </div>
     <div class="chat page-hero-chat">
       {% include bubble.html who="sister" ko="근데 있잖아, 앱 만드는 회사가 왜 우리를 데려온 거야? 아 잠깐, 우리가 귀여워서?" en="But wait, why would an app company bring us in? Oh. Because we're cute?" %}
@@ -20,11 +20,42 @@ description: moonkimvision이 만든 안드로이드 앱 — AppRoutine, Crop Sc
   </div>
 </section>
 
-<section class="section">
+<nav class="app-tabs container" aria-label="앱 종류 / App types">
+  <a href="#mobile"><span class="lang-ko">모바일 앱</span><span class="lang-en">Mobile apps</span></a>
+  <a href="#web"><span class="lang-ko">웹에서 바로</span><span class="lang-en">Play on the web</span></a>
+</nav>
+
+<section class="section section-anchor" id="mobile">
   <div class="container">
+    <header class="section-head">
+      <p class="eyebrow"><span class="lang-ko">모바일 앱</span><span class="lang-en">Mobile apps</span></p>
+      <h2 class="section-title"><span class="lang-ko">폰에 설치해서 쓰는 앱</span><span class="lang-en">Install on your phone</span></h2>
+      <p class="section-lead"><span class="lang-ko">구글 플레이에서 받아요. 계정 가입 없이, 사용 기록과 영상은 기기 안에만.</span><span class="lang-en">Get them on Google Play. No sign-up, and your usage history and recordings stay on your device.</span></p>
+    </header>
     <div class="app-grid">
       {%- for app in site.data.apps %}
       {% include app-card.html app=app %}
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt section-anchor" id="web">
+  <div class="container">
+    <header class="section-head section-head-row">
+      <div>
+        <p class="eyebrow"><span class="lang-ko">웹에서 바로</span><span class="lang-en">Play on the web</span></p>
+        <h2 class="section-title"><span class="lang-ko">설치 없이, 다 같이.</span><span class="lang-en">No install. Everyone in.</span></h2>
+        <p class="section-lead"><span class="lang-ko">브라우저에서 바로 여는 웹게임이에요. 거실 TV나 태블릿에 띄워 놓고 한 화면에서 같이 해요. 판은 기기에 저장돼서 닫았다 열어도 이어서 할 수 있어요.</span><span class="lang-en">Web games that open right in your browser. Put one on the living-room TV or a tablet and play together on one screen. The board is saved on your device, so you can pick up where you left off.</span></p>
+      </div>
+      <div class="chat chat-sm">
+        {% include bubble.html who="sister" ko="앱만 만드는 줄 알았지? 아 잠깐, 게임도 있어. 내가 이겨 본 게임만 골랐—" en="Thought they only made apps? Wait, there are games too. I only picked the ones I've won—" %}
+        {% include bubble.html who="brother" ko="…한 판 이겼어." en="…You won one." %}
+      </div>
+    </header>
+    <div class="app-grid">
+      {%- for game in site.data.games %}
+      {% include game-card.html game=game %}
       {%- endfor %}
     </div>
   </div>

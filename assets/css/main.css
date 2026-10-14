@@ -15,8 +15,8 @@
   --orange: #F57C00;     /* 유일한 색 */
   --orange-soft: #FFE0B2;
   --bro-bubble: #FFE3BF; /* 동생 자막색 #FFB74D 계열 */
-  --pink: #FF2E93;       /* 노 책임(공동책임 곰) 털색 — 주황 외 유일한 예외 */
-  --bear-bubble: #FFD6EA;
+  --silver: #9AA3AD;     /* 노 책임(공동책임) 은회색 머리 */
+  --coworker-bubble: #E9ECEF;
   --line: 2.5px solid var(--ink);
   --shadow: 5px 5px 0 var(--ink);
   --shadow-lg: 8px 8px 0 var(--ink);
@@ -227,7 +227,7 @@ html[data-lang="en"] .lang-ko-el { display: none !important; }
   background: var(--orange); top: 14%; left: 11%;
 }
 .twin-card-brother .twin-card-art::before { background: var(--ink); }
-.twin-card-bear .twin-card-art::before { background: var(--pink); }
+.twin-card-coworker .twin-card-art::before { background: var(--silver); }
 .twin-card-art img {
   position: absolute; left: 50%; top: 6%; height: 175%; width: auto; max-width: none;
   transform: translateX(-50%); transition: transform .2s;
@@ -269,6 +269,31 @@ a.group-card:hover .group-card-art img { transform: scale(1.03); }
   font-family: var(--display); font-size: 4rem; color: var(--orange);
 }
 .group-card-next .group-card-body { text-align: center; align-items: center; }
+.family-photo { margin: 0; padding: 14px 14px 10px; border: var(--line); border-radius: 24px; box-shadow: var(--shadow); background: var(--paper); }
+.family-photo img { display: block; width: 100%; height: auto; border-radius: 14px; border: 2px solid var(--ink); }
+.family-photo figcaption { font-family: var(--display); font-size: 1.2rem; text-align: center; padding-top: 10px; }
+.section-tight { padding-bottom: 0; }
+.promo-card {
+  display: grid; grid-template-columns: 0.8fr 1.2fr; margin-top: 28px; text-decoration: none; color: inherit;
+  background: var(--paper); border: var(--line); border-radius: 24px; overflow: hidden; box-shadow: var(--shadow);
+  transition: transform .15s, box-shadow .15s;
+}
+.promo-card:hover { transform: translate(-3px, -3px); box-shadow: var(--shadow-lg); }
+.promo-art { display: block; border-right: var(--line); background: var(--cream); }
+.promo-art img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.promo-body { display: flex; flex-direction: column; gap: 12px; padding: 28px 30px; }
+.promo-body .eyebrow { margin: 0; }
+.promo-title { font-family: var(--display); font-size: 2.4rem; line-height: 1.1; }
+.promo-line { color: var(--ink-2); }
+.promo-body .chat { margin: 4px 0; }
+.app-tabs { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+.app-tabs a {
+  font-weight: 900; text-decoration: none; color: var(--ink); padding: 8px 18px; border-radius: 999px;
+  background: var(--paper); border: var(--line); box-shadow: 3px 3px 0 var(--ink); transition: transform .12s, box-shadow .12s;
+}
+.app-tabs a:hover { transform: translate(-2px, -2px); box-shadow: 5px 5px 0 var(--ink); }
+.section-anchor { scroll-margin-top: 80px; }
+.app-tabs + .section { padding-top: 40px; }
 .eyebrow-link { color: inherit; text-decoration: none; border-bottom: 2px solid var(--orange); }
 
 /* ── Chat bubbles (마크다운·카드 공용) ───────────────────── */
@@ -288,9 +313,9 @@ a.group-card:hover .group-card-art img { transform: scale(1.03); }
 .chat-brother { flex-direction: row-reverse; }
 .chat-brother .chat-bubble { background: var(--bro-bubble); border-radius: 18px 18px 4px 18px; }
 .chat-brother .chat-name { text-align: right; }
-.chat-bear { flex-direction: row-reverse; }
-.chat-bear .chat-bubble { background: var(--bear-bubble); border-radius: 18px 18px 4px 18px; }
-.chat-bear .chat-name { text-align: right; }
+.chat-coworker { flex-direction: row-reverse; }
+.chat-coworker .chat-bubble { background: var(--coworker-bubble); border-radius: 18px 18px 4px 18px; }
+.chat-coworker .chat-name { text-align: right; }
 .chat-sm { margin: 18px 0; gap: 10px; }
 .chat-sm .chat-avatar { width: 38px; height: 38px; }
 .chat-sm .chat-bubble { font-size: 0.92rem; padding: 6px 14px 8px; }
@@ -423,8 +448,8 @@ a.group-card:hover .group-card-art img { transform: scale(1.03); }
   border-radius: 50%; background: var(--orange); border: var(--line);
 }
 .profile-brother .profile-figure::before { background: var(--paper); }
-.profile-bear .profile-figure::before { background: var(--pink); }
-.profile-bear .stat-fill { background: var(--pink); }
+.profile-coworker .profile-figure::before { background: var(--silver); }
+.profile-coworker .stat-fill { background: var(--ink); }
 .turnaround {
   position: relative; height: 600px;
   -webkit-mask-image: linear-gradient(#000 80%, transparent);
@@ -597,7 +622,8 @@ a.group-card:hover .group-card-art img { transform: scale(1.03); }
 .peek-brother { right: 8%; top: -14px; }
 .site-footer { font-size: 0.87rem; background: linear-gradient(var(--cream) 104px, var(--ink) 104px); color: #cfc9bd; }
 .site-footer > .container { padding-top: 40px; padding-bottom: 26px; }
-.footer-grid { display: grid; grid-template-columns: 1fr 1.3fr auto; gap: 24px; margin-bottom: 24px; }
+.footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 24px; margin-bottom: 24px; }
+.footer-head { color: #8d877b; font-size: 0.78rem; font-weight: 700; letter-spacing: .04em; }
 .footer-col p { margin-bottom: 4px; line-height: 1.6; }
 .footer-brand { font-family: var(--display); font-size: 1.3rem; color: var(--cream); margin-bottom: 8px !important; }
 .footer-links { display: flex; flex-direction: column; gap: 4px; }
@@ -605,11 +631,17 @@ a.group-card:hover .group-card-art img { transform: scale(1.03); }
 .footer-links a:hover { color: var(--orange); }
 .site-footer a { color: var(--cream); }
 .footer-bottom { border-top: 1px solid #3a3a3a; padding-top: 16px; text-align: center; color: #8d877b; }
+.footer-biz { margin-top: 6px; font-size: 0.78rem; }
+.footer-biz summary { cursor: pointer; display: inline-block; list-style: none; text-decoration: underline; text-underline-offset: 3px; }
+.footer-biz summary::-webkit-details-marker { display: none; }
+.footer-biz p { margin-top: 8px; line-height: 1.7; }
+.footer-biz a, .footer-biz { color: #8d877b; }
 
 /* ── Responsive ───────────────────────────────────────────── */
 @media (max-width: 960px) {
   .post-grid, .episode-grid { grid-template-columns: repeat(2, 1fr); }
-  .twin-grid, .app-grid, .group-grid { grid-template-columns: 1fr; }
+  .twin-grid, .app-grid, .group-grid, .promo-card { grid-template-columns: 1fr; }
+  .promo-art { border-right: 0; border-bottom: var(--line); aspect-ratio: 16 / 10; }
   .formula { grid-template-columns: 1fr; gap: 28px; }
   .stamp-grid { grid-template-columns: repeat(3, 1fr); }
   .profile-grid { grid-template-columns: 1fr; }

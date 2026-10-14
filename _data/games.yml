@@ -1,4 +1,4 @@
-# moonkimvision 웹게임 목록 — /games/ 페이지가 이 파일을 읽는다.
+# moonkimvision 웹게임 목록 — /apps/ 페이지의 '웹에서 바로'(#web) 구역이 이 파일을 읽는다.
 # 게임 파일(games/<id>/)은 각 게임 저장소(비공개)의 GitHub Actions 가 이 저장소로 복사해 넣는다 — 여기서 직접 고치지 않는다.
 # 새 게임: 게임 저장소에 .github/workflows/deploy.yml(yutnori 저장소 참고) + 아래 항목 + 썸네일(assets/images/games/<id>.webp, 16:9)
 

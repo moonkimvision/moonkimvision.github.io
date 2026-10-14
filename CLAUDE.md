@@ -24,17 +24,17 @@ Jekyll 기반 GitHub Pages 블로그.
 ├── _data/
 │   ├── characters.yml   # 캐릭터 그룹 목록 (상단 메뉴 '캐릭터' /characters/, 프로필 레이아웃·카드·말풍선이 읽음)
 │   ├── twins.yml        # 쌍둥이 캐릭터 프로필·능력치·에피소드 (characters.yml 의 twins 그룹 data)
-│   ├── gongdong.yml     # 공동책임(아빠 유 책임 + 곰돌이 노 책임) 프로필·능력치 (gongdong 그룹 data)
+│   ├── gongdong.yml     # 공동책임(아빠 유 책임 + 회사 동기 노 책임) 프로필·능력치 (gongdong 그룹 data)
 │   ├── apps.yml         # 앱 목록 (홈·앱 페이지·포스트 하단 카드가 읽음)
-│   ├── games.yml        # 웹게임 목록 (/games/ 가 읽음)
+│   ├── games.yml        # 웹게임 목록 (/apps/ 의 '웹에서 바로' 구역이 읽음)
 │   └── sns.yml          # 유튜브·인스타그램·틱톡 채널 (_config.yml social.links 와 같은 주소)
 ├── _posts/              # 블로그 포스트 (YYYY-MM-DD-slug.md)
 ├── privacy/             # 앱별 개인정보처리방침
 ├── characters/          # 캐릭터 목록(/characters/) — 그룹 카드 + '새 친구 준비 중' 카드
 ├── twins/               # 쌍둥이 소개(/twins/) + 프로필(sister, brother) — 첫 캐릭터 그룹 (주소는 SNS 공유돼 있어 유지)
-├── gongdong/            # 공동책임 소개(/gongdong/) + 프로필(dad, bear) — 두 번째 캐릭터 그룹
-├── apps/                # 앱 목록(/apps/)
-├── games/               # 게임 목록(/games/) + 게임별 폴더(games/<id>/ — 게임 저장소 Actions 가 복사, 직접 수정 금지)
+├── gongdong/            # 공동책임 소개(/gongdong/) + 프로필(dad, coworker). bear.html 은 옛 주소 → coworker 이동
+├── apps/                # 앱(/apps/) — 모바일 앱(#mobile) + 웹게임(#web) 두 구역
+├── games/               # /games/ 는 /apps/#web 로 이동만. 게임별 폴더(games/<id>/ — 게임 저장소 Actions 가 복사, 직접 수정 금지)
 ├── 404.html             # 없는 주소 안내 (쌍둥이)
 ├── _layouts/            # default · home · page · post · character · policy-bilingual
 ├── _includes/           # header · footer · bubble(말풍선, group 인자) · app-card · game-card · twin-card(멤버 카드, group 인자) · post-card
@@ -43,7 +43,8 @@ Jekyll 기반 GitHub Pages 블로그.
 │   ├── js/site.js       # 언어 토글·캐릭터 대사·포즈 전환 (언어 첫 적용만 head 인라인)
 │   └── images/
 │       ├── twins/       # 캐릭터 WebP(컷아웃·얼굴·스탬프·푸터 빼꼼), OG jpg, 파비콘
-│       ├── gongdong/    # 공동책임 WebP (컷아웃·얼굴·듀오) — marketing-studio 마스터 시트에서 잘라 냄
+│       ├── gongdong/    # 공동책임 WebP (컷아웃·얼굴은 marketing-studio 마스터 시트에서 잘라 냄, 듀오 셀카는 output/2026-10-15/site_gongdong_duo_v1_3)
+│       ├── characters/  # 캐릭터 페이지 단체 사진 family.webp (output/2026-10-15/site_family_v1_1)
 │       ├── apps/        # 앱 아이콘
 │       └── games/       # 게임 썸네일 WebP (16:9)
 ├── BACKLOG.md
@@ -65,7 +66,7 @@ Jekyll 기반 GitHub Pages 블로그.
 
 ## 캐릭터 추가 (쌍둥이 외 새 그룹, 2026-10-12~)
 
-상단 메뉴는 `홈 · 캐릭터 · 앱 · 게임 · 블로그 · 정책`. '캐릭터'(/characters/)는 `_data/characters.yml` 의 그룹을 카드로 보여 주고, 그룹 주소 아래 어느 페이지에서든 메뉴가 켜진다.
+상단 메뉴는 `홈 · 캐릭터 · 앱 · 블로그` (앱 안에 모바일 앱·웹게임, 정책·사업자 정보는 푸터). '캐릭터'(/characters/)는 `_data/characters.yml` 의 그룹을 카드로 보여 주고, 그룹 주소 아래 어느 페이지에서든 메뉴가 켜진다.
 
 1. `_data/characters.yml` 에 그룹 한 항목: `id`, `status`(active | soon — soon 이면 링크 없이 '곧 공개' 카드), `url`(`/<id>/`, 기존 폴더 apps·games·twins·privacy·posts 와 겹치지 않게), `data`(멤버 데이터 파일 이름), `members`, `name_ko/en`, `tagline_ko/en`, `image`(그룹 대표 이미지, 16:10 으로 잘림), `color`, 선택 `formula`(프로필 아래 '공식' 띠)·`profile_eyebrow_ko/en`.
 2. `_data/<data>.yml`: 멤버마다 `twins.yml` 과 같은 구조 (id, url, name/role/oneliner/intro, images.front·three_quarter·side·face, profile, quotes, stats) + `stat_labels`. 짝이 있으면 `other` (능력치 비교 눈금·짝 프로필 링크), 없으면 생략.
@@ -106,7 +107,7 @@ bundle exec jekyll build
 ### 게임 추가
 - 게임은 각자 비공개 저장소(예: `moonkimvision/yutnori`)에 두고, `main` push 시 GitHub Actions 가 이 저장소의 `games/<id>/` 로 복사·커밋한다 → `https://moonkimvision.com/games/<id>/`.
 - 게임 저장소에 `.github/workflows/deploy.yml`(yutnori 저장소 것 복사, 경로만 바꿈)과 Secret `SITE_DEPLOY_KEY`(이 저장소 Deploy key 의 짝, 쓰기 허용)를 둔다. 배포 키는 저장소마다 따로 만든다.
-- `_data/games.yml` 에 항목 추가 (썸네일 `assets/images/games/<id>.webp`, 쌍둥이 한마디).
+- `_data/games.yml` 에 항목 추가 (썸네일 `assets/images/games/<id>.webp`, 쌍둥이 한마디). 목록은 `/apps/#web` 에 나온다.
 
 ### 블로그 포스트
 - 경로: `_posts/YYYY-MM-DD-slug.md`

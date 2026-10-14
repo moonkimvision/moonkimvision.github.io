@@ -29,18 +29,18 @@
   status: active
   url: /gongdong/
   data: gongdong               # 멤버 프로필 데이터: _data/gongdong.yml
-  members: [dad, bear]
+  members: [dad, coworker]
   name_ko: 공동책임
   name_en: YouNo Lead
-  tagline_ko: 쌍둥이 아빠 유 책임과 곰돌이 인형 노 책임. 둘 다 직책이 '책임'이라, 합쳐서 공동책임.
-  tagline_en: The twins' dad, Lead Yu, and his teddy-bear puppet, Lead No. Two leads, one comedy duo.
+  tagline_ko: 쌍둥이 아빠 유 책임과 회사 동기 노 책임. 둘 다 직책이 '책임'이라, 합쳐서 공동책임.
+  tagline_en: The twins' dad, Lead Yu, and his coworker, Lead No. Two leads, one comedy duo.
   image: /assets/images/gongdong/duo.webp
-  color: "#FF2E93"             # 노 책임 털색 (시리즈 색 규칙의 의도한 예외)
+  color: "#9AA3AD"             # 노 책임 은회색 머리
   formula:
     eyebrow_ko: 아빠 공식
     eyebrow_en: The dad formula
-    title_ko: 유 책임의 한마디 → 노 책임의 한마디 → 더 큰 웃음 → 정적.
-    title_en: His dad joke → the bear's dry reply → even louder laughter → silence.
+    title_ko: 유 책임의 들뜬 한마디 → 노 책임의 사실 한 줄 → 더 큰 웃음 → 정적.
+    title_en: His dad joke → Lead No's dry fact → even louder laughter → silence.
     text_ko: 태클이 안 먹힌다. 비꼬는 말도 칭찬으로 알아듣는 사람이라서.
     text_en: The comeback never lands. He hears every jab as a compliment.
   profile_eyebrow_ko: 공동책임 프로필

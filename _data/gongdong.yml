@@ -1,11 +1,11 @@
 # 공동책임 (아빠 콤비) 캐릭터 프로필 데이터 — _data/characters.yml 의 gongdong 그룹
-# 원본 설정: marketing-studio/projects/twins/marketing/character/CHARACTER.md ('공동책임', §11 아빠, §13 곰돌이)
+# 원본 설정: marketing-studio/projects/twins/marketing/character/CHARACTER.md ('공동책임', §11 아빠, §14 노 책임)
 # 설정이 바뀌면 이 파일을 같이 고친다.
 
 dad:
   id: dad
   url: /gongdong/dad/
-  other: bear
+  other: coworker
   name_ko: 유 책임
   name_en: Lead Yu
   badge_ko: 쌍둥이 아빠
@@ -31,8 +31,8 @@ dad:
   profile:
     - label_ko: 호칭
       label_en: Called
-      ko: 남매는 "아빠", 곰은 "유 책임님"
-      en: "\"Dad\" to the twins, \"Lead Yu\" to the bear"
+      ko: 남매는 "아빠", 노 책임은 "유 책임님"
+      en: "\"Dad\" to the twins, \"Lead Yu\" to Lead No"
     - label_ko: 포지션
       label_en: Role
       ko: 아재개그와 근거 없는 자신감 (튀는 쪽)
@@ -88,71 +88,71 @@ dad:
     - key: formal
       value: 0
 
-bear:
-  id: bear
-  url: /gongdong/bear/
+coworker:
+  id: coworker
+  url: /gongdong/coworker/
   other: dad
   name_ko: 노 책임
   name_en: Lead No
-  badge_ko: 아빠 짝꿍 · 막대 인형
-  badge_en: Dad's sidekick · rod puppet
-  role_ko: 건조한 한마디 담당
+  badge_ko: 아빠 회사 동기
+  badge_en: Dad's coworker
+  role_ko: 건조한 한마디 · 정리 담당
   role_en: The Dry One
-  oneliner_ko: 귀여운 핫핑크 곰인데, 세상 다 산 눈.
-  oneliner_en: A cute hot-pink bear with eyes that have seen it all.
+  oneliner_ko: 늘 피곤한데 일은 제일 잘하는 사람.
+  oneliner_en: Always tired, always the best at the job.
   intro_ko: >-
-    유 책임과 같은 직급이라 둘은 동기 같은 사이. 아빠 개그의 유일한 냉정한 관객이다.
-    아빠가 들뜰수록 차분해지고, 가족 중 혼자 사내 존댓말을 끝까지 지킨다.
-    아래에서 막대로 움직이는 인형이라 혼자 못 걷지만, 아무도 막대에 대해 묻지 않는다.
-    사실 아빠를 좋아한다. 절대 말로 하지 않을 뿐.
+    유 책임과 입사 동기, 같은 직급. 퇴근길마다 유 책임에게 붙잡혀 이 집 거실까지 끌려온다.
+    그래서 집에서도 사원증을 목에 걸고 있다. 아직 퇴근을 못 했다는 뜻이다.
+    상황을 사실 한 줄로 정리하면 장면이 끝난다. 말은 차가운데 손은 따뜻해서,
+    아빠가 깜빡한 심부름을 이미 사 와 있곤 한다. 들키면 "…남은 거예요."
   intro_en: >-
-    Same job title as Lead Yu, so the two are like coworkers from the same hiring class.
-    He's the only audience that never laughs at Dad's jokes. The more excited Dad gets,
-    the calmer he becomes — and he's the only one in the family who sticks to polite office speech.
-    He's a rod puppet and can't walk on his own, but nobody ever asks about the rods.
-    Secretly, he likes Dad. He'd just never say it.
+    Lead Yu's coworker from the same hiring class, same title. Every evening Lead Yu drags him home
+    "for just one drink," so he's always in the living room — still wearing his ID badge,
+    because technically he never clocked out. One flat, factual sentence from him ends any scene.
+    Cold words, warm hands: he's usually already bought the groceries Dad forgot.
+    If you catch him, it's "…They were leftovers."
   images:
-    front: /assets/images/gongdong/bear-front.webp
-    three_quarter: /assets/images/gongdong/bear-34.webp
-    side: /assets/images/gongdong/bear-side.webp
-    face: /assets/images/gongdong/bear-face.webp
+    front: /assets/images/gongdong/coworker-front.webp
+    three_quarter: /assets/images/gongdong/coworker-34.webp
+    side: /assets/images/gongdong/coworker-side.webp
+    face: /assets/images/gongdong/coworker-face.webp
   profile:
     - label_ko: 호칭
       label_en: Called
-      ko: 노 책임. 아빠를 꼬박꼬박 "유 책임님"이라고 부른다
-      en: Lead No — always calls Dad "Lead Yu"
+      ko: 노 책임. 아빠를 꼬박꼬박 "유 책임님"이라고 부르고, 남매에게도 존댓말
+      en: Lead No — always calls Dad "Lead Yu," and speaks politely even to the kids
     - label_ko: 포지션
       label_en: Role
-      ko: 들뜬 아빠 옆의 건조한 한마디
-      en: The dry one-liner next to an overexcited Dad
+      ko: 들뜬 유 책임 옆에서 장면을 닫는 마지막 한 줄
+      en: The last line that closes the scene next to an overexcited Lead Yu
     - label_ko: 성격
       label_en: Personality
-      ko: 시니컬한 현실주의자. 기대를 안 하니 실망도 안 한다. 웃지 않는다
-      en: A cynical realist. Expects nothing, so he's never disappointed. Never smiles
+      ko: 스마트한 정리꾼. 만성 피로. 시크한데 따뜻하다 — 말 말고 행동으로만
+      en: A sharp organizer, chronically tired. Cool on the outside, warm in what he does — never in what he says
     - label_ko: 말투
       label_en: Speech
-      ko: 짧은 존댓말, 끝은 늘 내림. 감탄사·느낌표 없음
-      en: Short and polite, always trailing down. No exclamations, ever
+      ko: 짧은 존댓말, 끝은 늘 내림. 대답 앞에 반 박자 정적. 사내 말투가 섞인다
+      en: Short and polite, always trailing down, with a half-beat pause first. Office-speak slips in
     - label_ko: 외형
       label_en: Look
-      ko: 핫핑크 곰, 반쯤 감긴 눈. 아래에서 막대 세 개로 움직이고 발이 떠 있다
-      en: A hot-pink bear with half-closed eyes. Moved by three rods from below, feet never touching the ground
+      ko: 마르고 길쭉한 50대, 짧게 넘긴 은회색 머리, 얇은 사각 안경, 반쯤 감긴 피곤한 눈
+      en: Tall and thin, in his fifties — short swept-back silver hair, thin square glasses, tired half-closed eyes
     - label_ko: 옷
       label_en: Outfit
-      ko: 아빠와 같은 흰 반팔 티. 아빠가 입혔다. 불만이다
-      en: The same white tee as Dad. Dad put it on him. He's not happy about it
+      ko: 흰 셔츠 + 진회색 니트 조끼 + 검정 바지 + 검정 구두
+      en: White shirt, dark gray knit vest, black trousers, black shoes
     - label_ko: 시그니처
       label_en: Signature
-      ko: 핫핑크 털 — 흑백 세계의 두 번째 색
-      en: Hot-pink fur — the second color in a black-and-white world
+      ko: 주황 사원증 목걸이 줄 — 집에서도 안 뺀다
+      en: An orange ID-badge lanyard — he never takes it off, even at their house
     - label_ko: 좋아하는 것
       label_en: Loves
-      ko: (말 안 함) 사실 유 책임님
-      en: (Won't say.) Lead Yu, actually
+      ko: (말 안 함) 퇴근, 커피, 사실 유 책임님
+      en: (Won't say.) Clocking out, coffee — and Lead Yu, actually
     - label_ko: 특기
       label_en: Talent
-      ko: 아빠 개그 뒤에 정적 만들기, 남매와 같은 눈으로 아빠 쳐다보기
-      en: Creating silence after Dad's jokes, giving Dad the same look the twins do
+      ko: 소란 속에서 눈 감고 있다가 끝나자마자 한 줄로 정리하기, 남매와 같은 눈으로 아빠 쳐다보기
+      en: Dozing through the chaos, then summing it up in one line — and giving Dad the same look the twins do
   quotes:
     - ko: 아, 네.
       en: Ah. Okay.
@@ -162,17 +162,17 @@ bear:
       en: That's your opinion, Lead Yu.
     - ko: 유 책임님, 그거 회의 때도 하셨어요.
       en: Lead Yu, you did that one in the meeting too.
-    - ko: …제 책임은 아닌데요.
-      en: …That's not my responsibility.
-    - ko: …같은 거 입히지 마세요.
-      en: …Please stop dressing us alike.
+    - ko: …저는 퇴근했는데요.
+      en: …I clocked out, though.
+    - ko: …남은 거예요.
+      en: …They were leftovers.
   stats:
     - key: dadjoke
       value: 0
     - key: energy
-      value: 5
+      value: 10
     - key: confidence
-      value: 20
+      value: 30
     - key: dry
       value: 98
     - key: formal

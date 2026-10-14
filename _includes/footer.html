@@ -7,23 +7,32 @@
     <div class="footer-grid">
       <div class="footer-col">
         <p class="footer-brand">{{ site.company.name }}</p>
-        <p><span class="lang-ko">대표자</span><span class="lang-en">Representative</span>: {{ site.company.representative }}</p>
-        <p><span class="lang-ko">사업자등록번호</span><span class="lang-en">Business Reg. No.</span>: {{ site.company.registration }}</p>
-        {% include sns-links.html style="icons" %}
-      </div>
-      <div class="footer-col">
-        <p>{{ site.company.address }}</p>
         <p><a href="mailto:{{ site.company.email }}">{{ site.company.email }}</a></p>
+        {% include sns-links.html style="icons" %}
       </div>
       <div class="footer-col footer-links">
         <a href="{{ '/characters/' | relative_url }}"><span class="lang-ko">캐릭터</span><span class="lang-en">Characters</span></a>
-        <a href="{{ '/apps/' | relative_url }}"><span class="lang-ko">앱</span><span class="lang-en">Apps</span></a>
-        <a href="{{ '/privacy/' | relative_url }}"><span class="lang-ko">개인정보처리방침</span><span class="lang-en">Privacy policies</span></a>
+        <a href="{{ '/apps/' | relative_url }}"><span class="lang-ko">앱 · 웹게임</span><span class="lang-en">Apps & web games</span></a>
+        <a href="{{ '/posts/' | relative_url }}"><span class="lang-ko">블로그</span><span class="lang-en">Blog</span></a>
         <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+      </div>
+      <div class="footer-col footer-links">
+        <p class="footer-head"><span class="lang-ko">정책</span><span class="lang-en">Policies</span></p>
+        <a href="{{ '/privacy/' | relative_url }}"><span class="lang-ko">개인정보처리방침</span><span class="lang-en">Privacy policies</span></a>
       </div>
     </div>
     <div class="footer-bottom">
       <p>&copy; {{ 'now' | date: "%Y" }} {{ site.company.name }}. All rights reserved.</p>
+      {%- comment -%} 사업자 정보: 모든 페이지에 두되 접어 둔다 (판매·결제가 없어 상시 노출 의무는 없음, 문의·신뢰용) {%- endcomment %}
+      <details class="footer-biz">
+        <summary><span class="lang-ko">사업자 정보</span><span class="lang-en">Business info</span></summary>
+        <p>
+          <span class="lang-ko">상호</span><span class="lang-en">Company</span>: {{ site.company.name }} ·
+          <span class="lang-ko">대표자</span><span class="lang-en">Representative</span>: {{ site.company.representative }} ·
+          <span class="lang-ko">사업자등록번호</span><span class="lang-en">Business Reg. No.</span>: {{ site.company.registration }}<br>
+          {{ site.company.address }} · {{ site.company.email }}
+        </p>
+      </details>
     </div>
   </div>
 </footer>

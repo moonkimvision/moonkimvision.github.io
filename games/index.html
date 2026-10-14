@@ -1,31 +1,17 @@
 ---
-layout: default
-bilingual: true
-title: "게임"
+layout: null
 permalink: /games/
-description: 설치 없이 브라우저에서 바로 하는 moonkimvision 웹게임 — 윷놀이 대항전.
+sitemap: false
 ---
-<section class="page-hero page-hero-compact">
-  <div class="stamp-drift" aria-hidden="true"></div>
-  <div class="container page-hero-inner">
-    <div>
-      <p class="eyebrow"><span class="lang-ko">게임</span><span class="lang-en">Games</span></p>
-      <h1 class="page-hero-title"><span class="lang-ko">설치 없이, 다 같이.</span><span class="lang-en">No install. Everyone in.</span></h1>
-      <p class="hero-lead"><span class="lang-ko">브라우저에서 바로 여는 웹게임이에요. 거실 TV나 태블릿에 띄워 놓고 한 화면에서 같이 해요. 판은 기기에 저장돼서 닫았다 열어도 이어서 할 수 있어요.</span><span class="lang-en">Web games that open right in your browser. Put one on the living-room TV or a tablet and play together on one screen. The board is saved on your device, so you can pick up where you left off.</span></p>
-    </div>
-    <div class="chat page-hero-chat">
-      {% include bubble.html who="sister" ko="앱만 만드는 줄 알았지? 아 잠깐, 게임도 있어. 내가 이겨 본 게임만 골랐—" en="Thought they only made apps? Wait, there are games too. I only picked the ones I've won—" %}
-      {% include bubble.html who="brother" ko="…한 판 이겼어." en="…You won one." %}
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="app-grid">
-      {%- for game in site.data.games %}
-      {% include game-card.html game=game %}
-      {%- endfor %}
-    </div>
-  </div>
-</section>
+{%- comment -%} 게임 목록은 앱 페이지의 '웹에서 바로'(/apps/#web) 로 합쳐졌다. 게임 자체(/games/<id>/)는 그대로. {%- endcomment -%}
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>웹게임 — moonkimvision</title>
+  <link rel="canonical" href="{{ '/apps/' | absolute_url }}">
+  <meta name="robots" content="noindex">
+  <meta http-equiv="refresh" content="0; url={{ '/apps/#web' | relative_url }}">
+</head>
+<body><a href="{{ '/apps/#web' | relative_url }}">웹게임 목록으로 이동</a></body>
+</html>
