@@ -180,6 +180,10 @@ stat_labels:
   zoning: { ko: 멍 지수, en: Zone-out level }
 
 # 숏폼 에피소드 (marketing-studio/projects/twins/marketing/campaigns)
+# lines: /twins/ 에피소드 카드에 나오는 대표 대사 (한국어만)
+# scene: 홈 히어로 무대에서 차례로 재생되는 대본 (campaigns/<날짜-id>/story.md 의 대사 분담 그대로)
+#   who: 멤버 id(sister | brother) 또는 narr(무대 아래 자막). 대사 길이만큼 알아서 머물고,
+#   { pause: <ms> } 로 정적을 더 줄 수 있다. soon: true 회차는 히어로에 나오지 않는다.
 episodes:
   - series_ko: 아이스크림 실종 사건
     series_en: The Missing Ice Cream
@@ -188,6 +192,19 @@ episodes:
     summary_ko: 누나의 아이스크림이 사라졌다. 증거는 없다. "네가 먹었지?" "아니?" 카메라 각도만 바꿔 세 번.
     summary_en: "Her ice cream is gone, and there's no proof. \"You ate it?\" \"No?\" Three times, three camera angles."
     lines: ["야.", "왜.", "네가 먹었지?", "아니?"]
+    scene:
+      - { who: narr, ko: "누나 아이스크림이 사라졌다.", en: "Her ice cream is gone." }
+      - { who: sister, ko: "야.", en: "Hey." }
+      - { who: brother, ko: "…왜.", en: "…What." }
+      - { who: sister, ko: "야.", en: "Hey." }
+      - { who: brother, ko: "…왜?", en: "…What?" }
+      - { who: sister, ko: "네가 먹었지?", en: "You ate it, didn't you?" }
+      - { who: brother, ko: "아니?", en: "No?" }
+      - { who: sister, ko: "네가 먹었지?!", en: "You ate it, didn't you?!" }
+      - { who: brother, ko: "아니?", en: "No?" }
+      - { pause: 600 }
+      - { who: sister, ko: "네가. 먹었지?", en: "You. Ate it?" }
+      - { who: brother, ko: "…아니?", en: "…No?" }
   - series_ko: 아이스크림 실종 사건
     series_en: The Missing Ice Cream
     title_ko: 2화 — 그 후
@@ -195,6 +212,17 @@ episodes:
     summary_ko: 범인은… 아빠. 이번엔 동생이 추궁할 차례. "어쩔 건데?" "어쩌라고."
     summary_en: "The culprit was… Dad. Now it's his turn to interrogate. \"So what now?\" \"So what.\""
     lines: ["어쩔 건데?", "어쩌라고."]
+    scene:
+      - { who: narr, ko: "범인은… 아빠.", en: "The culprit was… Dad." }
+      - { who: brother, ko: "야.", en: "Hey." }
+      - { who: sister, ko: "왜.", en: "What." }
+      - { who: brother, ko: "어쩔 건데?", en: "So what now?" }
+      - { who: sister, ko: "어쩌라고.", en: "So what." }
+      - { who: brother, ko: "어쩔 건데?", en: "So what now?" }
+      - { who: sister, ko: "어쩌라고!", en: "SO WHAT!" }
+      - { who: brother, ko: "어. 쩔. 건. 데?", en: "So. What. Now?" }
+      - { pause: 500 }
+      - { who: brother, ko: "엄마~!!", en: "MOM~!!" }
   - series_ko: 아이스크림 실종 사건
     series_en: The Missing Ice Cream
     title_ko: 3화 — 그 후의 그 후
@@ -202,6 +230,18 @@ episodes:
     summary_ko: 엄마가 새로 사 줬다. 누나 것만. 소파 위 정적과 쩝쩝 소리.
     summary_en: Mom bought a new one. Only for her. Silence on the sofa, and loud chewing.
     lines: ["맛있냐?", "안 줘."]
+    scene:
+      - { who: narr, ko: "엄마가 새로 사 줬다. 누나 것만.", en: "Mom bought a new one. Only for her." }
+      - { who: brother, ko: "야.", en: "Hey." }
+      - { who: sister, ko: "왜.", en: "What." }
+      - { who: brother, ko: "맛있냐?", en: "Good?" }
+      - { who: sister, ko: "아, 꺼져.", en: "Ugh, go away." }
+      - { who: sister, ko: "안 줘.", en: "Not sharing." }
+      - { who: brother, ko: "무슨 맛인데?", en: "What flavor?" }
+      - { who: sister, ko: "알잖아.", en: "You know." }
+      - { who: narr, ko: "(쩝쩝)", en: "(chomp, chomp)" }
+      - { who: brother, ko: "누나.", en: "Sis." }
+      - { who: sister, ko: "꺼져.", en: "Go away." }
   - series_ko: 누나의 인생샷
     series_en: Sis's Perfect Shot
     title_ko: 1화 — 다시
@@ -209,6 +249,20 @@ episodes:
     summary_ko: 포즈는 네 번 바꿨는데, 사진엔 전부 동생 얼굴. 전면 카메라였다.
     summary_en: Four different poses, four photos of his face. The front camera was on.
     lines: ["다시.", "…찍었어."]
+    scene:
+      - { who: sister, ko: "찍어.", en: "Take one." }
+      - { who: brother, ko: "…찍었어.", en: "…Took it." }
+      - { who: sister, ko: "다시.", en: "Again." }
+      - { who: brother, ko: "…찍었어.", en: "…Took it." }
+      - { who: sister, ko: "다시. 각도 좀.", en: "Again. Fix the angle." }
+      - { who: brother, ko: "…찍었어.", en: "…Took it." }
+      - { who: sister, ko: "아 다시!", en: "Ugh, AGAIN!" }
+      - { who: brother, ko: "…찍었어.", en: "…Took it." }
+      - { who: sister, ko: "보여 줘.", en: "Show me." }
+      - { who: sister, ko: "…이게 뭐야.", en: "…What is this." }
+      - { who: narr, ko: "전부 동생 얼굴. (전면 카메라)", en: "All his face. (Front camera.)" }
+      - { who: brother, ko: "…나.", en: "…Me." }
+      - { who: brother, ko: "…잘 나왔지?", en: "…Came out good, right?" }
   - series_ko: 누나의 인생샷
     series_en: Sis's Perfect Shot
     title_ko: 2화 — 좋아요
@@ -216,6 +270,24 @@ episodes:
     summary_ko: 실수로 올라간 동생 셀카, 좋아요 3,208. 누나 사진은 41.
     summary_en: His selfie got posted by mistake — 3,208 likes. Hers got 41.
     lines: ["내 건 이거.", "…적네."]
+    scene:
+      - { who: narr, ko: "동생 셀카가 누나 계정에 올라갔다. (실수로)", en: "His selfie went up on her account. (By mistake.)" }
+      - { who: sister, ko: "야.", en: "Hey." }
+      - { who: brother, ko: "왜.", en: "What." }
+      - { who: sister, ko: "이거 봐.", en: "Look at this." }
+      - { who: brother, ko: "…나네.", en: "…That's me." }
+      - { who: sister, ko: "좋아요 봐.", en: "Look at the likes." }
+      - { who: narr, ko: "좋아요 3,208", en: "3,208 likes" }
+      - { who: brother, ko: "…많네.", en: "…That's a lot." }
+      - { who: sister, ko: "내 건 이거.", en: "Mine's this." }
+      - { who: narr, ko: "좋아요 41", en: "41 likes" }
+      - { who: brother, ko: "…적네.", en: "…That's not many." }
+      - { who: sister, ko: "너 뭐 했어.", en: "What did you do." }
+      - { who: brother, ko: "…안 했어.", en: "…Nothing." }
+      - { who: sister, ko: "표정 뭐야, 그거.", en: "What's with that face." }
+      - { who: brother, ko: "…그냥.", en: "…Just." }
+      - { who: sister, ko: "그냥?!", en: "JUST?!" }
+      - { who: brother, ko: "…응.", en: "…Yeah." }
   - series_ko: 누나의 인생샷
     series_en: Sis's Perfect Shot
     title_ko: 3화 — 따라 하기
@@ -224,3 +296,18 @@ episodes:
     summary_en: She starts her research — copying his blank stare.
     lines: []
     soon: true
+    scene:
+      - { who: brother, ko: "…뭐 해.", en: "…What are you doing." }
+      - { who: sister, ko: "아무것도.", en: "Nothing." }
+      - { who: brother, ko: "…뭐 해.", en: "…What are you doing." }
+      - { who: sister, ko: "연습.", en: "Practicing." }
+      - { who: brother, ko: "…뭘.", en: "…What." }
+      - { who: sister, ko: "그 표정.", en: "That face." }
+      - { who: brother, ko: "…이거?", en: "…This?" }
+      - { who: sister, ko: "그거! 어떻게 하는 건데.", en: "THAT! How do you do it?" }
+      - { who: brother, ko: "…그냥 있는 건데.", en: "…I'm just sitting here." }
+      - { pause: 800 }
+      - { who: brother, ko: "…누나 그건 졸린 거야.", en: "…Sis, that's just sleepy." }
+      - { who: sister, ko: "꺼져.", en: "Go away." }
+      - { who: narr, ko: "좋아요 5,102 · 댓글 1위 \"뒤에 분 누구예요?\"", en: "5,102 likes · Top comment: \"Who's that in the back?\"" }
+      - { who: brother, ko: "…나.", en: "…Me." }

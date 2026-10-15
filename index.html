@@ -3,9 +3,6 @@ layout: home
 title: moonkimvision
 description: 무표정 쌍둥이 남매가 안내하는 moonkimvision의 앱과 이야기. AppRoutine, Crop Screen Recorder.
 ---
-{%- assign s = site.data.twins.sister -%}
-{%- assign b = site.data.twins.brother -%}
-
 <section class="hero">
   <div class="stamp-drift" aria-hidden="true"></div>
   <div class="container hero-inner">
@@ -25,34 +22,64 @@ description: 무표정 쌍둥이 남매가 안내하는 moonkimvision의 앱과 
       </div>
     </div>
 
-    <div class="hero-stage">
-      <p class="bubble bubble-left" id="bubble-sister" aria-live="polite"><span class="lang-ko">야.</span><span class="lang-en">Hey.</span></p>
-      <p class="bubble bubble-right" id="bubble-brother" aria-live="polite"><span class="lang-ko">…왜.</span><span class="lang-en">…What.</span></p>
-      <button type="button" class="hero-twin hero-sister" data-bubble="#bubble-sister"
-        data-lines-ko="야.|네가 먹었지?|다시.|아 잠깐, 있잖아—|이거 봐.|안 줘."
-        data-lines-en="Hey.|You ate it, didn't you?|Again.|Wait, wait, listen—|Look at this.|Not sharing.">
-        <img src="{{ s.images.front | relative_url }}" alt="" width="390" height="1100">
-        <span class="sr-only"><span class="lang-ko">누나에게 말 걸기</span><span class="lang-en">Poke the sister</span></span>
-      </button>
-      <button type="button" class="hero-twin hero-brother" data-bubble="#bubble-brother"
-        data-lines-ko="…왜.|아니?|…찍었어.|…몰라.|…잘 나왔지?|…적네."
-        data-lines-en="…What.|No?|…Took it.|…Dunno.|…Came out good, right?|…That's not many.">
-        <img src="{{ b.images.front | relative_url }}" alt="" width="447" height="1100">
-        <span class="sr-only"><span class="lang-ko">동생에게 말 걸기</span><span class="lang-en">Poke the brother</span></span>
-      </button>
-      <p class="stage-hint"><span class="lang-ko">캐릭터를 눌러 보세요</span><span class="lang-en">Tap a twin</span></p>
+    {%- comment -%}
+      캐릭터 무대: _data/characters.yml 의 active 그룹마다 한 무대(cast). 좌우 화살표로 그룹을 넘기고,
+      아래 에피소드 바에서 회차를 누르면 그 그룹 데이터의 episodes[].scene 을 말풍선으로 재생한다 (assets/js/site.js).
+      멤버 두 명 = 왼쪽·오른쪽. 무대 위 키는 main.css 의 .cast-<멤버 id>.
+    {%- endcomment -%}
+    {%- assign groups = site.data.characters | where: "status", "active" %}
+    <div class="hero-stage" data-stage>
+      {%- for g in groups %}
+      {%- assign gd = site.data[g.data] %}
+      <div class="cast" data-cast="{{ g.id }}"{% unless forloop.first %} hidden{% endunless %}>
+        {%- for m in g.members %}
+        {%- assign c = gd[m] %}
+        {%- if forloop.first %}{% assign side = "left" %}{% else %}{% assign side = "right" %}{% endif %}
+        {%- case m %}{% when "sister" %}{% assign w = 390 %}{% when "brother" %}{% assign w = 447 %}{% when "dad" %}{% assign w = 496 %}{% when "coworker" %}{% assign w = 373 %}{% else %}{% assign w = 420 %}{% endcase %}
+        <p class="bubble bubble-{{ side }} bubble-{{ m }}" data-bubble-for="{{ m }}" aria-live="polite"><span class="lang-ko">{{ c.quotes[0].ko }}</span><span class="lang-en">{{ c.quotes[0].en }}</span></p>
+        <button type="button" class="hero-twin hero-{{ side }} cast-{{ m }}" data-member="{{ m }}">
+          <img src="{{ c.images.front | relative_url }}" alt="" width="{{ w }}" height="1100">
+          <span class="sr-only"><span class="lang-ko">{{ c.name_ko }} — 에피소드 재생</span><span class="lang-en">{{ c.name_en }} — play an episode</span></span>
+        </button>
+        {%- endfor %}
+      </div>
+      {%- endfor %}
+      <p class="stage-caption" data-caption aria-live="polite" hidden><span class="lang-ko"></span><span class="lang-en"></span></p>
+      {%- if groups.size > 1 %}
+      <button type="button" class="stage-arrow stage-prev" data-cast-step="-1"><span aria-hidden="true">‹</span><span class="sr-only"><span class="lang-ko">이전 캐릭터</span><span class="lang-en">Previous characters</span></span></button>
+      <button type="button" class="stage-arrow stage-next" data-cast-step="1"><span aria-hidden="true">›</span><span class="sr-only"><span class="lang-ko">다음 캐릭터</span><span class="lang-en">Next characters</span></span></button>
+      {%- endif %}
+      <p class="stage-hint"><span class="lang-ko">캐릭터를 누르면 에피소드 시작</span><span class="lang-en">Tap a character to play</span></p>
     </div>
   </div>
 </section>
 
-<div class="ticker" aria-hidden="true">
-  <div class="ticker-track">
-    {%- comment -%} 에피소드 대사(_data/twins.yml)를 두 번 이어 붙여 끊김 없이 흐르게 한다 {%- endcomment -%}
-    {%- for round in (1..2) %}
-    {% for ep in site.data.twins.episodes %}{% for l in ep.lines %}<span>{{ l }}</span>{% endfor %}{% endfor %}
+<div class="episode-bar">
+  <div class="container">
+    {%- for g in groups %}
+    {%- assign gd = site.data[g.data] %}
+    <div class="ep-set" data-ep-set="{{ g.id }}"{% unless forloop.first %} hidden{% endunless %}>
+      <p class="ep-set-name" style="--group-color: {{ g.color }}">
+        <span class="lang-ko">{{ g.name_ko }}</span><span class="lang-en">{{ g.name_en }}</span>
+        {%- if groups.size > 1 %}<span class="ep-set-count">{{ forloop.index }} / {{ groups.size }}</span>{% endif %}
+      </p>
+      <ol class="ep-list">
+        {%- for ep in gd.episodes %}
+        {%- if ep.scene and ep.soon != true %}
+        <li><button type="button" class="ep-chip" data-ep="{{ forloop.index0 }}">
+          <small><span class="lang-ko">{{ ep.series_ko }}</span><span class="lang-en">{{ ep.series_en }}</span></small>
+          <span class="lang-ko">{{ ep.title_ko }}</span><span class="lang-en">{{ ep.title_en }}</span>
+        </button></li>
+        {%- endif %}
+        {%- endfor %}
+      </ol>
+    </div>
     {%- endfor %}
   </div>
 </div>
+<script type="application/json" id="stage-episodes">{
+  {%- for g in groups %}{% assign gd = site.data[g.data] %}{{ g.id | jsonify }}: [{% for ep in gd.episodes %}{% if ep.scene %}{{ ep.scene | jsonify }}{% else %}[]{% endif %}{% unless forloop.last %},{% endunless %}{% endfor %}]{% unless forloop.last %},{% endunless %}{% endfor -%}
+}</script>
 
 <section class="section">
   <div class="container">

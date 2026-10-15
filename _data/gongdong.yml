@@ -184,3 +184,58 @@ stat_labels:
   confidence: { ko: 근거 없는 자신감, en: Unfounded confidence }
   dry: { ko: 건조함, en: Dryness }
   formal: { ko: 사내 존댓말, en: Office politeness }
+
+# 홈 히어로 무대에서 재생되는 장면 (형식은 twins.yml episodes 참고, who: dad | coworker | narr)
+# 아직 영상으로 나온 회차가 없어 CHARACTER.md 의 공식(들뜬 한마디 → 사실 한 줄 → 더 큰 웃음 → 정적)으로 쓴 무대용 콩트.
+episodes:
+  - series_ko: 딱 한 잔만
+    series_en: Just One Drink
+    title_ko: 1화 — 퇴근길
+    title_en: Ep.1 — The Commute
+    scene:
+      - { who: narr, ko: "저녁 6시, 회사 앞.", en: "6 p.m., outside the office." }
+      - { who: dad, ko: "노 책임! 우리 집 가서 딱 한 잔만!", en: "Lead No! Come over for just one drink!" }
+      - { who: coworker, ko: "…저 내일 아홉 시 회의요.", en: "…I have a nine a.m. meeting tomorrow." }
+      - { who: dad, ko: "그러니까 딱 한 잔! 하하하!", en: "That's why it's just one! Hahaha!" }
+      - { pause: 500 }
+      - { who: coworker, ko: "…어제도 그러셨어요.", en: "…You said that yesterday too." }
+      - { who: dad, ko: "역시 노 책임은 기억력이 좋아!", en: "See? Lead No has a great memory!" }
+      - { who: narr, ko: "밤 11시, 쌍둥이네 거실.", en: "11 p.m., the twins' living room." }
+      - { who: coworker, ko: "…아, 네.", en: "…Ah. Okay." }
+  - series_ko: 딱 한 잔만
+    series_en: Just One Drink
+    title_ko: 2화 — 아재개그
+    title_en: Ep.2 — Dad Joke
+    scene:
+      - { who: dad, ko: "노 책임~ 아재개그 하나 할까?", en: "Hey, Lead No~ Want to hear a dad joke?" }
+      - { who: coworker, ko: "…아니요.", en: "…No." }
+      - { who: dad, ko: "세상에서 제일 뜨거운 과일은?", en: "Why did the scarecrow get promoted?" }
+      - { pause: 700 }
+      - { who: dad, ko: "천도복숭아! 하하하!", en: "He was outstanding in his field! Hahaha!" }
+      - { who: coworker, ko: "…안 웃겨요.", en: "…Not funny." }
+      - { who: dad, ko: "하하하하!", en: "HAHAHAHA!" }
+      - { who: coworker, ko: "유 책임님, 그거 회의 때도 하셨어요.", en: "Lead Yu, you did that one in the meeting too." }
+  - series_ko: 딱 한 잔만
+    series_en: Just One Drink
+    title_ko: 3화 — 공동 책임
+    title_en: Ep.3 — Joint Responsibility
+    scene:
+      - { who: narr, ko: "냉동실 아이스크림이 사라졌다.", en: "The ice cream in the freezer is gone." }
+      - { who: dad, ko: "아빠가 먹었지! 맛있더라!", en: "I ate it! It was delicious!" }
+      - { who: coworker, ko: "…그거 애들 거였어요.", en: "…That was the kids'." }
+      - { who: dad, ko: "그러니까 이건 공동 책임이야, 노 책임!", en: "So this is a joint responsibility, Lead No!" }
+      - { pause: 600 }
+      - { who: coworker, ko: "…저는 한 입도 안 먹었는데요.", en: "…I didn't have a single bite." }
+      - { who: dad, ko: "하하하! 역시 노 책임은 정확해!", en: "Hahaha! Lead No, always so precise!" }
+  - series_ko: 딱 한 잔만
+    series_en: Just One Drink
+    title_ko: 4화 — 남은 거예요
+    title_en: Ep.4 — Leftovers
+    scene:
+      - { who: dad, ko: "아이고~ 엄마가 우유 사 오랬는데!", en: "Oh boy~ Mom told me to buy milk!" }
+      - { pause: 500 }
+      - { who: coworker, ko: "…냉장고에 있어요.", en: "…It's in the fridge." }
+      - { who: dad, ko: "어? 언제 샀어?", en: "Huh? When did you buy it?" }
+      - { pause: 700 }
+      - { who: coworker, ko: "…남은 거예요.", en: "…It was left over." }
+      - { who: dad, ko: "역시 노 책임은 보는 눈이 있어!", en: "See? Lead No really knows quality!" }

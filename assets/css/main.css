@@ -172,8 +172,44 @@ html[data-lang="en"] .lang-ko-el { display: none !important; }
 .hero-twin img { height: 100%; width: auto; }
 .hero-twin:hover { transform: translateY(-6px); }
 .hero-twin:active { transform: translateY(2px) scaleY(0.98); }
-.hero-sister { left: 8%; height: 80%; z-index: 2; }
-.hero-brother { right: 4%; height: 85%; }
+.hero-left { left: 8%; height: 80%; z-index: 2; }
+.hero-right { right: 4%; height: 85%; }
+/* 그룹별 키 (멤버 id) */
+.cast-dad { left: 4%; height: 82%; }
+.cast-coworker { right: 6%; height: 90%; }
+.hero-twin.is-talking { animation: talk .34s ease-out; }
+@keyframes talk { 40% { transform: translateY(-9px); } }
+
+/* 무대 = 그룹(cast) 하나씩. 좌우 화살표·스와이프로 넘긴다 */
+.cast { position: absolute; inset: 0; }
+.cast.enter-next { animation: cast-in-next .38s ease-out; }
+.cast.enter-prev { animation: cast-in-prev .38s ease-out; }
+@keyframes cast-in-next { from { opacity: 0; transform: translateX(48px); } }
+@keyframes cast-in-prev { from { opacity: 0; transform: translateX(-48px); } }
+.stage-arrow {
+  position: absolute; top: 46%; z-index: 6; width: 46px; height: 46px; padding: 0 0 3px;
+  display: grid; place-items: center; cursor: pointer;
+  background: var(--paper); color: var(--ink); border: var(--line); border-radius: 50%;
+  box-shadow: 3px 3px 0 var(--ink); font: 900 1.7rem/1 var(--display, inherit);
+  transition: transform .15s, background .15s;
+}
+.stage-arrow:hover { background: var(--orange); }
+.stage-arrow:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--ink); }
+.stage-prev { left: -10px; }
+.stage-next { right: -10px; }
+/* 에피소드 자막 (narr) */
+.stage-caption {
+  position: absolute; left: 50%; bottom: 62px; z-index: 5; transform: translateX(-50%);
+  max-width: 88%; width: max-content; text-align: center;
+  background: var(--ink); color: var(--cream); border-radius: 999px;
+  padding: 6px 18px 8px; font-weight: 800; font-size: 0.98rem; line-height: 1.4;
+  box-shadow: 3px 3px 0 var(--orange);
+}
+.stage-caption[hidden] { display: none; }
+.stage-caption.pop { animation: caption-in .3s ease-out; }
+@keyframes caption-in { from { opacity: 0; transform: translate(-50%, 8px); } }
+.stage-hint { transition: opacity .3s; }
+.hero-stage.is-playing .stage-hint { opacity: 0; }
 .stage-hint {
   position: absolute; right: 0; bottom: 18px; z-index: 3;
   font-size: 0.78rem; font-weight: 700; color: var(--muted);
@@ -196,21 +232,40 @@ html[data-lang="en"] .lang-ko-el { display: none !important; }
 .bubble-right { right: 0; top: 6px; background: var(--bro-bubble); }
 .bubble-right::after { left: 34px; transform: rotate(45deg) skew(10deg, 10deg); }
 .bubble.pop { animation: pop .28s ease-out; }
+.bubble { transition: opacity .25s; }
+.bubble.is-dim { opacity: .4; }
+.bubble.is-empty { visibility: hidden; }
+.bubble-coworker { background: var(--coworker-bubble); }
 @keyframes pop { 0% { transform: scale(.85); } 70% { transform: scale(1.06); } 100% { transform: scale(1); } }
 
-/* 대사 띠 */
-.ticker { background: var(--ink); color: var(--cream); overflow: hidden; border-bottom: var(--line); }
-.ticker-track { display: flex; width: max-content; animation: ticker 36s linear infinite; }
-.ticker-track span {
-  font-family: var(--display); font-size: 1.35rem; padding: 12px 22px; white-space: nowrap;
-  display: inline-flex; align-items: center;
+/* 에피소드 바 (히어로 아래 띠): 지금 무대 그룹의 회차 목록 */
+.episode-bar { background: var(--ink); color: var(--cream); border-bottom: var(--line); padding: 14px 0; }
+.ep-set { display: flex; align-items: center; gap: 20px; }
+.ep-set[hidden] { display: none; }
+.ep-set-name {
+  display: flex; align-items: center; gap: 10px; margin: 0; flex-shrink: 0;
+  font-family: var(--display); font-size: 1.3rem; white-space: nowrap;
 }
-.ticker-track span::after {
-  content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--orange);
-  margin-left: 44px;
+.ep-set-name::before { content: ""; width: 12px; height: 12px; border-radius: 50%; background: var(--group-color, var(--orange)); border: 2px solid var(--cream); }
+.ep-set-count { font-family: inherit; font-size: 0.8rem; color: var(--gray); }
+.ep-list { display: flex; gap: 10px; margin: 0; padding: 4px 2px; list-style: none; overflow-x: auto; scrollbar-width: none; }
+.ep-list::-webkit-scrollbar { display: none; }
+.ep-chip {
+  position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: flex-start;
+  padding: 6px 14px 9px; white-space: nowrap; text-align: left; cursor: pointer;
+  background: transparent; color: var(--cream); font: inherit; font-weight: 800; font-size: 0.92rem; line-height: 1.35;
+  border: 2px solid rgba(255, 246, 229, .3); border-radius: 14px; transition: border-color .15s, background .15s;
 }
-.ticker:hover .ticker-track { animation-play-state: paused; }
-@keyframes ticker { to { transform: translateX(-50%); } }
+.ep-chip small { font-size: 0.72rem; font-weight: 700; color: var(--gray); }
+.ep-chip:hover { border-color: var(--cream); }
+.ep-chip::after {
+  content: ""; position: absolute; left: 0; bottom: 0; height: 4px;
+  width: calc(var(--p, 0) * 100%); background: var(--ink); transition: width .3s;
+}
+.ep-chip.is-playing { background: var(--orange); border-color: var(--orange); color: var(--ink); }
+.ep-chip.is-playing small { color: var(--ink-2); }
+.ep-chip.is-seen small::after { content: " ✓"; color: var(--orange); }
+.ep-chip.is-playing small::after { content: none; }
 
 /* ── Twin cards ──────────────────────────────────────────── */
 .twin-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
@@ -658,8 +713,14 @@ a.group-card:hover .group-card-art img { transform: scale(1.03); }
   .hero-inner { grid-template-columns: 1fr; padding-top: 40px; gap: 0; }
   .hero-copy { padding-bottom: 8px; }
   .hero-stage { height: 400px; }
-  .hero-sister { left: 6%; }
-  .hero-brother { right: 2%; }
+  .hero-left { left: 6%; }
+  .hero-right { right: 2%; }
+  .stage-prev { left: -4px; }
+  .stage-next { right: -4px; }
+  .stage-arrow { width: 40px; height: 40px; font-size: 1.5rem; }
+  .stage-caption { bottom: 48px; font-size: 0.88rem; }
+  .ep-set { flex-direction: column; align-items: stretch; gap: 8px; }
+  .ep-set-name { font-size: 1.1rem; }
   .bubble { font-size: 1rem; max-width: 170px; }
   .stage-hint { bottom: 10px; }
 
@@ -712,7 +773,7 @@ a.group-card:hover .group-card-art img { transform: scale(1.03); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .stamp-drift, .ticker-track { animation: none; }
+  .stamp-drift, .cast, .hero-twin, .bubble, .stage-caption { animation: none !important; }
   * { transition: none !important; scroll-behavior: auto !important; }
 }
 

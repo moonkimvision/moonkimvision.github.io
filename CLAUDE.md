@@ -73,6 +73,7 @@ Jekyll 기반 GitHub Pages 블로그.
 3. `/<id>/index.html`(그룹 소개, `twins/index.html` 참고) + 멤버 프로필 `/<id>/<member>.html`: front matter `layout: character`, `group: <id>`, `character: <member>`.
 4. 이미지: `assets/images/<id>/` (WebP). 카드·말풍선은 그룹을 넘긴다 — `{% include twin-card.html group="<id>" id="<member>" %}`, `{% include bubble.html group="<id>" who="<member>" ... %}`. 말풍선 색은 `main.css` 의 `.chat-<member>` 를 추가 (없으면 기본 흰 말풍선).
 5. 새 캐릭터가 공개 전이면 `status: soon` 으로 먼저 카드만 (티저).
+6. 홈 히어로 무대: active 그룹은 자동으로 좌우 화살표 캐러셀에 들어간다. `_data/<data>.yml` 의 `episodes[].scene`(`{ who: <멤버>|narr, ko, en }`, 정적은 `{ pause: ms }`)이 히어로 아래 에피소드 바에서 재생된다. 무대 위 키·위치는 `main.css` 의 `.cast-<멤버>`, 이미지 가로 크기는 `index.html` 의 `case m`.
 
 ---
 
