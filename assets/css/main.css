@@ -182,8 +182,9 @@ html[data-lang="en"] .lang-ko-el { display: none !important; }
 
 /* 무대 = 그룹(cast) 하나씩. 좌우 화살표·스와이프로 넘긴다 */
 .cast { position: absolute; inset: 0; }
-.cast.enter-next { animation: cast-in-next .38s ease-out; }
-.cast.enter-prev { animation: cast-in-prev .38s ease-out; }
+.cast.enter-next, .hero-copy.enter-next { animation: cast-in-next .38s ease-out; }
+.cast.enter-prev, .hero-copy.enter-prev { animation: cast-in-prev .38s ease-out; }
+.hero-copy[hidden] { display: none; }
 @keyframes cast-in-next { from { opacity: 0; transform: translateX(48px); } }
 @keyframes cast-in-prev { from { opacity: 0; transform: translateX(-48px); } }
 .stage-arrow {

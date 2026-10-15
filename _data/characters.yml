@@ -24,6 +24,14 @@
     text_en: Both deadpan. The laugh lives in the silence after.
   profile_eyebrow_ko: 쌍둥이 프로필
   profile_eyebrow_en: Twin profile
+  # 홈 히어로 왼쪽 글 (무대에서 이 그룹을 보고 있을 때). <mark> 는 주황 형광펜
+  hero:
+    title_ko: 무표정 쌍둥이가<br><mark>앱</mark>을 소개합니다.
+    title_en: Two deadpan twins<br>present our <mark>apps</mark>.
+    lead_ko: 몇 분 차이로 태어난 이란성 쌍둥이 남매. 말 많은 누나와 한마디뿐인 동생이 moonkimvision의 앱과 이야기를 안내해요.
+    lead_en: Fraternal twins born minutes apart. A sister who never stops talking and a brother who says one word at a time — your guides to moonkimvision's apps.
+    cta_ko: 쌍둥이 만나기
+    cta_en: Meet the twins
 
 - id: gongdong
   status: active
@@ -45,3 +53,10 @@
     text_en: The comeback never lands. He hears every jab as a compliment.
   profile_eyebrow_ko: 공동책임 프로필
   profile_eyebrow_en: YouNo Lead profile
+  hero:
+    title_ko: 혼자 신난 아빠와<br><mark>끌려온</mark> 동기.
+    title_en: One over-excited dad,<br>one <mark>dragged-along</mark> coworker.
+    lead_ko: 쌍둥이 아빠 유 책임과 회사 동기 노 책임. 둘 다 직책이 '책임'이라, 합쳐서 공동책임. 아재개그는 한쪽만 웃고, 태클은 칭찬으로 돌아와요.
+    lead_en: The twins' dad, Lead Yu, and his coworker, Lead No — two leads, one comedy duo. Only one of them laughs at the dad jokes, and every jab comes back as a compliment.
+    cta_ko: 공동책임 만나기
+    cta_en: Meet YouNo Lead

@@ -6,20 +6,27 @@ description: 무표정 쌍둥이 남매가 안내하는 moonkimvision의 앱과 
 <section class="hero">
   <div class="stamp-drift" aria-hidden="true"></div>
   <div class="container hero-inner">
-    <div class="hero-copy">
-      <p class="eyebrow">moonkimvision · <span class="lang-ko">모바일 앱 스튜디오</span><span class="lang-en">Mobile app studio</span></p>
-      <h1 class="hero-title">
-        <span class="lang-ko">무표정 쌍둥이가<br><mark>앱</mark>을 소개합니다.</span>
-        <span class="lang-en">Two deadpan twins<br>present our <mark>apps</mark>.</span>
-      </h1>
-      <p class="hero-lead">
-        <span class="lang-ko">몇 분 차이로 태어난 이란성 쌍둥이 남매. 말 많은 누나와 한마디뿐인 동생이 moonkimvision의 앱과 이야기를 안내해요.</span>
-        <span class="lang-en">Fraternal twins born minutes apart. A sister who never stops talking and a brother who says one word at a time — your guides to moonkimvision's apps.</span>
-      </p>
-      <div class="hero-cta">
-        <a href="{{ '/twins/' | relative_url }}" class="btn btn-orange"><span class="lang-ko">쌍둥이 만나기</span><span class="lang-en">Meet the twins</span></a>
-        <a href="{{ '/apps/' | relative_url }}" class="btn btn-line"><span class="lang-ko">앱 둘러보기</span><span class="lang-en">See the apps</span></a>
+    {%- assign groups = site.data.characters | where: "status", "active" %}
+    {%- comment -%} 왼쪽 글도 무대와 같이 그룹마다 하나 — 화살표로 넘기면 함께 바뀐다 (characters.yml 의 hero) {%- endcomment -%}
+    <div class="hero-copies">
+      {%- for g in groups %}
+      <div class="hero-copy" data-copy="{{ g.id }}"{% unless forloop.first %} hidden{% endunless %}>
+        <p class="eyebrow">moonkimvision · <span class="lang-ko">{% if forloop.first %}모바일 앱 스튜디오{% else %}{{ g.name_ko }}{% endif %}</span><span class="lang-en">{% if forloop.first %}Mobile app studio{% else %}{{ g.name_en }}{% endif %}</span></p>
+        {%- if forloop.first %}
+        <h1 class="hero-title"><span class="lang-ko">{{ g.hero.title_ko }}</span><span class="lang-en">{{ g.hero.title_en }}</span></h1>
+        {%- else %}
+        <p class="hero-title"><span class="lang-ko">{{ g.hero.title_ko }}</span><span class="lang-en">{{ g.hero.title_en }}</span></p>
+        {%- endif %}
+        <p class="hero-lead">
+          <span class="lang-ko">{{ g.hero.lead_ko }}</span>
+          <span class="lang-en">{{ g.hero.lead_en }}</span>
+        </p>
+        <div class="hero-cta">
+          <a href="{{ g.url | relative_url }}" class="btn btn-orange"><span class="lang-ko">{{ g.hero.cta_ko }}</span><span class="lang-en">{{ g.hero.cta_en }}</span></a>
+          <a href="{{ '/apps/' | relative_url }}" class="btn btn-line"><span class="lang-ko">앱 둘러보기</span><span class="lang-en">See the apps</span></a>
+        </div>
       </div>
+      {%- endfor %}
     </div>
 
     {%- comment -%}
@@ -27,7 +34,6 @@ description: 무표정 쌍둥이 남매가 안내하는 moonkimvision의 앱과 
       아래 에피소드 바에서 회차를 누르면 그 그룹 데이터의 episodes[].scene 을 말풍선으로 재생한다 (assets/js/site.js).
       멤버 두 명 = 왼쪽·오른쪽. 무대 위 키는 main.css 의 .cast-<멤버 id>.
     {%- endcomment -%}
-    {%- assign groups = site.data.characters | where: "status", "active" %}
     <div class="hero-stage" data-stage>
       {%- for g in groups %}
       {%- assign gd = site.data[g.data] %}

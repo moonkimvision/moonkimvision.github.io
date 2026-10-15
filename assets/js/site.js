@@ -28,6 +28,7 @@
     try { scripts = JSON.parse(document.getElementById('stage-episodes').textContent); } catch (e) {}
     var casts = [].slice.call(stage.querySelectorAll('[data-cast]'));
     var sets = [].slice.call(document.querySelectorAll('[data-ep-set]'));
+    var copies = [].slice.call(document.querySelectorAll('[data-copy]'));  // 히어로 왼쪽 글 (그룹마다)
     var caption = stage.querySelector('[data-caption]');
     var cur = 0, timer = null, playing = null, autoTimer = null;
 
@@ -110,6 +111,11 @@
         c.classList.remove('enter-next', 'enter-prev');
       });
       sets.forEach(function (s, k) { s.hidden = k !== cur; });
+      copies.forEach(function (c, k) {
+        c.hidden = k !== cur;
+        c.classList.remove('enter-next', 'enter-prev');
+        if (k === cur && dir) { void c.offsetWidth; c.classList.add(dir > 0 ? 'enter-next' : 'enter-prev'); }
+      });
       caption.hidden = true;
       if (dir) { void casts[cur].offsetWidth; casts[cur].classList.add(dir > 0 ? 'enter-next' : 'enter-prev'); }
       var chip = nextChip();
