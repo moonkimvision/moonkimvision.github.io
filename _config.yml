@@ -44,6 +44,12 @@ defaults:
     values:
       layout: post
       lang: ko
+  # 정책 페이지는 링크로만 연다 — 사이트 어디에도 링크하지 않고, 검색·사이트맵에서도 뺀다
+  - scope:
+      path: "privacy"
+    values:
+      sitemap: false
+      noindex: true
 
 # 빌드 설정
 markdown: kramdown

@@ -128,9 +128,8 @@ Email: moonkimvision@gmail.com
 </div>
 ```
 
-5. `privacy` 이고 `_data/apps.yml` 에 해당 앱이 있으면 그 항목의 `privacy:` 를 새 permalink 로 맞춘다.
-   앱이 아직 없으면 [CLAUDE.md](../../CLAUDE.md) "앱 추가" 규칙대로 항목을 추가할지 사용자에게 묻는다
-   (`/privacy/` 목록은 `_data/apps.yml` 에서 만들어진다).
+5. `privacy` 이고 `_data/apps.yml` 에 해당 앱이 있으면 그 항목의 `privacy:` 를 새 permalink 로 맞춘다 (기록용).
+   정책 페이지는 링크로만 연다 — 푸터·앱 카드·포스트 등 사이트 어디에도 링크를 걸지 않는다.
 
 6. 생성 완료 후 다음을 출력한다.
 

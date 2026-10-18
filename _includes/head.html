@@ -29,6 +29,9 @@
   {%- if site.adsense and jekyll.environment == "production" %}
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.adsense }}" crossorigin="anonymous"></script>
   {%- endif %}
+  {%- if page.noindex %}
+  <meta name="robots" content="noindex">
+  {%- endif %}
   {% seo %}
   {% feed_meta %}
 </head>

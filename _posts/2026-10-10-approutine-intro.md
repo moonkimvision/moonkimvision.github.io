@@ -87,8 +87,6 @@ AppRoutine은 기록만 보는 앱이 아니라 **런처**이기도 해요.
 
 AppRoutine은 계정 가입 없이 바로 시작해요. 앱 사용 기록은 **기기 안에서만 처리 · 저장**되고, 외부 서버로 보내지 않아요. 처음 실행할 때 안드로이드의 '앱 사용 정보 액세스' 권한만 허용해 주면 돼요.
 
-자세한 내용은 [개인정보처리방침](/privacy/apptimeline/)에서 확인할 수 있어요.
-
 <div class="chat">
 {% include bubble.html who="sister" text="그러니까 정리하면, 기록 보고, 바로 열고, 줄이고, 알람까지. 아 잠깐, 나 오늘 몇 시간 썼는지는 말 안 할 거야." %}
 {% include bubble.html who="brother" text="…7시간." %}

@@ -678,7 +678,7 @@ a.group-card:hover .group-card-art img { transform: scale(1.03); }
 .peek-brother { right: 8%; top: -14px; }
 .site-footer { font-size: 0.87rem; background: linear-gradient(var(--cream) 104px, var(--ink) 104px); color: #cfc9bd; }
 .site-footer > .container { padding-top: 40px; padding-bottom: 26px; }
-.footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 24px; margin-bottom: 24px; }
+.footer-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 24px; margin-bottom: 24px; }
 .footer-head { color: #8d877b; font-size: 0.78rem; font-weight: 700; letter-spacing: .04em; }
 .footer-col p { margin-bottom: 4px; line-height: 1.6; }
 .footer-brand { font-family: var(--display); font-size: 1.3rem; color: var(--cream); margin-bottom: 8px !important; }

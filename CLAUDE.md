@@ -29,7 +29,7 @@ Jekyll 기반 GitHub Pages 블로그.
 │   ├── games.yml        # 웹게임 목록 (/apps/ 의 '웹에서 바로' 구역이 읽음)
 │   └── sns.yml          # 유튜브·인스타그램·틱톡 채널 (_config.yml social.links 와 같은 주소)
 ├── _posts/              # 블로그 포스트 (YYYY-MM-DD-slug.md)
-├── privacy/             # 앱별 개인정보처리방침
+├── privacy/             # 앱별 개인정보처리방침 (링크로만 접근 — 목록 페이지·사이트 내 링크 없음)
 ├── characters/          # 캐릭터 목록(/characters/) — 그룹 카드 + '새 친구 준비 중' 카드
 ├── twins/               # 쌍둥이 소개(/twins/) + 프로필(sister, brother) — 첫 캐릭터 그룹 (주소는 SNS 공유돼 있어 유지)
 ├── gongdong/            # 공동책임 소개(/gongdong/) + 프로필(dad, coworker). bear.html 은 옛 주소 → coworker 이동
@@ -66,7 +66,7 @@ Jekyll 기반 GitHub Pages 블로그.
 
 ## 캐릭터 추가 (쌍둥이 외 새 그룹, 2026-10-12~)
 
-상단 메뉴는 `홈 · 캐릭터 · 앱 · 블로그` (앱 안에 모바일 앱·웹게임, 정책·사업자 정보는 푸터). '캐릭터'(/characters/)는 `_data/characters.yml` 의 그룹을 카드로 보여 주고, 그룹 주소 아래 어느 페이지에서든 메뉴가 켜진다.
+상단 메뉴는 `홈 · 캐릭터 · 앱 · 블로그` (앱 안에 모바일 앱·웹게임, 사업자 정보는 푸터). '캐릭터'(/characters/)는 `_data/characters.yml` 의 그룹을 카드로 보여 주고, 그룹 주소 아래 어느 페이지에서든 메뉴가 켜진다.
 
 1. `_data/characters.yml` 에 그룹 한 항목: `id`, `status`(active | soon — soon 이면 링크 없이 '곧 공개' 카드), `url`(`/<id>/`, 기존 폴더 apps·games·twins·privacy·posts 와 겹치지 않게), `data`(멤버 데이터 파일 이름), `members`, `name_ko/en`, `tagline_ko/en`, `image`(그룹 대표 이미지, 16:10 으로 잘림), `color`, 선택 `formula`(프로필 아래 '공식' 띠)·`profile_eyebrow_ko/en`.
 2. `_data/<data>.yml`: 멤버마다 `twins.yml` 과 같은 구조 (id, url, name/role/oneliner/intro, images.front·three_quarter·side·face, profile, quotes, stats) + `stat_labels`. 짝이 있으면 `other` (능력치 비교 눈금·짝 프로필 링크), 없으면 생략.
@@ -100,9 +100,10 @@ bundle exec jekyll build
 - Google Play 등록 URL 예시: `https://moonkimvision.com/privacy/my-app/`
 - layout: `policy-bilingual` (한/영 토글, `title_ko`·`title_en`) 또는 `page`
 - 정책 페이지 URL 은 스토어에 등록돼 있으므로 바꾸지 않는다.
+- **정책 페이지는 링크로만 연다.** 사이트 어디에도(푸터·앱 카드·포스트·404) 링크하지 않고, `/privacy/` 목록 페이지도 두지 않는다. `_config.yml` defaults 가 `privacy/` 아래에 `noindex`(robots meta)·`sitemap: false` 를 건다.
 
 ### 앱 추가
-- `_data/apps.yml` 에 항목 추가 (아이콘 `assets/images/apps/<id>-icon.png`, 스토어·정책·소개 글 링크, 쌍둥이 한마디)
+- `_data/apps.yml` 에 항목 추가 (아이콘 `assets/images/apps/<id>-icon.png`, 스토어·소개 글 링크, 정책 주소(기록용, 화면엔 안 나옴), 쌍둥이 한마디)
 - 소개 포스트에 `app: <id>` 를 넣으면 포스트 상단 색과 하단 앱 카드가 붙는다.
 
 ### 게임 추가
