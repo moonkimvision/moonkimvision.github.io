@@ -81,7 +81,7 @@ moonkimvision("회사", "저희")은 자동 클릭 앱 오토 클릭(이하 "서
 
 개인정보처리방침에 관한 문의 사항은 아래로 연락해 주십시오.
 
-**fisherman.moon@gmail.com**
+**moonkimvision@gmail.com**
 
 </div>
 
@@ -158,6 +158,6 @@ We may update this policy from time to time. Any changes will be posted on this 
 
 If you have any questions about this Privacy Policy, please contact us at:
 
-**fisherman.moon@gmail.com**
+**moonkimvision@gmail.com**
 
 </div>

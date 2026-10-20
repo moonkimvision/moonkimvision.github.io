@@ -119,7 +119,7 @@ Firebase를 통해 전송되는 데이터는 암호화(HTTPS)되며, Google은 �
 
 개인정보처리방침과 데이터 삭제에 관한 문의 사항은 아래로 연락해 주십시오.
 
-**fisherman.moon@gmail.com**
+**moonkimvision@gmail.com**
 
 </div>
 
@@ -234,6 +234,6 @@ We may update this policy from time to time. Any changes will be posted on this 
 
 If you have any questions about this Privacy Policy or want to request data deletion, please contact us at:
 
-**fisherman.moon@gmail.com**
+**moonkimvision@gmail.com**
 
 </div>

@@ -107,7 +107,7 @@ Google의 데이터 처리 방식은 [Google 개인정보처리방침](https://p
 
 개인정보처리방침에 관한 문의 사항은 아래로 연락해 주십시오.
 
-**fisherman.moon@gmail.com**
+**moonkimvision@gmail.com**
 
 </div>
 
@@ -210,6 +210,6 @@ We may update this policy from time to time. Any changes will be posted on this 
 
 If you have any questions about this Privacy Policy, please contact us at:
 
-**fisherman.moon@gmail.com**
+**moonkimvision@gmail.com**
 
 </div>

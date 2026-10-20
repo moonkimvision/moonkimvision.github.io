@@ -123,7 +123,7 @@ moonkimvision("회사", "저희")은 냉장고 관리 앱 우리집 냉장고(�
 
 개인정보처리방침과 계정·데이터 삭제에 관한 문의 사항은 아래로 연락해 주십시오.
 
-**fisherman.moon@gmail.com**
+**moonkimvision@gmail.com**
 
 </div>
 
@@ -242,6 +242,6 @@ We may update this policy from time to time. Any changes will be posted on this 
 
 If you have any questions about this Privacy Policy or want to request account or data deletion, please contact us at:
 
-**fisherman.moon@gmail.com**
+**moonkimvision@gmail.com**
 
 </div>
