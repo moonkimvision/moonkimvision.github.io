@@ -4,7 +4,7 @@ title_ko: "QR 스캐너 개인정보처리방침"
 title_en: "QR Scanner Privacy Policy"
 title: "QR Scanner Privacy Policy"
 permalink: /privacy/qr-scanner/
-date: 2026-10-20
+date: 2026-10-21
 lang: ko
 ---
 
@@ -50,36 +50,46 @@ QR 코드와 바코드를 실시간으로 인식하는 데에만 사용합니다
 
 QR 코드 안의 링크는 사용자가 "열기"를 누를 때만 브라우저로 엽니다. 링크 안전 검사는 기기 안에서만 이루어지며, 검사하려고 주소를 외부로 보내지 않습니다.
 
+"웹 검색"을 누르면 스캔한 내용이 검색어로 담긴 Google 검색 페이지가 브라우저에서 열립니다. 이 검색은 사용자가 누를 때만 이루어지며 Google의 정책을 따릅니다.
+
 ---
 
 ### 3. 코드 인식 (Google ML Kit)
 
-코드 인식에는 Google Play 서비스의 ML Kit 바코드 스캔을 사용합니다. 이미지는 기기 안에서 처리되며 Google로 보내지 않습니다. 다만 Google은 기능 개선과 문제 해결을 위해 ML Kit 사용 통계(사용 횟수, 오류, 기기·앱 정보 등)를 수집할 수 있습니다. 자세한 내용은 [ML Kit 개인정보 안내](https://developers.google.com/ml-kit/terms)와 [Google 개인정보처리방침](https://policies.google.com/privacy)을 참고하십시오.
+코드 인식에는 Google Play 서비스의 ML Kit 바코드 스캔을 사용합니다. 이미지는 기기 안에서 처리되며 Google로 보내지 않습니다. 다만 Google은 기능 개선과 문제 해결을 위해 ML Kit 사용 통계(사용 횟수, 오류, 기기·앱 정보 등)를 수집할 수 있습니다. 자세한 내용은 [ML Kit 데이터 공개](https://developers.google.com/ml-kit/android-data-disclosure)와 [Google 개인정보처리방침](https://policies.google.com/privacy)을 참고하십시오.
 
 ---
 
-### 4. 이용자의 권리 (GDPR · CCPA)
+### 4. 백업
+
+**Android 자동 백업**  
+기기에서 Google 백업이 켜져 있으면 Android 운영체제가 앱 데이터(스캔·생성 기록, 즐겨찾기, 선물함)를 사용자의 Google 계정에 백업합니다. 이 백업은 Google이 관리하며 저희는 접근할 수 없습니다. 기기 설정에서 백업을 끌 수 있습니다.
+
+---
+
+### 5. 이용자의 권리 (GDPR · CCPA)
 
 - 기기에 저장된 데이터는 앱 안에서 기록을 지우거나, 앱 데이터를 지우거나, 앱을 삭제하면 언제든지 삭제됩니다.
 - 저희는 사용자 데이터를 서버에 보관하지 않으므로 별도로 열람·삭제를 요청할 데이터가 없습니다.
+- Google 계정에 저장된 백업은 Google 계정 설정에서 삭제할 수 있습니다.
 
 **저희는 개인정보를 판매하지 않습니다.**
 
 ---
 
-### 5. 아동 개인정보 보호
+### 6. 아동 개인정보 보호
 
 본 서비스는 만 13세 미만 아동을 대상으로 하지 않습니다. 궁금한 점이 있는 보호자는 아래 이메일로 연락해 주십시오.
 
 ---
 
-### 6. 개인정보처리방침 변경
+### 7. 개인정보처리방침 변경
 
 본 방침은 수시로 업데이트될 수 있습니다. 변경 사항은 이 페이지에 게시합니다.
 
 ---
 
-### 7. 문의
+### 8. 문의
 
 개인정보처리방침에 관한 문의 사항은 아래로 연락해 주십시오.
 
@@ -129,36 +139,46 @@ These requests contain no personal information. As with any internet request, th
 
 Links inside QR codes are opened in your browser only when you tap "Open." Link safety checks run entirely on your device; addresses are not sent anywhere to be checked.
 
+When you tap "Web search," a Google search page with the scanned content as the query opens in your browser. This search happens only when you tap it and is governed by Google's policies.
+
 ---
 
 ### 3. Code Recognition (Google ML Kit)
 
-Code recognition uses ML Kit barcode scanning from Google Play services. Images are processed on your device and are not sent to Google. However, Google may collect ML Kit usage statistics (such as usage counts, errors, and device and app information) to improve the feature and troubleshoot problems. See the [ML Kit terms and privacy information](https://developers.google.com/ml-kit/terms) and the [Google Privacy Policy](https://policies.google.com/privacy).
+Code recognition uses ML Kit barcode scanning from Google Play services. Images are processed on your device and are not sent to Google. However, Google may collect ML Kit usage statistics (such as usage counts, errors, and device and app information) to improve the feature and troubleshoot problems. See the [ML Kit data disclosure](https://developers.google.com/ml-kit/android-data-disclosure) and the [Google Privacy Policy](https://policies.google.com/privacy).
 
 ---
 
-### 4. Your Rights (GDPR · CCPA)
+### 4. Backups
+
+**Android Auto Backup**  
+If Google backup is enabled on your device, Android backs up the app's data (scan and creation history, favorites, gift box) to your Google account. Google manages this backup and we cannot access it. You can turn backup off in your device settings.
+
+---
+
+### 5. Your Rights (GDPR · CCPA)
 
 - Data stored on your device can be deleted at any time by clearing history in the app, clearing the app's data, or uninstalling the app.
 - We do not keep user data on any server, so there is no server data to access or delete.
+- Backups stored in your Google account can be deleted in your Google account settings.
 
 **We do not sell personal information.**
 
 ---
 
-### 5. Children's Privacy
+### 6. Children's Privacy
 
 The Service is not directed at children under 13. Parents or guardians with questions may contact us at the email below.
 
 ---
 
-### 6. Changes to This Privacy Policy
+### 7. Changes to This Privacy Policy
 
 We may update this policy from time to time. Any changes will be posted on this page.
 
 ---
 
-### 7. Contact Us
+### 8. Contact Us
 
 If you have any questions about this Privacy Policy, please contact us at:
 
