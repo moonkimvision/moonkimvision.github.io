@@ -4,7 +4,7 @@ title_ko: "가위바위보 챔피언 개인정보처리방침"
 title_en: "RPS Champion Privacy Policy"
 title: "RPS Champion Privacy Policy"
 permalink: /privacy/rps-champion/
-date: 2026-10-19
+date: 2026-10-22
 lang: ko
 ---
 
@@ -37,7 +37,7 @@ moonkimvision("회사", "저희")은 가위바위보 챔피언 앱과 웹(이하
 - **연습전 기록**: 봇과 대결한 기록과 일일 연습 포인트
 
 **기기 권한**  
-인터넷(INTERNET) 권한만 사용합니다. 위치·연락처·사진·카메라·마이크 권한은 사용하지 않습니다.
+인터넷(INTERNET) 권한과, Android 앱의 광고를 위한 광고 ID(AD_ID) 권한만 사용합니다. 위치·연락처·사진·카메라·마이크 권한은 사용하지 않습니다.
 
 ---
 
@@ -67,7 +67,7 @@ moonkimvision("회사", "저희")은 가위바위보 챔피언 앱과 웹(이하
 
 ---
 
-### 4. 처리 위탁 및 국외 이전 (Google Firebase)
+### 4. 처리 위탁 및 국외 이전 (Google Firebase · AdMob)
 
 서비스는 Google LLC의 Firebase를 사용해 정보를 저장·처리합니다.
 
@@ -82,7 +82,18 @@ moonkimvision("회사", "저희")은 가위바위보 챔피언 앱과 웹(이하
 
 자세한 내용은 [Firebase 개인정보 보호](https://firebase.google.com/support/privacy)와 [Google 개인정보처리방침](https://policies.google.com/privacy)을 참고하십시오.
 
-**저희는 광고나 분석 도구를 사용하지 않으며, 개인정보를 판매하거나 제3자에게 제공하지 않습니다.**
+**광고 (Google AdMob)**  
+Android 앱은 화면 하단 배너 광고를 위해 Google AdMob을 사용합니다(웹에는 광고가 없습니다). Google은 광고 게재·성과 측정·부정 행위 방지를 위해 다음 정보를 수집·처리할 수 있습니다.
+
+- 광고 ID 등 기기 식별자
+- IP 주소와 이를 통한 대략적인 위치
+- 기기·앱 정보, 광고 노출·클릭 기록, 비정상 종료 등 진단 정보
+
+유럽경제지역(EEA)·영국·스위스 사용자에게는 처음 실행할 때 광고 개인정보 동의 화면이 표시되며, 앱 화면 맨 아래의 "광고 개인정보 설정"에서 언제든지 선택을 바꿀 수 있습니다. 기기 설정에서 광고 ID를 재설정하거나 맞춤 광고를 끌 수도 있습니다.
+
+Google의 데이터 처리 방식은 [Google 파트너 사이트·앱 데이터 사용 방식](https://policies.google.com/technologies/partner-sites)을 참고하십시오.
+
+**광고 외의 분석·추적 도구는 사용하지 않으며, 개인정보를 판매하거나 광고 외의 목적으로 제3자에게 제공하지 않습니다.**
 
 ---
 
@@ -102,7 +113,7 @@ moonkimvision("회사", "저희")은 가위바위보 챔피언 앱과 웹(이하
 
 ### 7. 이용자의 권리 (개인정보 보호법 · GDPR · CCPA)
 
-이용자는 언제든지 자신의 개인정보 열람·정정·삭제·처리 정지를 요청할 수 있습니다. 닉네임은 앱에서 직접 바꿀 수 있고(30일에 한 번), 그 밖의 요청은 아래 이메일로 보내 주십시오.
+이용자는 언제든지 자신의 개인정보 열람·정정·삭제·처리 정지를 요청할 수 있습니다. 닉네임은 앱에서 직접 바꿀 수 있고(30일에 한 번), 그 밖의 요청은 아래 이메일로 보내 주십시오. 광고와 관련된 데이터는 4항의 방법으로 동의를 바꾸거나 광고 ID를 재설정해 관리할 수 있습니다.
 
 ---
 
@@ -163,7 +174,7 @@ Your email address is used only to verify your sign-in and is **never shown to o
 - **Practice records**: matches against bots and daily practice points
 
 **Device permissions**  
-The Service uses only the INTERNET permission. It does not use location, contacts, photos, camera, or microphone permissions.
+The Service uses only the INTERNET permission and, in the Android app, the advertising ID (AD_ID) permission for ads. It does not use location, contacts, photos, camera, or microphone permissions.
 
 ---
 
@@ -193,7 +204,7 @@ Do not use your real name, contact details, or other personal information in you
 
 ---
 
-### 4. Processors and International Transfer (Google Firebase)
+### 4. Processors and International Transfer (Google Firebase · AdMob)
 
 The Service stores and processes information using Firebase by Google LLC.
 
@@ -208,7 +219,18 @@ The Service stores and processes information using Firebase by Google LLC.
 
 For details, see [Privacy and Security in Firebase](https://firebase.google.com/support/privacy) and the [Google Privacy Policy](https://policies.google.com/privacy).
 
-**We do not use advertising or analytics tools, and we do not sell or provide personal information to third parties.**
+**Advertising (Google AdMob)**  
+The Android app uses Google AdMob to show a banner ad at the bottom of the screen (the website has no ads). Google may collect and process the following to serve and measure ads and to prevent fraud:
+
+- Device identifiers such as the advertising ID
+- IP address and approximate location derived from it
+- Device and app information, ad impressions and clicks, and diagnostics such as crash logs
+
+Users in the European Economic Area, the UK, and Switzerland are shown an ad privacy consent message on first launch and can change their choice at any time with "Ad privacy settings" at the very bottom of the app screen. You can also reset your advertising ID or opt out of personalized ads in your device settings.
+
+For how Google handles this data, see [How Google uses information from sites or apps that use our services](https://policies.google.com/technologies/partner-sites).
+
+**Apart from advertising, we do not use analytics or tracking tools, and we do not sell personal information or provide it to third parties for any purpose other than advertising.**
 
 ---
 
@@ -228,7 +250,7 @@ Results and invite links are shared through your device's share sheet (messaging
 
 ### 7. Your Rights (PIPA · GDPR · CCPA)
 
-You may request access to, correction of, deletion of, or suspension of processing of your personal information at any time. You can change your nickname in the app (once every 30 days); for other requests, contact us at the email below.
+You may request access to, correction of, deletion of, or suspension of processing of your personal information at any time. You can change your nickname in the app (once every 30 days); for other requests, contact us at the email below. Advertising-related data can be managed by changing your consent or resetting your advertising ID as described in Section 4.
 
 ---
 
