@@ -1,16 +1,16 @@
 ---
 layout: policy-bilingual
-title_ko: "오토 클릭 개인정보처리방침"
-title_en: "Auto Click Privacy Policy"
-title: "Auto Click Privacy Policy"
+title_ko: "오토터치 개인정보처리방침"
+title_en: "AutoTouch Privacy Policy"
+title: "AutoTouch Privacy Policy"
 permalink: /privacy/autoclick/
-date: 2026-10-20
+date: 2026-10-25
 lang: ko
 ---
 
 <div class="lang-ko" markdown="1">
 
-moonkimvision("회사", "저희")은 자동 클릭 앱 오토 클릭(이하 "서비스")을 무료로 제공합니다.
+moonkimvision("회사", "저희")은 자동 클릭 앱 오토터치(이하 "서비스")을 무료로 제공합니다.
 
 본 페이지는 서비스 이용 시 개인정보의 수집·이용·공개에 관한 정책을 안내합니다.  
 서비스를 이용함으로써 본 정책에 동의하는 것으로 간주됩니다.
@@ -87,7 +87,7 @@ moonkimvision("회사", "저희")은 자동 클릭 앱 오토 클릭(이하 "서
 
 <div class="lang-en" style="display:none" markdown="1">
 
-moonkimvision ("we," "us," or "our") provides Auto Click, an automatic tapping app (the "Service"), free of charge.
+moonkimvision ("we," "us," or "our") provides AutoTouch (오토터치), an automatic tapping app (the "Service"), free of charge.
 
 This page explains our policies on the collection, use, and disclosure of personal information when you use the Service.  
 By using the Service, you agree to this policy.
