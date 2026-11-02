@@ -4,7 +4,7 @@ title_ko: "앱루틴(AppRoutine) 개인정보처리방침"
 title_en: "AppRoutine Privacy Policy"
 title: "AppRoutine Privacy Policy"
 permalink: /privacy/approutine/
-date: 2026-10-26
+date: 2026-11-02
 lang: ko
 ---
 
@@ -55,7 +55,7 @@ moonkimvision("회사", "저희")은 앱 사용 기록 타임라인·런처 앱 
 
 ---
 
-### 3. 광고 (Google AdMob)
+### 3. 광고와 이용 통계 (Google AdMob · Firebase Analytics)
 
 서비스는 배너 광고를 위해 Google AdMob을 사용합니다. Google은 광고 게재·성과 측정·부정 행위 방지를 위해 다음 정보를 수집·처리할 수 있습니다.
 
@@ -69,11 +69,20 @@ moonkimvision("회사", "저희")은 앱 사용 기록 타임라인·런처 앱 
 
 Google의 데이터 처리 방식은 [Google 개인정보처리방침](https://policies.google.com/privacy)과 [Google 파트너 사이트·앱 데이터 사용 방식](https://policies.google.com/technologies/partner-sites)을 참고하십시오.
 
+**이용 통계 (Google Firebase Analytics)**  
+앱이 어떻게 쓰이는지 파악하고 개선하기 위해 Google Firebase Analytics를 사용합니다. 다음 정보가 Google로 전송됩니다.
+
+- 앱 인스턴스 ID, 광고 ID 등 기기 식별자
+- 앱 실행, 화면 이동, 사용 시간 같은 앱 사용 기록과 주요 기능을 사용했다는 사실(예: 알람 만들기, 타임라인에서 앱 실행). 기능 이름만 보내고 내용은 보내지 않습니다.
+- 기기 모델, 운영체제 버전, 언어, 앱 버전, IP 주소로 추정한 국가·지역
+
+**앱 사용 기록, 설치된 앱 목록, 다이어트·알람 설정은 이용 통계에 들어가지 않으며 Google에 전달되지 않습니다.** 수집한 통계는 서비스 개선에만 쓰며 개인을 식별하는 데 쓰지 않습니다. Google의 처리 방식은 [Firebase 개인정보 보호 안내](https://firebase.google.com/support/privacy)를 참고하십시오. 기기 설정에서 광고 ID를 재설정하거나 삭제할 수 있습니다.
+
 ---
 
 ### 4. 제3자 제공
 
-저희는 사용자의 정보를 판매하거나 제3자에게 제공하지 않습니다. 3항의 광고를 제외하면 서비스에는 분석·추적 도구가 포함되어 있지 않습니다.
+저희는 사용자의 정보를 판매하거나 제3자에게 제공하지 않습니다. 3항의 광고와 이용 통계(Google)를 제외하면 서비스에는 다른 분석·추적 도구가 포함되어 있지 않습니다.
 
 설정의 "의견 보내기"를 누르면 Google 설문지가 열립니다. 이곳에 입력한 내용은 사용자가 직접 제출할 때만 저희에게 전달됩니다.
 
@@ -157,7 +166,7 @@ If Google backup is enabled on your device, Android may back up the app's data t
 
 ---
 
-### 3. Advertising (Google AdMob)
+### 3. Advertising and Analytics (Google AdMob · Firebase Analytics)
 
 The Service uses Google AdMob to show banner ads. Google may collect and process the following to serve and measure ads and to prevent fraud:
 
@@ -171,11 +180,20 @@ Users in the European Economic Area, the UK, and Switzerland are shown an ad pri
 
 For how Google handles this data, see the [Google Privacy Policy](https://policies.google.com/privacy) and [How Google uses information from sites or apps that use our services](https://policies.google.com/technologies/partner-sites).
 
+**Usage Statistics (Google Firebase Analytics)**  
+We use Google Firebase Analytics to understand how the app is used and to improve it. The following is sent to Google:
+
+- Device identifiers such as the app instance ID and the advertising ID
+- App usage such as app opens, screen views, and time spent, and the fact that a main feature was used (for example, creating an alarm or launching an app from the timeline). Only the feature name is sent, never the content.
+- Device model, operating system version, language, app version, and country or region estimated from the IP address
+
+**Your app usage history, installed app list, and app diet and alarm settings are never included in usage statistics and are never sent to Google.** We use these statistics only to improve the Service and not to identify you. For how Google handles this data, see [Privacy and Security in Firebase](https://firebase.google.com/support/privacy). You can reset or delete your advertising ID in your device settings.
+
 ---
 
 ### 4. Sharing
 
-We do not sell or share your information with third parties. Apart from the advertising in Section 3, the Service contains no analytics or tracking tools.
+We do not sell or share your information with third parties. Apart from the advertising and usage statistics (Google) in Section 3, the Service contains no other analytics or tracking tools.
 
 Tapping "Send Feedback" in Settings opens a Google Form. Anything you enter there reaches us only if you submit it yourself.
 

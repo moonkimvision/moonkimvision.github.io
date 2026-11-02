@@ -4,7 +4,7 @@ title_ko: "응원 전광판 개인정보처리방침"
 title_en: "Cheering Banner Privacy Policy"
 title: "Cheering Banner Privacy Policy"
 permalink: /privacy/cheerbanner/
-date: 2026-10-26
+date: 2026-11-02
 lang: ko
 ---
 
@@ -52,7 +52,7 @@ Google의 데이터 처리 방식은 [Google 개인정보처리방침](https://p
 
 ---
 
-### 3. 광고 (Google AdMob)
+### 3. 광고와 이용 통계 (Google AdMob · Firebase Analytics)
 
 서비스는 전면 광고를 위해 Google AdMob을 사용합니다. 광고는 전광판을 닫고 편집 화면으로 돌아올 때만 가끔 표시되며, **전광판을 켜 둔 동안에는 표시되지 않습니다.** Google은 광고 게재·성과 측정·부정 행위 방지를 위해 다음 정보를 수집·처리할 수 있습니다.
 
@@ -65,6 +65,15 @@ Google의 데이터 처리 방식은 [Google 개인정보처리방침](https://p
 유럽경제지역(EEA)·영국·스위스 사용자에게는 처음 실행할 때 광고 개인정보 동의 화면이 표시되며, 편집 화면 맨 아래의 "광고 개인정보 옵션"에서 언제든지 선택을 바꿀 수 있습니다. 기기 설정에서 광고 ID를 재설정하거나 맞춤 광고를 끌 수도 있습니다.
 
 Google의 데이터 처리 방식은 [Google 개인정보처리방침](https://policies.google.com/privacy)과 [Google 파트너 사이트·앱 데이터 사용 방식](https://policies.google.com/technologies/partner-sites)을 참고하십시오.
+
+**이용 통계 (Google Firebase Analytics)**  
+앱이 어떻게 쓰이는지 파악하고 개선하기 위해 Google Firebase Analytics를 사용합니다. 다음 정보가 Google로 전송됩니다.
+
+- 앱 인스턴스 ID, 광고 ID 등 기기 식별자
+- 앱 실행, 화면 이동, 사용 시간 같은 앱 사용 기록과 주요 기능을 사용했다는 사실(예: 전광판 재생). 기능 이름만 보내고 내용은 보내지 않습니다.
+- 기기 모델, 운영체제 버전, 언어, 앱 버전, IP 주소로 추정한 국가·지역
+
+**전광판 문구와 설정은 이용 통계에 들어가지 않으며 Google에 전달되지 않습니다.** 수집한 통계는 서비스 개선에만 쓰며 개인을 식별하는 데 쓰지 않습니다. Google의 처리 방식은 [Firebase 개인정보 보호 안내](https://firebase.google.com/support/privacy)를 참고하십시오. 기기 설정에서 광고 ID를 재설정하거나 삭제할 수 있습니다.
 
 ---
 
@@ -83,7 +92,7 @@ Google의 데이터 처리 방식은 [Google 개인정보처리방침](https://p
 
 ### 6. 제3자 제공
 
-저희는 사용자의 정보를 판매하거나 제3자에게 제공하지 않습니다. 3항의 광고를 제외하면 서비스에는 분석·추적 도구, 비정상 종료 보고 도구가 포함되어 있지 않습니다.
+저희는 사용자의 정보를 판매하거나 제3자에게 제공하지 않습니다. 3항의 광고와 이용 통계(Google)를 제외하면 서비스에는 다른 분석·추적 도구, 비정상 종료 보고 도구가 포함되어 있지 않습니다.
 
 ---
 
@@ -162,7 +171,7 @@ For how Google handles this data, see the [Google Privacy Policy](https://polici
 
 ---
 
-### 3. Ads (Google AdMob)
+### 3. Ads and Analytics (Google AdMob · Firebase Analytics)
 
 The Service uses Google AdMob to show full-screen (interstitial) ads. An ad may appear now and then when you close the banner and return to the editor, and **never while your banner is on.** Google may collect and process the following to serve ads, measure their performance, and prevent fraud:
 
@@ -175,6 +184,15 @@ The Service uses Google AdMob to show full-screen (interstitial) ads. An ad may 
 Users in the European Economic Area (EEA), the UK, and Switzerland see an ad privacy consent screen on first launch and can change their choice at any time with "Ad privacy options" at the bottom of the editor. You can also reset your advertising ID or turn off personalized ads in your device settings.
 
 For how Google handles this data, see the [Google Privacy Policy](https://policies.google.com/privacy) and [How Google uses information from sites or apps that use our services](https://policies.google.com/technologies/partner-sites).
+
+**Usage Statistics (Google Firebase Analytics)**  
+We use Google Firebase Analytics to understand how the app is used and to improve it. The following is sent to Google:
+
+- Device identifiers such as the app instance ID and the advertising ID
+- App usage such as app opens, screen views, and time spent, and the fact that a main feature was used (for example, playing a banner). Only the feature name is sent, never the content.
+- Device model, operating system version, language, app version, and country or region estimated from the IP address
+
+**Your banner text and settings are never included in usage statistics and are never sent to Google.** We use these statistics only to improve the Service and not to identify you. For how Google handles this data, see [Privacy and Security in Firebase](https://firebase.google.com/support/privacy). You can reset or delete your advertising ID in your device settings.
 
 ---
 
@@ -193,7 +211,7 @@ If Google backup is enabled on your device, Android may back up the app's data (
 
 ### 6. Sharing with Third Parties
 
-We do not sell or share your information with third parties. Apart from the ads in Section 3, the Service contains no analytics or tracking tools and no crash reporting tools.
+We do not sell or share your information with third parties. Apart from the ads and usage statistics (Google) in Section 3, the Service contains no other analytics or tracking tools and no crash reporting tools.
 
 ---
 

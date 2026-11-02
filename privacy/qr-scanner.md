@@ -4,7 +4,7 @@ title_ko: "QR 스캐너 개인정보처리방침"
 title_en: "QR Scanner Privacy Policy"
 title: "QR Scanner Privacy Policy"
 permalink: /privacy/qr-scanner/
-date: 2026-10-21
+date: 2026-11-02
 lang: ko
 ---
 
@@ -19,7 +19,7 @@ moonkimvision("회사", "저희")은 QR 스캐너 앱(이하 "서비스")을 무
 
 ### 1. 수집하는 정보
 
-**저희는 이름·이메일·전화번호 같은 개인정보를 받지 않습니다.** 서비스에는 회원가입·로그인·광고가 없습니다.
+**저희는 이름·이메일·전화번호 같은 개인정보를 받지 않습니다.** 서비스에는 회원가입·로그인이 없습니다. 화면 하단에 배너 광고가 하나 있습니다(4번).
 
 **기기 안에만 저장되는 정보**  
 스캔·생성한 코드 기록, 즐겨찾기, 선물함(코드펫·장비·도감)은 **기기 내부 저장소에만 저장**되며 서버로 보내지 않습니다. 앱을 삭제하면 함께 삭제됩니다.
@@ -60,14 +60,41 @@ QR 코드 안의 링크는 사용자가 "열기"를 누를 때만 브라우저�
 
 ---
 
-### 4. 백업
+### 4. 광고와 이용 통계 (Google AdMob · Firebase Analytics)
+
+스캔·만들기·기록·선물함 화면 하단에 Google AdMob 배너 광고를 하나 보여 줍니다. 스캔 결과 화면과 선물 열기 화면에는 광고가 없습니다. Google은 광고 게재·성과 측정·부정 행위 방지를 위해 다음 정보를 수집·처리할 수 있습니다.
+
+- 광고 ID 등 기기 식별자
+- IP 주소와 이를 통한 대략적인 위치
+- 기기·앱 정보, 광고 노출·클릭 기록, 비정상 종료 등 진단 정보
+
+**스캔한 코드의 내용, 기록, 선물함은 광고 요청에 쓰지 않으며 Google에 보내지 않습니다.**
+
+유럽경제지역(EEA)·영국·스위스 사용자에게는 처음 실행할 때 광고 개인정보 동의 화면이 표시되며, 기록 화면 상단의 "광고 개인정보 옵션"(방패 아이콘)에서 언제든지 선택을 바꿀 수 있습니다. 기기 설정에서 광고 ID를 재설정하거나 맞춤 광고를 끌 수도 있습니다.
+
+Google의 데이터 처리 방식은 [Google 파트너 사이트·앱 데이터 사용 방식](https://policies.google.com/technologies/partner-sites)과 [AdMob 데이터 공개](https://developers.google.com/admob/android/privacy/play-data-disclosure)를 참고하십시오.
+
+**이용 통계 (Google Firebase Analytics)**  
+앱이 어떻게 쓰이는지 파악하고 개선하기 위해 Google Firebase Analytics를 사용합니다. 다음 정보가 Google로 전송됩니다.
+
+- 앱 인스턴스 ID, 광고 ID 등 기기 식별자
+- 앱 실행, 화면 이동, 사용 시간 같은 앱 사용 기록과 주요 기능을 사용했다는 사실(예: 코드 스캔, 코드펫 획득). 기능 이름만 보내고 내용은 보내지 않습니다.
+- 기기 모델, 운영체제 버전, 언어, 앱 버전, IP 주소로 추정한 국가·지역
+
+**스캔한 코드의 내용, 기록, 선물함은 이용 통계에 들어가지 않으며 Google에 전달되지 않습니다.** 수집한 통계는 서비스 개선에만 쓰며 개인을 식별하는 데 쓰지 않습니다. Google의 처리 방식은 [Firebase 개인정보 보호 안내](https://firebase.google.com/support/privacy)를 참고하십시오. 기기 설정에서 광고 ID를 재설정하거나 삭제할 수 있습니다.
+
+**광고와 이용 통계 외의 분석·추적 도구는 사용하지 않으며, 개인정보를 판매하거나 광고·이용 통계 외의 목적으로 제3자에게 제공하지 않습니다.**
+
+---
+
+### 5. 백업
 
 **Android 자동 백업**  
 기기에서 Google 백업이 켜져 있으면 Android 운영체제가 앱 데이터(스캔·생성 기록, 즐겨찾기, 선물함)를 사용자의 Google 계정에 백업합니다. 이 백업은 Google이 관리하며 저희는 접근할 수 없습니다. 기기 설정에서 백업을 끌 수 있습니다.
 
 ---
 
-### 5. 이용자의 권리 (GDPR · CCPA)
+### 6. 이용자의 권리 (GDPR · CCPA)
 
 - 기기에 저장된 데이터는 앱 안에서 기록을 지우거나, 앱 데이터를 지우거나, 앱을 삭제하면 언제든지 삭제됩니다.
 - 저희는 사용자 데이터를 서버에 보관하지 않으므로 별도로 열람·삭제를 요청할 데이터가 없습니다.
@@ -77,19 +104,19 @@ QR 코드 안의 링크는 사용자가 "열기"를 누를 때만 브라우저�
 
 ---
 
-### 6. 아동 개인정보 보호
+### 7. 아동 개인정보 보호
 
 본 서비스는 만 13세 미만 아동을 대상으로 하지 않습니다. 궁금한 점이 있는 보호자는 아래 이메일로 연락해 주십시오.
 
 ---
 
-### 7. 개인정보처리방침 변경
+### 8. 개인정보처리방침 변경
 
 본 방침은 수시로 업데이트될 수 있습니다. 변경 사항은 이 페이지에 게시합니다.
 
 ---
 
-### 8. 문의
+### 9. 문의
 
 개인정보처리방침에 관한 문의 사항은 아래로 연락해 주십시오.
 
@@ -108,7 +135,7 @@ By using the Service, you agree to this policy.
 
 ### 1. Information Collection and Use
 
-**We do not ask for personal information such as your name, email, or phone number.** The Service has no sign-up, no login, and no ads.
+**We do not ask for personal information such as your name, email, or phone number.** The Service has no sign-up and no login. It shows one banner ad at the bottom of the screen (section 4).
 
 **Stored only on your device**  
 Your scan and creation history, favorites, and gift box (Code Pets, items, collection) are **stored only on your device** and are never sent to our servers. They are deleted when you uninstall the app.
@@ -149,14 +176,41 @@ Code recognition uses ML Kit barcode scanning from Google Play services. Images 
 
 ---
 
-### 4. Backups
+### 4. Advertising and Analytics (Google AdMob · Firebase Analytics)
+
+The Scan, Create, History, and Gift box screens show one Google AdMob banner ad at the bottom. There are no ads on the scan result sheet or the gift opening screen. Google may collect and process the following to serve and measure ads and to prevent fraud:
+
+- Device identifiers such as the advertising ID
+- IP address and approximate location derived from it
+- Device and app information, ad impressions and clicks, and diagnostics such as crash logs
+
+**The content of the codes you scan, your history, and your gift box are never used in ad requests and are never sent to Google.**
+
+Users in the European Economic Area, the UK, and Switzerland are shown an ad privacy consent message on first launch and can change their choice at any time with "Ad privacy options" (the shield icon) at the top of the History screen. You can also reset your advertising ID or opt out of personalized ads in your device settings.
+
+For how Google handles this data, see [How Google uses information from sites or apps that use our services](https://policies.google.com/technologies/partner-sites) and the [AdMob data disclosure](https://developers.google.com/admob/android/privacy/play-data-disclosure).
+
+**Usage Statistics (Google Firebase Analytics)**  
+We use Google Firebase Analytics to understand how the app is used and to improve it. The following is sent to Google:
+
+- Device identifiers such as the app instance ID and the advertising ID
+- App usage such as app opens, screen views, and time spent, and the fact that a main feature was used (for example, scanning a code or catching a Code Pet). Only the feature name is sent, never the content.
+- Device model, operating system version, language, app version, and country or region estimated from the IP address
+
+**The content of the codes you scan, your history, and your gift box are never included in usage statistics and are never sent to Google.** We use these statistics only to improve the Service and not to identify you. For how Google handles this data, see [Privacy and Security in Firebase](https://firebase.google.com/support/privacy). You can reset or delete your advertising ID in your device settings.
+
+**Apart from advertising and usage statistics, we do not use analytics or tracking tools, and we do not sell personal information or provide it to third parties for any purpose other than advertising and usage statistics.**
+
+---
+
+### 5. Backups
 
 **Android Auto Backup**  
 If Google backup is enabled on your device, Android backs up the app's data (scan and creation history, favorites, gift box) to your Google account. Google manages this backup and we cannot access it. You can turn backup off in your device settings.
 
 ---
 
-### 5. Your Rights (GDPR · CCPA)
+### 6. Your Rights (GDPR · CCPA)
 
 - Data stored on your device can be deleted at any time by clearing history in the app, clearing the app's data, or uninstalling the app.
 - We do not keep user data on any server, so there is no server data to access or delete.
@@ -166,19 +220,19 @@ If Google backup is enabled on your device, Android backs up the app's data (sca
 
 ---
 
-### 6. Children's Privacy
+### 7. Children's Privacy
 
 The Service is not directed at children under 13. Parents or guardians with questions may contact us at the email below.
 
 ---
 
-### 7. Changes to This Privacy Policy
+### 8. Changes to This Privacy Policy
 
 We may update this policy from time to time. Any changes will be posted on this page.
 
 ---
 
-### 8. Contact Us
+### 9. Contact Us
 
 If you have any questions about this Privacy Policy, please contact us at:
 

@@ -4,7 +4,7 @@ title_ko: "Crop Screen Recorder 개인정보처리방침"
 title_en: "Crop Screen Recorder Privacy Policy"
 title: "Crop Screen Recorder Privacy Policy"
 permalink: /privacy/cropscreenrecorder/
-date: 2026-06-25
+date: 2026-11-02
 lang: ko
 ---
 
@@ -46,11 +46,21 @@ Crop Screen Recorder는 화면의 특정 영역(오버레이로 지정한 크롭
 
 - **Google Play 서비스:** 기본 앱 기능 지원에 사용됩니다.
 - **Google AdMob:** 배너 광고 표시에 사용됩니다. AdMob은 광고 ID 및 쿠키를 통해 맞춤형 광고를 제공할 수 있습니다.
+- **Google Firebase Analytics:** 이용 통계에 사용됩니다. 아래 내용을 참고하십시오.
 - **Google Forms (피드백):** 앱 내 "피드백 보내기" 메뉴를 선택하면 외부 브라우저로 Google Forms 페이지가 열립니다. 폼 제출은 전적으로 사용자의 선택이며, 제출 시 입력한 정보는 Google의 개인정보처리방침이 적용됩니다.
 
 제3자 서비스 개인정보처리방침:
 - [Google Play 서비스 개인정보처리방침](https://policies.google.com/privacy)
 - [Google AdMob 개인정보처리방침](https://policies.google.com/technologies/ads)
+
+**이용 통계 (Google Firebase Analytics)**  
+앱이 어떻게 쓰이는지 파악하고 개선하기 위해 Google Firebase Analytics를 사용합니다. 다음 정보가 Google로 전송됩니다.
+
+- 앱 인스턴스 ID, 광고 ID 등 기기 식별자
+- 앱 실행, 화면 이동, 사용 시간 같은 앱 사용 기록과 주요 기능을 사용했다는 사실(예: 녹화 저장). 기능 이름만 보내고 내용은 보내지 않습니다.
+- 기기 모델, 운영체제 버전, 언어, 앱 버전, IP 주소로 추정한 국가·지역
+
+**녹화한 영상과 화면 내용은 이용 통계에 들어가지 않으며 Google에 전달되지 않습니다.** 수집한 통계는 서비스 개선에만 쓰며 개인을 식별하는 데 쓰지 않습니다. Google의 처리 방식은 [Firebase 개인정보 보호 안내](https://firebase.google.com/support/privacy)를 참고하십시오. 기기 설정에서 광고 ID를 재설정하거나 삭제할 수 있습니다.
 
 ---
 
@@ -145,11 +155,21 @@ The app uses third-party services that may collect information used to identify 
 
 - **Google Play Services:** Used for basic app functionality.
 - **Google AdMob:** Used to display banner advertisements. AdMob may use advertising IDs and cookies to serve personalized ads based on your interests.
+- **Google Firebase Analytics:** Used for usage statistics. See below.
 - **Google Forms (Feedback):** Selecting "Send Feedback" in the app opens a Google Forms page in your external browser. Submitting the form is entirely optional and at your discretion; any information you submit is subject to Google's privacy policy.
 
 Links to the privacy policies of third-party service providers:
 - [Google Play Services Privacy Policy](https://policies.google.com/privacy)
 - [Google AdMob Privacy Policy](https://policies.google.com/technologies/ads)
+
+**Usage Statistics (Google Firebase Analytics)**  
+We use Google Firebase Analytics to understand how the app is used and to improve it. The following is sent to Google:
+
+- Device identifiers such as the app instance ID and the advertising ID
+- App usage such as app opens, screen views, and time spent, and the fact that a main feature was used (for example, saving a recording). Only the feature name is sent, never the content.
+- Device model, operating system version, language, app version, and country or region estimated from the IP address
+
+**Your recordings and screen content are never included in usage statistics and are never sent to Google.** We use these statistics only to improve the Service and not to identify you. For how Google handles this data, see [Privacy and Security in Firebase](https://firebase.google.com/support/privacy). You can reset or delete your advertising ID in your device settings.
 
 ---
 

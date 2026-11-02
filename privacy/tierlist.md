@@ -4,7 +4,7 @@ title_ko: "티어리스트 메이커 개인정보처리방침"
 title_en: "Tier List Maker Privacy Policy"
 title: "Tier List Maker Privacy Policy"
 permalink: /privacy/tierlist/
-date: 2026-10-16
+date: 2026-11-02
 lang: ko
 ---
 
@@ -50,7 +50,7 @@ moonkimvision("회사", "저희")은 티어리스트 메이커 앱(이하 "서�
 
 ---
 
-### 3. 광고 (Google AdMob)
+### 3. 광고와 이용 통계 (Google AdMob · Firebase Analytics)
 
 서비스는 화면 하단 배너와 새 티어리스트를 만들 때 표시되는 전면 광고를 위해 Google AdMob을 사용합니다. Google은 광고 게재·성과 측정·부정 행위 방지를 위해 다음 정보를 수집·처리할 수 있습니다.
 
@@ -62,9 +62,18 @@ moonkimvision("회사", "저희")은 티어리스트 메이커 앱(이하 "서�
 
 Google의 데이터 처리 방식은 [Google 개인정보처리방침](https://policies.google.com/privacy)과 [Google 파트너 사이트·앱 데이터 사용 방식](https://policies.google.com/technologies/partner-sites)을 참고하십시오.
 
+**이용 통계 (Google Firebase Analytics)**  
+앱이 어떻게 쓰이는지 파악하고 개선하기 위해 Google Firebase Analytics를 사용합니다. 다음 정보가 Google로 전송됩니다.
+
+- 앱 인스턴스 ID, 광고 ID 등 기기 식별자
+- 앱 실행, 화면 이동, 사용 시간 같은 앱 사용 기록과 주요 기능을 사용했다는 사실(예: 이미지 저장·공유). 기능 이름만 보내고 내용은 보내지 않습니다.
+- 기기 모델, 운영체제 버전, 언어, 앱 버전, IP 주소로 추정한 국가·지역
+
+**티어 리스트 내용과 이미지는 이용 통계에 들어가지 않으며 Google에 전달되지 않습니다.** 수집한 통계는 서비스 개선에만 쓰며 개인을 식별하는 데 쓰지 않습니다. Google의 처리 방식은 [Firebase 개인정보 보호 안내](https://firebase.google.com/support/privacy)를 참고하십시오. 기기 설정에서 광고 ID를 재설정하거나 삭제할 수 있습니다.
+
 ### 4. 그 밖의 제3자 서비스
 
-광고 외의 분석·추적 SDK는 없습니다.  
+3항의 광고와 이용 통계(Google) 외의 분석·추적 SDK는 없습니다.  
 설정의 "문의하기"는 기기의 메일 앱을, "개인정보처리방침"은 브라우저를 엽니다.
 
 ---
@@ -139,7 +148,7 @@ These requests contain no personal information. As with any internet request, th
 
 ---
 
-### 3. Advertising (Google AdMob)
+### 3. Advertising and Analytics (Google AdMob · Firebase Analytics)
 
 The Service uses Google AdMob to show a banner at the bottom of the screen and a full-screen ad when you create a new tier list. Google may collect and process the following to serve and measure ads and to prevent fraud:
 
@@ -151,9 +160,18 @@ Users in the European Economic Area, the UK, and Switzerland are shown an ad pri
 
 For how Google handles this data, see the [Google Privacy Policy](https://policies.google.com/privacy) and [How Google uses information from sites or apps that use our services](https://policies.google.com/technologies/partner-sites).
 
+**Usage Statistics (Google Firebase Analytics)**  
+We use Google Firebase Analytics to understand how the app is used and to improve it. The following is sent to Google:
+
+- Device identifiers such as the app instance ID and the advertising ID
+- App usage such as app opens, screen views, and time spent, and the fact that a main feature was used (for example, saving or sharing an image). Only the feature name is sent, never the content.
+- Device model, operating system version, language, app version, and country or region estimated from the IP address
+
+**Your tier lists and images are never included in usage statistics and are never sent to Google.** We use these statistics only to improve the Service and not to identify you. For how Google handles this data, see [Privacy and Security in Firebase](https://firebase.google.com/support/privacy). You can reset or delete your advertising ID in your device settings.
+
 ### 4. Other Third-Party Services
 
-Apart from advertising, the Service contains no analytics or tracking SDKs.  
+Apart from the advertising and usage statistics (Google) in Section 3, the Service contains no other analytics or tracking SDKs.  
 "Contact us" in Settings opens your email app, and "Privacy Policy" opens your browser.
 
 ---

@@ -4,7 +4,7 @@ title_ko: "오토터치 개인정보처리방침"
 title_en: "AutoTouch Privacy Policy"
 title: "AutoTouch Privacy Policy"
 permalink: /privacy/autoclick/
-date: 2026-10-26
+date: 2026-11-02
 lang: ko
 ---
 
@@ -50,7 +50,7 @@ moonkimvision("회사", "저희")은 자동 클릭 앱 오토터치(이하 "서�
 
 ---
 
-### 4. 광고 (Google AdMob)
+### 4. 광고와 이용 통계 (Google AdMob · Firebase Analytics)
 
 서비스는 홈 화면 하단 배너 광고를 위해 Google AdMob을 사용합니다. 광고는 앱 화면에만 표시되며, 조작 패널이나 다른 앱 화면 위에는 표시되지 않습니다. Google은 광고 게재·성과 측정·부정 행위 방지를 위해 다음 정보를 수집·처리할 수 있습니다.
 
@@ -63,6 +63,15 @@ moonkimvision("회사", "저희")은 자동 클릭 앱 오토터치(이하 "서�
 유럽경제지역(EEA)·영국·스위스 사용자에게는 처음 실행할 때 광고 개인정보 동의 화면이 표시되며, 홈 화면 위쪽의 "광고 개인정보 설정"에서 언제든지 선택을 바꿀 수 있습니다. 기기 설정에서 광고 ID를 재설정하거나 맞춤 광고를 끌 수도 있습니다.
 
 Google의 데이터 처리 방식은 [Google 개인정보처리방침](https://policies.google.com/privacy)과 [Google 파트너 사이트·앱 데이터 사용 방식](https://policies.google.com/technologies/partner-sites)을 참고하십시오.
+
+**이용 통계 (Google Firebase Analytics)**  
+앱이 어떻게 쓰이는지 파악하고 개선하기 위해 Google Firebase Analytics를 사용합니다. 다음 정보가 Google로 전송됩니다.
+
+- 앱 인스턴스 ID, 광고 ID 등 기기 식별자
+- 앱 실행, 화면 이동, 사용 시간 같은 앱 사용 기록과 주요 기능을 사용했다는 사실(예: 스크립트 실행). 기능 이름만 보내고 내용은 보내지 않습니다.
+- 기기 모델, 운영체제 버전, 언어, 앱 버전, IP 주소로 추정한 국가·지역
+
+**화면 내용, 입력한 텍스트, 클릭 스크립트는 이용 통계에 들어가지 않으며 Google에 전달되지 않습니다.** 수집한 통계는 서비스 개선에만 쓰며 개인을 식별하는 데 쓰지 않습니다. Google의 처리 방식은 [Firebase 개인정보 보호 안내](https://firebase.google.com/support/privacy)를 참고하십시오. 기기 설정에서 광고 ID를 재설정하거나 삭제할 수 있습니다.
 
 ---
 
@@ -138,7 +147,7 @@ When you choose to export, a script is saved as a JSON file to a location you pi
 
 ---
 
-### 4. Advertising (Google AdMob)
+### 4. Advertising and Analytics (Google AdMob · Firebase Analytics)
 
 The Service uses Google AdMob to show a banner at the bottom of the home screen. Ads appear only on the app's own screens, never on the control panel or over other apps. Google may collect and process the following to serve and measure ads and to prevent fraud:
 
@@ -151,6 +160,15 @@ Nothing is obtained through the accessibility service, and screen content, typed
 Users in the European Economic Area, the UK, and Switzerland are shown an ad privacy consent message on first launch and can change their choice at any time with "Ad privacy settings" at the top of the home screen. You can also reset your advertising ID or opt out of personalized ads in your device settings.
 
 For how Google handles this data, see the [Google Privacy Policy](https://policies.google.com/privacy) and [How Google uses information from sites or apps that use our services](https://policies.google.com/technologies/partner-sites).
+
+**Usage Statistics (Google Firebase Analytics)**  
+We use Google Firebase Analytics to understand how the app is used and to improve it. The following is sent to Google:
+
+- Device identifiers such as the app instance ID and the advertising ID
+- App usage such as app opens, screen views, and time spent, and the fact that a main feature was used (for example, running a script). Only the feature name is sent, never the content.
+- Device model, operating system version, language, app version, and country or region estimated from the IP address
+
+**Screen content, text you type, and your click scripts are never included in usage statistics and are never sent to Google.** We use these statistics only to improve the Service and not to identify you. For how Google handles this data, see [Privacy and Security in Firebase](https://firebase.google.com/support/privacy). You can reset or delete your advertising ID in your device settings.
 
 ---
 
