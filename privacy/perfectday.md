@@ -19,7 +19,7 @@ moonkimvision("회사", "저희")은 할 일·습관 플래너 앱 오늘챙김(
 
 ### 1. 수집하는 정보
 
-**저희는 이름·이메일·전화번호 같은 개인정보를 받지 않습니다.** 서비스에는 회원가입·로그인 화면이 없습니다. 화면 하단 광고를 위해 Google AdMob이 기기 정보를 처리합니다 (4항).
+**저희는 이름·이메일·전화번호 같은 개인정보를 받지 않습니다.** 서비스에는 회원가입·로그인 화면이 없습니다. 화면 하단 광고와 이용 통계를 위해 Google AdMob·Firebase Analytics가 기기 정보를 처리합니다 (4항).
 
 **기기 안에만 저장되는 정보**  
 아래 정보는 **기기 내부 저장소에만 저장**되며, 서비스 기능을 제공하는 데만 쓰입니다.
@@ -36,7 +36,7 @@ moonkimvision("회사", "저희")은 할 일·습관 플래너 앱 오늘챙김(
 사용자가 정한 시각에 알림을 보내고, 기기를 다시 켜거나 시간대가 바뀐 뒤 예약된 알림을 되살리는 데 사용합니다.
 
 **인터넷 (INTERNET, ACCESS_NETWORK_STATE), 광고 ID (AD_ID)**  
-친구와 함께하기 기능(2항)과 화면 하단 광고를 불러오는 데(4항) 사용합니다.
+친구와 함께하기 기능(2항), 화면 하단 광고와 이용 통계(4항)에 사용합니다.
 
 위치·연락처·캘린더·사진·카메라·마이크 권한은 사용하지 않습니다.
 
@@ -87,7 +87,16 @@ Firebase를 통해 전송되는 데이터는 암호화(HTTPS)되며, Google은 �
 
 유럽경제지역(EEA)·영국·스위스 사용자에게는 처음 실행할 때 광고 개인정보 동의 화면이 표시되며, 설정의 "광고 개인정보 설정"에서 언제든지 선택을 바꿀 수 있습니다. 기기 설정에서 광고 ID를 재설정하거나 맞춤 광고를 끌 수도 있습니다. 자세한 내용은 [Google 파트너 사이트·앱 데이터 사용 방식](https://policies.google.com/technologies/partner-sites)을 참고하십시오.
 
-저희는 사용자의 정보를 판매하지 않으며, 2항의 친구와 위의 광고를 제외하면 제3자에게 제공하지 않습니다. 서비스에는 분석·추적 도구가 포함되어 있지 않습니다.
+**이용 통계 (Google Firebase Analytics)**  
+앱이 어떻게 쓰이는지 파악하고 개선하기 위해 Google Firebase Analytics를 사용합니다. 다음 정보가 Google로 전송됩니다.
+
+- 앱 인스턴스 ID, 광고 ID 등 기기 식별자
+- 앱 실행, 화면 이동, 사용 시간 같은 앱 사용 기록과 주요 기능을 사용했다는 사실(예: 할 일 추가, 할 일 완료). 기능 이름만 보내고 내용은 보내지 않습니다.
+- 기기 모델, 운영체제 버전, 언어, 앱 버전, IP 주소로 추정한 국가·지역
+
+**할 일 제목·메모·완료 기록과 친구 정보은 이용 통계에 들어가지 않으며 Google에 전달되지 않습니다.** 수집한 통계는 서비스 개선에만 쓰며 개인을 식별하는 데 쓰지 않습니다. Google의 처리 방식은 [Firebase 개인정보 보호 안내](https://firebase.google.com/support/privacy)를 참고하십시오.
+
+저희는 사용자의 정보를 판매하지 않으며, 2항의 친구와 위의 광고·이용 통계를 제외하면 제3자에게 제공하지 않습니다. 광고와 이용 통계 외의 분석·추적 도구는 사용하지 않습니다.
 
 ---
 
@@ -134,7 +143,7 @@ By using the Service, you agree to this policy.
 
 ### 1. Information Collection and Use
 
-**We do not ask for personal information such as your name, email, or phone number.** The Service has no sign-up or login screen. Google AdMob processes device information to show the banner ad at the bottom of the screen (Section 4).
+**We do not ask for personal information such as your name, email, or phone number.** The Service has no sign-up or login screen. Google AdMob and Firebase Analytics process device information for the banner ad at the bottom of the screen and for usage statistics (Section 4).
 
 **Stored only on your device**  
 The following information is **stored only on your device** and is used only to provide the Service's features:
@@ -151,7 +160,7 @@ Used to send task reminders and friend updates (for example, when a friend compl
 Used to send reminders at the times you set and to restore scheduled reminders after your device restarts or the time zone changes.
 
 **Internet (INTERNET, ACCESS_NETWORK_STATE), advertising ID (AD_ID)**  
-Used for doing tasks together with friends (Section 2) and to load the banner ad at the bottom of the screen (Section 4).
+Used for doing tasks together with friends (Section 2), the banner ad at the bottom of the screen, and usage statistics (Section 4).
 
 The Service does not use location, contacts, calendar, photos, camera, or microphone permissions.
 
@@ -202,7 +211,16 @@ The Service uses Google AdMob to show a banner at the bottom of the screens with
 
 Users in the European Economic Area, the UK, and Switzerland are shown an ad privacy consent message on first launch and can change their choice at any time under "Ad privacy settings" in Settings. You can also reset your advertising ID or opt out of personalized ads in your device settings. See [How Google uses information from sites or apps that use our services](https://policies.google.com/technologies/partner-sites) for details.
 
-We do not sell your information, and apart from the friends described in Section 2 and the advertising above, we do not share it with third parties. The Service contains no analytics or tracking tools.
+**Usage Statistics (Google Firebase Analytics)**  
+We use Google Firebase Analytics to understand how the app is used and to improve it. The following is sent to Google:
+
+- Device identifiers such as the app instance ID and the advertising ID
+- App usage such as app opens, screen views, and time spent, and the fact that a main feature was used (for example, adding or completing a task). Only the feature name is sent, never the content.
+- Device model, operating system version, language, app version, and country or region estimated from the IP address
+
+**Your task titles, notes, completion history, and friend information are never included in usage statistics and are never sent to Google.** We use these statistics only to improve the Service and not to identify you. For how Google handles this data, see [Privacy and Security in Firebase](https://firebase.google.com/support/privacy).
+
+We do not sell your information, and apart from the friends described in Section 2 and the advertising and usage statistics above, we do not share it with third parties. We use no analytics or tracking tools other than advertising and usage statistics.
 
 ---
 

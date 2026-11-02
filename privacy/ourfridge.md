@@ -19,7 +19,7 @@ moonkimvision("회사", "저희")은 냉장고 관리 앱 우리집 냉장고(�
 
 ### 1. 수집하는 정보
 
-**혼자 쓰는 경우 모든 기록은 기기 안에만 저장되며, 회원가입·로그인이 필요 없습니다.** 기록을 서버로 보내는 것은 사용자가 직접 "냉장고 함께 쓰기"를 켰을 때뿐입니다 (2항). 화면 하단 광고를 위해 Google AdMob이 기기 정보를 처리합니다 (5항).
+**혼자 쓰는 경우 모든 기록은 기기 안에만 저장되며, 회원가입·로그인이 필요 없습니다.** 기록을 서버로 보내는 것은 사용자가 직접 "냉장고 함께 쓰기"를 켰을 때뿐입니다 (2항). 화면 하단 광고와 이용 통계를 위해 Google AdMob·Firebase Analytics가 기기 정보를 처리합니다 (5항).
 
 **기기 안에만 저장되는 정보**  
 아래 정보는 **기기 내부 저장소에만 저장**되며, 서비스 기능을 제공하는 데만 쓰입니다.
@@ -33,7 +33,7 @@ moonkimvision("회사", "저희")은 냉장고 관리 앱 우리집 냉장고(�
 사진은 기기의 카메라 앱이나 Android 사진 선택 도구를 통해 사용자가 고른 것만 받습니다. 카메라·저장소 권한은 요청하지 않으며, **사진은 서버로 올리지 않습니다.**
 
 **인터넷 (INTERNET, ACCESS_NETWORK_STATE), 광고 ID (AD_ID)**  
-"냉장고 함께 쓰기"의 로그인·동기화와 화면 하단 광고를 불러오는 데 사용합니다 (5항).
+"냉장고 함께 쓰기"의 로그인·동기화, 화면 하단 광고와 이용 통계에 사용합니다 (5항).
 
 위치·연락처·마이크 권한은 사용하지 않으며, 알림을 보내지 않습니다.
 
@@ -92,7 +92,16 @@ moonkimvision("회사", "저희")은 냉장고 관리 앱 우리집 냉장고(�
 
 유럽경제지역(EEA)·영국·스위스 사용자에게는 처음 실행할 때 광고 개인정보 동의 화면이 표시되며, 설정의 "광고 개인정보 옵션"에서 언제든지 선택을 바꿀 수 있습니다. 기기 설정에서 광고 ID를 재설정하거나 맞춤 광고를 끌 수도 있습니다. 자세한 내용은 [Google 파트너 사이트·앱 데이터 사용 방식](https://policies.google.com/technologies/partner-sites)을 참고하십시오.
 
-저희는 사용자의 정보를 판매하지 않으며, 위의 광고를 제외하면 제3자에게 제공하지 않습니다. 서비스에는 분석·추적 도구가 포함되어 있지 않습니다.
+**이용 통계 (Google Firebase Analytics)**  
+앱이 어떻게 쓰이는지 파악하고 개선하기 위해 Google Firebase Analytics를 사용합니다. 다음 정보가 Google로 전송됩니다.
+
+- 앱 인스턴스 ID, 광고 ID 등 기기 식별자
+- 앱 실행, 화면 이동, 사용 시간 같은 앱 사용 기록과 주요 기능을 사용했다는 사실(예: 식품 추가, 식품 사용·폐기). 기능 이름만 보내고 내용은 보내지 않습니다.
+- 기기 모델, 운영체제 버전, 언어, 앱 버전, IP 주소로 추정한 국가·지역
+
+**식품 이름·메모 등 식품·장보기·식단·레시피 기록과 사진, 함께 쓰기 정보은 이용 통계에 들어가지 않으며 Google에 전달되지 않습니다.** 수집한 통계는 서비스 개선에만 쓰며 개인을 식별하는 데 쓰지 않습니다. Google의 처리 방식은 [Firebase 개인정보 보호 안내](https://firebase.google.com/support/privacy)를 참고하십시오.
+
+저희는 사용자의 정보를 판매하지 않으며, 위의 광고와 이용 통계를 제외하면 제3자에게 제공하지 않습니다. 광고와 이용 통계 외의 분석·추적 도구는 사용하지 않습니다.
 
 ---
 
@@ -138,7 +147,7 @@ By using the Service, you agree to this policy.
 
 ### 1. Information Collection and Use
 
-**If you use the Service on your own, all your records stay on your device and no sign-up or login is needed.** Your records are sent to a server only when you turn on "Share your fridge" (Section 2). Google AdMob processes device information to show the banner ad at the bottom of the screen (Section 5).
+**If you use the Service on your own, all your records stay on your device and no sign-up or login is needed.** Your records are sent to a server only when you turn on "Share your fridge" (Section 2). Google AdMob and Firebase Analytics process device information for the banner ad at the bottom of the screen and for usage statistics (Section 5).
 
 **Stored only on your device**  
 The following information is **stored only on your device** and is used only to provide the Service's features:
@@ -152,7 +161,7 @@ The following information is **stored only on your device** and is used only to 
 Photos come only from your device's camera app or the Android photo picker, as chosen by you. The Service does not request camera or storage permissions, and **photos are never uploaded to a server.**
 
 **Internet (INTERNET, ACCESS_NETWORK_STATE), advertising ID (AD_ID)**  
-Used for sign-in and sync in "Share your fridge" and to load the banner ad at the bottom of the screen (Section 5).
+Used for sign-in and sync in "Share your fridge", the banner ad at the bottom of the screen, and usage statistics (Section 5).
 
 The Service does not use location, contacts, or microphone permissions, and it does not send notifications.
 
@@ -211,7 +220,16 @@ The Service uses Google AdMob to show a banner at the bottom of the screens with
 
 Users in the European Economic Area, the UK, and Switzerland are shown an ad privacy consent message on first launch and can change their choice at any time under "Ad privacy options" in Settings. You can also reset your advertising ID or opt out of personalized ads in your device settings. See [How Google uses information from sites or apps that use our services](https://policies.google.com/technologies/partner-sites) for details.
 
-We do not sell your information, and apart from the advertising above, we do not share it with third parties. The Service contains no analytics or tracking tools.
+**Usage Statistics (Google Firebase Analytics)**  
+We use Google Firebase Analytics to understand how the app is used and to improve it. The following is sent to Google:
+
+- Device identifiers such as the app instance ID and the advertising ID
+- App usage such as app opens, screen views, and time spent, and the fact that a main feature was used (for example, adding an item, or using or discarding one). Only the feature name is sent, never the content.
+- Device model, operating system version, language, app version, and country or region estimated from the IP address
+
+**Your item names, notes, and other item, shopping, meal plan, and recipe records, your photos, and your sharing information are never included in usage statistics and are never sent to Google.** We use these statistics only to improve the Service and not to identify you. For how Google handles this data, see [Privacy and Security in Firebase](https://firebase.google.com/support/privacy).
+
+We do not sell your information, and apart from the advertising and usage statistics above, we do not share it with third parties. We use no analytics or tracking tools other than advertising and usage statistics.
 
 ---
 
