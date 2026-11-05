@@ -30,6 +30,7 @@ Jekyll 기반 GitHub Pages 블로그.
 │   └── sns.yml          # 유튜브·인스타그램·틱톡 채널 (_config.yml social.links 와 같은 주소)
 ├── _posts/              # 블로그 포스트 (YYYY-MM-DD-slug.md)
 ├── privacy/             # 앱별 개인정보처리방침 (링크로만 접근 — 목록 페이지·사이트 내 링크 없음)
+├── terms/               # 앱별 서비스 약관 (privacy/ 와 같은 규칙: 링크로만 접근, noindex)
 ├── characters/          # 캐릭터 목록(/characters/) — 그룹 카드 + '새 친구 준비 중' 카드
 ├── twins/               # 쌍둥이 소개(/twins/) + 프로필(sister, brother) — 첫 캐릭터 그룹 (주소는 SNS 공유돼 있어 유지)
 ├── gongdong/            # 공동책임 소개(/gongdong/) + 프로필(dad, coworker). bear.html 은 옛 주소 → coworker 이동

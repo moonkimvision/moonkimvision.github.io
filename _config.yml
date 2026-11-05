@@ -50,6 +50,11 @@ defaults:
     values:
       sitemap: false
       noindex: true
+  - scope:
+      path: "terms"
+    values:
+      sitemap: false
+      noindex: true
   # 서치 콘솔 소유 확인 파일은 사이트맵에서 뺀다
   - scope:
       path: "google4605d158ba2cf69d.html"

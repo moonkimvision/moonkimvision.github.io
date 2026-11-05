@@ -5,7 +5,7 @@ bilingual: true
 <div class="page-wrapper">
   <article class="page paper">
     <header class="page-header">
-      <p class="eyebrow"><span class="lang-ko">개인정보처리방침</span><span class="lang-en">Privacy Policy</span></p>
+      <p class="eyebrow"><span class="lang-ko">{{ page.eyebrow_ko | default: "개인정보처리방침" }}</span><span class="lang-en">{{ page.eyebrow_en | default: "Privacy Policy" }}</span></p>
       <h1 class="lang-ko-el">{{ page.title_ko }}</h1>
       <h1 class="lang-en-el">{{ page.title_en }}</h1>
       {%- if page.date -%}
