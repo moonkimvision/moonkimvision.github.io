@@ -31,6 +31,7 @@
     var copies = [].slice.call(document.querySelectorAll('[data-copy]'));  // 히어로 왼쪽 글 (그룹마다)
     var caption = stage.querySelector('[data-caption]');
     var cur = 0, timer = null, playing = null, autoTimer = null;
+    var calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     var say = function (el, line) {
       el.querySelector('.lang-ko').textContent = line.ko;
@@ -119,7 +120,7 @@
       caption.hidden = true;
       if (dir) { void casts[cur].offsetWidth; casts[cur].classList.add(dir > 0 ? 'enter-next' : 'enter-prev'); }
       var chip = nextChip();
-      if (chip) autoTimer = setTimeout(function () { play(chip); }, 700);
+      if (chip && !calm) autoTimer = setTimeout(function () { play(chip); }, 700);
     };
 
     document.querySelectorAll('[data-ep-set] .ep-chip').forEach(function (chip) {
@@ -148,9 +149,9 @@
       if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) show(cur + (dx < 0 ? 1 : -1), dx < 0 ? 1 : -1);
     });
 
-    // 처음 들어오면 첫 회차를 한 번 틀어 준다
+    // 처음 들어오면 첫 회차를 한 번 틀어 준다 (움직임 줄이기 설정이면 누를 때만)
     var first = nextChip();
-    if (first) autoTimer = setTimeout(function () { play(first); }, 1200);
+    if (first && !calm) autoTimer = setTimeout(function () { play(first); }, 1200);
   }
 
   // ── 프로필 정면/3/4/옆 전환: [data-turnaround] 안의 .pose[data-pose] + [data-pose-btn]

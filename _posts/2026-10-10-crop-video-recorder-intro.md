@@ -3,6 +3,7 @@ layout: post
 title: "Crop Screen Recorder — 화면 전체 말고, 필요한 부분만 녹화하기"
 subtitle: "녹화하는 순간 이미 잘려 있는 영상. 편집은 필요 없어요."
 date: 2026-10-10 11:00:00 +0900
+last_modified_at: 2026-11-05 21:00:00 +0900
 lang: ko
 app: crop-video-recorder
 tags: [CropScreenRecorder, 앱소개, 화면녹화]
@@ -61,9 +62,9 @@ description: "Crop Screen Recorder는 화면 위에 녹화 영역을 띄우고 �
 ## 5. 녹화 후 바로 공유
 
 - 저장하자마자 **공유** — 설정하면 공유 창이 자동으로 열려요.
-- **녹화 목록**에서 재생 · 공유 · 삭제.
+- **녹화 목록**에서 재생 · 공유 · 삭제. 영상 / GIF만 골라 볼 수 있고, 전체 개수와 용량도 한눈에 보여요.
 - **GIF 만들기** — 원하는 구간만 골라 가볍게.
-- 앞뒤 **자르기** — 재인코딩 없이 빠르게, 원본은 그대로.
+- 앞뒤 **자르기** — 재인코딩 없이 빠르게, 원본은 그대로. 자른 영상은 바로 공유할 수 있어요.
 
 <div class="chat">
 {% include bubble.html who="sister" text="GIF로 만들면 단톡에 바로 던질 수 있잖아. 근데 있잖아, 이번엔 알림 안 찍힌 거 맞지? 한 번만 더 확인하고—" %}

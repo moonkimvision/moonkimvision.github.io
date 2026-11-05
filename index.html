@@ -1,7 +1,6 @@
 ---
 layout: home
-title: moonkimvision
-description: 무표정 쌍둥이 남매가 안내하는 moonkimvision의 앱과 이야기. AppRoutine, Crop Screen Recorder.
+description: 무표정 쌍둥이 남매가 안내하는 moonkimvision의 안드로이드 앱과 웹게임, 그리고 이야기.
 ---
 <section class="hero">
   <div class="stamp-drift" aria-hidden="true"></div>
@@ -153,12 +152,15 @@ description: 무표정 쌍둥이 남매가 안내하는 moonkimvision의 앱과 
 
 <section class="section">
   <div class="container">
-    <header class="section-head">
-      <p class="eyebrow"><span class="lang-ko">앱</span><span class="lang-en">Apps</span></p>
-      <h2 class="section-title"><span class="lang-ko">쌍둥이가 매일 쓰는 앱</span><span class="lang-en">Apps the twins actually use</span></h2>
+    <header class="section-head section-head-row">
+      <div>
+        <p class="eyebrow"><span class="lang-ko">앱</span><span class="lang-en">Apps</span></p>
+        <h2 class="section-title"><span class="lang-ko">쌍둥이가 매일 쓰는 앱</span><span class="lang-en">Apps the twins actually use</span></h2>
+      </div>
+      <a href="{{ '/apps/' | relative_url }}" class="link-more"><span class="lang-ko">앱 {{ site.data.apps.size }}개 모두 보기 →</span><span class="lang-en">All {{ site.data.apps.size }} apps →</span></a>
     </header>
-    <div class="app-grid">
-      {%- for app in site.data.apps %}
+    <div class="app-grid app-grid-rows">
+      {%- for app in site.data.apps limit: 4 %}
       {% include app-card.html app=app place="home" %}
       {%- endfor %}
     </div>

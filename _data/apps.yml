@@ -1,12 +1,15 @@
 # moonkimvision 앱 목록 — 홈·앱 페이지·포스트 하단 카드가 이 파일을 읽는다.
-# 새 앱을 추가하면: 아이콘(assets/images/apps/) + 소개 포스트 + 개인정보처리방침(privacy/) 을 같이 만든다.
+# Play 에 공개된 앱만 넣는다. 위에서 4개가 홈에 나오니 보여 주고 싶은 앱을 위에 둔다.
+# 새 앱을 추가하면: 아이콘(assets/images/apps/) + 개인정보처리방침(privacy/) 을 같이 만든다.
+# post: 는 소개 글이 있을 때만 (없으면 카드의 주 버튼이 Google Play 가 된다).
 # privacy: 는 기록용 — 정책 페이지는 링크로만 열고 사이트에는 링크하지 않는다.
+# 카드에는 이름·tagline 만 나온다. summary·features·twins 는 지금 화면에 안 나오는 예비 문구.
 
 - id: approutine
   name: AppRoutine
-  name_ko: 앱루틴
+  name_ko: AppRoutine
   icon: /assets/images/apps/approutine-icon.png
-  color: "#1565C0"
+  color: "#5B4FD9"
   platform: Android
   tagline_ko: 내 하루를 되감아 보는 앱
   tagline_en: Rewind your day
@@ -27,7 +30,7 @@
 
 - id: crop-video-recorder
   name: Crop Screen Recorder
-  name_ko: 크롭 스크린 레코더
+  name_ko: Crop Screen Recorder
   icon: /assets/images/apps/crop-video-recorder-icon.png
   color: "#141414"
   platform: Android
@@ -47,3 +50,201 @@
     - who: brother
       ko: …영역만 찍으면 돼.
       en: …Just record the area.
+
+- id: ourfridge
+  name: Our Fridge
+  name_ko: 우리집 냉장고
+  icon: /assets/images/apps/ourfridge-icon.png
+  color: "#1BA8C4"
+  platform: Android
+  tagline_ko: 집에 뭐가 있는지 한눈에
+  tagline_en: Know what's in your fridge
+  summary_ko: 냉장고 속 재료와 유통기한을 한눈에. 다 쓰면 장바구니로, 있는 재료로 식단까지.
+  summary_en: See what's in your fridge and when it expires. Restock with one tap and plan meals.
+  features_ko: [유통기한 관리, 장보기 목록, 식단 달력, 재료 맞춤 메뉴, 레시피북]
+  features_en: [Expiry tracking, Shopping list, Meal calendar, Menu ideas, Recipe book]
+  store: https://play.google.com/store/apps/details?id=com.moonkimvision.ourfridge
+  privacy: /privacy/ourfridge/
+  twins:
+    - who: sister
+      ko: 우유 사 왔어! 아 잠깐, 어제도 샀나? 그제도—
+      en: I bought milk! Wait, did I buy some yesterday? And the day before—
+    - who: brother
+      ko: …냉장고 앱에 있어.
+      en: …It's in the fridge app.
+
+- id: tier-list
+  name: Tier List Maker
+  name_ko: 티어리스트 메이커
+  icon: /assets/images/apps/tier-list-icon.png
+  color: "#D29976"
+  platform: Android
+  tagline_ko: 뭐든 줄 세우는 재미
+  tagline_en: Rank anything
+  summary_ko: 게임·애니 템플릿으로 바로 시작하거나, 내 사진과 글자로 나만의 티어리스트를 만들어요. 완성하면 이미지로 공유.
+  summary_en: Start from a game or anime template, or build your own list with photos and text. Share it as an image when you're done.
+  features_ko: [게임·애니 템플릿, 내 사진으로 만들기, 글자 항목, 이미지로 공유]
+  features_en: [Game & anime templates, Use your photos, Text items, Share as image]
+  store: https://play.google.com/store/apps/details?id=com.moonkimvision.tier_list
+  privacy: /privacy/tierlist/
+  twins:
+    - who: sister
+      ko: 내 티어표에선 내가 S야. 아 잠깐, S 위에 한 칸 더 만들—
+      en: I'm S-tier on my list. Wait, let me add a tier above S—
+    - who: brother
+      ko: …네 티어표니까.
+      en: …It's your list.
+
+- id: lumi
+  name: Lumi
+  name_ko: 루미
+  icon: /assets/images/apps/lumi-icon.png
+  color: "#AEA0F7"
+  platform: Android
+  tagline_ko: 귀여운 주기 달력
+  tagline_en: A cute cycle calendar
+  summary_ko: 생리 예정일·배란일·가임기를 예측하고, 기분과 몸 상태를 가볍게 기록해요.
+  summary_en: Period, fertile window and ovulation forecasts. Log your mood and symptoms in seconds.
+  features_ko: [생리 예정일 예측, 배란일·가임기, 원탭 기록, 기분·몸 상태]
+  features_en: [Period forecast, Ovulation & fertile window, One-tap logging, Mood & symptoms]
+  store: https://play.google.com/store/apps/details?id=com.moonkimvision.lumi
+  privacy: /privacy/lumi/
+  twins:
+    - who: sister
+      ko: 다음 주 약속 벌써 다 잡았거든? 아 잠깐, 그 주가 혹시—
+      en: I've booked all of next week already. Wait, that week might be—
+    - who: brother
+      ko: …달력 봐.
+      en: …Check the calendar.
+
+- id: exchange-alarm
+  name: Currency Alarm
+  name_ko: 환율 알람
+  icon: /assets/images/apps/exchange-alarm-icon.png
+  color: "#F26223"
+  platform: Android
+  tagline_ko: 원하는 환율이 되면 알려 줘요
+  tagline_en: Get alerted at your target rate
+  summary_ko: 목표 환율 알림에 여행 경비 계산기, 홈 화면 위젯까지. 주요 통화 환율을 한눈에.
+  summary_en: Rate alerts at your target, plus a travel cost calculator and a handy home screen widget.
+  features_ko: [목표 환율 알람, 환율 차트, 여행 경비 계산, 홈 화면 위젯]
+  features_en: [Target rate alarms, Rate charts, Travel budget, Home screen widget]
+  store: https://play.google.com/store/apps/details?id=com.moonkimvisoin.exchangealarm
+  privacy: /privacy/exchange-alarm/
+  twins:
+    - who: sister
+      ko: 달러 떨어지면 바꾸려고 계속 보고 있었거든? 아 잠깐, 방금 떨어졌나—
+      en: I've been watching for the dollar to drop. Wait, did it just drop—
+    - who: brother
+      ko: …알람 맞춰.
+      en: …Set an alarm.
+
+- id: todaycare
+  name: Today Care
+  name_ko: 오늘챙김
+  icon: /assets/images/apps/todaycare-icon.png
+  color: "#2F6F55"
+  platform: Android
+  tagline_ko: 해낸 만큼 남는 할일 앱
+  tagline_en: To-dos that leave a record
+  summary_ko: 오늘 할 일을 빠짐없이 챙기고, 해낸 만큼 기록으로. 습관·일정·함께하기를 한 앱에서.
+  summary_en: Finish today's tasks and watch your progress grow. Habits, plans and friends in one app.
+  features_ko: [오늘 할 일, 습관 반복, 달력 기록, 함께하기]
+  features_en: [Today's tasks, Repeating habits, Calendar history, Do it with friends]
+  store: https://play.google.com/store/apps/details?id=com.moonkimvision.perfectday
+  privacy: /privacy/perfectday/
+  twins:
+    - who: sister
+      ko: 오늘 할 일 다 했어. 진짜로. 아 잠깐, 하나, 아니 세 개만—
+      en: I finished everything today. Really. Wait, except one. No, three—
+    - who: brother
+      ko: …체크 안 돼 있어.
+      en: …They're not checked.
+
+- id: qr-scanner
+  name: QR Scanner
+  name_ko: QR 스캐너
+  icon: /assets/images/apps/qr-scanner-icon.png
+  color: "#5B3FD6"
+  platform: Android
+  tagline_ko: 비추면 바로, 위험하면 미리
+  tagline_en: Point, scan, stay safe
+  summary_ko: 비추면 바로 스캔. 위험한 QR은 열기 전에 경고하고, 새 코드마다 귀여운 펫을 선물해요.
+  summary_en: Point and scan. Get warned about risky QR codes, and a cute pet with new codes.
+  features_ko: [QR·바코드 스캔, 위험 링크 경고, QR 만들기, 펫 모으기]
+  features_en: [QR & barcode scan, Risky link alerts, QR maker, Collect pets]
+  store: https://play.google.com/store/apps/details?id=com.moonkimvision.qrscanner
+  privacy: /privacy/qr-scanner/
+  twins:
+    - who: sister
+      ko: 이거 찍으면 경품 준대! 근데 있잖아, 주소가 좀—
+      en: Scan this and you win a prize! But wait, the address looks a bit—
+    - who: brother
+      ko: …열기 전에 알려 줘.
+      en: …It warns you before opening.
+
+- id: cheerbanner
+  name: Cheering Banner
+  name_ko: 응원 전광판
+  icon: /assets/images/apps/cheerbanner-icon.png
+  color: "#E5262B"
+  platform: Android
+  tagline_ko: 폰이 LED 전광판으로
+  tagline_en: Turn your phone into an LED sign
+  summary_ko: 응원 문구를 전광판처럼 띄우고, 친구 폰과 나란히 들면 하나로 이어져요.
+  summary_en: Show your cheer like an LED sign, and line up friends' phones for one long banner.
+  features_ko: [LED 전광판, 여러 폰 이어 붙이기, 색 조합, 응원 글꼴]
+  features_en: [LED sign, Link multiple phones, Color themes, Cheer fonts]
+  store: https://play.google.com/store/apps/details?id=com.moonkimvision.cheeringbanner
+  privacy: /privacy/cheerbanner/
+  twins:
+    - who: sister
+      ko: 내 응원 문구, 저 끝까지 보이게 할 거야. 아 잠깐, 폰이 좀 작—
+      en: My cheer's going to reach the back row. Wait, this phone is kind of small—
+    - who: brother
+      ko: …폰을 이어.
+      en: …Link the phones.
+
+- id: autoclick
+  name: Auto Touch
+  name_ko: 오토터치
+  icon: /assets/images/apps/autoclick-icon.png
+  color: "#4F46E5"
+  platform: Android
+  tagline_ko: 반복 터치는 앱에게
+  tagline_en: Leave the repeat taps to the app
+  summary_ko: 정해 둔 곳을 원하는 간격과 횟수만큼 대신 눌러 줘요. 쓰던 앱 위에서 바로 실행.
+  summary_en: Taps the spots you choose at the interval and count you set. Runs right over the app you're using.
+  features_ko: [여러 곳 반복 클릭, 스와이프·스크롤, 간격·횟수 설정, 동작 저장]
+  features_en: [Multi-point clicks, Swipe & scroll, Interval & count, Saved actions]
+  store: https://play.google.com/store/apps/details?id=com.moonkimvision.autoclick
+  privacy: /privacy/autoclick/
+  twins:
+    - who: sister
+      ko: 같은 데 백 번 눌렀더니 손가락이, 아 잠깐, 감각이—
+      en: I tapped the same spot a hundred times and my finger, wait, I can't feel—
+    - who: brother
+      ko: …앱한테 시켜.
+      en: …Let the app do it.
+
+- id: rps-champion
+  name: RPS Champion
+  name_ko: 가위바위보 챔피언
+  icon: /assets/images/apps/rps-champion-icon.png
+  color: "#C69731"
+  platform: Android
+  tagline_ko: 2주마다 새 챔피언
+  tagline_en: A new champion every 2 weeks
+  summary_ko: 먼저 내고 기다릴까, 상대의 수를 읽고 맞설까? 시즌 랭킹으로 겨루는 가위바위보 대전.
+  summary_en: Throw first, or read your rival and strike back. Rock-paper-scissors with season rankings.
+  features_ko: [가위바위보 대전, 시즌 랭킹, 2주 시즌]
+  features_en: [RPS battles, Season rankings, 2-week seasons]
+  store: https://play.google.com/store/apps/details?id=com.moonkimvision.rpschampion
+  privacy: /privacy/rps-champion/
+  twins:
+    - who: sister
+      ko: 나 가위바위보 천재거든? 아 잠깐, 방금 진 건 연습이고—
+      en: I'm a rock-paper-scissors genius. Wait, that loss was just practice—
+    - who: brother
+      ko: …2주 뒤에 또 있어.
+      en: …There's another season in two weeks.

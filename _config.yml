@@ -1,5 +1,5 @@
 title: MoonKimVision
-description: 무표정 쌍둥이 남매가 안내하는 moonkimvision의 모바일 앱과 이야기
+description: 무표정 쌍둥이 남매가 안내하는 moonkimvision의 안드로이드 앱과 웹게임, 그리고 이야기
 url: "https://moonkimvision.com"
 baseurl: ""
 lang: ko
@@ -38,6 +38,10 @@ defaults:
       path: ""
     values:
       image: /assets/images/twins/og-twins.jpg
+  - scope:
+      path: "gongdong"
+    values:
+      image: /assets/images/gongdong/og-gongdong.jpg
   - scope:
       path: ""
       type: posts

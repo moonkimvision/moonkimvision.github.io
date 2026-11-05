@@ -104,7 +104,8 @@ bundle exec jekyll build
 - **정책 페이지는 링크로만 연다.** 사이트 어디에도(푸터·앱 카드·포스트·404) 링크하지 않고, `/privacy/` 목록 페이지도 두지 않는다. `_config.yml` defaults 가 `privacy/` 아래에 `noindex`(robots meta)·`sitemap: false` 를 건다.
 
 ### 앱 추가
-- `_data/apps.yml` 에 항목 추가 (아이콘 `assets/images/apps/<id>-icon.png`, 스토어·소개 글 링크, 정책 주소(기록용, 화면엔 안 나옴), 쌍둥이 한마디)
+- Play 에 공개된 앱만 `_data/apps.yml` 에 항목 추가 (아이콘 `assets/images/apps/<id>-icon.png`, 스토어 링크, 정책 주소(기록용, 화면엔 안 나옴), 한 줄 소개 `tagline`). 카드는 납작한 한 줄이라 이름·`tagline`·Google Play 받기 버튼만 나온다. 소개 글 `post` 는 있을 때만 넣는다 (있으면 한 줄 소개 뒤에 링크가 붙는다).
+- 홈에는 `apps.yml` 위에서 4개만 나오고, 전체는 `/apps/` 에 나온다.
 - 소개 포스트에 `app: <id>` 를 넣으면 포스트 상단 색과 하단 앱 카드가 붙는다.
 
 ### 게임 추가
