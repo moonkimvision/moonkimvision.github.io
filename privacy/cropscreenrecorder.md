@@ -85,7 +85,7 @@ Crop Screen Recorder는 화면의 특정 영역(오버레이로 지정한 크롭
 - **처리 반대 및 제한 권리**
 - **데이터 이동성 권리**
 
-보유 정보 확인 또는 삭제 요청은 아래 이메일로 문의하십시오.
+보유 정보 확인 또는 삭제 요청은 아래 이메일로 문의하십시오. 의견 보내기로 보낸 내용과 적은 이메일 주소의 열람·삭제도 같은 이메일로 요청할 수 있습니다.
 
 ---
 
@@ -96,6 +96,8 @@ CCPA에 따라 캘리포니아 거주자는 다음 권리를 갖습니다.
 - 수집된 개인 데이터의 범주 및 구체적 내용 공개 요청
 - 수집된 개인 데이터 삭제 요청
 - 개인 데이터 판매 거부 요청
+
+의견 보내기로 보낸 내용과 적은 이메일 주소의 열람·삭제는 아래 이메일로 요청할 수 있습니다.
 
 **저희는 귀하의 개인 데이터를 판매하지 않습니다.**  
 Google AdMob 등 제3자 광고 네트워크는 맞춤형 광고를 위해 기기 식별자를 수집할 수 있습니다.  
@@ -200,7 +202,7 @@ We are a Data Controller of your information. If you are a resident of the Europ
 - **The right to object and restrict processing.**
 - **The right to data portability.**
 
-If you wish to be informed about what Personal Information we hold about you or want it removed from our systems, please contact us.
+If you wish to be informed about what Personal Information we hold about you or want it removed from our systems, please contact us. To access or delete the feedback you sent and the email address you entered, contact us at the email below.
 
 ---
 
@@ -211,6 +213,8 @@ Under the CCPA, California residents have the right to:
 - Request disclosure of the categories and specific pieces of personal data a business has collected about them.
 - Request that a business delete any personal data it has collected about them.
 - Opt out of the sale of their personal data ("Do Not Sell My Personal Information").
+
+To access or delete the feedback you sent and the email address you entered, contact us at the email below.
 
 **We do not sell your personal data.**  
 Third-party ad networks (like AdMob) may collect device identifiers for personalized advertising.  

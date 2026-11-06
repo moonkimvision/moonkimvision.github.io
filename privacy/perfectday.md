@@ -108,6 +108,7 @@ Firebase를 통해 전송되는 데이터는 암호화(HTTPS)되며, Google은 �
 - 할 일과 친구는 앱 안에서 언제든지 고치거나 삭제할 수 있으며, 앱을 삭제하면 기기에 저장된 데이터도 함께 삭제됩니다.
 - 함께하는 할 일을 삭제하면 친구의 기기에서도 함께하기가 해제됩니다. 이미 친구에게 전달된 정보는 친구의 기기에 남을 수 있습니다.
 - 서버에 남은 익명 계정과 친구 코드의 삭제는 아래 이메일로 요청할 수 있습니다. 앱의 친구 화면에 표시되는 내 친구 코드를 함께 보내 주시면 확인 후 삭제합니다.
+- 의견 보내기로 보낸 내용과 적은 이메일 주소의 열람·삭제는 아래 이메일로 요청할 수 있습니다.
 - Google 계정에 저장된 백업은 Google 계정 설정에서 삭제할 수 있습니다.
 - 광고 관련 데이터는 4항의 방법으로 동의를 바꾸거나 광고 ID를 재설정해 관리할 수 있습니다.
 
@@ -235,6 +236,7 @@ We do not sell your information, and apart from the friends described in Section
 - You can edit or delete tasks and friends at any time in the app. Uninstalling the app also deletes the data stored on your device.
 - Deleting a shared task also stops sharing it on your friends' devices. Information already delivered to a friend may remain on their device.
 - You can request deletion of your anonymous account and friend code from the server by emailing us at the address below. Please include your friend code, shown on the Friends screen, and we will delete them after verification.
+- To access or delete the feedback you sent and the email address you entered, contact us at the email below.
 - Backups stored in your Google account can be deleted in your Google account settings.
 - Advertising-related data can be managed by changing your consent or resetting your advertising ID as described in Section 4.
 

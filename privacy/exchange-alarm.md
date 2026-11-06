@@ -81,6 +81,7 @@ Google의 데이터 처리 방식은 [Google 개인정보처리방침](https://p
 
 - 기기에 저장된 데이터는 앱 데이터를 지우거나 앱을 삭제하면 언제든지 삭제됩니다.
 - 투표·한마디 등 익명 ID와 연결된 서버 데이터의 열람·삭제를 원하시면 아래 이메일로 요청해 주십시오.
+- 의견 보내기로 보낸 내용과 적은 이메일 주소의 열람·삭제는 아래 이메일로 요청할 수 있습니다.
 - 광고 관련 데이터는 위 4항의 방법으로 동의를 바꾸거나 광고 ID를 재설정해 관리할 수 있습니다.
 
 **저희는 개인정보를 판매하지 않습니다.**
@@ -186,6 +187,7 @@ For how Google handles this data, see the [Google Privacy Policy](https://polici
 
 - Data stored on your device can be deleted at any time by clearing the app's data or uninstalling the app.
 - To access or delete server data linked to your anonymous ID (votes and comments), contact us at the email below.
+- To access or delete the feedback you sent and the email address you entered, contact us at the email below.
 - Advertising-related data can be managed by changing your consent or resetting your advertising ID as described in Section 4.
 
 **We do not sell personal information.**
