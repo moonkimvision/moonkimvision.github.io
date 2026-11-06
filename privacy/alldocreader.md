@@ -4,7 +4,7 @@ title_ko: "올덕리더 개인정보처리방침"
 title_en: "AllDocReader Privacy Policy"
 title: "AllDocReader Privacy Policy"
 permalink: /privacy/alldocreader/
-date: 2026-11-04
+date: 2026-11-07
 lang: ko
 ---
 
@@ -19,7 +19,7 @@ moonkimvision("회사", "저희")은 문서 뷰어 앱 올덕리더(이하 "서�
 
 ### 1. 수집하는 정보
 
-**저희는 이름·이메일·전화번호 같은 개인정보를 받지 않으며, 사용자의 문서와 그 내용·파일 이름·검색어를 서버로 보내지 않습니다.** 서비스에는 회원가입·로그인이 없고, 문서를 열고 편집하고 변환하는 모든 작업은 기기 안에서만 이루어집니다.
+**저희는 의견 보내기에 직접 적은 이메일 주소를 빼면 이름·이메일·전화번호 같은 개인정보를 받지 않으며, 사용자의 문서와 그 내용·파일 이름·검색어를 서버로 보내지 않습니다.** 서비스에는 회원가입·로그인이 없고, 문서를 열고 편집하고 변환하는 모든 작업은 기기 안에서만 이루어집니다.
 
 **기기 안에만 저장되는 정보**  
 아래 정보는 **기기 내부 저장소에만 저장**되며, 서비스 기능을 제공하는 데만 쓰입니다.
@@ -38,9 +38,12 @@ moonkimvision("회사", "저희")은 문서 뷰어 앱 올덕리더(이하 "서�
 "스캔→PDF"는 기기의 카메라 앱으로 찍은 사진을, "이미지→PDF"와 "페이지 편집"은 사용자가 사진 선택 도구에서 고른 사진만 받아 기기 안에서 PDF로 만듭니다. 서비스는 카메라·사진 권한을 요청하지 않습니다.
 
 **인터넷 (INTERNET, ACCESS_NETWORK_STATE), 광고 ID (AD_ID)**  
-광고를 불러오고 이용 통계를 보내는 데만 사용합니다 (3항). 문서를 여는 데에는 인터넷이 필요하지 않습니다.
+광고를 불러오고 이용 통계를 보내는 데(3항), 사용자가 직접 의견을 보내는 데만 사용합니다. 문서를 여는 데에는 인터넷이 필요하지 않습니다.
 
 위치·연락처·마이크 권한은 사용하지 않습니다.
+
+**의견 보내기**  
+앱 안에서 의견을 보내면 쓴 내용, 선택해서 적은 이메일 주소, 앱 버전, 기기 모델, OS 버전, 언어 설정이 Google Firebase(Firestore) 서버로 전송되어 문의 확인과 답변, 앱 개선에만 쓰입니다. 기기나 사람을 알아볼 수 있는 식별자는 보내지 않습니다. 처리한 뒤 1년 안에 지웁니다.
 
 ---
 
@@ -87,7 +90,7 @@ Google의 데이터 처리 방식은 [Google 개인정보처리방침](https://p
 
 ### 5. 보관 기간과 삭제
 
-- 저희 서버에는 사용자의 데이터가 저장되지 않습니다.
+- 의견 보내기로 보낸 내용을 빼면 서버에 사용자의 데이터가 저장되지 않습니다. 보낸 의견은 처리한 뒤 1년 안에 지우며, 그 전에 열람·삭제를 원하면 아래 이메일로 요청할 수 있습니다.
 - 기기에 저장된 목록·즐겨찾기·서명·설정은 기기 설정 > 앱 > 올덕리더 > 저장공간 > "데이터 삭제"로 지울 수 있으며, 앱을 삭제하면 함께 삭제됩니다. 서비스로 만든 파일(Documents/AllDocReader 등)은 사용자의 파일이므로 앱을 삭제해도 남아 있습니다.
 - Google 계정에 저장된 백업은 Google 계정 설정에서 삭제할 수 있습니다.
 
@@ -133,7 +136,7 @@ By using the Service, you agree to this policy.
 
 ### 1. Information Collection and Use
 
-**We do not ask for personal information such as your name, email, or phone number, and we never send your documents, their content, file names, or search terms to any server.** The Service has no sign-up or login, and opening, editing, and converting documents all happen on your device.
+**Apart from an email address you choose to enter when sending feedback, we do not ask for personal information such as your name, email, or phone number, and we never send your documents, their content, file names, or search terms to any server.** The Service has no sign-up or login, and opening, editing, and converting documents all happen on your device.
 
 **Stored only on your device**  
 The following is **stored only on your device** and is used only to provide the Service's features:
@@ -152,9 +155,12 @@ Used to find documents across your device, show them by type, and rename, delete
 "Scan to PDF" receives photos taken with your device's camera app, and "Images to PDF" and "Edit pages" receive only the photos you pick in the system photo picker; they are turned into PDFs on your device. The Service does not request camera or photo permissions.
 
 **Internet (INTERNET, ACCESS_NETWORK_STATE), advertising ID (AD_ID)**  
-Used only to load ads and send usage statistics (Section 3). Opening documents does not require an internet connection.
+Used only to load ads, send usage statistics (Section 3), and send feedback when you choose to. Opening documents does not require an internet connection.
 
 The Service does not use location, contacts, or microphone permissions.
+
+**Send Feedback**  
+When you send feedback in the app, what you write, the email address you choose to enter, the app version, device model, OS version, and language setting are sent to Google Firebase (Firestore) servers and are used only to review and respond to your inquiry and to improve the app. We do not send any identifier that could recognize your device or you. We delete this information within one year after handling it.
 
 ---
 
@@ -201,7 +207,7 @@ We do not sell or share your information with third parties. Apart from the adve
 
 ### 5. Retention and Deletion
 
-- We do not store any of your data on our servers.
+- Apart from feedback you send, none of your data is stored on a server. Feedback is deleted within one year after handling; to access or delete it sooner, contact us at the email below.
 - The document list, favorites, signatures, and settings stored on your device can be cleared in your device's Settings > Apps > AllDocReader > Storage > "Clear data," and are deleted when you uninstall the app. Files you created with the Service (such as in Documents/AllDocReader) are your own files and remain after uninstalling.
 - Backups stored in your Google account can be deleted in your Google account settings.
 

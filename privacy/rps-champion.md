@@ -4,7 +4,7 @@ title_ko: "가위바위보 챔피언 개인정보처리방침"
 title_en: "RPS Champion Privacy Policy"
 title: "RPS Champion Privacy Policy"
 permalink: /privacy/rps-champion/
-date: 2026-10-22
+date: 2026-11-07
 lang: ko
 ---
 
@@ -39,6 +39,9 @@ moonkimvision("회사", "저희")은 가위바위보 챔피언 앱과 웹(이하
 **기기 권한**  
 인터넷(INTERNET) 권한과, Android 앱의 광고를 위한 광고 ID(AD_ID) 권한만 사용합니다. 위치·연락처·사진·카메라·마이크 권한은 사용하지 않습니다.
 
+**의견 보내기**  
+앱 안에서 의견을 보내면 쓴 내용, 선택해서 적은 이메일 주소, 앱 버전, 기기 모델, OS 버전, 언어 설정이 Google Firebase(Firestore) 서버로 전송되어 문의 확인과 답변, 앱 개선에만 쓰입니다. 기기나 사람을 알아볼 수 있는 식별자는 보내지 않습니다. 처리한 뒤 1년 안에 지웁니다.
+
 ---
 
 ### 2. 이용 목적
@@ -48,6 +51,7 @@ moonkimvision("회사", "저희")은 가위바위보 챔피언 앱과 웹(이하
 - 2주 단위 시즌 랭킹 산정과 칭호·배지 지급
 - 친구 맺기, 친구전, 초대 링크 처리
 - 부정 이용(같은 상대와의 반복 대전 등) 방지
+- 의견 보내기로 받은 문의 확인과 답변, 앱 개선
 
 ---
 
@@ -75,8 +79,8 @@ moonkimvision("회사", "저희")은 가위바위보 챔피언 앱과 웹(이하
 |---|---|
 | 받는 자 | Google LLC (Firebase Authentication, Cloud Firestore, Cloud Functions, Firebase Hosting) |
 | 이전 항목 | 1항의 모든 정보 |
-| 목적 | 로그인, 데이터 저장, 대전 판정 등 서비스 운영 |
-| 장소 | 게임 데이터는 대한민국 서울 리전(asia-northeast3)에 저장되며, 로그인 처리는 미국 등 Google의 전 세계 서버에서 이루어질 수 있습니다 |
+| 목적 | 로그인, 데이터 저장, 대전 판정, 의견 확인 등 서비스 운영 |
+| 장소 | 게임 데이터와 의견은 대한민국 서울 리전(asia-northeast3)에 저장되며, 로그인 처리는 미국 등 Google의 전 세계 서버에서 이루어질 수 있습니다 |
 | 시기·방법 | 서비스 이용 시 네트워크를 통해 전송 |
 | 보유 기간 | 6항과 같음 |
 
@@ -105,7 +109,7 @@ Google의 데이터 처리 방식은 [Google 파트너 사이트·앱 데이터 
 
 ### 6. 보관 기간과 계정 삭제
 
-- 정보는 계정을 삭제할 때까지 보관합니다.
+- 의견 보내기로 보낸 내용을 뺀 정보는 계정을 삭제할 때까지 보관합니다. 보낸 의견은 처리한 뒤 1년 안에 지웁니다.
 - **계정 삭제**: 로그인한 Google 계정 이메일로 아래 주소에 "계정 삭제"를 요청해 주십시오. 확인 후 지체 없이(늦어도 30일 이내) 프로필·대전 기록·친구 정보·로그인 정보를 삭제합니다.
 - 상대방의 전적에 남은 대전 결과와 지난 시즌의 최종 순위표는 게임 기록의 정확성을 위해 남기되, 닉네임과 프로필 사진을 지워 누구인지 알 수 없게 처리합니다.
 
@@ -120,7 +124,7 @@ Google의 데이터 처리 방식은 [Google 파트너 사이트·앱 데이터 
 ### 8. 안전성 확보 조치
 
 - 모든 통신은 암호화(HTTPS)됩니다.
-- 데이터는 서버 함수를 통해서만 기록되며, 보안 규칙으로 다른 사용자의 비공개 정보(결과 전 패, 연습 기록 등)를 읽을 수 없게 막습니다.
+- 게임 데이터는 서버 함수를 통해서만 기록되며, 보안 규칙으로 다른 사용자의 비공개 정보(결과 전 패, 연습 기록 등)를 읽을 수 없게 막습니다.
 
 ---
 
@@ -176,6 +180,9 @@ Your email address is used only to verify your sign-in and is **never shown to o
 **Device permissions**  
 The Service uses only the INTERNET permission and, in the Android app, the advertising ID (AD_ID) permission for ads. It does not use location, contacts, photos, camera, or microphone permissions.
 
+**Send Feedback**  
+When you send feedback in the app, what you write, the email address you choose to enter, the app version, device model, OS version, and language setting are sent to Google Firebase (Firestore) servers and are used only to review and respond to your inquiry and to improve the app. We do not send any identifier that could recognize your device or you. We delete this information within one year after handling it.
+
 ---
 
 ### 2. Purpose of Use
@@ -185,6 +192,7 @@ The Service uses only the INTERNET permission and, in the Android app, the adver
 - Calculating two-week season rankings and awarding titles and badges
 - Friend connections, friend matches, and invite links
 - Preventing abuse (such as repeated matches against the same opponent)
+- Reviewing and responding to feedback you send, and improving the app
 
 ---
 
@@ -212,8 +220,8 @@ The Service stores and processes information using Firebase by Google LLC.
 |---|---|
 | Recipient | Google LLC (Firebase Authentication, Cloud Firestore, Cloud Functions, Firebase Hosting) |
 | Data | All information listed in Section 1 |
-| Purpose | Running the Service: sign-in, data storage, match judging |
-| Location | Game data is stored in the Seoul, South Korea region (asia-northeast3); sign-in may be processed on Google servers worldwide, including the United States |
+| Purpose | Running the Service: sign-in, data storage, match judging, reviewing feedback |
+| Location | Game data and feedback are stored in the Seoul, South Korea region (asia-northeast3); sign-in may be processed on Google servers worldwide, including the United States |
 | When and how | Transmitted over the network while you use the Service |
 | Retention | As described in Section 6 |
 
@@ -242,7 +250,7 @@ Results and invite links are shared through your device's share sheet (messaging
 
 ### 6. Retention and Account Deletion
 
-- Information is kept until you delete your account.
+- Apart from feedback you send, information is kept until you delete your account. Feedback is deleted within one year after handling.
 - **Account deletion**: email us at the address below from the Google account you sign in with and ask to "delete my account." After verification, we will delete your profile, match records, friend data, and sign-in data without delay (within 30 days at most).
 - Match results that remain in your opponents' histories and past seasons' final standings are kept for the accuracy of game records, but your nickname and profile photo are removed so you cannot be identified.
 
@@ -257,7 +265,7 @@ You may request access to, correction of, deletion of, or suspension of processi
 ### 8. Security
 
 - All communication is encrypted (HTTPS).
-- Data is written only through server functions, and security rules prevent other users from reading your private information (such as unrevealed throws and practice records).
+- Game data is written only through server functions, and security rules prevent other users from reading your private information (such as unrevealed throws and practice records).
 
 ---
 

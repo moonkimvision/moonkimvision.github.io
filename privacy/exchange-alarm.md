@@ -4,7 +4,7 @@ title_ko: "환율알람 개인정보처리방침"
 title_en: "Currency Alarm Privacy Policy"
 title: "Currency Alarm Privacy Policy"
 permalink: /privacy/exchange-alarm/
-date: 2026-10-19
+date: 2026-11-07
 lang: ko
 ---
 
@@ -19,7 +19,7 @@ moonkimvision("회사", "저희")은 환율알람 앱(이하 "서비스")을 무
 
 ### 1. 수집하는 정보
 
-**저희는 이름·이메일·전화번호 같은 개인정보를 받지 않습니다.** 서비스에는 회원가입·로그인이 없습니다.
+**저희는 의견 보내기에 직접 적은 이메일 주소를 빼면 이름·이메일·전화번호 같은 개인정보를 받지 않습니다.** 서비스에는 회원가입·로그인이 없습니다.
 
 **기기 안에만 저장되는 정보**  
 알람과 울린 기록, 기준 통화 등 설정, 여행 예산과 지출 기록, 받아 온 환율은 **기기 내부 저장소에만 저장**되며 서버로 보내지 않습니다. 앱을 삭제하면 함께 삭제됩니다.
@@ -31,6 +31,9 @@ moonkimvision("회사", "저희")은 환율알람 앱(이하 "서비스")을 무
 기기를 다시 켠 뒤 환율 확인 예약을 되살리고, 사용자가 허용한 경우 아침 브리핑을 정해진 시각에 보내는 데 사용합니다.
 
 위치·연락처·사진·마이크 권한은 사용하지 않습니다.
+
+**의견 보내기**  
+앱 안에서 의견을 보내면 쓴 내용, 선택해서 적은 이메일 주소, 앱 버전, 기기 모델, OS 버전, 언어 설정이 Google Firebase(Firestore) 서버로 전송되어 문의 확인과 답변, 앱 개선에만 쓰입니다. 기기나 사람을 알아볼 수 있는 식별자는 보내지 않습니다. 처리한 뒤 1년 안에 지웁니다.
 
 ---
 
@@ -121,7 +124,7 @@ By using the Service, you agree to this policy.
 
 ### 1. Information Collection and Use
 
-**We do not ask for personal information such as your name, email, or phone number.** The Service has no sign-up or login.
+**Apart from an email address you choose to enter when sending feedback, we do not ask for personal information such as your name, email, or phone number.** The Service has no sign-up or login.
 
 **Stored only on your device**  
 Alarms and alarm history, settings such as your base currency, trip budgets and spending, and downloaded rates are **stored only on your device** and are never sent to our servers. They are deleted when you uninstall the app.
@@ -133,6 +136,9 @@ Used to alert you when a target rate is reached and to deliver the morning brief
 Used to restore rate-check schedules after your device restarts and, if you allow it, to deliver the morning briefing on time.
 
 The Service does not use location, contacts, photos, or microphone permissions.
+
+**Send Feedback**  
+When you send feedback in the app, what you write, the email address you choose to enter, the app version, device model, OS version, and language setting are sent to Google Firebase (Firestore) servers and are used only to review and respond to your inquiry and to improve the app. We do not send any identifier that could recognize your device or you. We delete this information within one year after handling it.
 
 ---
 

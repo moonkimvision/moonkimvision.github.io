@@ -4,7 +4,7 @@ title_ko: "오늘챙김 개인정보처리방침"
 title_en: "Today Care Privacy Policy"
 title: "Today Care Privacy Policy"
 permalink: /privacy/perfectday/
-date: 2026-10-20
+date: 2026-11-07
 lang: ko
 ---
 
@@ -19,7 +19,7 @@ moonkimvision("회사", "저희")은 할 일·습관 플래너 앱 오늘챙김(
 
 ### 1. 수집하는 정보
 
-**저희는 이름·이메일·전화번호 같은 개인정보를 받지 않습니다.** 서비스에는 회원가입·로그인 화면이 없습니다. 화면 하단 광고와 이용 통계를 위해 Google AdMob·Firebase Analytics가 기기 정보를 처리합니다 (4항).
+**저희는 의견 보내기에 직접 적은 이메일 주소를 빼면 이름·이메일·전화번호 같은 개인정보를 받지 않습니다.** 서비스에는 회원가입·로그인 화면이 없습니다. 화면 하단 광고와 이용 통계를 위해 Google AdMob·Firebase Analytics가 기기 정보를 처리합니다 (4항).
 
 **기기 안에만 저장되는 정보**  
 아래 정보는 **기기 내부 저장소에만 저장**되며, 서비스 기능을 제공하는 데만 쓰입니다.
@@ -36,9 +36,12 @@ moonkimvision("회사", "저희")은 할 일·습관 플래너 앱 오늘챙김(
 사용자가 정한 시각에 알림을 보내고, 기기를 다시 켜거나 시간대가 바뀐 뒤 예약된 알림을 되살리는 데 사용합니다.
 
 **인터넷 (INTERNET, ACCESS_NETWORK_STATE), 광고 ID (AD_ID)**  
-친구와 함께하기 기능(2항), 화면 하단 광고와 이용 통계(4항)에 사용합니다.
+친구와 함께하기 기능(2항), 화면 하단 광고와 이용 통계(4항), 사용자가 직접 보내는 의견에 사용합니다.
 
 위치·연락처·캘린더·사진·카메라·마이크 권한은 사용하지 않습니다.
+
+**의견 보내기**  
+앱 안에서 의견을 보내면 쓴 내용, 선택해서 적은 이메일 주소, 앱 버전, 기기 모델, OS 버전, 언어 설정이 Google Firebase(Firestore) 서버로 전송되어 문의 확인과 답변, 앱 개선에만 쓰입니다. 기기나 사람을 알아볼 수 있는 식별자는 보내지 않습니다. 처리한 뒤 1년 안에 지웁니다.
 
 ---
 
@@ -143,7 +146,7 @@ By using the Service, you agree to this policy.
 
 ### 1. Information Collection and Use
 
-**We do not ask for personal information such as your name, email, or phone number.** The Service has no sign-up or login screen. Google AdMob and Firebase Analytics process device information for the banner ad at the bottom of the screen and for usage statistics (Section 4).
+**Apart from an email address you choose to enter when sending feedback, we do not ask for personal information such as your name, email, or phone number.** The Service has no sign-up or login screen. Google AdMob and Firebase Analytics process device information for the banner ad at the bottom of the screen and for usage statistics (Section 4).
 
 **Stored only on your device**  
 The following information is **stored only on your device** and is used only to provide the Service's features:
@@ -160,9 +163,12 @@ Used to send task reminders and friend updates (for example, when a friend compl
 Used to send reminders at the times you set and to restore scheduled reminders after your device restarts or the time zone changes.
 
 **Internet (INTERNET, ACCESS_NETWORK_STATE), advertising ID (AD_ID)**  
-Used for doing tasks together with friends (Section 2), the banner ad at the bottom of the screen, and usage statistics (Section 4).
+Used for doing tasks together with friends (Section 2), the banner ad at the bottom of the screen, usage statistics (Section 4), and feedback you choose to send.
 
 The Service does not use location, contacts, calendar, photos, camera, or microphone permissions.
+
+**Send Feedback**  
+When you send feedback in the app, what you write, the email address you choose to enter, the app version, device model, OS version, and language setting are sent to Google Firebase (Firestore) servers and are used only to review and respond to your inquiry and to improve the app. We do not send any identifier that could recognize your device or you. We delete this information within one year after handling it.
 
 ---
 

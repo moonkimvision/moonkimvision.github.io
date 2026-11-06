@@ -4,7 +4,7 @@ title_ko: "응원 전광판 개인정보처리방침"
 title_en: "Cheering Banner Privacy Policy"
 title: "Cheering Banner Privacy Policy"
 permalink: /privacy/cheerbanner/
-date: 2026-11-02
+date: 2026-11-07
 lang: ko
 ---
 
@@ -19,7 +19,7 @@ moonkimvision("회사", "저희")은 폰을 LED 전광판처럼 쓰는 응원 �
 
 ### 1. 수집하는 정보
 
-**저희는 이름·이메일·전화번호 같은 개인정보를 받지 않으며, 사용자가 입력한 문구나 고른 사진을 서버로 보내지 않습니다.** 서비스에는 회원가입·로그인이 없습니다.
+**저희는 의견 보내기에 직접 적은 이메일 주소를 빼면 이름·이메일·전화번호 같은 개인정보를 받지 않으며, 사용자가 입력한 문구나 고른 사진을 서버로 보내지 않습니다.** 서비스에는 회원가입·로그인이 없습니다.
 
 **기기 안에만 저장되는 정보**  
 아래 정보는 **기기 내부 저장소에만 저장**되며, 전광판을 보여 주는 데만 쓰입니다.
@@ -31,12 +31,15 @@ moonkimvision("회사", "저희")은 폰을 LED 전광판처럼 쓰는 응원 �
 "사진 넣기"를 누르면 Android 사진 선택 도구가 열리고, 사용자가 고른 사진 한 장만 앱에 전달됩니다. 사진·저장소 권한은 요청하지 않습니다. 사진은 "사진 지우기"로 언제든지 지울 수 있습니다.
 
 **인터넷 (INTERNET)**  
-여러 폰의 시계를 맞추는 데(2항)와 광고를 불러오는 데(3항) 사용합니다.
+여러 폰의 시계를 맞추는 데(2항)와 광고를 불러오는 데(3항), 사용자가 직접 의견을 보내는 데 사용합니다.
 
 **광고 ID (AD_ID)**  
 광고를 불러오는 데만 사용합니다 (3항).
 
 위치·연락처·카메라·마이크·저장소 권한은 사용하지 않습니다.
+
+**의견 보내기**  
+앱 안에서 의견을 보내면 쓴 내용, 선택해서 적은 이메일 주소, 앱 버전, 기기 모델, OS 버전, 언어 설정이 Google Firebase(Firestore) 서버로 전송되어 문의 확인과 답변, 앱 개선에만 쓰입니다. 기기나 사람을 알아볼 수 있는 식별자는 보내지 않습니다. 처리한 뒤 1년 안에 지웁니다.
 
 ---
 
@@ -98,7 +101,7 @@ Google의 데이터 처리 방식은 [Google 개인정보처리방침](https://p
 
 ### 7. 이용자의 권리와 삭제 (GDPR · CCPA)
 
-- 저희는 서버에 사용자 정보를 보관하지 않으므로 따로 삭제를 요청할 데이터가 없습니다.
+- 의견 보내기로 보낸 내용을 빼면 저희는 서버에 사용자 정보를 보관하지 않습니다. 보낸 의견의 열람·삭제는 아래 이메일로 요청할 수 있습니다.
 - 선수 얼굴 사진은 앱의 "선수 얼굴" > "사진 지우기"로, 문구와 설정은 앱에서 바로 고칠 수 있으며, 앱을 삭제하면 기기에 저장된 데이터도 함께 삭제됩니다.
 - Google 계정에 저장된 백업은 Google 계정 설정에서 삭제할 수 있습니다.
 - 광고 관련 데이터는 3항의 방법으로 동의를 바꾸거나 광고 ID를 재설정해 관리할 수 있습니다.
@@ -138,7 +141,7 @@ By using the Service, you agree to this policy.
 
 ### 1. Information Collection and Use
 
-**We do not ask for personal information such as your name, email, or phone number, and we never send the messages you type or the photos you pick to any server.** The Service has no sign-up or login.
+**Apart from an email address you choose to enter when sending feedback, we do not ask for personal information such as your name, email, or phone number, and we never send the messages you type or the photos you pick to any server.** The Service has no sign-up or login.
 
 **Stored only on your device**  
 The following is **stored only on your device** and is used only to show your banner:
@@ -150,12 +153,15 @@ The following is **stored only on your device** and is used only to show your ba
 When you tap "Add photo," the Android photo picker opens and only the one photo you choose is passed to the app. The Service does not request photo or storage permissions. You can delete the photo at any time with "Remove photo."
 
 **Internet (INTERNET)**  
-Used to sync the clocks of several phones (Section 2) and to load ads (Section 3).
+Used to sync the clocks of several phones (Section 2), to load ads (Section 3), and to send feedback when you choose to.
 
 **Advertising ID (AD_ID)**  
 Used only to load ads (Section 3).
 
 The Service does not use location, contacts, camera, microphone, or storage permissions.
+
+**Send Feedback**  
+When you send feedback in the app, what you write, the email address you choose to enter, the app version, device model, OS version, and language setting are sent to Google Firebase (Firestore) servers and are used only to review and respond to your inquiry and to improve the app. We do not send any identifier that could recognize your device or you. We delete this information within one year after handling it.
 
 ---
 
@@ -217,7 +223,7 @@ We do not sell or share your information with third parties. Apart from the ads 
 
 ### 7. Your Rights and Deletion (GDPR · CCPA)
 
-- We do not keep any user information on a server, so there is no server-side data to request deletion of.
+- Apart from feedback you send, we do not keep any user information on a server. To access or delete your feedback, contact us at the email below.
 - You can delete the player face photo in the app under "Player face" > "Remove photo," and edit your message and settings in the app at any time. Uninstalling the app also deletes the data stored on your device.
 - Backups stored in your Google account can be deleted in your Google account settings.
 - You can manage ad-related data by changing your consent or resetting your advertising ID as described in Section 3.

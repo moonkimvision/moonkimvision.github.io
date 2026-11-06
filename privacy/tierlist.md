@@ -4,7 +4,7 @@ title_ko: "티어리스트 메이커 개인정보처리방침"
 title_en: "Tier List Maker Privacy Policy"
 title: "Tier List Maker Privacy Policy"
 permalink: /privacy/tierlist/
-date: 2026-11-02
+date: 2026-11-07
 lang: ko
 ---
 
@@ -19,7 +19,7 @@ moonkimvision("회사", "저희")은 티어리스트 메이커 앱(이하 "서�
 
 ### 1. 수집하는 정보
 
-**저희는 개인정보를 직접 수집하지 않습니다.** 서비스에는 회원가입·로그인이 없고, 회사 서버로 데이터를 보내지 않습니다. 다만 무료 서비스 운영을 위해 광고를 게재하며, 광고 제공업체(Google AdMob)가 아래 3항의 정보를 수집할 수 있습니다.
+**저희는 의견 보내기로 직접 보낸 내용을 빼면 개인정보를 직접 수집하지 않습니다.** 서비스에는 회원가입·로그인이 없고, 의견 보내기 외에는 회사 서버로 데이터를 보내지 않습니다. 다만 무료 서비스 운영을 위해 광고를 게재하며, 광고 제공업체(Google AdMob)가 아래 3항의 정보를 수집할 수 있습니다.
 
 **사진 (사진 선택)**  
 사용자가 티어리스트에 넣을 이미지를 직접 고른 경우에만, 고른 사진을 앱 안에 복사해 사용합니다. 사진은 **기기 내부 저장소에만 저장**되며 업로드·전송하지 않습니다.
@@ -32,6 +32,9 @@ moonkimvision("회사", "저희")은 티어리스트 메이커 앱(이하 "서�
 
 **공유**  
 "공유"를 누르면 기기의 공유 화면이 열리고, 사용자가 고른 앱으로 이미지가 전달됩니다. 공유 대상과 내용은 전적으로 사용자가 선택합니다.
+
+**의견 보내기**  
+앱 안에서 의견을 보내면 쓴 내용, 선택해서 적은 이메일 주소, 앱 버전, 기기 모델, OS 버전, 언어 설정이 Google Firebase(Firestore) 서버로 전송되어 문의 확인과 답변, 앱 개선에만 쓰입니다. 기기나 사람을 알아볼 수 있는 식별자는 보내지 않습니다. 처리한 뒤 1년 안에 지웁니다.
 
 ---
 
@@ -80,7 +83,7 @@ Google의 데이터 처리 방식은 [Google 개인정보처리방침](https://p
 
 ### 5. 이용자의 권리 (GDPR · CCPA)
 
-저희는 개인정보를 보유하지 않으므로 열람·정정·삭제할 회사 측 데이터가 없습니다. 광고와 관련된 데이터는 위 3항의 방법으로 동의를 바꾸거나 광고 ID를 재설정해 관리할 수 있습니다. 기기에 저장된 데이터는 앱 데이터를 지우거나 앱을 삭제하면 언제든지 삭제됩니다.
+의견 보내기로 보낸 내용을 빼면 저희는 개인정보를 보유하지 않습니다. 보낸 의견의 열람·삭제는 아래 이메일로 요청할 수 있습니다. 광고와 관련된 데이터는 위 3항의 방법으로 동의를 바꾸거나 광고 ID를 재설정해 관리할 수 있습니다. 기기에 저장된 데이터는 앱 데이터를 지우거나 앱을 삭제하면 언제든지 삭제됩니다.
 
 **저희는 개인정보를 판매하지 않습니다.**
 
@@ -88,7 +91,7 @@ Google의 데이터 처리 방식은 [Google 개인정보처리방침](https://p
 
 ### 6. 아동 개인정보 보호
 
-본 서비스는 만 13세 미만 아동을 대상으로 하지 않으며, 저희는 누구의 개인정보도 직접 수집하지 않습니다. 궁금한 점이 있는 보호자는 아래 이메일로 연락해 주십시오.
+본 서비스는 만 13세 미만 아동을 대상으로 하지 않으며, 저희는 의견 보내기로 직접 보낸 내용 외에는 누구의 개인정보도 직접 수집하지 않습니다. 궁금한 점이 있는 보호자는 아래 이메일로 연락해 주십시오.
 
 ---
 
@@ -117,7 +120,7 @@ By using the Service, you agree to this policy.
 
 ### 1. Information Collection and Use
 
-**We do not collect personal information ourselves.** The Service has no sign-up or login, and it does not send data to our servers. To keep the Service free, it shows ads, and our ad provider (Google AdMob) may collect the information described in Section 3.
+**Apart from feedback you choose to send, we do not collect personal information ourselves.** The Service has no sign-up or login, and apart from feedback it does not send data to our servers. To keep the Service free, it shows ads, and our ad provider (Google AdMob) may collect the information described in Section 3.
 
 **Photos (photo picker)**  
 Only when you choose images to add to a tier list, the selected photos are copied into the app. They are **stored only on your device** and are never uploaded or transmitted.
@@ -130,6 +133,9 @@ Tier list content, images, and app settings are stored only on your device and a
 
 **Sharing**  
 Tapping "Share" opens your device's share sheet and sends the image to the app you choose. What you share, and with whom, is entirely up to you.
+
+**Send Feedback**  
+When you send feedback in the app, what you write, the email address you choose to enter, the app version, device model, OS version, and language setting are sent to Google Firebase (Firestore) servers and are used only to review and respond to your inquiry and to improve the app. We do not send any identifier that could recognize your device or you. We delete this information within one year after handling it.
 
 ---
 
@@ -178,7 +184,7 @@ Apart from the advertising and usage statistics (Google) in Section 3, the Servi
 
 ### 5. Your Rights (GDPR · CCPA)
 
-Because we hold no personal information, there is no data on our side to access, correct, or delete. Advertising-related data can be managed by changing your consent or resetting your advertising ID as described in Section 3. Data stored on your device can be deleted at any time by clearing the app's data or uninstalling the app.
+Apart from feedback you send, we hold no personal information. To access or delete your feedback, contact us at the email below. Advertising-related data can be managed by changing your consent or resetting your advertising ID as described in Section 3. Data stored on your device can be deleted at any time by clearing the app's data or uninstalling the app.
 
 **We do not sell personal information.**
 
@@ -186,7 +192,7 @@ Because we hold no personal information, there is no data on our side to access,
 
 ### 6. Children's Privacy
 
-The Service is not directed at children under 13, and we do not ourselves collect personal information from anyone. Parents or guardians with questions may contact us at the email below.
+The Service is not directed at children under 13, and apart from feedback people choose to send, we do not ourselves collect personal information from anyone. Parents or guardians with questions may contact us at the email below.
 
 ---
 

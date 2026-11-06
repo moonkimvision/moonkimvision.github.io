@@ -4,7 +4,7 @@ title_ko: "루미 개인정보처리방침"
 title_en: "Lumi Privacy Policy"
 title: "Lumi Privacy Policy"
 permalink: /privacy/lumi/
-date: 2026-11-02
+date: 2026-11-07
 lang: ko
 ---
 
@@ -19,7 +19,7 @@ moonkimvision("회사", "저희")은 생리 주기 관리 앱 루미(이하 "서
 
 ### 1. 수집하는 정보
 
-**저희는 이름·이메일·전화번호 같은 개인정보를 받지 않으며, 사용자가 입력한 건강 기록을 서버로 보내지 않습니다.** 서비스에는 회원가입·로그인이 없습니다.
+**저희는 의견 보내기에 직접 적은 이메일 주소를 빼면 이름·이메일·전화번호 같은 개인정보를 받지 않으며, 사용자가 입력한 건강 기록을 서버로 보내지 않습니다.** 서비스에는 회원가입·로그인이 없습니다.
 
 **기기 안에만 저장되는 정보**  
 사용자가 입력한 아래 정보는 **기기 내부 저장소에만 저장**되며, 예측 계산·리포트·알림 등 서비스 기능을 제공하는 데만 쓰입니다.
@@ -37,9 +37,12 @@ moonkimvision("회사", "저희")은 생리 주기 관리 앱 루미(이하 "서
 기기를 다시 켠 뒤 예약된 알림을 되살리는 데 사용합니다.
 
 **인터넷 (INTERNET), 광고 ID (AD_ID)**  
-화면 하단 광고를 불러오는 데만 사용합니다 (3항).
+화면 하단 광고를 불러오고 이용 통계를 보내는 데(3항), 사용자가 직접 의견을 보내는 데만 사용합니다.
 
 위치·연락처·사진·카메라·마이크 권한은 사용하지 않습니다.
+
+**의견 보내기**  
+앱 안에서 의견을 보내면 쓴 내용, 선택해서 적은 이메일 주소, 앱 버전, 기기 모델, OS 버전, 언어 설정이 Google Firebase(Firestore) 서버로 전송되어 문의 확인과 답변, 앱 개선에만 쓰입니다. 기기나 사람을 알아볼 수 있는 식별자는 보내지 않습니다. 처리한 뒤 1년 안에 지웁니다. 앱에 저장한 건강 기록은 의견에 자동으로 들어가지 않으니, 의견에 건강 정보를 적지 마십시오.
 
 ---
 
@@ -131,7 +134,7 @@ By using the Service, you agree to this policy.
 
 ### 1. Information Collection and Use
 
-**We do not ask for personal information such as your name, email, or phone number, and we never send the health records you enter to any server.** The Service has no sign-up or login.
+**Apart from an email address you choose to enter when sending feedback, we do not ask for personal information such as your name, email, or phone number, and we never send the health records you enter to any server.** The Service has no sign-up or login.
 
 **Stored only on your device**  
 The information you enter is **stored only on your device** and is used only to provide features such as predictions, insights, and reminders:
@@ -149,9 +152,12 @@ Used to send period, fertile window, ovulation, and pill reminders.
 Used to restore scheduled reminders after your device restarts.
 
 **Internet (INTERNET), advertising ID (AD_ID)**  
-Used only to load the banner ad at the bottom of the screen (Section 3).
+Used only to load the banner ad at the bottom of the screen, send usage statistics (Section 3), and send feedback when you choose to.
 
 The Service does not use location, contacts, photos, camera, or microphone permissions.
+
+**Send Feedback**  
+When you send feedback in the app, what you write, the email address you choose to enter, the app version, device model, OS version, and language setting are sent to Google Firebase (Firestore) servers and are used only to review and respond to your inquiry and to improve the app. We do not send any identifier that could recognize your device or you. We delete this information within one year after handling it. Health records saved in the app are not included automatically, so please do not write health information in your feedback.
 
 ---
 

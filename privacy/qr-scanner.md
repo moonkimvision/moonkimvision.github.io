@@ -4,7 +4,7 @@ title_ko: "QR 스캐너 개인정보처리방침"
 title_en: "QR Scanner Privacy Policy"
 title: "QR Scanner Privacy Policy"
 permalink: /privacy/qr-scanner/
-date: 2026-11-02
+date: 2026-11-07
 lang: ko
 ---
 
@@ -19,7 +19,7 @@ moonkimvision("회사", "저희")은 QR 스캐너 앱(이하 "서비스")을 무
 
 ### 1. 수집하는 정보
 
-**저희는 이름·이메일·전화번호 같은 개인정보를 받지 않습니다.** 서비스에는 회원가입·로그인이 없습니다. 화면 하단에 배너 광고가 하나 있습니다(4번).
+**저희는 의견 보내기에 직접 적은 이메일 주소를 빼면 이름·이메일·전화번호 같은 개인정보를 받지 않습니다.** 서비스에는 회원가입·로그인이 없습니다. 화면 하단에 배너 광고가 하나 있습니다(4번).
 
 **기기 안에만 저장되는 정보**  
 스캔·생성한 코드 기록, 즐겨찾기, 선물함(코드펫·장비·도감)은 **기기 내부 저장소에만 저장**되며 서버로 보내지 않습니다. 앱을 삭제하면 함께 삭제됩니다.
@@ -34,6 +34,9 @@ QR 코드와 바코드를 실시간으로 인식하는 데에만 사용합니다
 만든 QR 코드를 저장하면 사진첩의 `Pictures/QRScanner` 폴더에 이미지가 저장됩니다.
 
 연락처 추가·캘린더 일정 추가·Wi-Fi 연결은 각 시스템 앱으로 내용을 넘겨 사용자가 직접 저장하는 방식이며, 서비스가 연락처·캘린더·위치를 읽지 않습니다.
+
+**의견 보내기**  
+앱 안에서 의견을 보내면 쓴 내용, 선택해서 적은 이메일 주소, 앱 버전, 기기 모델, OS 버전, 언어 설정이 Google Firebase(Firestore) 서버로 전송되어 문의 확인과 답변, 앱 개선에만 쓰입니다. 기기나 사람을 알아볼 수 있는 식별자는 보내지 않습니다. 처리한 뒤 1년 안에 지웁니다.
 
 ---
 
@@ -97,7 +100,7 @@ Google의 데이터 처리 방식은 [Google 파트너 사이트·앱 데이터 
 ### 6. 이용자의 권리 (GDPR · CCPA)
 
 - 기기에 저장된 데이터는 앱 안에서 기록을 지우거나, 앱 데이터를 지우거나, 앱을 삭제하면 언제든지 삭제됩니다.
-- 저희는 사용자 데이터를 서버에 보관하지 않으므로 별도로 열람·삭제를 요청할 데이터가 없습니다.
+- 의견 보내기로 보낸 내용을 빼면 저희는 사용자 데이터를 서버에 보관하지 않습니다. 보낸 의견의 열람·삭제는 아래 이메일로 요청할 수 있습니다.
 - Google 계정에 저장된 백업은 Google 계정 설정에서 삭제할 수 있습니다.
 
 **저희는 개인정보를 판매하지 않습니다.**
@@ -135,7 +138,7 @@ By using the Service, you agree to this policy.
 
 ### 1. Information Collection and Use
 
-**We do not ask for personal information such as your name, email, or phone number.** The Service has no sign-up and no login. It shows one banner ad at the bottom of the screen (section 4).
+**Apart from an email address you choose to enter when sending feedback, we do not ask for personal information such as your name, email, or phone number.** The Service has no sign-up and no login. It shows one banner ad at the bottom of the screen (section 4).
 
 **Stored only on your device**  
 Your scan and creation history, favorites, and gift box (Code Pets, items, collection) are **stored only on your device** and are never sent to our servers. They are deleted when you uninstall the app.
@@ -150,6 +153,9 @@ When you use "Scan from image," the app reads only the single photo you choose t
 When you save a QR code you created, the image is saved to the `Pictures/QRScanner` folder in your gallery.
 
 Adding contacts, adding calendar events, and joining Wi-Fi networks hand the information to the respective system apps, where you save it yourself. The Service does not read your contacts, calendar, or location.
+
+**Send Feedback**  
+When you send feedback in the app, what you write, the email address you choose to enter, the app version, device model, OS version, and language setting are sent to Google Firebase (Firestore) servers and are used only to review and respond to your inquiry and to improve the app. We do not send any identifier that could recognize your device or you. We delete this information within one year after handling it.
 
 ---
 
@@ -213,7 +219,7 @@ If Google backup is enabled on your device, Android backs up the app's data (sca
 ### 6. Your Rights (GDPR · CCPA)
 
 - Data stored on your device can be deleted at any time by clearing history in the app, clearing the app's data, or uninstalling the app.
-- We do not keep user data on any server, so there is no server data to access or delete.
+- Apart from feedback you send, we do not keep user data on any server. To access or delete your feedback, contact us at the email below.
 - Backups stored in your Google account can be deleted in your Google account settings.
 
 **We do not sell personal information.**

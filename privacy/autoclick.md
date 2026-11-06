@@ -4,7 +4,7 @@ title_ko: "오토터치 개인정보처리방침"
 title_en: "AutoTouch Privacy Policy"
 title: "AutoTouch Privacy Policy"
 permalink: /privacy/autoclick/
-date: 2026-11-02
+date: 2026-11-07
 lang: ko
 ---
 
@@ -19,10 +19,13 @@ moonkimvision("회사", "저희")은 자동 클릭 앱 오토터치(이하 "서�
 
 ### 1. 수집하는 정보
 
-**저희는 이름·이메일·전화번호 같은 개인정보를 받지 않습니다.** 서비스에는 회원가입·로그인이 없습니다. 인터넷 연결은 홈 화면 하단 광고와 앱 이용 통계(4항)에만 사용합니다.
+**저희는 의견 보내기에 직접 적은 이메일 주소를 빼면 이름·이메일·전화번호 같은 개인정보를 받지 않습니다.** 서비스에는 회원가입·로그인이 없습니다. 인터넷 연결은 홈 화면 하단 광고와 앱 이용 통계(4항), 사용자가 직접 보내는 의견에만 사용합니다.
 
 **기기 안에만 저장되는 정보**  
 사용자가 만든 클릭 스크립트(이름, 클릭·스와이프 위치와 시간 간격, 반복 횟수·시간)는 **기기 내부 저장소에만 저장**되며, 자동 클릭을 실행하는 데만 쓰입니다. 스크립트는 저희나 광고 회사에 보내지 않습니다.
+
+**의견 보내기**  
+앱 안에서 의견을 보내면 쓴 내용, 선택해서 적은 이메일 주소, 앱 버전, 기기 모델, OS 버전, 언어 설정이 Google Firebase(Firestore) 서버로 전송되어 문의 확인과 답변, 앱 개선에만 쓰입니다. 기기나 사람을 알아볼 수 있는 식별자는 보내지 않습니다. 처리한 뒤 1년 안에 지웁니다.
 
 ---
 
@@ -116,10 +119,13 @@ By using the Service, you agree to this policy.
 
 ### 1. Information Collection and Use
 
-**We do not ask for personal information such as your name, email, or phone number.** The Service has no sign-up or login. It uses the internet only for the banner ad on the home screen and for usage statistics (Section 4).
+**Apart from an email address you choose to enter when sending feedback, we do not ask for personal information such as your name, email, or phone number.** The Service has no sign-up or login. It uses the internet only for the banner ad on the home screen, usage statistics (Section 4), and feedback you choose to send.
 
 **Stored only on your device**  
 The click scripts you create (name, tap and swipe positions and delays, repeat count or duration) are **stored only on your device** and are used only to run your automation. Scripts are never sent to us or to ad providers.
+
+**Send Feedback**  
+When you send feedback in the app, what you write, the email address you choose to enter, the app version, device model, OS version, and language setting are sent to Google Firebase (Firestore) servers and are used only to review and respond to your inquiry and to improve the app. We do not send any identifier that could recognize your device or you. We delete this information within one year after handling it.
 
 ---
 

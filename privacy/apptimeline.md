@@ -4,7 +4,7 @@ title_ko: "앱루틴(AppRoutine) 개인정보처리방침"
 title_en: "AppRoutine Privacy Policy"
 title: "AppRoutine Privacy Policy"
 permalink: /privacy/apptimeline/
-date: 2026-11-02
+date: 2026-11-07
 lang: ko
 ---
 
@@ -19,7 +19,7 @@ moonkimvision("회사", "저희")은 앱 사용 기록 타임라인·런처 앱 
 
 ### 1. 수집하는 정보
 
-**저희는 이름·이메일·전화번호 같은 개인정보를 받지 않으며, 앱 사용 기록을 서버로 보내지 않습니다.** 서비스에는 회원가입·로그인이 없습니다.
+**저희는 의견 보내기에 직접 적은 이메일 주소를 빼면 이름·이메일·전화번호 같은 개인정보를 받지 않으며, 앱 사용 기록을 서버로 보내지 않습니다.** 서비스에는 회원가입·로그인이 없습니다.
 
 **기기 안에만 저장되는 정보**  
 아래 정보는 **기기 내부 저장소에만 저장**되며, 타임라인·통계·다이어트·알람 등 서비스 기능을 제공하는 데만 쓰입니다.
@@ -43,9 +43,12 @@ moonkimvision("회사", "저희")은 앱 사용 기록 타임라인·런처 앱 
 앱 알람을 정해진 시각에 울리고, 기기를 다시 켠 뒤 예약된 알람을 되살리고, 앱을 열지 않아도 오늘 사용량을 주기적으로 확인하는 데 사용합니다.
 
 **인터넷 (INTERNET, ACCESS_NETWORK_STATE), 광고 ID (AD_ID)**  
-화면의 광고를 불러오는 데만 사용합니다 (3항).
+화면의 광고를 불러오고 이용 통계를 보내는 데(3항), 사용자가 직접 의견을 보내는 데만 사용합니다.
 
 위치·연락처·사진·카메라·마이크 권한은 사용하지 않습니다.
+
+**의견 보내기**  
+앱 안에서 의견을 보내면 쓴 내용, 선택해서 적은 이메일 주소, 앱 버전, 기기 모델, OS 버전, 언어 설정이 Google Firebase(Firestore) 서버로 전송되어 문의 확인과 답변, 앱 개선에만 쓰입니다. 기기나 사람을 알아볼 수 있는 식별자는 보내지 않습니다. 처리한 뒤 1년 안에 지웁니다.
 
 ---
 
@@ -84,7 +87,7 @@ Google의 데이터 처리 방식은 [Google 개인정보처리방침](https://p
 
 저희는 사용자의 정보를 판매하거나 제3자에게 제공하지 않습니다. 3항의 광고와 이용 통계(Google)를 제외하면 서비스에는 다른 분석·추적 도구가 포함되어 있지 않습니다.
 
-설정의 "의견 보내기"를 누르면 Google 설문지가 열립니다. 이곳에 입력한 내용은 사용자가 직접 제출할 때만 저희에게 전달됩니다.
+이전 버전에서는 설정의 "의견 보내기"를 누르면 Google 설문지가 열립니다. 이곳에 입력한 내용은 사용자가 직접 제출할 때만 저희에게 전달됩니다.
 
 ---
 
@@ -130,7 +133,7 @@ By using the Service, you agree to this policy.
 
 ### 1. Information Collection and Use
 
-**We do not ask for personal information such as your name, email, or phone number, and we never send your app usage history to any server.** The Service has no sign-up or login.
+**Apart from an email address you choose to enter when sending feedback, we do not ask for personal information such as your name, email, or phone number, and we never send your app usage history to any server.** The Service has no sign-up or login.
 
 **Stored only on your device**  
 The following information is **stored only on your device** and is used only to provide features such as the timeline, stats, app diet, and app alarms:
@@ -154,9 +157,12 @@ Used to send usage limit alerts, app alarms, and usage insight notifications.
 Used to fire app alarms at the time you set, restore scheduled alarms after your device restarts, and check today's usage periodically without opening the app.
 
 **Internet (INTERNET, ACCESS_NETWORK_STATE), advertising ID (AD_ID)**  
-Used only to load ads (Section 3).
+Used only to load ads, send usage statistics (Section 3), and send feedback when you choose to.
 
 The Service does not use location, contacts, photos, camera, or microphone permissions.
+
+**Send Feedback**  
+When you send feedback in the app, what you write, the email address you choose to enter, the app version, device model, OS version, and language setting are sent to Google Firebase (Firestore) servers and are used only to review and respond to your inquiry and to improve the app. We do not send any identifier that could recognize your device or you. We delete this information within one year after handling it.
 
 ---
 
@@ -195,7 +201,7 @@ We use Google Firebase Analytics to understand how the app is used and to improv
 
 We do not sell or share your information with third parties. Apart from the advertising and usage statistics (Google) in Section 3, the Service contains no other analytics or tracking tools.
 
-Tapping "Send Feedback" in Settings opens a Google Form. Anything you enter there reaches us only if you submit it yourself.
+In earlier versions, tapping "Send Feedback" in Settings opens a Google Form. Anything you enter there reaches us only if you submit it yourself.
 
 ---
 
