@@ -38,7 +38,7 @@ moonkimvision("회사", "저희")은 냉장고 관리 앱 우리집 냉장고(�
 위치·연락처·마이크 권한은 사용하지 않으며, 알림을 보내지 않습니다.
 
 **의견 보내기**  
-앱 안에서 의견을 보내면 쓴 내용, 선택해서 적은 이메일 주소, 앱 버전, 기기 모델, OS 버전, 언어 설정이 Google Firebase(Firestore) 서버로 전송되어 문의 확인과 답변, 앱 개선에만 쓰입니다. 기기나 사람을 알아볼 수 있는 식별자는 보내지 않습니다. 처리한 뒤 1년 안에 지웁니다.
+앱 안에서 의견을 보내면 쓴 내용, 선택해서 적은 이메일 주소, 앱 버전, 기기 모델, OS 버전, 언어 설정이 Google Firebase(Firestore) 서버로 전송되어 문의 확인과 답변, 앱 개선에만 쓰입니다. 기기나 사람을 알아볼 수 있는 식별자는 보내지 않습니다. 앱 개선 일감으로 삼을지 검토할 때는 쓴 내용이 AI 도구(Anthropic Claude)로 전달될 수 있습니다. 이때 이메일 주소와 전화번호는 가리고 보냅니다. 처리한 뒤 1년 안에 지웁니다.
 
 ---
 
@@ -104,7 +104,7 @@ moonkimvision("회사", "저희")은 냉장고 관리 앱 우리집 냉장고(�
 
 **식품 이름·메모 등 식품·장보기·식단·레시피 기록과 사진, 함께 쓰기 정보은 이용 통계에 들어가지 않으며 Google에 전달되지 않습니다.** 수집한 통계는 서비스 개선에만 쓰며 개인을 식별하는 데 쓰지 않습니다. Google의 처리 방식은 [Firebase 개인정보 보호 안내](https://firebase.google.com/support/privacy)를 참고하십시오.
 
-저희는 사용자의 정보를 판매하지 않으며, 위의 광고와 이용 통계를 제외하면 제3자에게 제공하지 않습니다. 광고와 이용 통계 외의 분석·추적 도구는 사용하지 않습니다.
+저희는 사용자의 정보를 판매하지 않으며, 위의 광고와 이용 통계를 제외하면 제3자에게 제공하지 않습니다. 광고와 이용 통계 외의 분석·추적 도구는 사용하지 않습니다. 다만 의견 보내기로 보낸 내용은 1항에서 설명한 대로 Google Firebase에 저장되고 AI 도구(Anthropic Claude)로 전달될 수 있습니다.
 
 ---
 
@@ -169,7 +169,7 @@ Used for sign-in and sync in "Share your fridge", the banner ad at the bottom of
 The Service does not use location, contacts, or microphone permissions, and it does not send notifications.
 
 **Send Feedback**  
-When you send feedback in the app, what you write, the email address you choose to enter, the app version, device model, OS version, and language setting are sent to Google Firebase (Firestore) servers and are used only to review and respond to your inquiry and to improve the app. We do not send any identifier that could recognize your device or you. We delete this information within one year after handling it.
+When you send feedback in the app, what you write, the email address you choose to enter, the app version, device model, OS version, and language setting are sent to Google Firebase (Firestore) servers and are used only to review and respond to your inquiry and to improve the app. We do not send any identifier that could recognize your device or you. When we review whether to make your feedback an app improvement task, what you write may be sent to an AI tool (Anthropic Claude). Email addresses and phone numbers are masked before it is sent. We delete this information within one year after handling it.
 
 ---
 
@@ -235,7 +235,7 @@ We use Google Firebase Analytics to understand how the app is used and to improv
 
 **Your item names, notes, and other item, shopping, meal plan, and recipe records, your photos, and your sharing information are never included in usage statistics and are never sent to Google.** We use these statistics only to improve the Service and not to identify you. For how Google handles this data, see [Privacy and Security in Firebase](https://firebase.google.com/support/privacy).
 
-We do not sell your information, and apart from the advertising and usage statistics above, we do not share it with third parties. We use no analytics or tracking tools other than advertising and usage statistics.
+We do not sell your information, and apart from the advertising and usage statistics above, we do not share it with third parties. We use no analytics or tracking tools other than advertising and usage statistics. However, feedback you send is stored on Google Firebase and may be passed to an AI tool (Anthropic Claude), as described in Section 1.
 
 ---
 

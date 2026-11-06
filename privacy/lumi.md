@@ -42,7 +42,7 @@ moonkimvision("회사", "저희")은 생리 주기 관리 앱 루미(이하 "서
 위치·연락처·사진·카메라·마이크 권한은 사용하지 않습니다.
 
 **의견 보내기**  
-앱 안에서 의견을 보내면 쓴 내용, 선택해서 적은 이메일 주소, 앱 버전, 기기 모델, OS 버전, 언어 설정이 Google Firebase(Firestore) 서버로 전송되어 문의 확인과 답변, 앱 개선에만 쓰입니다. 기기나 사람을 알아볼 수 있는 식별자는 보내지 않습니다. 처리한 뒤 1년 안에 지웁니다. 앱에 저장한 건강 기록은 의견에 자동으로 들어가지 않으니, 의견에 건강 정보를 적지 마십시오.
+앱 안에서 의견을 보내면 쓴 내용, 선택해서 적은 이메일 주소, 앱 버전, 기기 모델, OS 버전, 언어 설정이 Google Firebase(Firestore) 서버로 전송되어 문의 확인과 답변, 앱 개선에만 쓰입니다. 기기나 사람을 알아볼 수 있는 식별자는 보내지 않습니다. 앱 개선 일감으로 삼을지 검토할 때는 쓴 내용이 AI 도구(Anthropic Claude)로 전달될 수 있습니다. 이때 이메일 주소와 전화번호는 가리고 보냅니다. 처리한 뒤 1년 안에 지웁니다. 앱에 저장한 건강 기록은 의견에 자동으로 들어가지 않으니, 의견에 건강 정보를 적지 마십시오.
 
 ---
 
@@ -83,7 +83,7 @@ Google의 데이터 처리 방식은 [Google 개인정보처리방침](https://p
 
 ### 4. 제3자 제공
 
-저희는 사용자의 정보를 판매하거나 제3자에게 제공하지 않습니다. 3항의 광고와 이용 통계(Google)를 제외하면 서비스에는 다른 분석·추적 도구가 포함되어 있지 않습니다.
+저희는 사용자의 정보를 판매하거나 제3자에게 제공하지 않습니다. 3항의 광고와 이용 통계(Google)를 제외하면 서비스에는 다른 분석·추적 도구가 포함되어 있지 않습니다. 다만 의견 보내기로 보낸 내용은 1항에서 설명한 대로 Google Firebase에 저장되고 AI 도구(Anthropic Claude)로 전달될 수 있습니다.
 
 ---
 
@@ -157,7 +157,7 @@ Used only to load the banner ad at the bottom of the screen, send usage statisti
 The Service does not use location, contacts, photos, camera, or microphone permissions.
 
 **Send Feedback**  
-When you send feedback in the app, what you write, the email address you choose to enter, the app version, device model, OS version, and language setting are sent to Google Firebase (Firestore) servers and are used only to review and respond to your inquiry and to improve the app. We do not send any identifier that could recognize your device or you. We delete this information within one year after handling it. Health records saved in the app are not included automatically, so please do not write health information in your feedback.
+When you send feedback in the app, what you write, the email address you choose to enter, the app version, device model, OS version, and language setting are sent to Google Firebase (Firestore) servers and are used only to review and respond to your inquiry and to improve the app. We do not send any identifier that could recognize your device or you. When we review whether to make your feedback an app improvement task, what you write may be sent to an AI tool (Anthropic Claude). Email addresses and phone numbers are masked before it is sent. We delete this information within one year after handling it. Health records saved in the app are not included automatically, so please do not write health information in your feedback.
 
 ---
 
@@ -198,7 +198,7 @@ We use Google Firebase Analytics to understand how the app is used and to improv
 
 ### 4. Sharing
 
-We do not sell or share your information with third parties. Apart from the advertising and usage statistics (Google) in Section 3, the Service contains no other analytics or tracking tools.
+We do not sell or share your information with third parties. Apart from the advertising and usage statistics (Google) in Section 3, the Service contains no other analytics or tracking tools. However, feedback you send is stored on Google Firebase and may be passed to an AI tool (Anthropic Claude), as described in Section 1.
 
 ---
 

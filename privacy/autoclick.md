@@ -25,7 +25,7 @@ moonkimvision("회사", "저희")은 자동 클릭 앱 오토터치(이하 "서�
 사용자가 만든 클릭 스크립트(이름, 클릭·스와이프 위치와 시간 간격, 반복 횟수·시간)는 **기기 내부 저장소에만 저장**되며, 자동 클릭을 실행하는 데만 쓰입니다. 스크립트는 저희나 광고 회사에 보내지 않습니다.
 
 **의견 보내기**  
-앱 안에서 의견을 보내면 쓴 내용, 선택해서 적은 이메일 주소, 앱 버전, 기기 모델, OS 버전, 언어 설정이 Google Firebase(Firestore) 서버로 전송되어 문의 확인과 답변, 앱 개선에만 쓰입니다. 기기나 사람을 알아볼 수 있는 식별자는 보내지 않습니다. 처리한 뒤 1년 안에 지웁니다.
+앱 안에서 의견을 보내면 쓴 내용, 선택해서 적은 이메일 주소, 앱 버전, 기기 모델, OS 버전, 언어 설정이 Google Firebase(Firestore) 서버로 전송되어 문의 확인과 답변, 앱 개선에만 쓰입니다. 기기나 사람을 알아볼 수 있는 식별자는 보내지 않습니다. 앱 개선 일감으로 삼을지 검토할 때는 쓴 내용이 AI 도구(Anthropic Claude)로 전달될 수 있습니다. 이때 이메일 주소와 전화번호는 가리고 보냅니다. 처리한 뒤 1년 안에 지웁니다.
 
 ---
 
@@ -125,7 +125,7 @@ By using the Service, you agree to this policy.
 The click scripts you create (name, tap and swipe positions and delays, repeat count or duration) are **stored only on your device** and are used only to run your automation. Scripts are never sent to us or to ad providers.
 
 **Send Feedback**  
-When you send feedback in the app, what you write, the email address you choose to enter, the app version, device model, OS version, and language setting are sent to Google Firebase (Firestore) servers and are used only to review and respond to your inquiry and to improve the app. We do not send any identifier that could recognize your device or you. We delete this information within one year after handling it.
+When you send feedback in the app, what you write, the email address you choose to enter, the app version, device model, OS version, and language setting are sent to Google Firebase (Firestore) servers and are used only to review and respond to your inquiry and to improve the app. We do not send any identifier that could recognize your device or you. When we review whether to make your feedback an app improvement task, what you write may be sent to an AI tool (Anthropic Claude). Email addresses and phone numbers are masked before it is sent. We delete this information within one year after handling it.
 
 ---
 

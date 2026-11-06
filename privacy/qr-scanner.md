@@ -36,7 +36,7 @@ QR 코드와 바코드를 실시간으로 인식하는 데에만 사용합니다
 연락처 추가·캘린더 일정 추가·Wi-Fi 연결은 각 시스템 앱으로 내용을 넘겨 사용자가 직접 저장하는 방식이며, 서비스가 연락처·캘린더·위치를 읽지 않습니다.
 
 **의견 보내기**  
-앱 안에서 의견을 보내면 쓴 내용, 선택해서 적은 이메일 주소, 앱 버전, 기기 모델, OS 버전, 언어 설정이 Google Firebase(Firestore) 서버로 전송되어 문의 확인과 답변, 앱 개선에만 쓰입니다. 기기나 사람을 알아볼 수 있는 식별자는 보내지 않습니다. 처리한 뒤 1년 안에 지웁니다.
+앱 안에서 의견을 보내면 쓴 내용, 선택해서 적은 이메일 주소, 앱 버전, 기기 모델, OS 버전, 언어 설정이 Google Firebase(Firestore) 서버로 전송되어 문의 확인과 답변, 앱 개선에만 쓰입니다. 기기나 사람을 알아볼 수 있는 식별자는 보내지 않습니다. 앱 개선 일감으로 삼을지 검토할 때는 쓴 내용이 AI 도구(Anthropic Claude)로 전달될 수 있습니다. 이때 이메일 주소와 전화번호는 가리고 보냅니다. 처리한 뒤 1년 안에 지웁니다.
 
 ---
 
@@ -86,7 +86,7 @@ Google의 데이터 처리 방식은 [Google 파트너 사이트·앱 데이터 
 
 **스캔한 코드의 내용, 기록, 선물함은 이용 통계에 들어가지 않으며 Google에 전달되지 않습니다.** 수집한 통계는 서비스 개선에만 쓰며 개인을 식별하는 데 쓰지 않습니다. Google의 처리 방식은 [Firebase 개인정보 보호 안내](https://firebase.google.com/support/privacy)를 참고하십시오. 기기 설정에서 광고 ID를 재설정하거나 삭제할 수 있습니다.
 
-**광고와 이용 통계 외의 분석·추적 도구는 사용하지 않으며, 개인정보를 판매하거나 광고·이용 통계 외의 목적으로 제3자에게 제공하지 않습니다.**
+**광고와 이용 통계 외의 분석·추적 도구는 사용하지 않으며, 개인정보를 판매하거나 광고·이용 통계 외의 목적으로 제3자에게 제공하지 않습니다.** 다만 의견 보내기로 보낸 내용은 1항에서 설명한 대로 Google Firebase에 저장되고 AI 도구(Anthropic Claude)로 전달될 수 있습니다.
 
 ---
 
@@ -155,7 +155,7 @@ When you save a QR code you created, the image is saved to the `Pictures/QRScann
 Adding contacts, adding calendar events, and joining Wi-Fi networks hand the information to the respective system apps, where you save it yourself. The Service does not read your contacts, calendar, or location.
 
 **Send Feedback**  
-When you send feedback in the app, what you write, the email address you choose to enter, the app version, device model, OS version, and language setting are sent to Google Firebase (Firestore) servers and are used only to review and respond to your inquiry and to improve the app. We do not send any identifier that could recognize your device or you. We delete this information within one year after handling it.
+When you send feedback in the app, what you write, the email address you choose to enter, the app version, device model, OS version, and language setting are sent to Google Firebase (Firestore) servers and are used only to review and respond to your inquiry and to improve the app. We do not send any identifier that could recognize your device or you. When we review whether to make your feedback an app improvement task, what you write may be sent to an AI tool (Anthropic Claude). Email addresses and phone numbers are masked before it is sent. We delete this information within one year after handling it.
 
 ---
 
@@ -205,7 +205,7 @@ We use Google Firebase Analytics to understand how the app is used and to improv
 
 **The content of the codes you scan, your history, and your gift box are never included in usage statistics and are never sent to Google.** We use these statistics only to improve the Service and not to identify you. For how Google handles this data, see [Privacy and Security in Firebase](https://firebase.google.com/support/privacy). You can reset or delete your advertising ID in your device settings.
 
-**Apart from advertising and usage statistics, we do not use analytics or tracking tools, and we do not sell personal information or provide it to third parties for any purpose other than advertising and usage statistics.**
+**Apart from advertising and usage statistics, we do not use analytics or tracking tools, and we do not sell personal information or provide it to third parties for any purpose other than advertising and usage statistics.** However, feedback you send is stored on Google Firebase and may be passed to an AI tool (Anthropic Claude), as described in Section 1.
 
 ---
 

@@ -40,7 +40,7 @@ moonkimvision("회사", "저희")은 가위바위보 챔피언 앱과 웹(이하
 인터넷(INTERNET) 권한과, Android 앱의 광고를 위한 광고 ID(AD_ID) 권한만 사용합니다. 위치·연락처·사진·카메라·마이크 권한은 사용하지 않습니다.
 
 **의견 보내기**  
-앱 안에서 의견을 보내면 쓴 내용, 선택해서 적은 이메일 주소, 앱 버전, 기기 모델, OS 버전, 언어 설정이 Google Firebase(Firestore) 서버로 전송되어 문의 확인과 답변, 앱 개선에만 쓰입니다. 기기나 사람을 알아볼 수 있는 식별자는 보내지 않습니다. 처리한 뒤 1년 안에 지웁니다.
+앱 안에서 의견을 보내면 쓴 내용, 선택해서 적은 이메일 주소, 앱 버전, 기기 모델, OS 버전, 언어 설정이 Google Firebase(Firestore) 서버로 전송되어 문의 확인과 답변, 앱 개선에만 쓰입니다. 기기나 사람을 알아볼 수 있는 식별자는 보내지 않습니다. 앱 개선 일감으로 삼을지 검토할 때는 쓴 내용이 AI 도구(Anthropic Claude)로 전달될 수 있습니다. 이때 이메일 주소와 전화번호는 가리고 보냅니다. 처리한 뒤 1년 안에 지웁니다.
 
 ---
 
@@ -71,7 +71,7 @@ moonkimvision("회사", "저희")은 가위바위보 챔피언 앱과 웹(이하
 
 ---
 
-### 4. 처리 위탁 및 국외 이전 (Google Firebase · AdMob)
+### 4. 처리 위탁 및 국외 이전 (Google Firebase · AdMob · Anthropic)
 
 서비스는 Google LLC의 Firebase를 사용해 정보를 저장·처리합니다.
 
@@ -86,6 +86,18 @@ moonkimvision("회사", "저희")은 가위바위보 챔피언 앱과 웹(이하
 
 자세한 내용은 [Firebase 개인정보 보호](https://firebase.google.com/support/privacy)와 [Google 개인정보처리방침](https://policies.google.com/privacy)을 참고하십시오.
 
+**의견 검토 (Anthropic Claude)**  
+의견 보내기로 쓴 내용을 앱 개선 일감으로 삼을지 검토할 때 아래와 같이 국외로 이전될 수 있습니다.
+
+| 항목 | 내용 |
+|---|---|
+| 받는 자 | Anthropic PBC (Claude) |
+| 이전 항목 | 의견 보내기로 쓴 내용 (이메일 주소와 전화번호는 가림) |
+| 목적 | 앱 개선 일감으로 삼을지 검토 |
+| 장소 | 미국 등 Anthropic의 서버 |
+| 시기·방법 | 저희가 의견을 검토할 때 네트워크를 통해 전송 |
+| 보유 기간 | [Anthropic 개인정보처리방침](https://www.anthropic.com/legal/privacy)의 보관 기준을 따름 |
+
 **광고 (Google AdMob)**  
 Android 앱은 화면 하단 배너 광고를 위해 Google AdMob을 사용합니다(웹에는 광고가 없습니다). Google은 광고 게재·성과 측정·부정 행위 방지를 위해 다음 정보를 수집·처리할 수 있습니다.
 
@@ -97,7 +109,7 @@ Android 앱은 화면 하단 배너 광고를 위해 Google AdMob을 사용합�
 
 Google의 데이터 처리 방식은 [Google 파트너 사이트·앱 데이터 사용 방식](https://policies.google.com/technologies/partner-sites)을 참고하십시오.
 
-**광고 외의 분석·추적 도구는 사용하지 않으며, 개인정보를 판매하거나 광고 외의 목적으로 제3자에게 제공하지 않습니다.**
+**광고 외의 분석·추적 도구는 사용하지 않으며, 개인정보를 판매하거나 광고 외의 목적으로 제3자에게 제공하지 않습니다.** 다만 의견 보내기로 보낸 내용은 위 표와 같이 AI 도구(Anthropic Claude)로 전달될 수 있습니다.
 
 ---
 
@@ -181,7 +193,7 @@ Your email address is used only to verify your sign-in and is **never shown to o
 The Service uses only the INTERNET permission and, in the Android app, the advertising ID (AD_ID) permission for ads. It does not use location, contacts, photos, camera, or microphone permissions.
 
 **Send Feedback**  
-When you send feedback in the app, what you write, the email address you choose to enter, the app version, device model, OS version, and language setting are sent to Google Firebase (Firestore) servers and are used only to review and respond to your inquiry and to improve the app. We do not send any identifier that could recognize your device or you. We delete this information within one year after handling it.
+When you send feedback in the app, what you write, the email address you choose to enter, the app version, device model, OS version, and language setting are sent to Google Firebase (Firestore) servers and are used only to review and respond to your inquiry and to improve the app. We do not send any identifier that could recognize your device or you. When we review whether to make your feedback an app improvement task, what you write may be sent to an AI tool (Anthropic Claude). Email addresses and phone numbers are masked before it is sent. We delete this information within one year after handling it.
 
 ---
 
@@ -212,7 +224,7 @@ Do not use your real name, contact details, or other personal information in you
 
 ---
 
-### 4. Processors and International Transfer (Google Firebase · AdMob)
+### 4. Processors and International Transfer (Google Firebase · AdMob · Anthropic)
 
 The Service stores and processes information using Firebase by Google LLC.
 
@@ -227,6 +239,18 @@ The Service stores and processes information using Firebase by Google LLC.
 
 For details, see [Privacy and Security in Firebase](https://firebase.google.com/support/privacy) and the [Google Privacy Policy](https://policies.google.com/privacy).
 
+**Feedback Review (Anthropic Claude)**  
+When we review whether to make your feedback an app improvement task, what you write may be transferred abroad as follows.
+
+| Item | Details |
+|---|---|
+| Recipient | Anthropic PBC (Claude) |
+| Data | What you write in Send Feedback (email addresses and phone numbers are masked) |
+| Purpose | Reviewing whether to make it an app improvement task |
+| Location | Anthropic servers, including in the United States |
+| When and how | Transmitted over the network when we review the feedback |
+| Retention | As set out in the [Anthropic Privacy Policy](https://www.anthropic.com/legal/privacy) |
+
 **Advertising (Google AdMob)**  
 The Android app uses Google AdMob to show a banner ad at the bottom of the screen (the website has no ads). Google may collect and process the following to serve and measure ads and to prevent fraud:
 
@@ -238,7 +262,7 @@ Users in the European Economic Area, the UK, and Switzerland are shown an ad pri
 
 For how Google handles this data, see [How Google uses information from sites or apps that use our services](https://policies.google.com/technologies/partner-sites).
 
-**Apart from advertising, we do not use analytics or tracking tools, and we do not sell personal information or provide it to third parties for any purpose other than advertising.**
+**Apart from advertising, we do not use analytics or tracking tools, and we do not sell personal information or provide it to third parties for any purpose other than advertising.** However, feedback you send may be passed to an AI tool (Anthropic Claude), as shown in the table above.
 
 ---
 

@@ -39,7 +39,7 @@ moonkimvision("회사", "저희")은 폰을 LED 전광판처럼 쓰는 응원 �
 위치·연락처·카메라·마이크·저장소 권한은 사용하지 않습니다.
 
 **의견 보내기**  
-앱 안에서 의견을 보내면 쓴 내용, 선택해서 적은 이메일 주소, 앱 버전, 기기 모델, OS 버전, 언어 설정이 Google Firebase(Firestore) 서버로 전송되어 문의 확인과 답변, 앱 개선에만 쓰입니다. 기기나 사람을 알아볼 수 있는 식별자는 보내지 않습니다. 처리한 뒤 1년 안에 지웁니다.
+앱 안에서 의견을 보내면 쓴 내용, 선택해서 적은 이메일 주소, 앱 버전, 기기 모델, OS 버전, 언어 설정이 Google Firebase(Firestore) 서버로 전송되어 문의 확인과 답변, 앱 개선에만 쓰입니다. 기기나 사람을 알아볼 수 있는 식별자는 보내지 않습니다. 앱 개선 일감으로 삼을지 검토할 때는 쓴 내용이 AI 도구(Anthropic Claude)로 전달될 수 있습니다. 이때 이메일 주소와 전화번호는 가리고 보냅니다. 처리한 뒤 1년 안에 지웁니다.
 
 ---
 
@@ -95,7 +95,7 @@ Google의 데이터 처리 방식은 [Google 개인정보처리방침](https://p
 
 ### 6. 제3자 제공
 
-저희는 사용자의 정보를 판매하거나 제3자에게 제공하지 않습니다. 3항의 광고와 이용 통계(Google)를 제외하면 서비스에는 다른 분석·추적 도구, 비정상 종료 보고 도구가 포함되어 있지 않습니다.
+저희는 사용자의 정보를 판매하거나 제3자에게 제공하지 않습니다. 3항의 광고와 이용 통계(Google)를 제외하면 서비스에는 다른 분석·추적 도구, 비정상 종료 보고 도구가 포함되어 있지 않습니다. 다만 의견 보내기로 보낸 내용은 1항에서 설명한 대로 Google Firebase에 저장되고 AI 도구(Anthropic Claude)로 전달될 수 있습니다.
 
 ---
 
@@ -161,7 +161,7 @@ Used only to load ads (Section 3).
 The Service does not use location, contacts, camera, microphone, or storage permissions.
 
 **Send Feedback**  
-When you send feedback in the app, what you write, the email address you choose to enter, the app version, device model, OS version, and language setting are sent to Google Firebase (Firestore) servers and are used only to review and respond to your inquiry and to improve the app. We do not send any identifier that could recognize your device or you. We delete this information within one year after handling it.
+When you send feedback in the app, what you write, the email address you choose to enter, the app version, device model, OS version, and language setting are sent to Google Firebase (Firestore) servers and are used only to review and respond to your inquiry and to improve the app. We do not send any identifier that could recognize your device or you. When we review whether to make your feedback an app improvement task, what you write may be sent to an AI tool (Anthropic Claude). Email addresses and phone numbers are masked before it is sent. We delete this information within one year after handling it.
 
 ---
 
@@ -217,7 +217,7 @@ If Google backup is enabled on your device, Android may back up the app's data (
 
 ### 6. Sharing with Third Parties
 
-We do not sell or share your information with third parties. Apart from the ads and usage statistics (Google) in Section 3, the Service contains no other analytics or tracking tools and no crash reporting tools.
+We do not sell or share your information with third parties. Apart from the ads and usage statistics (Google) in Section 3, the Service contains no other analytics or tracking tools and no crash reporting tools. However, feedback you send is stored on Google Firebase and may be passed to an AI tool (Anthropic Claude), as described in Section 1.
 
 ---
 

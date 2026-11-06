@@ -39,7 +39,7 @@ Crop Screen Recorder는 화면의 특정 영역(오버레이로 지정한 크롭
 위 데이터는 모두 사용자의 기기 내에서만 처리·저장되며, 회사가 수집하거나 외부로 전송하지 않습니다.
 
 **의견 보내기**  
-앱 안에서 의견을 보내면 쓴 내용, 선택해서 적은 이메일 주소, 앱 버전, 기기 모델, OS 버전, 언어 설정이 Google Firebase(Firestore) 서버로 전송되어 문의 확인과 답변, 앱 개선에만 쓰입니다. 기기나 사람을 알아볼 수 있는 식별자는 보내지 않습니다. 처리한 뒤 1년 안에 지웁니다.
+앱 안에서 의견을 보내면 쓴 내용, 선택해서 적은 이메일 주소, 앱 버전, 기기 모델, OS 버전, 언어 설정이 Google Firebase(Firestore) 서버로 전송되어 문의 확인과 답변, 앱 개선에만 쓰입니다. 기기나 사람을 알아볼 수 있는 식별자는 보내지 않습니다. 앱 개선 일감으로 삼을지 검토할 때는 쓴 내용이 AI 도구(Anthropic Claude)로 전달될 수 있습니다. 이때 이메일 주소와 전화번호는 가리고 보냅니다. 처리한 뒤 1년 안에 지웁니다.
 
 ---
 
@@ -51,11 +51,13 @@ Crop Screen Recorder는 화면의 특정 영역(오버레이로 지정한 크롭
 - **Google AdMob:** 배너 광고 표시에 사용됩니다. AdMob은 광고 ID 및 쿠키를 통해 맞춤형 광고를 제공할 수 있습니다.
 - **Google Firebase Analytics:** 이용 통계에 사용됩니다. 아래 내용을 참고하십시오.
 - **Google Firebase Firestore (의견 보내기):** 앱 안에서 의견을 보낼 때만 사용됩니다. 보내는 내용은 1항을 참고하십시오.
+- **Anthropic Claude (의견 보내기 검토):** 의견을 앱 개선 일감으로 삼을지 검토할 때 쓴 내용이 전달될 수 있습니다. 1항을 참고하십시오.
 - **Google Forms (이전 버전의 피드백):** 이전 버전에서 앱 내 "피드백 보내기" 메뉴를 선택하면 외부 브라우저로 Google Forms 페이지가 열립니다. 폼 제출은 전적으로 사용자의 선택이며, 제출 시 입력한 정보는 Google의 개인정보처리방침이 적용됩니다.
 
 제3자 서비스 개인정보처리방침:
 - [Google Play 서비스 개인정보처리방침](https://policies.google.com/privacy)
 - [Google AdMob 개인정보처리방침](https://policies.google.com/technologies/ads)
+- [Anthropic 개인정보처리방침](https://www.anthropic.com/legal/privacy)
 
 **이용 통계 (Google Firebase Analytics)**  
 앱이 어떻게 쓰이는지 파악하고 개선하기 위해 Google Firebase Analytics를 사용합니다. 다음 정보가 Google로 전송됩니다.
@@ -152,7 +154,7 @@ Used to save and retrieve recorded video files on your device.
 All of the above data is processed and stored only on your device. We do not collect or transmit it externally.
 
 **Send Feedback**  
-When you send feedback in the app, what you write, the email address you choose to enter, the app version, device model, OS version, and language setting are sent to Google Firebase (Firestore) servers and are used only to review and respond to your inquiry and to improve the app. We do not send any identifier that could recognize your device or you. We delete this information within one year after handling it.
+When you send feedback in the app, what you write, the email address you choose to enter, the app version, device model, OS version, and language setting are sent to Google Firebase (Firestore) servers and are used only to review and respond to your inquiry and to improve the app. We do not send any identifier that could recognize your device or you. When we review whether to make your feedback an app improvement task, what you write may be sent to an AI tool (Anthropic Claude). Email addresses and phone numbers are masked before it is sent. We delete this information within one year after handling it.
 
 ---
 
@@ -164,11 +166,13 @@ The app uses third-party services that may collect information used to identify 
 - **Google AdMob:** Used to display banner advertisements. AdMob may use advertising IDs and cookies to serve personalized ads based on your interests.
 - **Google Firebase Analytics:** Used for usage statistics. See below.
 - **Google Firebase Firestore (Send Feedback):** Used only when you send feedback in the app. See Section 1 for what is sent.
+- **Anthropic Claude (Send Feedback review):** What you write may be passed to it when we review whether to make your feedback an app improvement task. See Section 1.
 - **Google Forms (Feedback in earlier versions):** In earlier versions, selecting "Send Feedback" in the app opens a Google Forms page in your external browser. Submitting the form is entirely optional and at your discretion; any information you submit is subject to Google's privacy policy.
 
 Links to the privacy policies of third-party service providers:
 - [Google Play Services Privacy Policy](https://policies.google.com/privacy)
 - [Google AdMob Privacy Policy](https://policies.google.com/technologies/ads)
+- [Anthropic Privacy Policy](https://www.anthropic.com/legal/privacy)
 
 **Usage Statistics (Google Firebase Analytics)**  
 We use Google Firebase Analytics to understand how the app is used and to improve it. The following is sent to Google:
