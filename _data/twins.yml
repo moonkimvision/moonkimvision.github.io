@@ -197,6 +197,8 @@ crush:
     happens to her, and her face still doesn't move.
   images:
     front: /assets/images/twins/crush-front.webp
+    three_quarter: /assets/images/twins/crush-34.webp
+    side: /assets/images/twins/crush-side.webp
     face: /assets/images/twins/crush-face.webp
   profile:
     - label_ko: 관계

@@ -292,8 +292,6 @@ html[data-lang="en"] .lang-ko-el { display: none !important; }
 .twin-card:hover .twin-card-art img { top: 3%; }
 /* 썸녀: 상반신 컷이라 덜 키운다 */
 .twin-card-crush .twin-card-art::before { background: var(--gray); }
-.twin-card-crush .twin-card-art img { top: 8%; height: 105%; }
-.twin-card-crush:hover .twin-card-art img { top: 5%; }
 .friends-head { margin-top: 56px; }
 .twin-card-body { display: flex; flex-direction: column; gap: 6px; padding: 26px 24px; }
 .twin-card-badge { align-self: flex-start; font-size: 0.75rem; font-weight: 700; color: var(--muted); border: 1.5px solid var(--gray); border-radius: 999px; padding: 0 10px; }
@@ -529,7 +527,6 @@ a.group-card:hover .group-card-art img { transform: scale(1.03); }
 .profile-brother .profile-figure::before { background: var(--paper); }
 .profile-coworker .profile-figure::before { background: var(--silver); }
 .profile-crush .profile-figure::before { background: var(--gray); }
-.profile-crush .turnaround { height: 520px; }
 .profile-coworker .stat-fill { background: var(--ink); }
 .turnaround {
   position: relative; height: 600px;
