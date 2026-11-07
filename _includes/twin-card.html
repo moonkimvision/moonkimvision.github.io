@@ -7,7 +7,7 @@
 {%- assign c = site.data[grp.data][include.id] -%}
 <a class="twin-card twin-card-{{ c.id }}" href="{{ c.url | relative_url }}">
   <span class="twin-card-art">
-    <img src="{{ c.images.three_quarter | relative_url }}" alt="{{ c.name_ko }} / {{ c.name_en }}" loading="lazy">
+    <img src="{{ c.images.three_quarter | default: c.images.front | relative_url }}" alt="{{ c.name_ko }} / {{ c.name_en }}" loading="lazy">
   </span>
   <span class="twin-card-body">
     <span class="twin-card-badge"><span class="lang-ko">{{ c.badge_ko }}</span><span class="lang-en">{{ c.badge_en }}</span></span>

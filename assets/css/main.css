@@ -290,6 +290,11 @@ html[data-lang="en"] .lang-ko-el { display: none !important; }
 }
 .twin-card-sister .twin-card-art img { transform: translateX(-50%) scaleX(-1); }
 .twin-card:hover .twin-card-art img { top: 3%; }
+/* 썸녀: 상반신 컷이라 덜 키운다 */
+.twin-card-crush .twin-card-art::before { background: var(--gray); }
+.twin-card-crush .twin-card-art img { top: 8%; height: 105%; }
+.twin-card-crush:hover .twin-card-art img { top: 5%; }
+.friends-head { margin-top: 56px; }
 .twin-card-body { display: flex; flex-direction: column; gap: 6px; padding: 26px 24px; }
 .twin-card-badge { align-self: flex-start; font-size: 0.75rem; font-weight: 700; color: var(--muted); border: 1.5px solid var(--gray); border-radius: 999px; padding: 0 10px; }
 .twin-card-name { font-family: var(--display); font-size: 2.6rem; line-height: 1.1; }
@@ -369,6 +374,7 @@ a.group-card:hover .group-card-art img { transform: scale(1.03); }
 .chat-brother { flex-direction: row-reverse; }
 .chat-brother .chat-bubble { background: var(--bro-bubble); border-radius: 18px 18px 4px 18px; }
 .chat-brother .chat-name { text-align: right; }
+.chat-crush .chat-bubble { background: var(--coworker-bubble); }
 .chat-coworker { flex-direction: row-reverse; }
 .chat-coworker .chat-bubble { background: var(--coworker-bubble); border-radius: 18px 18px 4px 18px; }
 .chat-coworker .chat-name { text-align: right; }
@@ -522,6 +528,8 @@ a.group-card:hover .group-card-art img { transform: scale(1.03); }
 }
 .profile-brother .profile-figure::before { background: var(--paper); }
 .profile-coworker .profile-figure::before { background: var(--silver); }
+.profile-crush .profile-figure::before { background: var(--gray); }
+.profile-crush .turnaround { height: 520px; }
 .profile-coworker .stat-fill { background: var(--ink); }
 .turnaround {
   position: relative; height: 600px;

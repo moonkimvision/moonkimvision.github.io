@@ -52,7 +52,8 @@ description: moonkimvision의 캐릭터들. 무표정 쌍둥이 남매와 아빠
           <span class="group-card-name"><span class="lang-ko">{{ g.name_ko }}</span><span class="lang-en">{{ g.name_en }}</span></span>
           <span class="group-card-line"><span class="lang-ko">{{ g.tagline_ko }}</span><span class="lang-en">{{ g.tagline_en }}</span></span>
           <span class="group-card-members">
-            {%- for m in g.members %}
+            {%- assign roster = g.members %}{% if g.friends %}{% assign roster = g.members | concat: g.friends %}{% endif %}
+            {%- for m in roster %}
             {%- assign c = d[m] %}
             <span class="group-member"><img src="{{ c.images.face | relative_url }}" alt="" width="40" height="40" loading="lazy"><span class="lang-ko">{{ c.name_ko }}</span><span class="lang-en">{{ c.name_en }}</span></span>
             {%- endfor %}

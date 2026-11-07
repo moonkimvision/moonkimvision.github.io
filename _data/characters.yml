@@ -8,6 +8,7 @@
   url: /twins/                 # 이미 SNS 에 공유된 주소라 바꾸지 않는다
   data: twins                  # 멤버 프로필 데이터: _data/twins.yml
   members: [sister, brother]
+  friends: [crush]             # 고정 조연 (홈 무대엔 안 나옴, 캐릭터 목록 얼굴·그룹 소개 카드에 나옴)
   name_ko: 쌍둥이 남매
   name_en: The Twins
   tagline_ko: 몇 분 차이로 태어난 이란성 쌍둥이. 말 많은 누나와 한마디뿐인 동생.

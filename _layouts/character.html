@@ -5,7 +5,7 @@ bilingual: true
 {%- comment -%}
   캐릭터 프로필. front matter: character: <멤버 id>, group: <그룹 id> (기본 twins)
   데이터: _data/characters.yml 의 그룹 항목 → 그 data 파일(_data/twins.yml 등)의 멤버.
-  멤버의 other(짝)가 있으면 능력치 비교 눈금·짝 프로필 링크, 그룹에 formula 가 있으면 아래 '공식' 띠를 그린다.
+  images.three_quarter 가 없으면 정면 한 장만(포즈 버튼 없음). 멤버의 other(짝)가 있으면 능력치 비교 눈금·짝 프로필 링크, 그룹에 formula 가 있으면 아래 '공식' 띠를 그린다.
 {%- endcomment -%}
 {%- assign grp_id = page.group | default: "twins" -%}
 {%- assign grp = site.data.characters | where: "id", grp_id | first -%}
@@ -19,14 +19,18 @@ bilingual: true
     <div class="profile-figure">
       <div class="turnaround" data-turnaround>
         <img class="pose is-on" data-pose="front" src="{{ c.images.front | relative_url }}" alt="{{ c.name_ko }} 정면 / {{ c.name_en }} front view">
+        {%- if c.images.three_quarter %}
         <img class="pose" aria-hidden="true" data-pose="three_quarter" src="{{ c.images.three_quarter | relative_url }}" alt="{{ c.name_ko }} 3/4 / {{ c.name_en }} three-quarter view" loading="lazy">
         <img class="pose" aria-hidden="true" data-pose="side" src="{{ c.images.side | relative_url }}" alt="{{ c.name_ko }} 옆모습 / {{ c.name_en }} side view" loading="lazy">
+        {%- endif %}
       </div>
+      {%- if c.images.three_quarter %}
       <div class="pose-tabs" role="group" aria-label="View">
         <button type="button" class="is-on" aria-pressed="true" data-pose-btn="front"><span class="lang-ko">정면</span><span class="lang-en">Front</span></button>
         <button type="button" aria-pressed="false" data-pose-btn="three_quarter">3/4</button>
         <button type="button" aria-pressed="false" data-pose-btn="side"><span class="lang-ko">옆</span><span class="lang-en">Side</span></button>
       </div>
+      {%- endif %}
     </div>
     <div class="profile-intro">
       <p class="eyebrow"><a href="{{ grp.url | relative_url }}" class="eyebrow-link"><span class="lang-ko">{{ grp.profile_eyebrow_ko | default: grp.name_ko }}</span><span class="lang-en">{{ grp.profile_eyebrow_en | default: grp.name_en }}</span></a> · <span class="lang-ko">{{ c.badge_ko }}</span><span class="lang-en">{{ c.badge_en }}</span></p>

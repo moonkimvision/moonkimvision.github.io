@@ -1,6 +1,10 @@
 # 쌍둥이 캐릭터 프로필 데이터
 # 원본 설정: marketing-studio/projects/twins/marketing/character/CHARACTER.md (§8 누나, §9 동생)
 # 설정이 바뀌면 이 파일을 같이 고친다.
+# crush(썸녀)는 쌍둥이가 아닌 고정 조연이라 characters.yml 의 members 가 아니라 friends 에 있다
+#   (홈 무대에는 안 나오고, /twins/ 카드·캐릭터 목록 얼굴·프로필 /twins/crush/ 에 나온다).
+#   원본은 아직 CHARACTER.md 에 없고 영상 컷(campaigns/20261106-fart-study, 20261107-next-turn)뿐.
+#   3/4·옆 이미지가 없어 프로필은 정면(상반신) 하나만 나온다.
 
 sister:
   id: sister
@@ -172,6 +176,84 @@ brother:
     - key: zoning
       value: 99
 
+crush:
+  id: crush
+  url: /twins/crush/
+  name_ko: 썸녀
+  name_en: The Crush
+  badge_ko: 동생 옆자리
+  badge_en: Sits next to him
+  role_ko: 무표정 되받아치기 담당
+  role_en: The Deadpan Comeback
+  oneliner_ko: 책에서 눈도 안 떼고, 한 줄로 끝낸다.
+  oneliner_en: Never looks up from her book. Ends it in one line.
+  intro_ko: >-
+    동생이 좋아하는 같은 반 친구. 아직 사귀는 사이는 아니다. 조용하고 차분해서
+    동생이 뭘 숨기려 해도 한 줄로 다 들킨다. 그런데 결국 자기도 똑같은 일을 겪고,
+    그때도 표정 하나 안 바뀐다.
+  intro_en: >-
+    His classmate, and the girl he likes. They're not dating — yet. She's quiet and calm,
+    so whatever he tries to hide, one line from her gives it all away. Then the same thing
+    happens to her, and her face still doesn't move.
+  images:
+    front: /assets/images/twins/crush-front.webp
+    face: /assets/images/twins/crush-face.webp
+  profile:
+    - label_ko: 관계
+      label_en: Relation
+      ko: 동생이 좋아하는 같은 반 친구. 자습 시간엔 바로 옆자리
+      en: The classmate he likes. Sits right next to him in study hall
+    - label_ko: 포지션
+      label_en: Role
+      ko: 무표정 한 줄 태클, 그리고 같은 일 되돌려받기
+      en: One deadpan line — then the same thing happens to her
+    - label_ko: 성격
+      label_en: Personality
+      ko: 조용하고 차분하다. 걱정은 해 주지만 들킨 건 그냥 말한다
+      en: Quiet and calm. She'll ask if you're okay, and still say what she noticed
+    - label_ko: 말투
+      label_en: Speech
+      ko: 평평하고 짧다. 눈은 책에 둔 채로
+      en: Flat and short, eyes still on her book
+    - label_ko: 외형
+      label_en: Look
+      ko: 어깨 아래로 내려오는 회색 긴 생머리, 작은 검은 머리핀 하나, 차분한 눈
+      en: Long straight gray hair past her shoulders, one small black hair clip, calm eyes
+    - label_ko: 옷
+      label_en: Outfit
+      ko: 단추를 끝까지 채운 흰 블라우스 + 진회색 카디건
+      en: White blouse buttoned to the top, dark gray cardigan
+    - label_ko: 시그니처
+      label_en: Signature
+      ko: 주황이 없다 — 쌍둥이 밖에서 온 사람
+      en: No orange — she's from outside the twins' world
+    - label_ko: 좋아하는 것
+      label_en: Loves
+      ko: 조용한 자습 시간, 떡볶이
+      en: Quiet study hall, tteokbokki
+  quotes:
+    - ko: 너 감기 걸린 거야? 괜찮아?
+      en: Do you have a cold? You okay?
+    - ko: 기침은 입으로 하는 거야.
+      en: You cough with your mouth.
+    - ko: 방금 물 내리는 소리 났는데?
+      en: I just heard it flush, though?
+    - ko: …콜록.
+      en: …Cough.
+    - ko: …어. 맞네.
+      en: …Oh. Right.
+  stats:
+    - key: talk
+      value: 25
+    - key: bravado
+      value: 5
+    - key: sns
+      value: 20
+    - key: tsukkomi
+      value: 90
+    - key: zoning
+      value: 30
+
 stat_labels:
   talk: { ko: 수다력, en: Chatter }
   bravado: { ko: 허세, en: Bravado }
@@ -311,3 +393,17 @@ episodes:
       - { who: sister, ko: "꺼져.", en: "Go away." }
       - { who: narr, ko: "좋아요 5,102 · 댓글 1위 \"뒤에 분 누구예요?\"", en: "5,102 likes · Top comment: \"Who's that in the back?\"" }
       - { who: brother, ko: "…나.", en: "…Me." }
+  - series_ko: 동생의 썸
+    series_en: His Crush
+    title_ko: 1화 — 기침은 입으로
+    title_en: Ep.1 — Cough With Your Mouth
+    summary_ko: 조용한 자습 시간, 썸녀 바로 옆자리. 방귀를 기침으로 덮다가 들켰다. 그리고 들려온 작은 뽁.
+    summary_en: Study hall, right next to her. He covers every fart with a cough — until she calls it. Then, a tiny pop from her side.
+    lines: ["기침은 입으로 하는 거야.", "…콜록."]
+  - series_ko: 동생의 썸
+    series_en: His Crush
+    title_ko: 2화 — 다음 차례
+    title_en: Ep.2 — Next in Line
+    summary_ko: 떡볶이집 화장실은 한 칸. 나오자마자 문 앞에 썸녀. 막아 봤지만 그냥 들어갔다. 둘이 먹은 건 같은 떡볶이.
+    summary_en: One stall at the tteokbokki place. He walks out — she's waiting. He tries to stop her; she goes in anyway. They ate the same tteokbokki.
+    lines: ["너 오늘 뭐 먹었어?", "…너랑 같은 떡볶이.", "…어. 맞네."]
