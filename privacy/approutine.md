@@ -94,6 +94,7 @@ Google의 데이터 처리 방식은 [Google 개인정보처리방침](https://p
 - 달성 기록은 설정 > 아카이브 데이터의 "선택 날짜 이전 삭제"로 지울 수 있습니다.
 - 앱 데이터를 지우거나 앱을 삭제하면 기기에 저장된 모든 데이터가 함께 삭제됩니다. Google 계정에 저장된 백업은 Google 계정 설정에서 삭제할 수 있습니다.
 - 광고 관련 데이터는 3항의 방법으로 동의를 바꾸거나 광고 ID를 재설정해 관리할 수 있습니다.
+- 의견 보내기(Google 설문지)로 보낸 내용의 열람·삭제는 아래 이메일로 요청할 수 있습니다.
 
 **저희는 개인정보를 판매하지 않습니다.**
 
@@ -205,6 +206,7 @@ Tapping "Send Feedback" in Settings opens a Google Form. Anything you enter ther
 - Achievement records can be deleted in Settings > Archive Data with "Delete Before Selected Date."
 - Clearing the app's data or uninstalling the app deletes all data stored on your device. Backups stored in your Google account can be deleted in your Google account settings.
 - Advertising-related data can be managed by changing your consent or resetting your advertising ID as described in Section 3.
+- To access or delete the feedback you submitted through the Google Form, contact us at the email below.
 
 **We do not sell personal information.**
 
