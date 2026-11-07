@@ -20,7 +20,9 @@ lang: ko
 
 서비스는 사용자가 지정한 화면 위치에 클릭과 스와이프를 정해진 간격과 횟수로 자동 실행합니다. 이를 위해 Android 접근성 서비스를 사용합니다.
 
-서비스는 무료이며 화면에 광고가 표시됩니다.
+서비스는 무료이며 홈 화면 하단에 Google AdMob 배너 광고가 표시됩니다. 광고는 조작 패널이나 다른 앱 화면 위에는 표시되지 않으며, 광고 내용과 광고하는 상품·서비스에 대한 책임은 광고주에게 있습니다.
+
+접근성 서비스는 앱 안의 사용 안내를 읽고 동의한 뒤 사용자가 기기 설정에서 직접 켭니다. 클릭·스와이프 동작을 보내는 데만 쓰며 화면 내용이나 입력한 텍스트를 읽지 않습니다. 기기 설정 > 접근성에서 언제든지 끌 수 있고, 끄면 자동 클릭은 동작하지 않습니다. 자세한 내용은 [오토터치 개인정보처리방침](/privacy/autoclick/)을 참고해 주세요.
 
 ---
 
@@ -32,7 +34,7 @@ lang: ko
 
 ### 3. 자동 클릭 사용에 관한 안내
 
-자동 클릭은 사용자가 만든 스크립트대로만 동작하며, 그 결과에 대한 책임은 사용자에게 있습니다. 다른 앱, 게임, 서비스의 약관이 자동 조작을 금지하는 경우 그 약관을 지켜 주십시오. 자동 클릭으로 다른 서비스에서 받은 제재나 불이익에 저희는 책임을 지지 않습니다. 결제, 송금처럼 되돌리기 어려운 화면에서는 자동 클릭을 쓰지 마십시오.
+자동 클릭은 사용자가 만든 스크립트대로만 동작하며, 그 결과에 대한 책임은 사용자에게 있습니다. 자동 클릭을 쓰는 앱, 게임, 서비스의 이용약관·운영 정책·부정행위(자동화·매크로) 금지 규정을 지킬 책임은 사용자에게 있습니다. 자동 클릭으로 다른 서비스에서 받은 제재나 불이익에 저희는 책임을 지지 않습니다. 결제, 송금처럼 되돌리기 어려운 화면에서는 자동 클릭을 쓰지 마십시오.
 
 ---
 
@@ -40,6 +42,8 @@ lang: ko
 
 서비스를 이용할 때 다음 행위를 해서는 안 됩니다.
 
+- 게임이나 앱의 부정행위 탐지(안티치트, 봇 탐지)를 피하거나 속이려는 목적으로 사용하는 행위 (서비스는 탐지를 피하는 기능을 제공하지 않습니다)
+- 시험, 투표, 이벤트처럼 공정성이 필요한 곳에서 결과를 조작하는 행위
 - 서버를 공격하거나, 다른 사람의 계정이나 데이터에 허락 없이 접근하는 행위
 - 서비스의 정상적인 운영을 방해하거나 서비스를 부정한 방법으로 이용하는 행위
 - 법령으로 허용되는 경우를 제외하고 서비스를 역설계하거나 무단으로 복제·배포하는 행위
@@ -104,7 +108,9 @@ These terms govern your use of AutoTouch, an auto clicker app (the "Service") pr
 
 The Service automatically performs taps and swipes at screen positions you choose, at the intervals and number of times you set. It uses the Android Accessibility Service to do this.
 
-The Service is free and shows ads.
+The Service is free and shows Google AdMob banner ads at the bottom of the home screen. Ads are not shown over the control panel or other apps, and advertisers are responsible for their ads and the products they offer.
+
+You turn on the accessibility service yourself in device settings after reading the in-app disclosure and agreeing to it. It is used only to send tap and swipe gestures and does not read screen content or text you type. You can turn it off at any time in Settings > Accessibility; when off, automatic tapping does not work. See the [AutoTouch Privacy Policy](/privacy/autoclick/) for details.
 
 ---
 
@@ -116,7 +122,7 @@ You do not need to sign up or log in.
 
 ### 3. Using Auto Clicks
 
-Auto clicks run only as your scripts tell them to, and you are responsible for their results. If the terms of another app, game, or service prohibit automated input, please follow those terms. We are not responsible for any penalties or losses you receive from other services because of auto clicks. Do not use auto clicks on screens where actions are hard to undo, such as payments or money transfers.
+Auto clicks run only as your scripts tell them to, and you are responsible for their results. You are responsible for following the terms of service, policies, and rules against cheating (automation or macros) of any app, game, or service you use auto clicks with. We are not responsible for any penalties or losses you receive from other services because of auto clicks. Do not use auto clicks on screens where actions are hard to undo, such as payments or money transfers.
 
 ---
 
@@ -124,6 +130,8 @@ Auto clicks run only as your scripts tell them to, and you are responsible for t
 
 When using the Service, you must not:
 
+- avoid or deceive the anti-cheat or bot detection of a game or app (the Service does not provide features to evade detection);
+- manipulate results where fairness is expected, such as exams, votes, or events;
 - attack our servers, or access another person's account or data without permission;
 - interfere with the normal operation of the Service or use it in a fraudulent way; or
 - reverse engineer, copy, or distribute the Service without permission, except as the law allows.
