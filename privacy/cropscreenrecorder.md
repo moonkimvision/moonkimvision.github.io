@@ -10,7 +10,7 @@ lang: ko
 
 <div class="lang-ko" markdown="1">
 
-moonkimvision("회사", "저희")은 Crop Screen Recorder 앱(이하 "서비스")을 광고 지원 방식으로 무료 제공합니다.
+moonkimvision("회사", "저희")은 Crop Screen Recorder 앱(이하 "서비스")을 광고 지원 방식으로 무료 제공합니다. 앱 안에서 Google Play 결제로 일회성 'Pro' 상품을 살 수 있습니다.
 
 본 페이지는 서비스 이용 시 개인정보의 수집·이용·공개에 관한 정책을 안내합니다.  
 서비스를 이용함으로써 본 정책에 동의하는 것으로 간주됩니다.
@@ -50,6 +50,8 @@ Crop Screen Recorder는 화면의 특정 영역(오버레이로 지정한 크롭
 - **Google Play 서비스:** 기본 앱 기능 지원에 사용됩니다.
 - **Google AdMob:** 배너 광고 표시에 사용됩니다. AdMob은 광고 ID 및 쿠키를 통해 맞춤형 광고를 제공할 수 있습니다.
 - **Google Firebase Analytics:** 이용 통계에 사용됩니다. 아래 내용을 참고하십시오.
+- **Google Firebase Crashlytics:** 비정상 종료·오류 분석에 사용됩니다. 아래 내용을 참고하십시오.
+- **Google Play 결제:** Pro 구매 처리에 사용됩니다. 아래 내용을 참고하십시오.
 - **Google Firebase Firestore (의견 보내기):** 앱 안에서 의견을 보낼 때만 사용됩니다. 보내는 내용은 1항을 참고하십시오.
 - **Anthropic Claude (의견 보내기 검토):** 의견을 앱 개선 일감으로 삼을지 검토할 때 쓴 내용이 전달될 수 있습니다. 1항을 참고하십시오.
 - **Google Forms (이전 버전의 피드백):** 이전 버전에서 앱 내 "피드백 보내기" 메뉴를 선택하면 외부 브라우저로 Google Forms 페이지가 열립니다. 폼 제출은 전적으로 사용자의 선택이며, 제출 시 입력한 정보는 Google의 개인정보처리방침이 적용됩니다.
@@ -68,11 +70,23 @@ Crop Screen Recorder는 화면의 특정 영역(오버레이로 지정한 크롭
 
 **녹화한 영상과 화면 내용은 이용 통계에 들어가지 않으며 Google에 전달되지 않습니다.** 수집한 통계는 서비스 개선에만 쓰며 개인을 식별하는 데 쓰지 않습니다. Google의 처리 방식은 [Firebase 개인정보 보호 안내](https://firebase.google.com/support/privacy)를 참고하십시오. 기기 설정에서 광고 ID를 재설정하거나 삭제할 수 있습니다.
 
+**오류 보고 (Google Firebase Crashlytics)**  
+앱이 비정상 종료되거나 일부 기능(녹화 시작, GIF 내보내기, 자르기, 구매 등)에서 오류가 나면, 원인을 찾아 고치기 위해 Google Firebase Crashlytics로 다음 정보가 Google에 전송됩니다.
+
+- 비정상 종료 로그(오류 내용과 발생 위치)
+- 기기 모델, 운영체제 버전, 앱 버전, 발생 시각 같은 진단 정보
+- Crashlytics 설치 ID
+
+**녹화한 영상, 화면 내용, 이름이나 이메일 같은 개인 식별 정보는 오류 보고에 들어가지 않습니다.** 수집한 정보는 오류 분석과 수정에만 씁니다. Google의 처리 방식은 [Firebase 개인정보 보호 안내](https://firebase.google.com/support/privacy)를 참고하십시오.
+
+**Pro 구매 (Google Play 결제)**  
+Pro 구매는 Google Play 결제 시스템으로 처리됩니다. 카드 번호 등 결제 수단 정보는 Google이 처리하며 저희는 받지 않습니다. 앱은 Pro를 샀는지 확인하기 위해 Google Play에서 구매 내역을 조회하고, 그 결과(구매 여부)만 기기에 저장합니다. Google의 처리 방식은 [Google 개인정보처리방침](https://policies.google.com/privacy)을 참고하십시오.
+
 ---
 
 ### 3. 로그 데이터
 
-서비스 이용 중 오류 발생 시, 제3자 도구를 통해 로그 데이터가 수집될 수 있습니다. 로그 데이터에는 기기 IP 주소, 기기명, 운영체제 버전, 앱 설정, 서비스 이용 일시, 기타 통계 정보 등이 포함될 수 있습니다.
+서비스 이용 중 오류 발생 시, 제3자 도구(2항의 Google Firebase Crashlytics)를 통해 로그 데이터가 수집될 수 있습니다. 로그 데이터에는 기기 IP 주소, 기기명, 운영체제 버전, 앱 설정, 서비스 이용 일시, 기타 통계 정보 등이 포함될 수 있습니다.
 
 ---
 
@@ -127,7 +141,7 @@ Google AdMob 등 제3자 광고 네트워크는 맞춤형 광고를 위해 기�
 
 <div class="lang-en" markdown="1">
 
-moonkimvision ("we," "us," or "our") built the Crop Screen Recorder app as an ad-supported app. This SERVICE is provided by moonkimvision at no cost and is intended for use as is.
+moonkimvision ("we," "us," or "our") built the Crop Screen Recorder app as an ad-supported app. This SERVICE is provided by moonkimvision at no cost and is intended for use as is. A one-time "Pro" product is available in the app through Google Play billing.
 
 This page informs visitors regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our Service.  
 If you choose to use our Service, then you agree to the collection and use of information in relation to this policy.
@@ -167,6 +181,8 @@ The app uses third-party services that may collect information used to identify 
 - **Google Play Services:** Used for basic app functionality.
 - **Google AdMob:** Used to display banner advertisements. AdMob may use advertising IDs and cookies to serve personalized ads based on your interests.
 - **Google Firebase Analytics:** Used for usage statistics. See below.
+- **Google Firebase Crashlytics:** Used to analyze crashes and errors. See below.
+- **Google Play Billing:** Used to process the Pro purchase. See below.
 - **Google Firebase Firestore (Send Feedback):** Used only when you send feedback in the app. See Section 1 for what is sent.
 - **Anthropic Claude (Send Feedback review):** What you write may be passed to it when we review whether to make your feedback an app improvement task. See Section 1.
 - **Google Forms (Feedback in earlier versions):** In earlier versions, selecting "Send Feedback" in the app opens a Google Forms page in your external browser. Submitting the form is entirely optional and at your discretion; any information you submit is subject to Google's privacy policy.
@@ -185,11 +201,23 @@ We use Google Firebase Analytics to understand how the app is used and to improv
 
 **Your recordings and screen content are never included in usage statistics and are never sent to Google.** We use these statistics only to improve the Service and not to identify you. For how Google handles this data, see [Privacy and Security in Firebase](https://firebase.google.com/support/privacy). You can reset or delete your advertising ID in your device settings.
 
+**Crash Reporting (Google Firebase Crashlytics)**  
+If the app crashes or an error occurs in certain features (such as starting a recording, exporting a GIF, trimming, or purchasing), the following is sent to Google through Google Firebase Crashlytics so we can find and fix the cause:
+
+- Crash logs (what went wrong and where)
+- Diagnostic information such as device model, operating system version, app version, and the time it happened
+- The Crashlytics installation ID
+
+**Your recordings, screen content, and personally identifiable information such as your name or email are never included in crash reports.** We use this information only to analyze and fix errors. For how Google handles this data, see [Privacy and Security in Firebase](https://firebase.google.com/support/privacy).
+
+**Pro Purchase (Google Play Billing)**  
+The Pro purchase is processed through Google Play's billing system. Payment information such as your card number is handled by Google and we do not receive it. The app checks your purchase history with Google Play to confirm whether you own Pro, and stores only the result (whether you own it) on your device. For how Google handles this data, see the [Google Privacy Policy](https://policies.google.com/privacy).
+
 ---
 
 ### 3. Log Data
 
-Whenever you use our Service, in a case of an error in the app, we may collect data and information (through third-party products) called Log Data. This Log Data may include information such as your device Internet Protocol ("IP") address, device name, operating system version, the configuration of the app when utilizing our Service, the time and date of your use of the Service, and other statistics.
+Whenever you use our Service, in a case of an error in the app, we may collect data and information (through third-party products, namely Google Firebase Crashlytics in Section 2) called Log Data. This Log Data may include information such as your device Internet Protocol ("IP") address, device name, operating system version, the configuration of the app when utilizing our Service, the time and date of your use of the Service, and other statistics.
 
 ---
 
