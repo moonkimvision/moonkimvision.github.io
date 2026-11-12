@@ -143,7 +143,7 @@ moonkimvision("회사", "저희")은 블록 퍼즐 게임 Block Lumen(이하 "�
 
 </div>
 
-<div class="lang-en" style="display:none" markdown="1">
+<div class="lang-en" markdown="1">
 
 moonkimvision ("we," "us," or "our") provides Block Lumen, a block puzzle game (the "Service"). The basic features are free, and a one-time "Remove Ads" purchase is available in the app.
 

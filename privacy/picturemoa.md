@@ -73,7 +73,7 @@ moonkimvision("회사", "저희")은 사진모아 앱(이하 "서비스")을 무
 
 </div>
 
-<div class="lang-en" style="display:none" markdown="1">
+<div class="lang-en" markdown="1">
 
 moonkimvision ("we," "us," or "our") provides the Picture Moa (사진모아) app (the "Service") free of charge.
 

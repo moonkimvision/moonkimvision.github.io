@@ -161,7 +161,7 @@ Google의 데이터 처리 방식은 [Google 파트너 사이트·앱 데이터 
 
 </div>
 
-<div class="lang-en" style="display:none" markdown="1">
+<div class="lang-en" markdown="1">
 
 moonkimvision ("we," "us," or "our") provides the RPS Champion app and website (the "Service") free of charge.
 

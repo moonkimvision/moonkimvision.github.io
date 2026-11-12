@@ -99,7 +99,7 @@ moonkimvision("회사", "저희")은 액션 로그라이크 게임 AdHero(이하
 
 </div>
 
-<div class="lang-en" style="display:none" markdown="1">
+<div class="lang-en" markdown="1">
 
 moonkimvision ("we," "us," or "our") provides AdHero, an action roguelike game (the "Service"), free of charge.
 

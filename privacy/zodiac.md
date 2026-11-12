@@ -133,7 +133,7 @@ Google의 데이터 처리 방식은 [Google 개인정보처리방침](https://p
 
 </div>
 
-<div class="lang-en" style="display:none" markdown="1">
+<div class="lang-en" markdown="1">
 
 moonkimvision ("we," "us," or "our") provides Nakgwan, a saju (Korean Four Pillars) fortune app (the "Service"). The basic features are free, and a lifetime pass that removes ads can be purchased in the app.
 

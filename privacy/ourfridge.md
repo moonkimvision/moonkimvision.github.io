@@ -139,7 +139,7 @@ moonkimvision("회사", "저희")은 냉장고 관리 앱 우리집 냉장고(�
 
 </div>
 
-<div class="lang-en" style="display:none" markdown="1">
+<div class="lang-en" markdown="1">
 
 moonkimvision ("we," "us," or "our") provides Our Fridge, a fridge and pantry management app (the "Service"), free of charge.
 

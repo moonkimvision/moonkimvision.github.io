@@ -136,7 +136,7 @@ Firebase를 통해 전송되는 데이터는 암호화(HTTPS)되며, Google은 �
 
 </div>
 
-<div class="lang-en" style="display:none" markdown="1">
+<div class="lang-en" markdown="1">
 
 moonkimvision ("we," "us," or "our") provides Today Care, a to-do and habit planner app (the "Service"), free of charge.
 

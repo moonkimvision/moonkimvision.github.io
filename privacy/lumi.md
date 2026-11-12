@@ -124,7 +124,7 @@ Google의 데이터 처리 방식은 [Google 개인정보처리방침](https://p
 
 </div>
 
-<div class="lang-en" style="display:none" markdown="1">
+<div class="lang-en" markdown="1">
 
 moonkimvision ("we," "us," or "our") provides Lumi, a period and cycle tracking app (the "Service"), free of charge.
 

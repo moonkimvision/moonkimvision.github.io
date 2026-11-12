@@ -102,7 +102,7 @@ Google 계정으로 로그인합니다. Google로부터 계정 식별자(UID), �
 
 </div>
 
-<div class="lang-en" style="display:none" markdown="1">
+<div class="lang-en" markdown="1">
 
 moonkimvision ("we," "us," or "our") provides Study Group Helper, an app for sharing study assignments (the "Service"), free of charge.
 

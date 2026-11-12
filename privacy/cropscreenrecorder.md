@@ -125,7 +125,7 @@ Google AdMob 등 제3자 광고 네트워크는 맞춤형 광고를 위해 기�
 
 </div>
 
-<div class="lang-en" style="display:none" markdown="1">
+<div class="lang-en" markdown="1">
 
 moonkimvision ("we," "us," or "our") built the Crop Screen Recorder app as an ad-supported app. This SERVICE is provided by moonkimvision at no cost and is intended for use as is.
 
