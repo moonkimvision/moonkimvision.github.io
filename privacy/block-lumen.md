@@ -4,13 +4,13 @@ title_ko: "Block Lumen 개인정보처리방침"
 title_en: "Block Lumen Privacy Policy"
 title: "Block Lumen Privacy Policy"
 permalink: /privacy/block-lumen/
-date: 2026-11-10
+date: 2026-11-12
 lang: ko
 ---
 
 <div class="lang-ko" markdown="1">
 
-moonkimvision("회사", "저희")은 블록 퍼즐 게임 Block Lumen(이하 "서비스")을 제공합니다. 기본 기능은 무료이며, 앱 안에서 '광고 제거'를 한 번 구매할 수 있습니다.
+moonkimvision("회사", "저희")은 블록 퍼즐 게임 Block Lumen(이하 "서비스")을 제공합니다. 기본 기능은 무료이며, 앱 안에서 Google Play 결제로 일회성 인앱 상품('광고 제거', '별가루 주머니', '별빛 컬렉션')을 살 수 있습니다.
 
 본 페이지는 서비스 이용 시 개인정보의 수집·이용·공개에 관한 정책을 안내합니다.  
 서비스를 이용함으로써 본 정책에 동의하는 것으로 간주됩니다.
@@ -19,7 +19,7 @@ moonkimvision("회사", "저희")은 블록 퍼즐 게임 Block Lumen(이하 "�
 
 ### 1. 수집하는 정보
 
-**서비스에는 회원가입이 없고, 이름을 입력하는 칸도 없습니다.** 게임 진행은 기기 안에만 저장됩니다. 기기 밖으로 나가는 정보는 시즌 랭킹 기록(2항), 사용자가 직접 보내는 의견(이 항의 "의견 보내기"), 광고와 이용 통계를 위해 Google이 처리하는 정보(5항)입니다. '광고 제거' 구매는 Google Play 결제 시스템이 처리합니다(5항).
+**서비스에는 회원가입이 없고, 이름을 입력하는 칸도 없습니다.** 게임 진행은 기기 안에만 저장됩니다. 기기 밖으로 나가는 정보는 시즌 랭킹 기록(2항), 사용자가 직접 보내는 의견(이 항의 "의견 보내기"), 광고와 이용 통계를 위해 Google이 처리하는 정보(5항)입니다. 인앱 상품 구매는 Google Play 결제 시스템이 처리합니다(5항).
 
 **기기 안에만 저장되는 정보**  
 아래 정보는 **기기 내부 저장소에만 저장**되며, 서비스 기능을 제공하는 데만 쓰입니다.
@@ -28,10 +28,12 @@ moonkimvision("회사", "저희")은 블록 퍼즐 게임 Block Lumen(이하 "�
 - 게임 안에서 모은 별가루, 아이템, 테마, 임무·과제·출석 기록
 - 소리·진동 설정
 - '광고 제거' 구매 여부 (배너·전면 광고를 보일지 정하는 데만 씁니다)
+- '별빛 컬렉션' 구매 여부 (결제 테마·타일 모양을 열지 정하는 데만 씁니다)
+- 이미 지급한 구매의 번호 (같은 구매로 별가루를 두 번 주지 않기 위해 씁니다)
 - 자동으로 만들어진 닉네임 번호 (랭킹에 참여하면 2항과 같이 서버에도 저장됩니다)
 
 **인터넷 (INTERNET, ACCESS_NETWORK_STATE), 광고 ID (AD_ID)**  
-시즌 랭킹(2항), 광고와 이용 통계(5항), '광고 제거' 구매와 구매 내역 확인(5항), 사용자가 직접 보내는 의견에 사용합니다. Google SDK가 광고와 이용 통계를 처리하기 위해 함께 선언하는 권한(ACCESS_ADSERVICES_AD_ID·ATTRIBUTION·TOPICS, WAKE_LOCK, FOREGROUND_SERVICE, 설치 경로 확인, Google 서비스 설정 읽기)도 포함되어 있습니다.
+시즌 랭킹(2항), 광고와 이용 통계(5항), 인앱 상품 구매와 구매 내역 확인(5항), 사용자가 직접 보내는 의견에 사용합니다. Google SDK가 광고와 이용 통계를 처리하기 위해 함께 선언하는 권한(ACCESS_ADSERVICES_AD_ID·ATTRIBUTION·TOPICS, WAKE_LOCK, FOREGROUND_SERVICE, 설치 경로 확인, Google 서비스 설정 읽기)도 포함되어 있습니다.
 
 **위치·연락처·사진·카메라·마이크 권한은 사용하지 않으며, 이 정보들을 수집하지 않습니다.** 알림도 보내지 않습니다.
 
@@ -96,7 +98,13 @@ moonkimvision("회사", "저희")은 블록 퍼즐 게임 Block Lumen(이하 "�
 동의가 필요한 지역(유럽경제지역·영국·스위스 등)의 사용자에게는 처음 실행할 때 Google UMP 광고 개인정보 동의 화면이 표시되어 맞춤 광고 여부를 선택할 수 있습니다. 이 지역의 사용자는 설정의 "광고 개인정보 설정"에서 언제든지 선택을 바꿀 수 있습니다. 기기 설정에서 광고 ID를 재설정하거나 맞춤 광고를 끌 수도 있습니다. 자세한 내용은 [Google 파트너 사이트·앱 데이터 사용 방식](https://policies.google.com/technologies/partner-sites)을 참고하십시오.
 
 **결제 (Google Play 결제)**  
-일회성 인앱 구매 '광고 제거'는 Google Play 결제 시스템으로 처리됩니다. 카드 번호 등 결제 수단 정보는 Google이 처리하며 저희는 받지 않습니다. 앱은 구매 여부(광고 제거 적용 여부)만 기기 안에 저장해 배너 광고와 판 사이 전면 광고를 보일지 정합니다. 보상형 광고는 사용자가 골라서 보는 것이라 구매 뒤에도 남아 있습니다. 앱을 켤 때 Google Play 구매 내역과 맞춰 보며, 환불된 구매는 광고 제거를 풀고 다시 광고를 보여 줍니다. 앱을 다시 설치해도 구매 복원으로 광고 제거가 돌아옵니다. 구매 정보는 저희 서버로 보내지 않고 이용 통계에도 넣지 않습니다. Google의 처리 방식은 [Google 개인정보처리방침](https://policies.google.com/privacy)을 참고하십시오.
+앱 안의 일회성 인앱 상품은 모두 Google Play 결제 시스템으로 처리됩니다. 카드 번호 등 결제 수단 정보는 Google이 처리하며 저희는 받지 않습니다.
+
+- '광고 제거' (한 번 사면 계속 유지): 배너 광고와 판 사이 전면 광고를 없앱니다. 보상형 광고는 사용자가 골라서 보는 것이라 구매 뒤에도 남아 있습니다.
+- '별빛 컬렉션' (한 번 사면 계속 유지): 결제 테마 3종과 타일 모양 2종을 열고 별가루 1000개를 줍니다.
+- '별가루 주머니' (살 때마다 쓰는 상품): 별가루 작은 주머니 500개, 별가루 주머니 1800개, 별가루 큰 주머니 4000개를 줍니다.
+
+앱은 구매 여부(광고 제거·별빛 컬렉션), 받은 별가루, 이미 지급한 구매의 번호를 기기 안에만 저장합니다. '광고 제거'와 '별빛 컬렉션'은 앱을 켤 때 Google Play 구매 내역과 맞춰 보며, 환불된 구매는 다시 잠그고(광고 제거는 광고를 다시 보여 줍니다), 앱을 다시 설치해도 구매 복원으로 돌아옵니다. '별가루 주머니'는 별가루를 지급해 기기에 저장한 뒤 Google Play에서 소비 처리되므로 다시 살 수 있으며, 앱을 다시 설치하거나 구매를 복원해도 돌아오지 않습니다. 구매 정보는 저희 서버로 보내지 않고 이용 통계에도 넣지 않습니다. Google의 처리 방식은 [Google 개인정보처리방침](https://policies.google.com/privacy)을 참고하십시오.
 
 **이용 통계 (Google Firebase Analytics)**  
 앱이 어떻게 쓰이는지 파악하고 개선하기 위해 Google Firebase Analytics를 사용합니다. 다음 정보가 Google로 전송됩니다.
@@ -145,7 +153,7 @@ moonkimvision("회사", "저희")은 블록 퍼즐 게임 Block Lumen(이하 "�
 
 <div class="lang-en" markdown="1">
 
-moonkimvision ("we," "us," or "our") provides Block Lumen, a block puzzle game (the "Service"). The basic features are free, and a one-time "Remove Ads" purchase is available in the app.
+moonkimvision ("we," "us," or "our") provides Block Lumen, a block puzzle game (the "Service"). The basic features are free, and one-time in-app products ("Remove Ads," "Stardust Pouch," and "Starlight Collection") are available in the app through Google Play billing.
 
 This page explains our policies on the collection, use, and disclosure of personal information when you use the Service.  
 By using the Service, you agree to this policy.
@@ -154,7 +162,7 @@ By using the Service, you agree to this policy.
 
 ### 1. Information Collection and Use
 
-**The Service has no sign-up and no field for entering your name.** Your game progress is stored only on your device. The only information that leaves your device is your season ranking record (Section 2), feedback you choose to send ("Send Feedback" in this section), and the information Google processes for advertising and usage statistics (Section 5). The one-time "Remove Ads" purchase is processed by Google Play's billing system (Section 5).
+**The Service has no sign-up and no field for entering your name.** Your game progress is stored only on your device. The only information that leaves your device is your season ranking record (Section 2), feedback you choose to send ("Send Feedback" in this section), and the information Google processes for advertising and usage statistics (Section 5). In-app purchases are processed by Google Play's billing system (Section 5).
 
 **Stored only on your device**  
 The following information is **stored only on your device** and is used only to provide the Service's features:
@@ -163,10 +171,12 @@ The following information is **stored only on your device** and is used only to 
 - Stardust, items, and themes earned in the game, and quest, achievement, and check-in records
 - Sound and vibration settings
 - Whether you have purchased Remove Ads (used only to decide whether to show banner and full-screen ads)
+- Whether you have purchased the Starlight Collection (used only to decide whether to unlock the premium themes and tile shapes)
+- The IDs of purchases already granted (used only to avoid giving Stardust twice for the same purchase)
 - Your automatically generated nickname numbers (also stored on the server when you join the ranking, as described in Section 2)
 
 **Internet (INTERNET, ACCESS_NETWORK_STATE), advertising ID (AD_ID)**  
-Used for the season ranking (Section 2), advertising and usage statistics (Section 5), the Remove Ads purchase and checking your purchase history (Section 5), and feedback you choose to send. The app also includes permissions that Google's SDKs declare to process advertising and usage statistics (ACCESS_ADSERVICES_AD_ID, ATTRIBUTION, and TOPICS; WAKE_LOCK; FOREGROUND_SERVICE; install referrer; and reading Google services settings).
+Used for the season ranking (Section 2), advertising and usage statistics (Section 5), in-app purchases and checking your purchase history (Section 5), and feedback you choose to send. The app also includes permissions that Google's SDKs declare to process advertising and usage statistics (ACCESS_ADSERVICES_AD_ID, ATTRIBUTION, and TOPICS; WAKE_LOCK; FOREGROUND_SERVICE; install referrer; and reading Google services settings).
 
 **The Service does not use location, contacts, photos, camera, or microphone permissions and does not collect that information.** It does not send notifications.
 
@@ -231,7 +241,13 @@ The Service uses Google AdMob for banner ads at the bottom of the home and seaso
 Users in regions where consent is required (such as the European Economic Area, the UK, and Switzerland) are shown a Google UMP ad privacy consent message on first launch and can choose whether to receive personalized ads. These users can change their choice at any time under "광고 개인정보 설정" (Ad privacy settings) in Settings. You can also reset your advertising ID or opt out of personalized ads in your device settings. See [How Google uses information from sites or apps that use our services](https://policies.google.com/technologies/partner-sites) for details.
 
 **Purchases (Google Play Billing)**  
-The one-time in-app purchase "Remove Ads" is processed through Google Play's billing system. Payment information such as your card number is handled by Google and we do not receive it. The app stores only whether you have made the purchase (whether Remove Ads is applied) on your device, and uses it to decide whether to show banner ads and full-screen ads between games. Rewarded ads, which you choose to watch, remain available after the purchase. Each time the app starts, it checks your Google Play purchase history; if the purchase has been refunded, Remove Ads is turned off and ads are shown again. If you reinstall the app, Remove Ads comes back when your purchase is restored. Purchase information is not sent to our servers and is not included in usage statistics. For how Google handles this data, see the [Google Privacy Policy](https://policies.google.com/privacy).
+All one-time in-app products in the app are processed through Google Play's billing system. Payment information such as your card number is handled by Google and we do not receive it.
+
+- "Remove Ads" (kept once purchased): removes banner ads and full-screen ads between games. Rewarded ads, which you choose to watch, remain available after the purchase.
+- "Starlight Collection" (kept once purchased): unlocks 3 premium themes and 2 tile shapes and gives 1,000 Stardust.
+- "Stardust Pouch" (used up each time you buy it): the Small Pouch gives 500 Stardust, the Pouch 1,800, and the Large Pouch 4,000.
+
+The app stores on your device only whether you own Remove Ads and the Starlight Collection, the Stardust you have received, and the IDs of purchases already granted. Each time the app starts, it checks your Google Play purchase history for Remove Ads and the Starlight Collection; refunded purchases are locked again (for Remove Ads, ads are shown again), and if you reinstall the app they come back when your purchases are restored. A Stardust Pouch is consumed in Google Play after its Stardust has been given and saved on your device, so it can be bought again and does not come back when you reinstall the app or restore purchases. Purchase information is not sent to our servers and is not included in usage statistics. For how Google handles this data, see the [Google Privacy Policy](https://policies.google.com/privacy).
 
 **Usage Statistics (Google Firebase Analytics)**  
 We use Google Firebase Analytics to understand how the app is used and to improve it. The following is sent to Google:
