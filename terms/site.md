@@ -110,7 +110,7 @@ moonkimvision (대표 MOON JOONSEOK)
 
 </div>
 
-<div class="lang-en" style="display:none" markdown="1">
+<div class="lang-en" markdown="1">
 
 These terms govern your use of the website https://moonkimvision.com (the "Site") operated by moonkimvision ("we," "us," or "our"). By using the Site, you agree to these terms.
 

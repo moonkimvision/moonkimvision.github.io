@@ -102,7 +102,7 @@ moonkimvision (대표 MOON JOONSEOK)
 
 </div>
 
-<div class="lang-en" style="display:none" markdown="1">
+<div class="lang-en" markdown="1">
 
 These terms govern your use of GeoZoom, a place-name quiz game (the "Service") provided by moonkimvision ("we," "us," or "our"). The Service is offered as an Android app and as a web version ([moonkimvision.com/games/geozoom/](/games/geozoom/)), and these terms apply to both. By using the Service, you agree to these terms.
 

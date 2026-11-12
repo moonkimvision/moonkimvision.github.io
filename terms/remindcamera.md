@@ -100,7 +100,7 @@ moonkimvision (대표 MOON JOONSEOK)
 
 </div>
 
-<div class="lang-en" style="display:none" markdown="1">
+<div class="lang-en" markdown="1">
 
 These terms govern your use of RemindCamera, a camera app for repeat photos (the "Service") provided by moonkimvision ("we," "us," or "our"). By using the Service, you agree to these terms.
 
