@@ -40,10 +40,10 @@ Jekyll 기반 GitHub Pages 블로그.
 ├── _layouts/            # default · home · page · post · character · policy-bilingual
 ├── _includes/           # header · footer · bubble(말풍선, group 인자) · app-card · game-card · twin-card(멤버 카드, group 인자) · post-card
 ├── assets/
-│   ├── css/main.css     # 쌍둥이 테마 (크림 + 먹색 + 주황 한 점)
+│   ├── css/main.css     # 사이트 UI 테마 (크림 + 먹색 + 주황 포인트. 그림 색은 아동 컬러판)
 │   ├── js/site.js       # 언어 토글·캐릭터 대사·포즈 전환 (언어 첫 적용만 head 인라인)
 │   └── images/
-│       ├── twins/       # 캐릭터 WebP(컷아웃·얼굴·스탬프·푸터 빼꼼), OG jpg, 파비콘
+│       ├── twins/       # 캐릭터 WebP 아동 컬러판(컷아웃·얼굴·스탬프·푸터 빼꼼), OG jpg, 파비콘 — 34·face·peek·stamp 는 marketing-studio `projects/twins/marketing/assets/site/` 사본(_mono 제외), 나머지는 recolor 도구로 칠함
 │       ├── gongdong/    # 공동책임 WebP (컷아웃·얼굴은 marketing-studio 마스터 시트에서 잘라 냄, 듀오 셀카는 output/2026-10-15/site_gongdong_duo_v1_3)
 │       ├── characters/  # 캐릭터 페이지 단체 사진 family.webp (output/2026-10-15/site_family_v1_1)
 │       ├── apps/        # 앱 아이콘
@@ -57,7 +57,7 @@ Jekyll 기반 GitHub Pages 블로그.
 ## 쌍둥이 캐릭터 (사이트 마스코트)
 
 - 원본 설정: `../marketing-studio/projects/twins/marketing/character/CHARACTER.md` — 누나(§8)·동생(§9). 사이트용 요약은 `_data/twins.yml`.
-- 디자인 규칙: 흑백 + 크림 배경 `#FFF6E5` + 유일한 색 주황 `#F57C00`(손목 밴드). 누나 말풍선 흰색, 동생 말풍선 연주황.
+- 그림 색 기준: 아동 컬러판(2026-11~, 흑백에서 바뀜). 기준 문서는 `../marketing-studio/projects/twins/marketing/character/PALETTE.md`·`palette.json`(twins-kids-v1) — 누나 핑크 `#FF6F91`, 동생 하늘색 `#3FA9F5`, 바지·치마 남색 `#34407A`, 크림 배경 `#FFF6E5`, 둘의 주황 손목 밴드 `#F57C00`(짝사랑엔 주황 없음). 새 그림·다시 칠하기는 그 팔레트로 하고 `tools/palette.py check` 로 확인. 누나 말풍선 흰색, 동생 말풍선 연주황.
 - 말투: 누나 = 수다·허세, 자기 말 끊기("아 잠깐"). 동생 = 느리고 짧은 한마디("…"로 시작). 훈계·비하 금지.
 - 포스트 안 대화: `<div class="chat">` 안에 `{% include bubble.html who="sister|brother" text="..." %}` 를 줄마다.
 - 언어: `bilingual: true` 페이지(또는 layout)만 헤더에 한국어/EN 토글이 나오고, 나머지는 `lang` 으로 고정된다. 양쪽 문구는 `.lang-ko` / `.lang-en`.
