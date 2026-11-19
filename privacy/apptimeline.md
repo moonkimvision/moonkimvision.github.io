@@ -4,7 +4,7 @@ title_ko: "앱루틴(AppRoutine) 개인정보처리방침"
 title_en: "AppRoutine Privacy Policy"
 title: "AppRoutine Privacy Policy"
 permalink: /privacy/apptimeline/
-date: 2026-11-07
+date: 2026-11-20
 lang: ko
 ---
 
@@ -19,7 +19,7 @@ moonkimvision("회사", "저희")은 앱 사용 기록 타임라인·런처 앱 
 
 ### 1. 수집하는 정보
 
-**저희는 의견 보내기에 직접 적은 이메일 주소를 빼면 이름·이메일·전화번호 같은 개인정보를 받지 않으며, 앱 사용 기록을 서버로 보내지 않습니다.** 서비스에는 회원가입·로그인이 없습니다.
+**저희는 의견 보내기에 직접 적은 이메일 주소를 빼면 이름·이메일·전화번호 같은 개인정보를 받지 않으며, 사용자가 "커뮤니티에 올리기"를 눌러 직접 올린 요약(아래 "커뮤니티(선택)")을 빼면 앱 사용 기록을 서버로 보내지 않습니다.** 서비스에는 회원가입·로그인이 없습니다.
 
 **기기 안에만 저장되는 정보**  
 아래 정보는 **기기 내부 저장소에만 저장**되며, 타임라인·통계·다이어트·알람 등 서비스 기능을 제공하는 데만 쓰입니다.
@@ -43,12 +43,22 @@ moonkimvision("회사", "저희")은 앱 사용 기록 타임라인·런처 앱 
 앱 알람을 정해진 시각에 울리고, 기기를 다시 켠 뒤 예약된 알람을 되살리고, 앱을 열지 않아도 오늘 사용량을 주기적으로 확인하는 데 사용합니다.
 
 **인터넷 (INTERNET, ACCESS_NETWORK_STATE), 광고 ID (AD_ID)**  
-화면의 광고를 불러오고 이용 통계를 보내는 데(3항), 사용자가 직접 의견을 보내는 데만 사용합니다.
+화면의 광고를 불러오고 이용 통계를 보내는 데(3항), 사용자가 직접 의견을 보내거나 커뮤니티에 올리는 데만 사용합니다.
 
 위치·연락처·사진·카메라·마이크 권한은 사용하지 않습니다.
 
 **의견 보내기**  
 앱 안에서 의견을 보내면 쓴 내용, 선택해서 적은 이메일 주소, 앱 버전, 기기 모델, OS 버전, 언어 설정이 Google Firebase(Firestore) 서버로 전송되어 문의 확인과 답변, 앱 개선에만 쓰입니다. 기기나 사람을 알아볼 수 있는 식별자는 보내지 않습니다. 앱 개선 일감으로 삼을지 검토할 때는 쓴 내용이 AI 도구(Anthropic Claude)로 전달될 수 있습니다. 이때 이메일 주소와 전화번호는 가리고 보냅니다. 처리한 뒤 1년 안에 지웁니다.
+
+**커뮤니티(선택)**  
+업적이나 오늘 기록을 앱 안 커뮤니티 피드에 올릴 수 있습니다. 사용자가 "커뮤니티에 올리기"를 눌렀을 때만 아래 정보가 전송됩니다.
+
+- 기기에서 무작위로 만든 별명(형용사+동물+4자리 숫자)
+- 업적을 올리면: 업적 배지 종류, 연속 달성 일수, 최고 기록, 성공률
+- 오늘 기록을 올리면: 오늘 휴대폰 사용 시간(분), 어제와의 차이, 지킨 목표 수/전체 목표 수
+- 게시 시각, 받은 응원 수
+
+앱 이름, 패키지명, 계정, 기기 식별자, 광고 ID는 보내지 않습니다. 올린 내용은 Google Firebase Cloud Firestore(서울 리전, moonkim-apps 프로젝트)에 저장되고, **다른 사용자가 커뮤니티 피드에서 별명과 함께 볼 수 있습니다.** 게시물은 7일 뒤 자동으로 삭제됩니다. 로그인이 없어 앱 안에서는 게시물을 지울 수 없으니, 그 전에 지우려면 8항의 이메일로 별명과 게시 시각을 알려 요청해 주십시오.
 
 ---
 
@@ -85,7 +95,7 @@ Google의 데이터 처리 방식은 [Google 개인정보처리방침](https://p
 
 ### 4. 제3자 제공
 
-저희는 사용자의 정보를 판매하거나 제3자에게 제공하지 않습니다. 3항의 광고와 이용 통계(Google)를 제외하면 서비스에는 다른 분석·추적 도구가 포함되어 있지 않습니다. 다만 의견 보내기로 보낸 내용은 1항에서 설명한 대로 Google Firebase에 저장되고 AI 도구(Anthropic Claude)로 전달될 수 있습니다.
+저희는 사용자의 정보를 판매하거나 제3자에게 제공하지 않습니다. 3항의 광고와 이용 통계(Google)를 제외하면 서비스에는 다른 분석·추적 도구가 포함되어 있지 않습니다. 다만 의견 보내기로 보낸 내용은 1항에서 설명한 대로 Google Firebase에 저장되고 AI 도구(Anthropic Claude)로 전달될 수 있습니다. 커뮤니티에 올린 내용은 1항에서 설명한 대로 Google Firebase에 저장되고, 앱의 다른 사용자에게 별명과 함께 공개됩니다.
 
 이전 버전에서는 설정의 "의견 보내기"를 누르면 Google 설문지가 열립니다. 이곳에 입력한 내용은 사용자가 직접 제출할 때만 저희에게 전달됩니다.
 
@@ -97,6 +107,7 @@ Google의 데이터 처리 방식은 [Google 개인정보처리방침](https://p
 - 달성 기록은 설정 > 아카이브 데이터의 "선택 날짜 이전 삭제"로 지울 수 있습니다.
 - 앱 데이터를 지우거나 앱을 삭제하면 기기에 저장된 모든 데이터가 함께 삭제됩니다. Google 계정에 저장된 백업은 Google 계정 설정에서 삭제할 수 있습니다.
 - 의견 보내기로 보낸 내용과 적은 이메일 주소의 열람·삭제는 아래 이메일로 요청할 수 있습니다.
+- 커뮤니티 게시물은 7일 뒤 자동으로 삭제됩니다. 그 전에 지우려면 별명과 게시 시각을 아래 이메일로 보내 요청할 수 있습니다.
 - 광고 관련 데이터는 3항의 방법으로 동의를 바꾸거나 광고 ID를 재설정해 관리할 수 있습니다.
 
 **저희는 개인정보를 판매하지 않습니다.**
@@ -112,6 +123,8 @@ Google의 데이터 처리 방식은 [Google 개인정보처리방침](https://p
 ### 7. 개인정보처리방침 변경
 
 본 방침은 수시로 업데이트될 수 있습니다. 변경 사항은 이 페이지에 게시합니다.
+
+최종 개정일: 2026년 11월 20일
 
 ---
 
@@ -134,7 +147,7 @@ By using the Service, you agree to this policy.
 
 ### 1. Information Collection and Use
 
-**Apart from an email address you choose to enter when sending feedback, we do not ask for personal information such as your name, email, or phone number, and we never send your app usage history to any server.** The Service has no sign-up or login.
+**Apart from an email address you choose to enter when sending feedback, we do not ask for personal information such as your name, email, or phone number, and we never send your app usage history to any server, except for summaries you choose to post by tapping "Post to Community" (see "Community (optional)" below).** The Service has no sign-up or login.
 
 **Stored only on your device**  
 The following information is **stored only on your device** and is used only to provide features such as the timeline, stats, app diet, and app alarms:
@@ -158,12 +171,22 @@ Used to send usage limit alerts, app alarms, and usage insight notifications.
 Used to fire app alarms at the time you set, restore scheduled alarms after your device restarts, and check today's usage periodically without opening the app.
 
 **Internet (INTERNET, ACCESS_NETWORK_STATE), advertising ID (AD_ID)**  
-Used only to load ads, send usage statistics (Section 3), and send feedback when you choose to.
+Used only to load ads, send usage statistics (Section 3), and send feedback or post to the community when you choose to.
 
 The Service does not use location, contacts, photos, camera, or microphone permissions.
 
 **Send Feedback**  
 When you send feedback in the app, what you write, the email address you choose to enter, the app version, device model, OS version, and language setting are sent to Google Firebase (Firestore) servers and are used only to review and respond to your inquiry and to improve the app. We do not send any identifier that could recognize your device or you. When we review whether to make your feedback an app improvement task, what you write may be sent to an AI tool (Anthropic Claude). Email addresses and phone numbers are masked before it is sent. We delete this information within one year after handling it.
+
+**Community (optional)**  
+You can post an achievement or today's record to the in-app community feed. The following is sent only when you tap "Post to Community":
+
+- A nickname randomly generated on your device (adjective + animal + 4-digit number)
+- For an achievement: the badge type, streak days, best record, and success rate
+- For today's record: today's phone usage in minutes, the difference from yesterday, and goals kept / total goals
+- The time of posting and the number of cheers received
+
+App names, package names, accounts, device identifiers, and the advertising ID are never sent. Posts are stored on Google Firebase Cloud Firestore (Seoul region, moonkim-apps project) and **can be seen by other users in the community feed along with your nickname.** Posts are deleted automatically after 7 days. Because there is no login, posts cannot be deleted in the app; to delete one sooner, email us at the address in Section 8 with your nickname and the time of posting.
 
 ---
 
@@ -200,7 +223,7 @@ We use Google Firebase Analytics to understand how the app is used and to improv
 
 ### 4. Sharing
 
-We do not sell or share your information with third parties. Apart from the advertising and usage statistics (Google) in Section 3, the Service contains no other analytics or tracking tools. However, feedback you send is stored on Google Firebase and may be passed to an AI tool (Anthropic Claude), as described in Section 1.
+We do not sell or share your information with third parties. Apart from the advertising and usage statistics (Google) in Section 3, the Service contains no other analytics or tracking tools. However, feedback you send is stored on Google Firebase and may be passed to an AI tool (Anthropic Claude), as described in Section 1. Community posts are stored on Google Firebase and shown to other users of the app with your nickname, as described in Section 1.
 
 In earlier versions, tapping "Send Feedback" in Settings opens a Google Form. Anything you enter there reaches us only if you submit it yourself.
 
@@ -212,6 +235,7 @@ In earlier versions, tapping "Send Feedback" in Settings opens a Google Form. An
 - Achievement records can be deleted in Settings > Archive Data with "Delete Before Selected Date."
 - Clearing the app's data or uninstalling the app deletes all data stored on your device. Backups stored in your Google account can be deleted in your Google account settings.
 - To access or delete the feedback you sent and the email address you entered, contact us at the email below.
+- Community posts are deleted automatically after 7 days. To delete a post sooner, send your nickname and the time of posting to the email below.
 - Advertising-related data can be managed by changing your consent or resetting your advertising ID as described in Section 3.
 
 **We do not sell personal information.**
@@ -227,6 +251,8 @@ The Service is not directed at children under 13. Parents or guardians with ques
 ### 7. Changes to This Privacy Policy
 
 We may update this policy from time to time. Any changes will be posted on this page.
+
+Last updated: November 20, 2026
 
 ---
 
