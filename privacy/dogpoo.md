@@ -10,7 +10,7 @@ lang: ko
 
 <div class="lang-ko" markdown="1">
 
-moonkimvision("회사", "저희")은 방치형 슈팅 RPG 개똥 히어로 : 방치형 rpg(이하 "서비스")를 제공합니다. 서비스는 광고를 보여 주는 방식으로 무료 제공되며, 트레이너 센터의 선택 상품(앱 안 결제)이 있습니다.
+moonkimvision("회사", "저희")은 방치형 슈팅 RPG 개똥 히어로 : 방치형 rpg(이하 "서비스")를 제공합니다. 서비스는 광고를 보여 주는 방식으로 무료 제공되며, 트레이너 센터의 선택 상품(앱 안 결제)이 있습니다. 광고는 게임오버 화면 아래의 배너 광고와, 원할 때만 보는 보상형 광고("광고 보고 골드 +N", 이번 판 골드를 한 번 더 받음) 두 가지이며 전면 광고는 없습니다.
 
 본 페이지는 서비스 이용 시 개인정보의 수집·이용·공개에 관한 정책을 안내합니다.  
 서비스를 이용함으로써 본 정책에 동의하는 것으로 간주됩니다.
@@ -42,15 +42,24 @@ moonkimvision("회사", "저희")은 방치형 슈팅 RPG 개똥 히어로 : 방
 트레이너 센터의 선택 상품(웨이트 훈련 2배, 러닝머신 훈련 2배)을 구매하면 Google Play가 결제를 처리합니다. 결제 수단 등 결제 정보는 Google이 처리하며 저희는 받거나 저장하지 않습니다. 구매 여부는 Google Play에서 확인해 앱에 반영합니다. 자세한 내용은 [Google 개인정보처리방침](https://policies.google.com/privacy)을 참고해 주세요.
 
 **광고 (Google AdMob)**  
-서비스는 광고를 보여 주기 위해 Google AdMob을 사용합니다. Google은 광고 게재·성과 측정·부정 행위 방지를 위해 다음 정보를 수집·처리할 수 있습니다.
+서비스는 배너·보상형 광고를 보여 주기 위해 Google AdMob 광고 SDK를 사용합니다. Google은 맞춤 광고 또는 비맞춤 광고 제공, 광고 성과 측정, 부정 행위 방지를 위해 다음 정보를 수집·처리할 수 있으며, 이 정보는 광고 SDK를 통해 제3자인 Google에 제공됩니다.
 
 - 광고 ID 등 기기 식별자
 - IP 주소와 이를 통한 대략적인 위치
 - 기기·앱 정보, 광고 노출·클릭 기록, 비정상 종료 등 진단 정보
 
-게임 진행 데이터(총·골드·훈련 기록 등)는 광고 요청에 사용되지 않으며 Google에 전달되지 않습니다. 기기 설정에서 광고 ID를 재설정하거나 맞춤 광고를 끌 수 있습니다. 유럽경제지역(EEA)·영국·스위스 사용자에게는 처음 실행할 때 광고 개인정보 동의 화면이 표시될 수 있습니다. Google의 데이터 처리 방식은 [Google 개인정보처리방침](https://policies.google.com/privacy)과 [Google 파트너 사이트·앱 데이터 사용 방식](https://policies.google.com/technologies/partner-sites)을 참고해 주세요.
+게임 진행 데이터(총·골드·훈련 기록 등)는 광고 요청에 사용되지 않으며 Google에 전달되지 않습니다. 맞춤 광고에 동의하지 않거나 맞춤 광고를 끄면, 광고 ID를 맞춤에 쓰지 않는 비맞춤 광고(보고 있는 앱 등 문맥 기반)가 표시됩니다.
 
-저희는 사용자의 정보를 판매하거나 제3자에게 제공하지 않습니다. 위 광고(Google)를 제외하면 서비스에는 다른 분석·추적 도구가 포함되어 있지 않습니다.
+**광고 동의와 철회 (Google UMP)**  
+유럽경제지역(EEA)·영국·스위스 등 동의가 필요한 지역의 사용자에게는 처음 실행할 때 Google UMP(사용자 메시징 플랫폼) 광고 개인정보 동의 화면이 표시되며, 동의하기 전에는 광고를 요청하지 않습니다. 동의를 철회하거나 선택을 바꾸려면 아래 방법을 이용해 주십시오.
+
+- 기기 설정 > 앱 > 개똥 히어로 : 방치형 rpg > 저장공간에서 "데이터 지우기"를 누른 뒤 앱을 다시 실행하면 동의 화면이 다시 표시되어 새로 선택할 수 있습니다. 이때 기기에 저장된 게임 진행 데이터도 함께 지워집니다.
+- 기기 설정(Google > 광고 또는 개인정보 보호 > 광고)에서 광고 ID를 재설정·삭제하거나 맞춤 광고를 끌 수 있습니다.
+- 아래 문의 이메일로 요청하실 수도 있습니다.
+
+Google의 데이터 처리 방식은 [Google 개인정보처리방침](https://policies.google.com/privacy)과 [Google 파트너 사이트·앱 데이터 사용 방식](https://policies.google.com/technologies/partner-sites)을 참고해 주세요.
+
+광고를 위해 위 정보가 Google에 제공되는 것을 제외하면, 저희는 사용자의 정보를 판매하거나 다른 제3자에게 제공하지 않습니다. 위 광고(Google)를 제외하면 서비스에는 다른 분석·추적 도구가 포함되어 있지 않습니다.
 
 ---
 
@@ -61,7 +70,7 @@ moonkimvision("회사", "저희")은 방치형 슈팅 RPG 개똥 히어로 : 방
 - 앱을 삭제하거나 기기 설정 > 앱 > 개똥 히어로 : 방치형 rpg > 저장공간에서 "데이터 지우기"를 누르면 기기에 저장된 모든 데이터가 삭제됩니다.
 - Google 계정에 저장된 백업은 Google 계정 설정에서 삭제할 수 있습니다.
 - 구매 내역은 Google Play가 관리하며, Google Play 앱의 구매 내역에서 확인할 수 있습니다.
-- 광고 관련 데이터는 기기 설정에서 광고 ID를 재설정하거나 맞춤 광고를 꺼서 관리할 수 있습니다.
+- 광고 관련 데이터는 기기 설정에서 광고 ID를 재설정하거나 맞춤 광고를 꺼서 관리할 수 있으며, 광고 동의 철회는 3항의 방법을 따릅니다.
 
 **저희는 개인정보를 판매하지 않습니다.**
 
@@ -89,7 +98,7 @@ moonkimvision("회사", "저희")은 방치형 슈팅 RPG 개똥 히어로 : 방
 
 <div class="lang-en" markdown="1">
 
-moonkimvision ("we," "us," or "our") provides Dog Poo Hero: Idle RPG, an idle shooter RPG (the "Service"). The Service is free, supported by ads, and offers optional in-app purchases in the Trainer Center.
+moonkimvision ("we," "us," or "our") provides Dog Poo Hero: Idle RPG, an idle shooter RPG (the "Service"). The Service is free, supported by ads, and offers optional in-app purchases in the Trainer Center. There are two kinds of ads: a banner ad at the bottom of the game-over screen, and an optional rewarded ad ("Watch an ad: +N gold", which gives you this run's gold once more). There are no interstitial ads.
 
 This page explains our policies on the collection, use, and disclosure of personal information when you use the Service.  
 By using the Service, you agree to this policy.
@@ -121,15 +130,24 @@ If Google backup is enabled on your device, Android backs up the game progress d
 When you buy an optional item in the Trainer Center (Weights Training x2, Treadmill Training x2), Google Play processes the payment. Google handles payment information such as your payment method, and we do not receive or store it. The app checks your purchases with Google Play. See the [Google Privacy Policy](https://policies.google.com/privacy) for details.
 
 **Ads (Google AdMob)**  
-The Service uses Google AdMob to show ads. Google may collect and process the following to serve and measure ads and to prevent fraud:
+The Service uses the Google AdMob ads SDK to show banner and rewarded ads. Google may collect and process the following to serve personalized or non-personalized ads, measure ad performance, and prevent fraud. This information is provided to Google, a third party, through the ads SDK:
 
 - Device identifiers such as the advertising ID
 - IP address and the approximate location derived from it
 - Device and app information, ad impressions and clicks, and diagnostics such as crashes
 
-Your game progress (guns, gold, training records, etc.) is not used in ad requests and is not sent to Google. You can reset your advertising ID or turn off personalized ads in your device settings. Users in the European Economic Area, the UK, and Switzerland may see an ad-privacy consent screen on first launch. See the [Google Privacy Policy](https://policies.google.com/privacy) and [How Google uses data from partner sites or apps](https://policies.google.com/technologies/partner-sites) for how Google processes data.
+Your game progress (guns, gold, training records, etc.) is not used in ad requests and is not sent to Google. If you do not consent to personalized ads or turn them off, you will see non-personalized ads that do not use your advertising ID for personalization (based on context such as the app you are using).
 
-We do not sell or share your information with third parties. Apart from the ads above (Google), the Service contains no other analytics or tracking tools.
+**Ad consent and withdrawal (Google UMP)**  
+Users in regions where consent is required, such as the European Economic Area (EEA), the UK, and Switzerland, see a Google UMP (User Messaging Platform) ad-privacy consent screen on first launch, and no ads are requested before consent. To withdraw your consent or change your choice:
+
+- Tap "Clear data" in your device's Settings > Apps > Dog Poo Hero: Idle RPG > Storage and open the app again. The consent screen will be shown again so you can choose anew. Note that this also deletes the game progress stored on your device.
+- Reset or delete your advertising ID, or turn off personalized ads, in your device settings (Google > Ads, or Privacy > Ads).
+- You can also contact us at the email below.
+
+See the [Google Privacy Policy](https://policies.google.com/privacy) and [How Google uses data from partner sites or apps](https://policies.google.com/technologies/partner-sites) for how Google processes data.
+
+Except for the information provided to Google for ads as described above, we do not sell or share your information with any other third parties. Apart from the ads above (Google), the Service contains no other analytics or tracking tools.
 
 ---
 
@@ -140,7 +158,7 @@ The Service has no in-app account, so you can delete the information stored on y
 - Uninstalling the app, or tapping "Clear data" in your device's Settings > Apps > Dog Poo Hero: Idle RPG > Storage, deletes all data stored on your device.
 - Backups stored in your Google account can be deleted in your Google account settings.
 - Your purchase history is managed by Google Play and can be viewed in the Google Play app.
-- Ad-related data can be managed by resetting your advertising ID or turning off personalized ads in your device settings.
+- Ad-related data can be managed by resetting your advertising ID or turning off personalized ads in your device settings. To withdraw ad consent, follow the steps in Section 3.
 
 **We do not sell personal information.**
 
