@@ -53,6 +53,7 @@ moonkimvision("회사", "저희")은 방치형 슈팅 RPG 개똥 히어로 : 방
 **광고 동의와 철회 (Google UMP)**  
 유럽경제지역(EEA)·영국·스위스 등 동의가 필요한 지역의 사용자에게는 처음 실행할 때 Google UMP(사용자 메시징 플랫폼) 광고 개인정보 동의 화면이 표시되며, 동의하기 전에는 광고를 요청하지 않습니다. 동의를 철회하거나 선택을 바꾸려면 아래 방법을 이용해 주십시오.
 
+- 앱 안 트레이너 센터 화면 왼쪽 아래 '광고 개인정보 옵션' 버튼(동의가 필요한 지역에서만 보임)
 - 기기 설정 > 앱 > 개똥 히어로 : 방치형 rpg > 저장공간에서 "데이터 지우기"를 누른 뒤 앱을 다시 실행하면 동의 화면이 다시 표시되어 새로 선택할 수 있습니다. 이때 기기에 저장된 게임 진행 데이터도 함께 지워집니다.
 - 기기 설정(Google > 광고 또는 개인정보 보호 > 광고)에서 광고 ID를 재설정·삭제하거나 맞춤 광고를 끌 수 있습니다.
 - 아래 문의 이메일로 요청하실 수도 있습니다.
@@ -141,6 +142,7 @@ Your game progress (guns, gold, training records, etc.) is not used in ad reques
 **Ad consent and withdrawal (Google UMP)**  
 Users in regions where consent is required, such as the European Economic Area (EEA), the UK, and Switzerland, see a Google UMP (User Messaging Platform) ad-privacy consent screen on first launch, and no ads are requested before consent. To withdraw your consent or change your choice:
 
+- 'Ad privacy options' button at the bottom left of the Trainer Center screen (shown only where consent is required)
 - Tap "Clear data" in your device's Settings > Apps > Dog Poo Hero: Idle RPG > Storage and open the app again. The consent screen will be shown again so you can choose anew. Note that this also deletes the game progress stored on your device.
 - Reset or delete your advertising ID, or turn off personalized ads, in your device settings (Google > Ads, or Privacy > Ads).
 - You can also contact us at the email below.
